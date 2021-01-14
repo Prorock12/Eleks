@@ -1,0 +1,17 @@
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\App.g.cs
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject_MarkupCompile.cache
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject_MarkupCompile.lref
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\bin\Debug\MyFirstProject.exe.config
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\bin\Debug\MyFirstProject.exe
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\bin\Debug\MyFirstProject.pdb
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.g.resources
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.Properties.Resources.resources
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.csproj.GenerateResource.cache
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.exe
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.pdb
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\Views\MainWindow.g.cs
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\Styles\MainWindowsStyle.baml
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\Views\MainWindow.baml
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\MyFirstProject.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\App.baml

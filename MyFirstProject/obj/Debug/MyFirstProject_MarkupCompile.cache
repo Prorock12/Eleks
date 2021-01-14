@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\bohdan.hlyva\WPF\MyFirstProject\App.xaml
-11151548125
+2-617334914
 
-5-2017746502
+9-1098701345
 13-1505183044
-MainWindow.xaml;
+Styles\MainWindowsStyle.xaml;Views\MainWindow.xaml;
 
-True
+False
 
