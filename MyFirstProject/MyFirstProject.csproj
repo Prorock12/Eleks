@@ -16,7 +16,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,6 +24,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +39,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +64,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Styles\MainWindowsStyle.xaml">
+    <Compile Include="Interfaces\ViewModels\IElementViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\IImageElementViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\IMediaElementViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\IPresentationViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\ISlideViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\ITextElementViewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\IVideoElementVewModel.cs" />
+    <Compile Include="Interfaces\ViewModels\IVisualElementViewModel.cs" />
+    <Compile Include="ViewModels\ElementViewModel.cs" />
+    <Compile Include="ViewModels\ImageElementViewModel.cs" />
+    <Compile Include="ViewModels\MediaElementViewModel.cs" />
+    <Compile Include="ViewModels\PresentationViewModel.cs" />
+    <Compile Include="ViewModels\SlideViewModel.cs" />
+    <Compile Include="ViewModels\TextElementViewModel.cs" />
+    <Compile Include="ViewModels\VideoElementViewModel.cs" />
+    <Compile Include="ViewModels\VisualElementViewModel.cs" />
+    <Compile Include="WindowCommands.cs" />
+    <Page Include="Styles\MainWindowStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,10 +93,25 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Phone.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Interfaces\Models\IElement.cs" />
+    <Compile Include="Interfaces\Models\IImageElement.cs" />
+    <Compile Include="Interfaces\Models\IMediaElement.cs" />
+    <Compile Include="Interfaces\Models\IPresentation.cs" />
+    <Compile Include="Interfaces\Models\ISlide.cs" />
+    <Compile Include="Interfaces\Models\ITextElement.cs" />
+    <Compile Include="Interfaces\Models\IVideoElement.cs" />
+    <Compile Include="Interfaces\Models\IVisualElement.cs" />
+    <Compile Include="Models\RelayCommand.cs" />
+    <Compile Include="Models\Element.cs" />
+    <Compile Include="Models\ImageElement.cs" />
+    <Compile Include="Models\MediaElement.cs" />
+    <Compile Include="Models\Presentation.cs" />
+    <Compile Include="Models\Slide.cs" />
+    <Compile Include="Models\TextElement.cs" />
+    <Compile Include="Models\VideoElement.cs" />
+    <Compile Include="Models\VisualElement.cs" />
+    <Compile Include="ViewModels\BindableBase.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\Operation.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -94,6 +135,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

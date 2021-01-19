@@ -4,43 +4,53 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstProject"
+        xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <ListBox x:Name="SlideListBox" ItemsSource="{Binding Phones}" SelectedItem="{Binding SelectedPhone}" Grid.Column="0"  Cursor="Hand" FontStretch="Condensed">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="5">
-                        <TextBlock Text="{Binding Path=Title}"/>
-                        <TextBlock Text="{Binding Path=Company}"/>
-                        <TextBlock Text="{Binding Path=Price}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <ListBox x:Name="ElementListBox" DataContext="{Binding SelectedPhone}" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontWeight="Bold" MinWidth="40">
-            <TextBlock x:Name="TextBlock1" Text="Selected Item"/>
-            <TextBlock Text="Model"/>
-            <TextBox Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="Company"/>
-            <TextBox Text="{Binding Company,UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="Price"/>
-            <TextBox Text="{Binding Price,UpdateSourceTrigger=PropertyChanged}"/>
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-            <ListBox.ItemContainerStyle>
-                <Style>
-                    <Setter Property="Canvas.Left" Value="150"/>
-                    <Setter Property="Canvas.Top" Value="50"/>
-                </Style>
-            </ListBox.ItemContainerStyle>
-        </ListBox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox  Grid.Row="0" Grid.Column="0" 
+                      Style="{StaticResource PresentationsListBoxStyle}" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+            <ContentPresenter Grid.Row="0" Grid.Column="1"
+                              Content="{Binding}"
+                              ContentTemplate="{StaticResource PresentationStackPanelButtons}"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox Grid.Column="0" Grid.Row="0" 
+                 Style="{StaticResource SlidesListBoxStyle}"/>
+
+            <ContentPresenter Grid.Row="0" Grid.Column="0" 
+                              Content="{Binding}"
+                              ContentTemplate="{StaticResource SlideStackPanelButtons}"/>
+
+            <ListBox Grid.Row="0" Grid.Column="1" 
+                     Style="{StaticResource ElementListBoxStyle}"/>
+
+            <ContentPresenter Grid.Row="0" Grid.Column="1" 
+                              Content="{Binding}"
+                              ContentTemplate="{StaticResource ElementStackPanelButtons}"/>
+
+        </Grid>
     </Grid>
 </Window>

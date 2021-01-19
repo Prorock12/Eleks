@@ -1,4 +1,5 @@
-﻿using MyFirstProject.Models;
+﻿using MyFirstProject.Interfaces.Models;
+using MyFirstProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,31 +8,70 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using MyFirstProject.Interfaces.ViewModels;
 
 namespace MyFirstProject.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : BindableBase
     {
-        Operation oper = new Operation();
-        Phone selectedPhone;
-        public ObservableCollection<Phone> Phones { get; set; }
-        public Phone SelectedPhone
+        #region Fields
+
+        private PresentationViewModel _selectedPresentation;
+
+        #endregion
+
+        #region Properties
+        public ObservableCollection<IPresentationViewModel> Presentations { get; set; }
+        public ICommand AddPresentationCommand { get; }
+        public ICommand RemovePresentationCommand { get; }
+
+        public PresentationViewModel SelectedPresentation
         {
-            get { return selectedPhone; }
-            set
-            {
-                oper.SetProperty<Phone>(ref selectedPhone, value);
-            }
+            get => _selectedPresentation;
+            set => SetProperty(ref _selectedPresentation, value);
         }
+
+        #endregion
+
+        #region Constructor
+
         public MainWindowViewModel()
         {
-            Phones = new ObservableCollection<Phone>
+            AddPresentationCommand = new RelayCommand(AddPresentation);
+            RemovePresentationCommand = new RelayCommand(RemovePresentation);
+
+            Presentations = new ObservableCollection<IPresentationViewModel>
             {
-                new Phone { Title="iPhone 7", Company="Apple", Price=56000 },
-                new Phone {Title="Galaxy S7 Edge", Company="Samsung", Price =60000 },
-                new Phone {Title="Elite x3", Company="HP", Price=56000 },
-                new Phone {Title="Mi5S", Company="Xiaomi", Price=35000 }
+                new PresentationViewModel("First"),
+                new PresentationViewModel("Second")
             };
+
         }
+
+        #endregion
+
+        #region Methods
+
+        private void AddPresentation(object obj)
+        {
+            var presentation = new PresentationViewModel("newSlide");
+            Presentations.Insert(Presentations.Count, presentation);
+            SelectedPresentation = presentation;
+        }
+        private void RemovePresentation(object obj)
+        {
+            Presentations.Remove(SelectedPresentation);
+        }
+
+        private bool CanAddSlide(object obj)
+        {
+            if (Presentations.Count > 10)
+                return false;
+            else
+                return true;
+        }
+
+        #endregion
     }
 }
