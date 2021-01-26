@@ -8,7 +8,7 @@ using MyFirstProject.Interfaces.ViewModels;
 
 namespace MyFirstProject.ViewModels
 {
-    public class ImageElementViewModel : VisualElementViewModel,IImageElementViewModel
+    public class ImageElementViewModel : MediaElementViewModel,IImageElementViewModel
     {
         public IImageElement ImageElement { get; set; }
         public ImageElementViewModel(IImageElement element) :base(element)

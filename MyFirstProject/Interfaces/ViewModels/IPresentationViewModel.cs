@@ -11,8 +11,7 @@ namespace MyFirstProject.Interfaces.ViewModels
     public interface IPresentationViewModel
     {
         #region Properties
-        string Name { get; set; }
-        string Path { get; set; }
+        IPresentation Presentation { get; set; }
         ObservableCollection<ISlideViewModel> Slides { get; set; }
 
         #endregion

@@ -9,7 +9,7 @@ using MyFirstProject.Models;
 
 namespace MyFirstProject.ViewModels
 {
-    public class TextElementViewModel : ElementViewModel,ITextElementViewModel
+    public class TextElementViewModel : VisualElementViewModel,ITextElementViewModel
     {
         public ITextElement TextElement { get; set; }
         public TextElementViewModel(ITextElement element):base(element)

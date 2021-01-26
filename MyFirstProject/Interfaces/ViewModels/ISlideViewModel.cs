@@ -12,7 +12,7 @@ namespace MyFirstProject.Interfaces.ViewModels
     {
         #region Properties
 
-        string Name { get; set; }
+        ISlide Slide { get; set; }
         ObservableCollection<IElementViewModel> Elements { get;}
 
         #endregion

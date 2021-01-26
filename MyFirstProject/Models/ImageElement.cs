@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyFirstProject.Models
 {
-    public class ImageElement : VisualElement, IImageElement
+    public class ImageElement : MediaElement, IImageElement
     {
         
     }

@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MyFirstProject.Interfaces.ViewModels;
+using Prism.Commands;
+using Prism.Regions;
+using Share;
 
 namespace MyFirstProject.ViewModels
 {
@@ -43,8 +46,8 @@ namespace MyFirstProject.ViewModels
 
             Presentations = new ObservableCollection<IPresentationViewModel>
             {
-                new PresentationViewModel("First"),
-                new PresentationViewModel("Second")
+                new PresentationViewModel(new Presentation{Name = "FirstPresentation" }),
+                new PresentationViewModel(new Presentation{Name = "Second" })
             };
 
         }
@@ -55,7 +58,7 @@ namespace MyFirstProject.ViewModels
 
         private void AddPresentation(object obj)
         {
-            var presentation = new PresentationViewModel("newSlide");
+            var presentation = new PresentationViewModel(new Presentation { Name = "newSlide" });
             Presentations.Insert(Presentations.Count, presentation);
             SelectedPresentation = presentation;
         }

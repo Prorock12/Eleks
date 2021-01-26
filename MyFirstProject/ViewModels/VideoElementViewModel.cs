@@ -8,7 +8,7 @@ using MyFirstProject.Interfaces.ViewModels;
 
 namespace MyFirstProject.ViewModels
 {
-    public class VideoElementViewModel : VisualElementViewModel,IVideoElementViewModel
+    public class VideoElementViewModel : MediaElementViewModel,IVideoElementViewModel
     {
         public IVideoElement VideoElement { get; set; }
 

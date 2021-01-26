@@ -1,4 +1,5 @@
-﻿using MyFirstProject.Interfaces.ViewModels;
+﻿using MyFirstProject.Interfaces.Models;
+using MyFirstProject.Interfaces.ViewModels;
 using MyFirstProject.Models;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -9,12 +10,13 @@ namespace MyFirstProject.ViewModels
     {
         #region Fields
 
-        private IElementViewModel _element;
-        private string _name;
+        private IVisualElementViewModel _selectedElement;
 
         #endregion Fields
 
         #region Properties
+
+        public ISlide Slide { get; set; }
 
         public ICommand AddTextElementCommand { get; }
 
@@ -24,16 +26,10 @@ namespace MyFirstProject.ViewModels
 
         public ICommand RemoveElementCommand { get; }
 
-        public string Name
+        public IVisualElementViewModel SelectedElement
         {
-            get => _name;
-            set => SetProperty(ref _name, value);
-        }
-
-        public IElementViewModel SelectedElement
-        {
-            get => _element;
-            set => SetProperty(ref _element, value);
+            get => _selectedElement;
+            set => SetProperty(ref _selectedElement, value);
         }
 
         public bool IsSelected { get; set; }
@@ -43,27 +39,27 @@ namespace MyFirstProject.ViewModels
 
         #region Constructor
 
-        public SlideViewModel(string name)
+        public SlideViewModel(ISlide slide)
         {
-            Name = name;
+            Slide = slide;
 
             AddTextElementCommand = new RelayCommand(AddText);
             AddImageElementCommand = new RelayCommand(AddImage);
             AddVideoElementCommand = new RelayCommand(AddVideo);
             RemoveElementCommand = new RelayCommand(RemoveElement);
 
-            Elements = new ObservableCollection<IElementViewModel>()
-            {
-                new TextElementViewModel(new TextElement{Text = "Hello"}),
-                new TextElementViewModel(new TextElement{Text = "World"}),
-                new ImageElementViewModel(new ImageElement(){Name = "SomeImage"})
-            };
+            //Elements = new ObservableCollection<IElementViewModel>()
+            //{
+            //    new TextElementViewModel(new TextElement{Name = "Hello"}),
+            //    new TextElementViewModel(new TextElement{Name = "World"}),
+            //    new ImageElementViewModel(new ImageElement(){Name = "SomeImage"})
+            //};
         }
         #endregion Constructor
 
         private void AddText(object obj)
         {
-            var text = new TextElementViewModel(new TextElement { Text = "newText" });
+            var text = new TextElementViewModel(new TextElement { Name = "newText" });
             Elements.Insert(Elements.Count, text);
             SelectedElement = text;
         }

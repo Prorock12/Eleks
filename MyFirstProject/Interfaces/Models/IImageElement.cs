@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyFirstProject.Interfaces.Models
 {
-    public interface IImageElement : IVisualElement
+    public interface IImageElement : IMediaElement
     {
 
     }

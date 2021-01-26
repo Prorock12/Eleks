@@ -3,8 +3,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
-                    mc:Ignorable="d"
-                    d:DataContext="{d:DesignInstance Type=viewModels:MainWindowViewModel}">
+                    mc:Ignorable="d">
 
     <Style TargetType="{x:Type ListBox}">
         <Setter Property="Foreground" Value="AntiqueWhite" />
@@ -17,8 +16,20 @@
         <Setter Property="Background" Value="Bisque" />
     </Style>
 
+    <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Width" Value="{Binding VisualElement.X}"/>
+        <Setter Property="Height" Value="{Binding VisualElement.Y}"/>
+    </Style>
+
+    <Style x:Key="CanvasElementContainerStyle"  TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Canvas.Left" Value="{Binding VisualElement.X}"/>
+        <Setter Property="Canvas.Top" Value="{Binding VisualElement.Y}"/>
+        <Setter Property="Width" Value="{Binding VisualElement.Width}"/>
+        <Setter Property="Height" Value="{Binding VisualElement.Height}"/>
+    </Style>
+
     <DataTemplate DataType="{x:Type viewModels:TextElementViewModel}">
-        <TextBlock Background="Brown" Text="{Binding   TextElement.Text}" />
+        <TextBlock Background="Brown" Text="{Binding   TextElement.Name}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type viewModels:ImageElementViewModel}">
@@ -30,31 +41,37 @@
     </DataTemplate>
 
     <DataTemplate x:Key="SlideTemplate" DataType="{x:Type viewModels:SlideViewModel}">
-        <TextBlock Text="{Binding Name }" />
+        <TextBlock Text="{Binding Slide.Name }" />
     </DataTemplate>
 
     <DataTemplate x:Key="PresentationTemplate" DataType="{x:Type viewModels:PresentationViewModel }">
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding Name}" Width="Auto" />
+            <TextBlock Text="{Binding Presentation.Name}" Width="Auto" />
         </StackPanel>
     </DataTemplate>
 
     <ControlTemplate x:Key="PresentationControlTemplate" TargetType="{x:Type ListBox}">
-        <StackPanel Background="Black">
+        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
             <ItemsPresenter />
-            <ContentPresenter />
-        </StackPanel>
+        </Border>
     </ControlTemplate>
 
     <ControlTemplate x:Key="SlideControlTemplate" TargetType="{x:Type ListBox}">
         <StackPanel Background="Black">
             <ItemsPresenter />
-            <ContentPresenter />
         </StackPanel>
     </ControlTemplate>
 
+    <ItemsPanelTemplate x:Key="ElementPanel">
+        <WrapPanel />
+    </ItemsPanelTemplate>
+
     <ItemsPanelTemplate x:Key="PresentationPanel">
         <WrapPanel />
+    </ItemsPanelTemplate>
+
+    <ItemsPanelTemplate x:Key="CanvasElementPanel">
+        <Canvas/>
     </ItemsPanelTemplate>
 
     <Style x:Key="SlidesListBoxStyle"
@@ -62,70 +79,32 @@
            BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="ItemTemplate" Value="{StaticResource SlideTemplate}" />
         <Setter Property="Template" Value="{StaticResource SlideControlTemplate}" />
-        <Setter Property="ItemsSource" Value="{Binding SelectedPresentation.Slides}" />
-        <Setter Property="SelectedItem" Value="{Binding SelectedPresentation.SelectedSlide}" />
     </Style>
 
     <Style x:Key="PresentationsListBoxStyle"
            TargetType="ListBox"
            BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="BorderBrush" Value="Azure"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="ItemsPanel" Value="{StaticResource PresentationPanel}"/>
         <Setter Property="ItemTemplate" Value="{StaticResource PresentationTemplate}" />
         <Setter Property="Template" Value="{StaticResource PresentationControlTemplate}" />
-        <Setter Property="ItemsSource" Value="{Binding Presentations}" />
-        <Setter Property="ItemsPanel" Value="{StaticResource PresentationPanel}"></Setter>
-        <Setter Property="SelectedItem" Value="{Binding SelectedPresentation}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
     </Style>
 
     <Style x:Key="ElementListBoxStyle"
            TargetType="{x:Type ListBox}"
            BasedOn="{StaticResource {x:Type ListBox}}">
-        <Setter Property="ItemsSource" Value="{Binding SelectedPresentation.SelectedSlide.Elements}"/>
-        <Setter Property="SelectedItem" Value="{Binding SelectedPresentation.SelectedSlide.SelectedElement}"/>
+        <Setter Property="ItemsPanel" Value="{StaticResource ElementPanel}"/>
+            <Setter Property="ItemContainerStyle" Value="{StaticResource  WrapElementContainerStyle}"/>
+
+            <Style.Triggers>
+            <DataTrigger Binding="{Binding SelectedPresentation.IsStackView}"  Value="True">
+                <Setter Property="ItemsPanel" Value="{StaticResource CanvasElementPanel}"/>
+                <Setter Property="ItemContainerStyle" Value="{StaticResource CanvasElementContainerStyle}"/>
+            </DataTrigger>
+            </Style.Triggers>
+
     </Style>
-
-    <DataTemplate x:Key="PresentationStackPanelButtons">
-        <StackPanel 
-                Orientation="Horizontal"
-                Background="Black">
-            <Button Content="Add Presentation"
-                Command="{Binding AddPresentationCommand}"
-                Margin="10" />
-
-            <Button Content="Remove Presentation"
-                Command="{Binding RemovePresentationCommand}"
-                Margin="10" />
-        </StackPanel>
-    </DataTemplate>
-
-    <DataTemplate x:Key="SlideStackPanelButtons">
-        <StackPanel VerticalAlignment="Bottom"
-                    Background="Black">
-            <Button Command="{Binding SelectedPresentation.AddSlideCommand}" 
-                    Content="Add Slide"
-                    Margin="10"/>
-            <Button Command="{Binding  SelectedPresentation.RemoveSlideCommand}"
-                    Content="Remove Slide"
-                    Margin="10"/>
-
-        </StackPanel>
-    </DataTemplate>
-
-    <DataTemplate x:Key="ElementStackPanelButtons">
-        <StackPanel Orientation="Horizontal"
-                    VerticalAlignment="Bottom"
-                    Background="Black">
-            <Button Command="{Binding SelectedPresentation.SelectedSlide.AddTextElementCommand}" 
-                    Content="Add Text"
-                    Margin="10"/>
-            <Button Command="{Binding SelectedPresentation.SelectedSlide.AddImageElementCommand}"
-                    Content="Add Image"
-                    Margin="10"/>
-            <Button Command="{Binding SelectedPresentation.SelectedSlide.AddVideoElementCommand}"
-                    Content="Add Video"
-                    Margin="10"/>
-            <Button Command="{Binding  SelectedPresentation.SelectedSlide.RemoveElementCommand}"
-                    Content="Remove Element"
-                    Margin="10"/>
-        </StackPanel>
-    </DataTemplate>
+    
 </ResourceDictionary>
