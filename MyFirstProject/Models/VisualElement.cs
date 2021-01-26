@@ -12,6 +12,9 @@ namespace MyFirstProject.Models
     {
         #region Fields
 
+        static Random _random = new Random();
+        private int _randomValue = _random.Next(100, 400);
+
         private double _x;
         private double _y;
         private double _width;
@@ -24,33 +27,33 @@ namespace MyFirstProject.Models
 
         public double X
         {
-            get => _x;
+            get => _randomValue;
             set => SetProperty(ref _x, value);
         }
 
         public double Y
         {
-            get => _y;
+            get => _randomValue;
             set => SetProperty(ref _y, value);
         }
 
         public double Width
         {
-            get => _width;
+            get => _randomValue;
 
             set => SetProperty(ref _width, value);
         }
 
         public double Height
         {
-            get => _height;
+            get => _randomValue;
 
             set => SetProperty(ref _height, value);
         }
 
         public double Angle
         {
-            get => _angle;
+            get => _randomValue;
 
             set => SetProperty(ref _angle, value);
         }

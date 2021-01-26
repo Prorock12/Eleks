@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstProject"
+        xmlns:share="clr-namespace:Share;assembly=Share"
         xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
+        xmlns:prism="http://prismlibrary.com/"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
         Title="MainWindow" Height="450" Width="800">
@@ -14,6 +16,7 @@
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.9*"/>
         </Grid.RowDefinitions>
+        
 
         <Grid Grid.Row="0" Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -21,13 +24,27 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox  Grid.Row="0" Grid.Column="0" 
-                      Style="{StaticResource PresentationsListBoxStyle}" 
-                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+            <ListBox  Grid.Column="0" 
+                      Style="{StaticResource PresentationsListBoxStyle}"
+                      ItemsSource="{Binding Presentations}"
+                      SelectedItem="{Binding SelectedPresentation}"/>
 
-            <ContentPresenter Grid.Row="0" Grid.Column="1"
-                              Content="{Binding}"
-                              ContentTemplate="{StaticResource PresentationStackPanelButtons}"/>
+            <StackPanel Grid.Column="1" 
+                Orientation="Horizontal"
+                Background="Black">
+                <Button Content="Add Presentation"
+                Command="{Binding AddPresentationCommand}"
+                Margin="10" />
+
+                <Button Content="Show ViewA"
+                        Command="{Binding NavigateCommand}"
+                        Margin="10" />
+
+                <Button Content="Remove Presentation"
+                Command="{Binding RemovePresentationCommand}"
+                Margin="10" />
+            </StackPanel>
+
 
         </Grid>
 
@@ -37,19 +54,53 @@
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox Grid.Column="0" Grid.Row="0" 
-                 Style="{StaticResource SlidesListBoxStyle}"/>
+            <ListBox Grid.Column="0" 
+                     Style="{StaticResource SlidesListBoxStyle}"
+                     ItemsSource="{Binding SelectedPresentation.Slides}"
+                     SelectedItem="{Binding SelectedPresentation.SelectedSlide}"/>
 
-            <ContentPresenter Grid.Row="0" Grid.Column="0" 
-                              Content="{Binding}"
-                              ContentTemplate="{StaticResource SlideStackPanelButtons}"/>
+            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                <ContentControl Foreground="AliceBlue" prism:RegionManager.RegionName="{x:Static share:RegionNames.ContextRegion}"/>
+            </StackPanel>
 
-            <ListBox Grid.Row="0" Grid.Column="1" 
-                     Style="{StaticResource ElementListBoxStyle}"/>
+            <StackPanel Grid.Column="0"
+                        VerticalAlignment="Bottom"
+                    Background="Black">
+                <Button Command="{Binding SelectedPresentation.AddSlideCommand}" 
+                    Content="Add Slide"
+                    Margin="10"/>
+                <Button Command="{Binding SelectedPresentation.RemoveSlideCommand}"
+                    Content="Remove Slide"
+                    Margin="10"/>
+            </StackPanel>
 
-            <ContentPresenter Grid.Row="0" Grid.Column="1" 
-                              Content="{Binding}"
-                              ContentTemplate="{StaticResource ElementStackPanelButtons}"/>
+            <ListBox x:Name="ElementListBoxStyle"
+                     Grid.Column="1" 
+                     Style="{StaticResource ElementListBoxStyle}"
+                     ItemsSource="{Binding SelectedPresentation.SelectedSlide.Elements}"
+                     SelectedItem="{Binding SelectedPresentation.SelectedSlide.SelectedElement}"/>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        Background="Black">
+                <CheckBox x:Name="ElementCheckBox"
+                          Content="Change Stack View"
+                          IsChecked="{Binding SelectedPresentation.IsStackView}"
+                          Margin="10" 
+                          Foreground="AliceBlue"/>
+                <Button Command="{Binding SelectedPresentation.SelectedSlide.AddTextElementCommand}" 
+                        Content="Add Text"
+                        Margin="10"/>
+                <Button Command="{Binding SelectedPresentation.SelectedSlide.AddImageElementCommand}"
+                    Content="Add Image"
+                    Margin="10"/>
+                <Button Command="{Binding SelectedPresentation.SelectedSlide.AddVideoElementCommand}"
+                    Content="Add Video"
+                    Margin="10"/>
+                <Button Command="{Binding  SelectedPresentation.SelectedSlide.RemoveElementCommand}"
+                    Content="Remove Element"
+                    Margin="10"/>
+            </StackPanel>
 
         </Grid>
     </Grid>

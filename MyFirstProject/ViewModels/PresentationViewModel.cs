@@ -15,8 +15,7 @@ namespace MyFirstProject.ViewModels
     {
         #region Fields
 
-        private string _name;
-        private string _path;
+        private bool _isStackView;
         private SlideViewModel _selectedSlide;
 
         #endregion
@@ -26,43 +25,38 @@ namespace MyFirstProject.ViewModels
         public ObservableCollection<ISlideViewModel> Slides { get; set; }
         public ICommand AddSlideCommand { get; }
         public ICommand RemoveSlideCommand { get; }
+        public IPresentation Presentation { get; set; }
+        public bool IsStackView 
+        {
+            get => _isStackView;
+            set => SetProperty(ref _isStackView,value); 
+        }
         public SlideViewModel SelectedSlide
         {
             get => _selectedSlide;
             set => SetProperty(ref _selectedSlide, value);
         }
-        public string Name
-        {
-            get => _name;
-            set => SetProperty(ref _name, value);
-        }
-
-        public string Path
-        {
-            get => _path;
-            set => SetProperty(ref _path, value);
-        }
 
         #endregion
 
-        public PresentationViewModel(string presentation)
+        public PresentationViewModel(IPresentation presentation)
         {
-            Name = presentation;
+            Presentation = presentation;
             AddSlideCommand = new RelayCommand(AddSlide);
             RemoveSlideCommand = new RelayCommand(RemoveSlide);
 
-            Slides = new ObservableCollection<ISlideViewModel>
-            {
-                new SlideViewModel("FirstSlide"),
-                new SlideViewModel("SecondSlide")
-            };
+            //Slides = new ObservableCollection<ISlideViewModel>
+            //{
+            //    new SlideViewModel(new Slide {Name="First" }),
+            //    new SlideViewModel(new Slide {Name="SecondSlide" })
+            //};
         }
 
         #region Method
 
         private void AddSlide(object obj)
         {
-            var slide = new SlideViewModel("nemSlide");
+            var slide = new SlideViewModel(new Slide { Name = "nemSlide" });
             Slides.Insert(Slides.Count, slide);
             SelectedSlide = slide;
         }
