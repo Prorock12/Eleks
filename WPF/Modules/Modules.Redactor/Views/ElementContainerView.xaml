@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Modules.Redactor.Views.ElementContainerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Styles/ElementStyle.xaml" />
+    </UserControl.Resources>
+
+    <Grid>
+        <ListBox x:Name="ElementListBoxStyle"
+                 Style="{StaticResource ElementListBoxStyle}"
+                     ItemsSource="{Binding Elements}"
+                     SelectedItem="{Binding SelectedElement}" />
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    Background="Black">
+            <CheckBox x:Name="ElementCheckBox"
+                      Content="Change Stack View"
+                      IsChecked="{Binding IsStackView}"
+                      Margin="10"
+                      Foreground="AliceBlue" />
+            <Button Command="{Binding AddTextElementCommand}"
+                    Content="Add Text"
+                    Margin="10" />
+            <Button Command="{Binding AddImageElementCommand}"
+                    Content="Add Image"
+                    Margin="10" />
+            <Button Command="{Binding AddVideoElementCommand}"
+                    Content="Add Video"
+                    Margin="10" />
+            <Button Command="{Binding  RemoveElementCommand}"
+                    Content="Remove Element"
+                    Margin="10" />
+        </StackPanel>
+    </Grid>
+</UserControl>
