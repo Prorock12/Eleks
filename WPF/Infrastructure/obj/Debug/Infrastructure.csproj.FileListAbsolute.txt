@@ -1,0 +1,12 @@
+C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Models.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Prism.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Models.pdb
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Prism.pdb
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Prism.xml
+C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.csproj.CopyComplete
+C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.pdb

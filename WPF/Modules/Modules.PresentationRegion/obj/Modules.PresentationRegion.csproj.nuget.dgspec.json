@@ -1,0 +1,250 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
+        "projectName": "Modules.PresentationRegion",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
+        "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bohdan.hlyva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
+        "projectName": "Modules.Redactor",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
+        "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bohdan.hlyva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
+        "projectName": "Modules.Slides",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
+        "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bohdan.hlyva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

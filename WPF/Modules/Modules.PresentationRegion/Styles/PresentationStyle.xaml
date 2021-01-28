@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:viewModels="clr-namespace:Modules.PresentationRegion.ViewModels"
+                    mc:Ignorable="d">
+
+    <Style TargetType="{x:Type ListBox}">
+        <Setter Property="Foreground" Value="AntiqueWhite" />
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Bisque" />
+    </Style>
+
+    <DataTemplate x:Key="PresentationTemplate" DataType="{x:Type viewModels:PresentationViewModel }">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Presentation.Name}" Width="Auto" />
+        </StackPanel>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="PresentationControlTemplate" TargetType="{x:Type ListBox}">
+        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <ItemsPresenter />
+        </Border>
+    </ControlTemplate>
+
+    <ItemsPanelTemplate x:Key="PresentationPanel">
+        <WrapPanel />
+    </ItemsPanelTemplate>
+
+    <Style x:Key="PresentationsListBoxStyle"
+           TargetType="ListBox"
+           BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="BorderBrush" Value="Azure" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="ItemsPanel" Value="{StaticResource PresentationPanel}" />
+        <Setter Property="ItemTemplate" Value="{StaticResource PresentationTemplate}" />
+        <Setter Property="Template" Value="{StaticResource PresentationControlTemplate}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+    </Style>
+</ResourceDictionary>
