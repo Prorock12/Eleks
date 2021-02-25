@@ -5,7 +5,7 @@
         #region Properties
 
         string Name { get; set; }
-        string Id { get; set; }
+        string Id { get; }
 
         #endregion Properties
     }

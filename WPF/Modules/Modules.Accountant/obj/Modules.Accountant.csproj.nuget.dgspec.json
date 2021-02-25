@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectName": "CommonUI",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
+        "projectName": "Modules.Accountant",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
+        "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bohdan.hlyva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Xceed.Products.Wpf.DataGrid.Full": {
+              "target": "Package",
+              "version": "[7.0.21101.19010, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 ﻿using Models.Interfaces.Models;
-using Models.Interfaces.ViewModels;
-using System.Collections.ObjectModel;
+using Modules.PresentationRegion.Interfaces;
 
 namespace Modules.PresentationRegion.ViewModels
 {
@@ -12,9 +11,13 @@ namespace Modules.PresentationRegion.ViewModels
 
         #endregion Properties
 
+        #region Constructor
+
         public PresentationViewModel(IPresentation presentation)
         {
             Presentation = presentation;
         }
+
+        #endregion Constructor
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Services.FilseSelector.dll
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Services.FilseSelector.pdb
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.dll
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.pdb
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Models.dll
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Prism.dll
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Models.pdb
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Prism.pdb
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Prism.xml
+C:\Users\bohdan.hlyva\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csproj.CopyComplete

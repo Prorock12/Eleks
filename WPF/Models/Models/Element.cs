@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
 using Models.Interfaces.Models;
 using Prism.Mvvm;
 
@@ -9,7 +9,7 @@ namespace Models.Models
         #region Fields
 
         private string _name;
-        private string _id;
+
 
         #endregion Fields
 
@@ -21,18 +21,18 @@ namespace Models.Models
             set => SetProperty(ref _name, value);
         }
 
-        public string Id
-        {
-            get => _id;
-            set => SetProperty(ref _id, value);
-        }
+        public string Id { get; }
 
-        public ObservableCollection<IElement> Elements { get; set; }
         #endregion Properties
+
+        #region Constructor
 
         protected Element(string name)
         {
+            Id = Guid.NewGuid().ToString();
             Name = name;
         }
+
+        #endregion Constructor
     }
 }

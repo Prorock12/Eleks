@@ -1,5 +1,5 @@
 ﻿using Models.Interfaces.Models;
-using Models.Interfaces.ViewModels;
+using Modules.Redactor.Interfaces;
 
 namespace Modules.Redactor.ViewModels
 {
@@ -11,9 +11,13 @@ namespace Modules.Redactor.ViewModels
 
         #endregion Properties
 
+        #region Constructors
+
         public TextElementViewModel(ITextElement element) : base(element)
         {
             TextElement = element;
         }
+
+        #endregion Constructors
     }
 }

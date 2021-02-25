@@ -1,13 +1,13 @@
 ﻿using Infrastructure.Events;
 using Models.Interfaces.Models;
-using Models.Interfaces.ViewModels;
 using Models.Models;
+using Modules.Slides.Interfaces;
 using Prism.Commands;
 using Prism.Events;
+using Prism.Mvvm;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using BindableBase = Prism.Mvvm.BindableBase;
 
 namespace Modules.Slides.ViewModels
 {
@@ -17,32 +17,25 @@ namespace Modules.Slides.ViewModels
 
         private IPresentation _selectedPresentation;
 
-        private bool _isSelectedPresentation;
-
         private readonly IEventAggregator _eventAggregator;
 
-        private SlideViewModel _selectedSlide;
+        private ISlideViewModel _selectedSlide;
 
         #endregion Fields
 
         #region Properties
-
-        public bool IsSelectedPresentation
-        {
-            get => _isSelectedPresentation;
-            set => SetProperty(ref _isSelectedPresentation, value);
-        }
 
         public ICommand AddSlideCommand { get; }
         public ICommand RemoveSlideCommand { get; }
 
         public ObservableCollection<ISlideViewModel> Slides { get; }
 
-        public SlideViewModel SelectedSlide
+        public ISlideViewModel SelectedSlide
         {
             get => _selectedSlide;
             set => SetProperty(ref _selectedSlide, value, OnSelectedSlideChanged);
         }
+
         public IPresentation SelectedPresentation
         {
             get => _selectedPresentation;
@@ -50,6 +43,8 @@ namespace Modules.Slides.ViewModels
         }
 
         #endregion Properties
+
+        #region Constructor
 
         public SlideContainerViewModel(IEventAggregator eventAggregator)
         {
@@ -60,15 +55,13 @@ namespace Modules.Slides.ViewModels
             eventAggregator.GetEvent<SelectedPresentationEvent>().Subscribe(OnSelectedPresentation);
 
             eventAggregator.GetEvent<AddSlideEvent>().Subscribe(OnAddSlide);
-
-            eventAggregator.GetEvent<AddTextElementEvent>().Subscribe(AddTextElementChanged);
-            eventAggregator.GetEvent<AddImageElementEvent>().Subscribe(AddImageElementChanged);
-            eventAggregator.GetEvent<AddVideoElementEvent>().Subscribe(AddVideoElementChanged);
-            eventAggregator.GetEvent<RemoveElementEvent>().Subscribe(RemoveElementChanged);
+            eventAggregator.GetEvent<RemoveSlideEvent>().Subscribe(OnRemoveSlide);
 
             AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
             RemoveSlideCommand = new DelegateCommand(RemoveSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
         }
+
+        #endregion Constructor
 
         #region Methods
 
@@ -99,6 +92,7 @@ namespace Modules.Slides.ViewModels
         {
             Slides.Clear();
             OnLoadSlides();
+            //SelectedSlide = Slides.FirstOrDefault();
         }
 
         private void OnSelectedSlideChanged()
@@ -111,6 +105,8 @@ namespace Modules.Slides.ViewModels
             var slide = new Slide("NewSlide");
 
             _eventAggregator.GetEvent<AddSlideEvent>().Publish(slide);
+
+            SelectedPresentation.Slides.Add(slide);
         }
 
         private void OnAddSlide(ISlide slide)
@@ -122,38 +118,19 @@ namespace Modules.Slides.ViewModels
 
         private void RemoveSlide()
         {
+            SelectedPresentation.Slides.Remove(SelectedSlide.Slide);
+
             _eventAggregator.GetEvent<RemoveSlideEvent>().Publish(SelectedSlide.Slide);
-
-            Slides.Remove(SelectedSlide);
         }
 
-        private void AddTextElementChanged(IElement element)
+        private void OnRemoveSlide(ISlide slide)
         {
-            var addText = Slides.First(x => x.Slide == SelectedSlide.Slide);
+            var removeSlide = Slides.First(x => x.Slide == slide);
+            Slides.Remove(removeSlide);
 
-            addText.Slide.Elements.Add(element);
+            //select s;lide
         }
 
-        private void AddImageElementChanged(IElement element)
-        {
-            var addImage = Slides.First(x => x.Slide == SelectedSlide.Slide);
-
-            addImage.Slide.Elements.Add(element);
-        }
-
-        private void AddVideoElementChanged(IElement element)
-        {
-            var addVideo = Slides.First(x => x.Slide == SelectedSlide.Slide);
-
-            addVideo.Slide.Elements.Add(element);
-        }
-
-        private void RemoveElementChanged(IElement element)
-        {
-            var removeElement = Slides.First(x => x.Slide == SelectedSlide.Slide);
-
-            removeElement.Slide.Elements.Remove(element);
-        }
         #endregion Methods
     }
 }

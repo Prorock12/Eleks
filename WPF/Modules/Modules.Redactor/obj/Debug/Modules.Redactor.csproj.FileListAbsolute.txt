@@ -70,3 +70,9 @@ C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\GalaSoft.MvvmLight.
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\GalaSoft.MvvmLight.pdb
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\CommonUI.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\CommonUI.pdb
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\Services.FilseSelector.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\bin\Debug\Services.FilseSelector.pdb
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\obj\Debug\Styles\VideoPlayer.g.cs
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\obj\Debug\Styles\VideoPlayer.baml
