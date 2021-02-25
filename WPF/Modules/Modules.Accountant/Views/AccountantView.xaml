@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="Modules.Accountant.Views.AccountantView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:viewModels="clr-namespace:Modules.Accountant.ViewModels"
+             xmlns:converters="clr-namespace:CommonUI.Converters;assembly=CommonUI"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance viewModels:AccountantViewModel}">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Styles/AccountantStyles.xaml"/>
+    </UserControl.Resources>
+
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        
+
+        <xcdg:DataGridControl Grid.Row="0" x:Name="ElementsGrid"
+                              ItemsSource="{Binding Elements}"
+                              SelectedItem="{Binding SelectedElement, Mode=TwoWay}"
+                              EditTriggers="ClickOnCurrentCell"
+                              Style="{StaticResource  {x:Type xcdg:DataGridControl}}"
+                              MouseRightButtonDown="RightButtonSelectElement_OnMouseRightButtonDown"
+                              GotKeyboardFocus="ElementsGrid_OnGotKeyboardFocus">
+            <xcdg:DataGridControl.View>
+                <xcdg:TableView Style="{StaticResource DatamartDataGridTableViewStyle}"/>
+            </xcdg:DataGridControl.View>
+
+            <xcdg:DataGridControl.InputBindings>
+                <KeyBinding Key="E"
+                    Modifiers="Control"
+                    Command="{Binding AddRowCommand}"/>
+                <KeyBinding Key="R"
+                    Modifiers="Control"
+                    Command="{Binding RemoveRowCommand}"/>
+            </xcdg:DataGridControl.InputBindings>
+
+            <xcdg:DataGridControl.Columns>
+                <xcdg:Column Title="Id"
+                             FieldName="Id"
+                             ReadOnly="True"
+                             />
+                <xcdg:Column Title="Name" FieldName="Name"/>
+                <xcdg:Column Title="X" 
+                             FieldName="X" >
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource XDataTemplate}"/>
+                    </xcdg:Column.CellEditor>
+                </xcdg:Column>
+                <xcdg:Column Title="Y" 
+                             FieldName="Y"
+                             CellEditor="{StaticResource YCellEditor}"/>
+                <xcdg:Column Title="Width" 
+                             FieldName="Width"
+                             CellEditor="{StaticResource WidthCellEditor}"
+                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}"/>
+                <xcdg:Column Title="Height" 
+                             FieldName="Height"
+                             CellEditor="{StaticResource HeightCellEditor}"
+                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}"/>
+                <xcdg:Column Title="Angle" 
+                             FieldName="Angle"
+                             CellEditor="{StaticResource AngleCellEditor}"/>
+                <xcdg:Column Title="Background" FieldName="Background"
+                             CellEditor="{StaticResource ColorsCellEditor}"
+                             AllowSort="False"/>
+                <xcdg:Column Title="BorderBrush" FieldName="BorderBrush"
+                             CellEditor="{StaticResource ColorsCellEditor}"
+                             AllowSort="False">
+                </xcdg:Column>
+            </xcdg:DataGridControl.Columns>
+
+        </xcdg:DataGridControl>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="AddRow" Command="{Binding AddRowCommand}" />
+            <Button Content="RemoveRow" Command="{Binding RemoveRowCommand}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

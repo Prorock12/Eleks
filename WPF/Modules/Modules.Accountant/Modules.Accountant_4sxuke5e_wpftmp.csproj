@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DDD598F-7D09-4741-9956-40C9655DC5C9}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modules.Accountant</RootNamespace>
+    <AssemblyName>Modules.Accountant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountantModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ViewModels\AccountantViewModel.cs" />
+    <Compile Include="Views\AccountantView.xaml.cs">
+      <DependentUpon>AccountantView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj">
+      <Project>{92eae888-2724-4d9d-b099-6c4fdd7b1be9}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\Models.csproj">
+      <Project>{2e1605c1-c01c-47d1-b74b-f12f3b2ca9fc}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+    <PackageReference Include="Xceed.Products.Wpf.DataGrid.Full">
+      <Version>7.0.21101.19010</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Infrastructure.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\WPF\Models\bin\Debug\Models.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\prism.core\8.0.0.1909\lib\net47\Prism.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\prism.wpf\8.0.0.1909\lib\net47\Prism.Wpf.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\WindowsBase.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.controls\7.0.21101.19010\lib\net40\Xceed.Wpf.Controls.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.controls\7.0.21101.19010\lib\net40\Xceed.Wpf.Controls.v7.0.XmlSerializers.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.themepack.1\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.ThemePack.1.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.themepack.2\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.ThemePack.2.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.themepack.3\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.ThemePack.3.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.themepack.4\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.ThemePack.4.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.themepack.5\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.ThemePack.5.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.v7.0.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.v7.0.XmlSerializers.dll" />
+    <ReferencePath Include="C:\Users\bohdan.hlyva\.nuget\packages\xceed.wpf.datagrid.views3d\7.0.21101.19010\lib\net40\Xceed.Wpf.DataGrid.Views3D.v7.0.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\bohdan.hlyva\WPF\Modules\Modules.Accountant\obj\Debug\Views\AccountantView.g.cs" />
+  </ItemGroup>
+</Project>

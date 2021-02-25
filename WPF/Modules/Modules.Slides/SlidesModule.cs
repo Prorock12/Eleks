@@ -8,12 +8,22 @@ namespace Modules.Slides
 {
     public class SlidesModule : IModule
     {
+        #region Fields
+
         private readonly IRegionManager _regionManager;
+
+        #endregion Fields
+
+        #region Constructor
 
         public SlidesModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
+
+        #endregion Constructor
+
+        #region Methods
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
@@ -23,5 +33,7 @@ namespace Modules.Slides
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
         }
+
+        #endregion Methods
     }
 }

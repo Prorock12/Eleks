@@ -13,32 +13,49 @@
         <ResourceDictionary Source="../Styles/ElementStyle.xaml" />
     </UserControl.Resources>
 
-    <Grid>
-        <ListBox x:Name="ElementListBoxStyle"
-                 Style="{StaticResource ElementListBoxStyle}"
-                     ItemsSource="{Binding Elements}"
-                     SelectedItem="{Binding SelectedElement}" />
+    <Border>
+        <Grid x:Name="ElementsShell">
 
-        <StackPanel Orientation="Horizontal"
-                    VerticalAlignment="Bottom"
-                    Background="Black">
-            <CheckBox x:Name="ElementCheckBox"
-                      Content="Change Stack View"
-                      IsChecked="{Binding IsStackView}"
-                      Margin="10"
-                      Foreground="AliceBlue" />
-            <Button Command="{Binding AddTextElementCommand}"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Viewbox>
+                <ListBox x:Name="ElementsListBox" 
+                         Width="{Binding SelectedPresentation.Resolution.Width}"
+                         Height="{Binding SelectedPresentation.Resolution.Height}"
+                         Style="{StaticResource ElementListBoxStyle}"
+                         ItemsSource="{Binding Elements}"
+                         SelectedItem="{Binding SelectedElement}"
+                         MouseDown="ElementsListBox_OnMouseDown"
+                         MouseUp="ElementsListBox_OnMouseUp"
+                         MouseMove="ElementsListBox_OnMouseMove"/>
+            </Viewbox>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal"
+                    VerticalAlignment="Bottom">
+
+                <CheckBox Content="Change Stack View"
+                          IsChecked="{Binding IsStackView}"
+                          Foreground="AliceBlue" />
+
+                <Button Command="{Binding AddTextElementCommand}"
                     Content="Add Text"
-                    Margin="10" />
-            <Button Command="{Binding AddImageElementCommand}"
+                    Style="{StaticResource AddButtonStyle}" />
+
+                <Button Command="{Binding AddImageElementCommand}"
                     Content="Add Image"
-                    Margin="10" />
-            <Button Command="{Binding AddVideoElementCommand}"
+                    Style="{StaticResource AddButtonStyle}" />
+
+                <Button Command="{Binding AddVideoElementCommand}"
                     Content="Add Video"
-                    Margin="10" />
-            <Button Command="{Binding  RemoveElementCommand}"
+                    Style="{StaticResource AddButtonStyle}" />
+
+                <Button Command="{Binding  RemoveElementCommand}"
                     Content="Remove Element"
-                    Margin="10" />
-        </StackPanel>
-    </Grid>
+                    Style="{StaticResource RemoveButtonStyle}" />
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

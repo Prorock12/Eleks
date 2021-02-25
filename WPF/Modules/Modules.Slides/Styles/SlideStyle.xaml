@@ -6,30 +6,111 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type ListBox}">
-        <Setter Property="Foreground" Value="AntiqueWhite" />
+        <Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
         <Setter Property="FontSize" Value="20" />
+        <Setter Property="BorderThickness" Value="0 0 0 2" />
+        <Setter Property="BorderBrush" Value="White" />
     </Style>
 
     <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Black" />
-        <Setter Property="Background" Value="Bisque" />
+        <Setter Property="Foreground" Value="Bisque" />
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Margin" Value="5" />
     </Style>
 
-    <DataTemplate x:Key="SlideTemplate" DataType="{x:Type viewModels:SlideViewModel}">
-        <TextBlock Text="{Binding   Slide.Name}" />
+    <Style TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="Black" />
+    </Style>
+
+    <Style TargetType="Border">
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderThickness" Value="2 0 0 2" />
+    </Style>
+
+    <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Green" />
+                <Setter Property="Foreground" Value="Goldenrod" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="RemoveButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkRed" />
+                <Setter Property="Foreground" Value="Black" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="SlideListBoxTemplate" DataType="{x:Type viewModels:SlideViewModel}">
+        <TextBlock Text="{Binding   Slide.Name}" Padding="5" />
     </DataTemplate>
 
-    <ControlTemplate x:Key="SlideControlTemplate" TargetType="{x:Type ListBox}">
-        <StackPanel Background="Black">
+    <ControlTemplate x:Key="SlideListBoxControlTemplate" TargetType="{x:Type ListBox}">
+        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
             <ItemsPresenter />
-        </StackPanel>
+        </Border>
     </ControlTemplate>
 
     <Style x:Key="SlidesListBoxStyle"
            TargetType="ListBox"
            BasedOn="{StaticResource {x:Type ListBox}}">
-        <Setter Property="ItemTemplate" Value="{StaticResource SlideTemplate}" />
-        <Setter Property="Template" Value="{StaticResource SlideControlTemplate}" />
+        <Setter Property="Template" Value="{StaticResource SlideListBoxControlTemplate}" />
+        <Setter Property="ItemTemplate" Value="{StaticResource SlideListBoxTemplate}" />
+    </Style>
+
+    <Style  TargetType="ListBoxItem">
+        <Setter Property="Margin" Value="5" />
+
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Foreground" Value="SandyBrown" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AddButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource AddButtonControlTemplate}" />
+    </Style>
+
+    <Style x:Key="RemoveButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource RemoveButtonControlTemplate}" />
     </Style>
 </ResourceDictionary>

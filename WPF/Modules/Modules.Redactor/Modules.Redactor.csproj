@@ -50,6 +50,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IElementViewModel.cs" />
+    <Compile Include="Interfaces\IImageElementViewModel.cs" />
+    <Compile Include="Interfaces\IMediaElementViewModel.cs" />
+    <Compile Include="Interfaces\ITextElementViewModel.cs" />
+    <Compile Include="Interfaces\IVideoElementVewModel.cs" />
+    <Compile Include="Interfaces\IVisualElementViewModel.cs" />
     <Compile Include="RedactorModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -64,10 +70,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Styles\VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ElementContainerViewModel.cs" />
     <Compile Include="ViewModels\ElementViewModel.cs" />
     <Compile Include="ViewModels\ImageElementViewModel.cs" />
     <Compile Include="ViewModels\MediaElementViewModel.cs" />
+    <Compile Include="ViewModels\ShapesElementViewModel.cs" />
     <Compile Include="ViewModels\TextElementViewModel.cs" />
     <Compile Include="ViewModels\VideoElementViewModel.cs" />
     <Compile Include="ViewModels\VisualElementViewModel.cs" />
@@ -89,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\VideoPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ElementContainerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +118,10 @@
     <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CommonStyles\CommonUI.csproj">
+      <Project>{7070743e-31e8-42df-8c77-0682b41c4c91}</Project>
+      <Name>CommonUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj">
       <Project>{92eae888-2724-4d9d-b099-6c4fdd7b1be9}</Project>
       <Name>Infrastructure</Name>
@@ -112,6 +130,20 @@
       <Project>{2e1605c1-c01c-47d1-b74b-f12f3b2ca9fc}</Project>
       <Name>Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
+      <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
+      <Name>Services.FilseSelector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Files\Videos\video1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Files\Images\image1.jpg" />
+    <Content Include="Files\Images\image2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\TextDocuments\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

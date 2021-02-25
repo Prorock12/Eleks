@@ -44,3 +44,7 @@ C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\GalaSoft.
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\GalaSoft.MvvmLight.pdb
 C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.FilseSelector.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.FilseSelector.pdb
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\CommonUI.dll
+C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\bin\Debug\CommonUI.pdb

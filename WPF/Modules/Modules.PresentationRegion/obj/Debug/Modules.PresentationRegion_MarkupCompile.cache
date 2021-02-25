@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\bohdan.hlyva\WPF\Modules\Modules.PresentationRegion\obj\Debug\
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\
 Modules.PresentationRegion
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 2-257491634
 
-71587182044
-1352049462676
+8633806735
+135-299641438
 Styles\PresentationStyle.xaml;Views\PresentationContainerView.xaml;
 
-False
+True
 

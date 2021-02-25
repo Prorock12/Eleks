@@ -1,5 +1,5 @@
 ﻿using Models.Interfaces.Models;
-using Models.Interfaces.ViewModels;
+using Modules.Slides.Interfaces;
 
 namespace Modules.Slides.ViewModels
 {
@@ -11,9 +11,13 @@ namespace Modules.Slides.ViewModels
 
         #endregion Properties
 
+        #region Constructor
+
         public SlideViewModel(ISlide slide)
         {
             Slide = slide;
         }
+
+        #endregion Constructor
     }
 }

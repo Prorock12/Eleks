@@ -13,27 +13,29 @@
         <ResourceDictionary Source="../Styles/PresentationStyle.xaml" />
     </UserControl.Resources>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
+    <Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Column="0"
-                 Style="{StaticResource PresentationsListBoxStyle}"
+            <ListBox Grid.Column="0" Style="{StaticResource PresentationsListBoxStyle}"
                  ItemsSource="{Binding Presentations}"
                  SelectedItem="{Binding SelectedPresentation}" />
 
-        <StackPanel Grid.Column="1"
-                    Orientation="Horizontal"
-                    Background="Black">
-            <Button Content="Add Presentation"
-                    Command="{Binding AddPresentationCommand}"
-                    Margin="10" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button Content="Add Presentation"
+                    Style="{StaticResource AddButtonStyle}"
+                    Command="{Binding AddPresentationCommand}" />
 
-            <Button Content="Remove Presentation"
-                    Command="{Binding RemovePresentationCommand}"
-                    Margin="10" />
-        </StackPanel>
-    </Grid>
+                <Button Content="Remove Presentation"
+                    Style="{StaticResource RemoveButtonStyle}"
+                    Command="{Binding RemovePresentationCommand}" />
+
+                <Button Content="Change Size"
+                        Command="{Binding ChangeSizeCommand}" />
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

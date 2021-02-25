@@ -1,6 +1,6 @@
 ﻿using Models.Interfaces.Models;
-using System.Collections.ObjectModel;
 using Prism.Mvvm;
+using System.Collections.ObjectModel;
 
 namespace Models.Models
 {
@@ -26,7 +26,7 @@ namespace Models.Models
 
         #region Constructors
 
-        public Slide(string name) :this()
+        public Slide(string name) : this()
         {
             Name = name;
         }

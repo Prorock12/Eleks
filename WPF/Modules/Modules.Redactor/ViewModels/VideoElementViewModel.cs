@@ -1,5 +1,12 @@
 ﻿using Models.Interfaces.Models;
-using Models.Interfaces.ViewModels;
+using Modules.Redactor.Interfaces;
+using Prism.Commands;
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace Modules.Redactor.ViewModels
 {
@@ -11,9 +18,13 @@ namespace Modules.Redactor.ViewModels
 
         #endregion Properties
 
+        #region Constructors
+
         public VideoElementViewModel(IVideoElement element) : base(element)
         {
             VideoElement = element;
         }
+
+        #endregion Constructors
     }
 }

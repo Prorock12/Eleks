@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Modules.Controller.Views.ControllerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:mvvm="http://prismlibrary.com/"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Modules.Controller.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance viewModels:ControllerViewModel}"
+             mvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Styles/SlideStyle.xaml" />
+    </UserControl.Resources>
+
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        Background="Black">
+                <Button Command="{Binding AddSlideCommand}"
+                        Content="Add Slide"
+                        Style="{StaticResource AddButtonStyle}" />
+                <Button Command="{Binding AddTextCommand}"
+                        Content="Add Text"
+                        Style="{StaticResource AddButtonStyle}" />
+                <Button Command="{Binding AddImageCommand}"
+                        Content="Add Image"
+                        Style="{StaticResource AddButtonStyle}" />
+                <Button Command="{Binding AddVideoCommand}"
+                        Content="Add Video"
+                        Style="{StaticResource AddButtonStyle}" />
+                <CheckBox    Content="Horizontal View"
+                             IsChecked="{Binding IsStackView}" />
+            </StackPanel>
+
+            <ItemsControl Grid.Row="1"
+                              Style="{StaticResource SlidesListBoxStyle}"
+                              ItemsSource="{Binding  Slides}" />
+        </Grid>
+    </Border>
+</UserControl>

@@ -3,22 +3,121 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:viewModels1="clr-namespace:Modules.Redactor.ViewModels"
+                    xmlns:common ="clr-namespace:CommonUI;assembly=CommonUI"
+                    xmlns:converters="clr-namespace:CommonUI.Converters;assembly=CommonUI"
+                    xmlns:local ="clr-namespace:Modules.Redactor.Styles"
                     mc:Ignorable="d">
 
+    <converters:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
+    
     <Style TargetType="{x:Type ListBox}">
-        <Setter Property="Foreground" Value="AntiqueWhite" />
+        <Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
         <Setter Property="FontSize" Value="20" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderThickness" Value="0 0 0 2" />
     </Style>
 
     <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Black" />
-        <Setter Property="Background" Value="Bisque" />
+        <Setter Property="Foreground" Value="Bisque" />
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Margin" Value="5" />
     </Style>
 
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="Margin" Value="10 17 10 10" />
+        <Setter Property="Padding" Value="5" />
+    </Style>
+
+    <Style TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderThickness" Value="0 0 2 2" />
+    </Style>
+
+    <Style TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="Black" />
+    </Style>
+
+    <Style x:Key="VisualElementBorderEffectStyle">
+
+    </Style>
+
+    <ControlTemplate x:Key="ElementControlTemplate" TargetType="{x:Type ListBoxItem}">
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <Border 
+                BorderThickness="{Binding VisualElement.BorderThickness}"
+                CornerRadius="{Binding VisualElement.CornerRadius}"
+                Padding="{Binding VisualElement.Padding}"
+                Style="{StaticResource VisualElementBorderEffectStyle}">
+                <Border.Background>
+                    <SolidColorBrush Color="{Binding VisualElement.Background}" />
+                </Border.Background>
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="{Binding VisualElement.BorderBrush}"/>
+                </Border.BorderBrush>
+                <Border.Effect>
+                    <BlurEffect Radius="{Binding VisualElement.Radius}"
+                                KernelType="{Binding VisualElement.KernelType}"
+                                RenderingBias="{Binding VisualElement.RenderingBias}"/>
+                </Border.Effect>
+                <ContentPresenter>
+                    <ContentPresenter.Effect>
+                        <DropShadowEffect BlurRadius="{Binding VisualElement.BlurRadius}" 
+                                          Color="{Binding VisualElement.Color}"
+                                          Direction="{Binding VisualElement.Direction}"
+                                          Opacity="{Binding VisualElement.Opacity}"
+                                          ShadowDepth="{Binding VisualElement.ShadowDepth}"/>
+                    </ContentPresenter.Effect>
+                </ContentPresenter>
+            </Border>
+        </Border>
+        <ControlTemplate.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#1F26A0DA"/>
+                    <Setter Property="BorderBrush" Value="#A826A0DA"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                    <Condition Property="IsSelected" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#3DDADADA"/>
+                    <Setter Property="BorderBrush" Value="#FFDADADA"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                    <Condition Property="IsSelected" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#3D26A0DA"/>
+                    <Setter Property="BorderBrush" Value="#FF26A0DA"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="#FF6D6D6D"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
+
     <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type ListBoxItem}">
-        <Setter Property="Width" Value="{Binding VisualElement.X}" />
-        <Setter Property="Height" Value="{Binding VisualElement.Y}" />
+        <Setter Property="Width" Value="{Binding VisualElement.Width}" />
+        <Setter Property="Height" Value="{Binding VisualElement.Height}" />
+        <Setter Property="Margin" Value="{Binding VisualElement.Margin}"/>
+        <Setter Property="Template" Value="{StaticResource ElementControlTemplate}"/>
     </Style>
 
     <Style x:Key="CanvasElementContainerStyle"  TargetType="{x:Type ListBoxItem}">
@@ -26,39 +125,132 @@
         <Setter Property="Canvas.Top" Value="{Binding VisualElement.Y}" />
         <Setter Property="Width" Value="{Binding VisualElement.Width}" />
         <Setter Property="Height" Value="{Binding VisualElement.Height}" />
+        <Setter Property="Margin" Value="{Binding VisualElement.Margin}"/>
+        <Setter Property="RenderTransformOrigin">
+            <Setter.Value>
+                <Point X="50" Y="50"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <RotateTransform Angle="{Binding VisualElement.Angle}"/>
+            </Setter.Value>
+        </Setter>
     </Style>
 
+    <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Green" />
+                <Setter Property="Foreground" Value="Goldenrod" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="RemoveButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter  Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkRed" />
+                <Setter Property="Foreground" Value="Black" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
     <DataTemplate DataType="{x:Type viewModels1:TextElementViewModel}">
-        <TextBlock Background="Brown" Text="{Binding   TextElement.Name}" />
+        <Border>
+            <StackPanel>
+                <common:RichTextBoxExtended x:Name="MyRtb" Text="{Binding TextElement.Text}"
+                                            Background="{Binding TextElement.Background}"
+                                            Width="Auto"
+                                            Foreground="Black"
+                                            Padding="5"/>
+                <StackPanel Orientation="Horizontal">
+                <Button Content="Load" Command="{Binding LoadCommand, ElementName=MyRtb}"/>
+                <Button Content="Save" Command="{Binding SaveCommand, ElementName=MyRtb}"/>
+                </StackPanel>
+            </StackPanel>
+            <Border.Effect>
+                <DropShadowEffect></DropShadowEffect>
+            </Border.Effect>
+        </Border>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type viewModels1:ImageElementViewModel}">
-        <TextBlock Background="Blue" Text="{Binding  ImageElement.Name}" />
+        <Image Source="{Binding ImageElement.Path}"/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type viewModels1:VideoElementViewModel}">
-        <TextBlock Background="Purple" Text="{Binding VideoElement.Name}" />
+        <local:VideoPlayer/>
     </DataTemplate>
 
-    <ItemsPanelTemplate x:Key="ElementPanel">
+    <ControlTemplate x:Key="ElementsListBoxControlTemplate" TargetType="{x:Type ListBox}">
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ItemsPresenter />
+        </Border>
+    </ControlTemplate>
+
+    <ItemsPanelTemplate x:Key="ElementWrapPanel">
         <WrapPanel />
     </ItemsPanelTemplate>
 
-    <ItemsPanelTemplate x:Key="CanvasElementPanel">
+    <ItemsPanelTemplate x:Key="ElementCanvasPanel">
         <Canvas />
     </ItemsPanelTemplate>
 
     <Style x:Key="ElementListBoxStyle"
            TargetType="{x:Type ListBox}"
            BasedOn="{StaticResource {x:Type ListBox}}">
-        <Setter Property="ItemsPanel" Value="{StaticResource ElementPanel}" />
+        <Setter Property="ItemsPanel" Value="{StaticResource ElementWrapPanel}" />
         <Setter Property="ItemContainerStyle" Value="{StaticResource  WrapElementContainerStyle}" />
-
+        <Setter Property="Template" Value="{StaticResource ElementsListBoxControlTemplate}" />
+       
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsStackView}"  Value="True">
-                <Setter Property="ItemsPanel" Value="{StaticResource CanvasElementPanel}" />
+                <Setter Property="ItemsPanel" Value="{StaticResource ElementCanvasPanel}" />
                 <Setter Property="ItemContainerStyle" Value="{StaticResource CanvasElementContainerStyle}" />
             </DataTrigger>
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AddButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource AddButtonControlTemplate}" />
+    </Style>
+
+    <Style x:Key="RemoveButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource RemoveButtonControlTemplate}" />
     </Style>
 </ResourceDictionary>

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\bohdan.hlyva\WPF\Modules\Modules.Slides\obj\Debug\
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\obj\Debug\
 Modules.Slides
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 2-1271673298
 
-71506343981
-134-1926896599
+8-1510490942
+134-329933536
 Styles\SlideStyle.xaml;Views\SlideContainerView.xaml;
 
-False
+True
 

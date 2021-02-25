@@ -20,9 +20,12 @@ namespace Models.Models
 
         #endregion Properties
 
+        #region Constructor
+
         public MediaElement(string name) : base(name)
         {
-
         }
+
+        #endregion Constructor
     }
 }

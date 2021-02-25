@@ -13,21 +13,30 @@
         <ResourceDictionary Source="../Styles/SlideStyle.xaml" />
     </UserControl.Resources>
 
-    <Grid>
-        <ListBox Grid.Column="0"
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ListBox Grid.Row="0"
                  Style="{StaticResource SlidesListBoxStyle}"
                  ItemsSource="{Binding  Slides}"
-                 SelectedItem="{Binding SelectedSlide}"/>
+                 SelectedItem="{Binding SelectedSlide}" />
 
-        <StackPanel Grid.Column="0"
+            <StackPanel Grid.Row="1"
                     VerticalAlignment="Bottom"
                     Background="Black">
-            <Button Command="{Binding AddSlideCommand}"
-                    Content="Add Slide"
-                    Margin="10" />
-            <Button Command="{Binding RemoveSlideCommand}"
+
+                <Button Command="{Binding AddSlideCommand}"
+                        Content="Add Slide"
+                        Style="{StaticResource AddButtonStyle}" />
+
+                <Button Command="{Binding RemoveSlideCommand}"
                     Content="Remove Slide"
-                    Margin="10" />
-        </StackPanel>
-    </Grid>
+                    Style="{StaticResource RemoveButtonStyle}" />
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

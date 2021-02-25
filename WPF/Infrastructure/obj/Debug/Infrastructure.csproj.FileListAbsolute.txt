@@ -10,3 +10,9 @@ C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\Prism.xml
 C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.csproj.CopyComplete
 C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.dll
 C:\Users\bohdan.hlyva\WPF\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\PresentationCore.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\PresentationFramework.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\System.Design.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\System.Xaml.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\UIAutomationProvider.dll
+C:\Users\bohdan.hlyva\WPF\Infrastructure\bin\Debug\WindowsBase.dll

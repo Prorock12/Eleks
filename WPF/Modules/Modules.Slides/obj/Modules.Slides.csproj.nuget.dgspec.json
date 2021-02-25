@@ -4,6 +4,25 @@
     "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {}
   },
   "projects": {
+    "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectName": "CommonUI",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
@@ -61,11 +80,17 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj"
+              },
               "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
               },
               "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"
               }
             }
           }
@@ -170,6 +195,25 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
+        "projectName": "Services.FilseSelector",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

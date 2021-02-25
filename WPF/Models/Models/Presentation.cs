@@ -1,6 +1,6 @@
 ﻿using Models.Interfaces.Models;
-using System.Collections.ObjectModel;
 using Prism.Mvvm;
+using System.Collections.ObjectModel;
 
 namespace Models.Models
 {
@@ -10,6 +10,7 @@ namespace Models.Models
 
         private string _name;
         private string _path;
+        private IResolution _resolution;
 
         #endregion Fields
 
@@ -17,7 +18,7 @@ namespace Models.Models
 
         public string Name
         {
-            get => _name; 
+            get => _name;
             set => SetProperty(ref _name, value);
         }
 
@@ -29,24 +30,38 @@ namespace Models.Models
 
         public ObservableCollection<ISlide> Slides { get; set; }
 
+        public IResolution Resolution
+        {
+            get => _resolution;
+            set => SetProperty(ref _resolution, value);
+        }
+
         #endregion Properties
 
-        #region Constructor
+        #region Constructors
 
         public Presentation()
         {
+            Resolution = new Resolution
+            {
+                Height = 1000,
+                Width = 1000
+            };
+
             Slides = new ObservableCollection<ISlide>()
             {
                 new Slide("First Slide"),
                 new Slide("Second")
             };
+
+            Name = nameof(Presentation);
         }
 
-        public Presentation(string name):this()
+        public Presentation(string name) : this()
         {
             Name = name;
         }
 
-        #endregion Constructor
+        #endregion Constructors
     }
 }

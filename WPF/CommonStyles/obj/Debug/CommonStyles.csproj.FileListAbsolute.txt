@@ -1,0 +1,14 @@
+C:\Users\bohdan.hlyva\WPF\CommonStyles\bin\Debug\CommonStyles.dll
+C:\Users\bohdan.hlyva\WPF\CommonStyles\bin\Debug\CommonStyles.pdb
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles_MarkupCompile.cache
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.g.resources
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.Properties.Resources.resources
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.csproj.GenerateResource.cache
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.dll
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.pdb
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\Styles\GridSplitterStyle.baml
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\CommonStyles_MarkupCompile.lref
+C:\Users\bohdan.hlyva\WPF\CommonStyles\obj\Debug\Styles\Converters.baml

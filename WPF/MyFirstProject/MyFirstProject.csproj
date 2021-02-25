@@ -89,7 +89,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="Views\ChangeSizeDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -97,9 +101,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ViewModels\ChangeSizeDialogViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\ChangeSizeDialogView.xaml.cs">
+      <DependentUpon>ChangeSizeDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -131,9 +139,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonStyles\CommonUI.csproj">
+      <Project>{7070743e-31e8-42df-8c77-0682b41c4c91}</Project>
+      <Name>CommonUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{92eae888-2724-4d9d-b099-6c4fdd7b1be9}</Project>
       <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{2e1605c1-c01c-47d1-b74b-f12f3b2ca9fc}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Modules.Accountant\Modules.Accountant.csproj">
+      <Project>{4ddd598f-7d09-4741-9956-40c9655dc5c9}</Project>
+      <Name>Modules.Accountant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Modules.Controller\Modules.Controller.csproj">
+      <Project>{752b7ca8-a337-4914-8f08-8a9fa81dacd7}</Project>
+      <Name>Modules.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Modules.Effects\Modules.Effects.csproj">
+      <Project>{26efa4e9-b8cc-4bae-b431-02d94c2b8ed6}</Project>
+      <Name>Modules.Effects</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\Modules.PresentationRegion\Modules.PresentationRegion.csproj">
       <Project>{c793c551-bf6d-4f9a-9419-d90deb9017aa}</Project>
@@ -146,6 +174,14 @@
     <ProjectReference Include="..\Modules\Modules.Slides\Modules.Slides.csproj">
       <Project>{b55f85d9-811d-4824-ab71-c38c801ffc21}</Project>
       <Name>Modules.Slides</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.DialogService\Services.DialogService.csproj">
+      <Project>{17ff1ce4-8cbe-4a84-bda8-c1f9da573943}</Project>
+      <Name>Services.DialogService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
+      <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
+      <Name>Services.FilseSelector</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

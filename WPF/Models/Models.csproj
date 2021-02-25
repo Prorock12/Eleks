@@ -51,26 +51,27 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Effects\IBlurEffect.cs" />
+    <Compile Include="Interfaces\Effects\IBorderEffect.cs" />
+    <Compile Include="Interfaces\Effects\IDropShadowEffect.cs" />
+    <Compile Include="Interfaces\Effects\IEffect.cs" />
+    <Compile Include="Interfaces\Effects\IMarginEffect.cs" />
+    <Compile Include="Interfaces\Effects\IMediaEffect.cs" />
+    <Compile Include="Interfaces\Effects\IPositionEffect.cs" />
     <Compile Include="Interfaces\Models\IElement.cs" />
     <Compile Include="Interfaces\Models\IImageElement.cs" />
     <Compile Include="Interfaces\Models\IMediaElement.cs" />
     <Compile Include="Interfaces\Models\IPresentation.cs" />
+    <Compile Include="Interfaces\Models\IResolution.cs" />
     <Compile Include="Interfaces\Models\ISlide.cs" />
     <Compile Include="Interfaces\Models\ITextElement.cs" />
     <Compile Include="Interfaces\Models\IVideoElement.cs" />
     <Compile Include="Interfaces\Models\IVisualElement.cs" />
-    <Compile Include="Interfaces\ViewModels\IElementViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\IImageElementViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\IMediaElementViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\IPresentationViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\ISlideViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\ITextElementViewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\IVideoElementVewModel.cs" />
-    <Compile Include="Interfaces\ViewModels\IVisualElementViewModel.cs" />
     <Compile Include="Models\Element.cs" />
     <Compile Include="Models\ImageElement.cs" />
     <Compile Include="Models\MediaElement.cs" />
     <Compile Include="Models\Presentation.cs" />
+    <Compile Include="Models\Resolution.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Models\TextElement.cs" />
     <Compile Include="Models\VideoElement.cs" />
@@ -98,5 +99,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,13 +1,11 @@
 ﻿using Infrastructure.Events;
-using Models.Interfaces.ViewModels;
 using Models.Models;
+using Modules.PresentationRegion.Interfaces;
 using Prism.Commands;
 using Prism.Events;
+using Prism.Mvvm;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
-using Models.Interfaces.Models;
-using BindableBase = Prism.Mvvm.BindableBase;
 
 namespace Modules.PresentationRegion.ViewModels
 {
@@ -16,6 +14,7 @@ namespace Modules.PresentationRegion.ViewModels
         #region Fields
 
         private readonly IEventAggregator _eventAggregator;
+
         private PresentationViewModel _selectedPresentation;
 
         #endregion Fields
@@ -25,6 +24,7 @@ namespace Modules.PresentationRegion.ViewModels
         public ObservableCollection<IPresentationViewModel> Presentations { get; set; }
         public ICommand AddPresentationCommand { get; }
         public ICommand RemovePresentationCommand { get; }
+        public ICommand ChangeSizeCommand { get; }
 
         public PresentationViewModel SelectedPresentation
         {
@@ -40,17 +40,14 @@ namespace Modules.PresentationRegion.ViewModels
         {
             _eventAggregator = eventAggregator;
 
-            eventAggregator.GetEvent<AddSlideEvent>().Subscribe(OnAddSlide);
-            eventAggregator.GetEvent<RemoveSlideEvent>().Subscribe(OnRemoveSlide);
-
-
             AddPresentationCommand = new DelegateCommand(AddPresentation);
             RemovePresentationCommand = new DelegateCommand(RemovePresentation);
+            ChangeSizeCommand = new DelegateCommand(ChangeSizeSendRequest);
 
             Presentations = new ObservableCollection<IPresentationViewModel>
             {
-                new PresentationViewModel(new Presentation{Name = "FirstPresentation" }),
-                new PresentationViewModel(new Presentation{Name = "Second" })
+                new PresentationViewModel(new Presentation("FirstPresentation" )),
+                new PresentationViewModel(new Presentation("Second" ))
             };
         }
 
@@ -58,18 +55,10 @@ namespace Modules.PresentationRegion.ViewModels
 
         #region Methods
 
-        private void OnAddSlide(ISlide slide)
+        private void ChangeSizeSendRequest()
         {
-            var addSlide = Presentations.First(x => x.Presentation == SelectedPresentation.Presentation);
-
-            addSlide.Presentation.Slides.Add(slide);
-        }
-
-        private void OnRemoveSlide(ISlide slide)
-        {
-            var removeSlide = Presentations.First(x => x.Presentation == SelectedPresentation.Presentation);
-
-            removeSlide.Presentation.Slides.Remove(slide);
+            
+            _eventAggregator.GetEvent<SendRequestChangeSizeEvent>().Publish();
         }
 
         private void OnSelectedPresentationChanged()
@@ -79,7 +68,7 @@ namespace Modules.PresentationRegion.ViewModels
 
         private void AddPresentation()
         {
-            var presentation = new PresentationViewModel(new Presentation { Name = "newSlide" });
+            var presentation = new PresentationViewModel(new Presentation("newSlide"));
             Presentations.Insert(Presentations.Count, presentation);
             SelectedPresentation = presentation;
         }
@@ -88,6 +77,7 @@ namespace Modules.PresentationRegion.ViewModels
         {
             Presentations.Remove(SelectedPresentation);
         }
+
         #endregion Methods
     }
 }

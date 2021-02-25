@@ -131,6 +131,18 @@
           "lib/net47/Unity.Container.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -156,11 +168,13 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "CommonUI": "1.0.0",
           "Infrastructure": "1.0.0",
           "Models": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.FilseSelector": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Modules.Redactor.dll": {}
@@ -185,6 +199,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Slides.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
@@ -318,6 +344,18 @@
           "lib/net47/Unity.Container.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -343,11 +381,13 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "CommonUI": "1.0.0",
           "Infrastructure": "1.0.0",
           "Models": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.FilseSelector": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Modules.Redactor.dll": {}
@@ -372,6 +412,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Slides.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
@@ -505,6 +557,18 @@
           "lib/net47/Unity.Container.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -530,11 +594,13 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "CommonUI": "1.0.0",
           "Infrastructure": "1.0.0",
           "Models": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.FilseSelector": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Modules.Redactor.dll": {}
@@ -559,6 +625,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Slides.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
@@ -692,6 +770,18 @@
           "lib/net47/Unity.Container.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -717,11 +807,13 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "CommonUI": "1.0.0",
           "Infrastructure": "1.0.0",
           "Models": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.FilseSelector": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Modules.Redactor.dll": {}
@@ -746,6 +838,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Slides.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     }
@@ -1100,6 +1204,11 @@
         "unity.container.nuspec"
       ]
     },
+    "CommonUI/1.0.0": {
+      "type": "project",
+      "path": "../../CommonStyles/CommonUI.csproj",
+      "msbuildProject": "../../CommonStyles/CommonUI.csproj"
+    },
     "Infrastructure/1.0.0": {
       "type": "project",
       "path": "../../Infrastructure/Infrastructure.csproj",
@@ -1119,6 +1228,11 @@
       "type": "project",
       "path": "../Modules.Slides/Modules.Slides.csproj",
       "msbuildProject": "../Modules.Slides/Modules.Slides.csproj"
+    },
+    "Services.FilseSelector/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj"
     }
   },
   "projectFileDependencyGroups": {
