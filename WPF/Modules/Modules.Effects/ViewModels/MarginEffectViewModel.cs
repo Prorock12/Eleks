@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using Models.Interfaces.Effects;
+﻿using Models.Interfaces.Effects;
+using System.Windows;
 
 namespace Modules.Effects.ViewModels
 {
@@ -12,7 +12,7 @@ namespace Modules.Effects.ViewModels
         private int _top;
         private int _bottom;
 
-        #endregion
+        #endregion Fields
 
         #region Properties
 
@@ -39,14 +39,16 @@ namespace Modules.Effects.ViewModels
             get => _bottom;
             set => SetProperty(ref _bottom, value, OnMarginChanged);
         }
+
         public IMarginEffect MarginEffect { get; }
 
-        #endregion
+        #endregion Properties
 
-        public MarginEffectViewModel(IMarginEffect marginEffect) : base (marginEffect,"Margin")
+        public MarginEffectViewModel(IMarginEffect marginEffect) : base(marginEffect, "Margin")
         {
             MarginEffect = marginEffect;
         }
+
         private void OnMarginChanged()
         {
             MarginEffect.Margin = new Thickness(Left, Top, Right, Bottom);

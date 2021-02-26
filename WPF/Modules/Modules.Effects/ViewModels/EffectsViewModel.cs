@@ -1,5 +1,4 @@
 ﻿using Infrastructure;
-using Prism.Mvvm;
 using Models.Interfaces.Effects;
 
 namespace Modules.Effects.ViewModels
@@ -7,11 +6,13 @@ namespace Modules.Effects.ViewModels
     public class EffectsViewModel : NotifyDataErrorViewModelBase
     {
         private string _name;
+
         public string Name
         {
             get => _name;
             set => SetProperty(ref _name, value);
         }
+
         public IEffect Effect { get; }
 
         public EffectsViewModel(IEffect effect, string name) : this()
@@ -19,9 +20,9 @@ namespace Modules.Effects.ViewModels
             Effect = effect;
             Name = name;
         }
+
         public EffectsViewModel()
         {
-
         }
     }
 }

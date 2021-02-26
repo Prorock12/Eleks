@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Media;
 
 namespace Infrastructure
@@ -40,6 +36,7 @@ namespace Infrastructure
         {
             return new ExtendedColor("Black", Color.FromRgb(0, 0, 0));
         }
+
         private static ExtendedColor GetWhiteColor()
         {
             return new ExtendedColor("White", Color.FromRgb(255, 255, 255));

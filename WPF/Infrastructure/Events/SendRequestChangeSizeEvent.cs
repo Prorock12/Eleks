@@ -4,6 +4,5 @@ namespace Infrastructure.Events
 {
     public class SendRequestChangeSizeEvent : PubSubEvent
     {
-        
     }
 }

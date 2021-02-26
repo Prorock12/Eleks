@@ -1,7 +1,5 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using Prism.Commands;
 
 namespace Modules.Redactor.Views
 {
@@ -14,12 +12,13 @@ namespace Modules.Redactor.Views
 
         private bool _isMoving;
 
-        #endregion
+        #endregion Fields
 
         public ElementContainerView()
         {
             InitializeComponent();
         }
+
         private void ElementsListBox_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _isMoving = true;

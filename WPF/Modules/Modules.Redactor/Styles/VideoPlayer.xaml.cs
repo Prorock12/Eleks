@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+
 namespace Modules.Redactor.Styles
 {
     public partial class VideoPlayer : UserControl

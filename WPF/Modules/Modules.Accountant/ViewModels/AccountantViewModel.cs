@@ -1,25 +1,22 @@
-﻿using Prism.Commands;
+﻿using Models.Interfaces.Models;
+using Models.Models;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
 using System.Windows.Threading;
-using Models.Interfaces.Models;
-using Models.Models;
 
 namespace Modules.Accountant.ViewModels
 {
     public class AccountantViewModel : BindableBase
     {
         private static Random _random = new Random();
-        private int _count;
 
         private IVisualElement _selectedElement;
 
         public ICommand AddRowCommand { get; set; }
         public ICommand RemoveRowCommand { get; set; }
-
 
         public IVisualElement SelectedElement
         {
@@ -28,27 +25,18 @@ namespace Modules.Accountant.ViewModels
         }
 
         public ObservableCollection<IVisualElement> Elements { get; set; }
-        public IVisualElement VisualElement { get; set; }
-        public int Count 
-        {
-            get =>_count;
-            set => SetProperty(ref _count, value);
-
-        }
 
         public AccountantViewModel()
         {
-            Count = 10;
             AddRowCommand = new DelegateCommand(AddRow);
-            RemoveRowCommand = new DelegateCommand(RemoveRow, () => SelectedElement != null).ObservesProperty(() =>  SelectedElement);
+            RemoveRowCommand = new DelegateCommand(RemoveRow, () => SelectedElement != null).ObservesProperty(() => SelectedElement);
 
             Elements = new ObservableCollection<IVisualElement>();
-            
+
             for (int i = 0; i < 1000; i++)
             {
                 Elements.Add(CreateElement());
             }
-
         }
 
         private static IVisualElement CreateElement()
@@ -57,8 +45,10 @@ namespace Modules.Accountant.ViewModels
             {
                 case 1:
                     return new TextElement("New Text");
+
                 case 2:
                     return new ImageElement("New Image");
+
                 default:
                     return new VideoElement("New Video");
             }
@@ -66,14 +56,11 @@ namespace Modules.Accountant.ViewModels
 
         private void AddRow()
         {
-           
-
             Dispatcher.CurrentDispatcher.InvokeAsync(() =>
             {
                 var newElement = CreateElement();
                 Elements.Add(newElement);
-                 SelectedElement = newElement;
-
+                SelectedElement = newElement;
             }, DispatcherPriority.Loaded);
         }
 

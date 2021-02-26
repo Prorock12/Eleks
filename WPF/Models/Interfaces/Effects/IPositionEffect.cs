@@ -1,5 +1,5 @@
 ﻿namespace Models.Interfaces.Effects
-{ 
+{
     public interface IPositionEffect : IEffect
     {
         #region Properties

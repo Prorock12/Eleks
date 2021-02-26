@@ -5,13 +5,12 @@ using Modules.Redactor.Interfaces;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
+using Services.FilseSelector;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media;
-using Microsoft.Win32;
-using Services.FilseSelector;
 
 namespace Modules.Redactor.ViewModels
 {
@@ -75,7 +74,7 @@ namespace Modules.Redactor.ViewModels
 
         #region Constructor
 
-        public ElementContainerViewModel(IEventAggregator eventAggregator,IFileSelector fileSelector)
+        public ElementContainerViewModel(IEventAggregator eventAggregator, IFileSelector fileSelector)
         {
             _eventAggregator = eventAggregator;
             _fileSelector = fileSelector;
@@ -190,8 +189,9 @@ namespace Modules.Redactor.ViewModels
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
+            if(image==null) return;
             _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
-                SelectedSlide.Elements.Add(image);
+            SelectedSlide.Elements.Add(image);
         }
 
         private void OnAddImage(IElement element)
@@ -204,6 +204,7 @@ namespace Modules.Redactor.ViewModels
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
+            if (video == null) return;
             _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
             SelectedSlide.Elements.Add(video);
         }

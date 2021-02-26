@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using MyFirstProject.ViewModels;
 
 namespace MyFirstProject.Views
 {
@@ -10,6 +12,11 @@ namespace MyFirstProject.Views
         public ShellView()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ShellViewModel.SetBaseSettings();
         }
     }
 }

@@ -1,9 +1,6 @@
-﻿using System.ComponentModel;
-
-namespace Models.Interfaces.Effects
+﻿namespace Models.Interfaces.Effects
 {
     public interface IEffect
     {
-
     }
 }

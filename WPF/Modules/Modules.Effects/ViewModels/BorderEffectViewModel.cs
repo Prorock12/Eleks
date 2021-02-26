@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using Infrastructure;
+﻿using Infrastructure;
 using Models.Interfaces.Effects;
+using System.Linq;
 
 namespace Modules.Effects.ViewModels
 {
@@ -17,6 +17,7 @@ namespace Modules.Effects.ViewModels
             get => _extendedBackgroundColor;
             set => SetProperty(ref _extendedBackgroundColor, value, OnExtendedBackgroundColorChanged);
         }
+
         public ExtendedColor ExtendedBorderBrushColor
         {
             get => _extendedBorderBrushColor;
@@ -32,6 +33,7 @@ namespace Modules.Effects.ViewModels
 
             BorderEffect.Background = ExtendedBackgroundColor.Color;
         }
+
         private void OnExtendedBorderBrushColorChanged()
         {
             if (ExtendedBorderBrushColor == null)
@@ -93,16 +95,15 @@ namespace Modules.Effects.ViewModels
             BorderEffect.BorderThickness = BorderThickness;
         }
 
-
         public IBorderEffect BorderEffect { get; }
 
-        public BorderEffectViewModel(IBorderEffect borderEffect) : base(borderEffect,"Border")
+        public BorderEffectViewModel(IBorderEffect borderEffect) : base(borderEffect, "Border")
         {
             BorderEffect = borderEffect;
             BorderThickness = borderEffect.BorderThickness;
             CornerRadius = borderEffect.CornerRadius;
             Padding = borderEffect.Padding;
-            ExtendedBackgroundColor = 
+            ExtendedBackgroundColor =
                 ExtendedColorHelper.Colors.FirstOrDefault(c => c.Color.Equals(borderEffect.Background));
             ExtendedBorderBrushColor =
                 ExtendedColorHelper.Colors.FirstOrDefault(c => c.Color.Equals(borderEffect.BorderBrush));

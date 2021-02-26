@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/GridSplitterStyle.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/Converters.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/Converters.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </prism:PrismApplication.Resources>

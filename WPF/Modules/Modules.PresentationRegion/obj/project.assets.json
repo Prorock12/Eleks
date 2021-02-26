@@ -1253,11 +1253,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
+      "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
       "projectName": "Modules.PresentationRegion",
-      "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
+      "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
       "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.PresentationRegion\\obj\\",
+      "outputPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.PresentationRegion\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1278,17 +1278,17 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
             },
-            "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
             },
-            "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
-              "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
             },
-            "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
-              "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj"
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj"
             }
           }
         }

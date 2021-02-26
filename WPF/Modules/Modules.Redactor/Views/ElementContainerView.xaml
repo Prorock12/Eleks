@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:localization="clr-namespace:Modules.Redactor.Properties"
              xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
@@ -21,39 +22,40 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Viewbox>
-                <ListBox x:Name="ElementsListBox" 
+            <Viewbox KeyboardNavigation.TabNavigation="Cycle">
+                <ListBox x:Name="ElementsListBox"
                          Width="{Binding SelectedPresentation.Resolution.Width}"
                          Height="{Binding SelectedPresentation.Resolution.Height}"
                          Style="{StaticResource ElementListBoxStyle}"
                          ItemsSource="{Binding Elements}"
                          SelectedItem="{Binding SelectedElement}"
+                         KeyboardNavigation.TabNavigation="Cycle"
                          MouseDown="ElementsListBox_OnMouseDown"
                          MouseUp="ElementsListBox_OnMouseUp"
-                         MouseMove="ElementsListBox_OnMouseMove"/>
+                         MouseMove="ElementsListBox_OnMouseMove" />
             </Viewbox>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal"
                     VerticalAlignment="Bottom">
 
-                <CheckBox Content="Change Stack View"
+                <CheckBox Content="{x:Static localization:Resources.Change_Stack_View}"
                           IsChecked="{Binding IsStackView}"
                           Foreground="AliceBlue" />
 
                 <Button Command="{Binding AddTextElementCommand}"
-                    Content="Add Text"
+                    Content="{x:Static localization:Resources.Add_Text}"
                     Style="{StaticResource AddButtonStyle}" />
 
                 <Button Command="{Binding AddImageElementCommand}"
-                    Content="Add Image"
+                    Content="{x:Static localization:Resources.Add_Image}"
                     Style="{StaticResource AddButtonStyle}" />
 
                 <Button Command="{Binding AddVideoElementCommand}"
-                    Content="Add Video"
+                    Content="{x:Static localization:Resources.Add_Video}"
                     Style="{StaticResource AddButtonStyle}" />
 
                 <Button Command="{Binding  RemoveElementCommand}"
-                    Content="Remove Element"
+                    Content="{x:Static localization:Resources.Remove_Element}"
                     Style="{StaticResource RemoveButtonStyle}" />
             </StackPanel>
         </Grid>

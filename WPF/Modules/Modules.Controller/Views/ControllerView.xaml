@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:localization="clr-namespace:Modules.Controller.Properties"
              xmlns:viewModels="clr-namespace:Modules.Controller.ViewModels"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
@@ -25,19 +26,19 @@
                         Orientation="Horizontal"
                         Background="Black">
                 <Button Command="{Binding AddSlideCommand}"
-                        Content="Add Slide"
+                        Content="{x:Static localization:Resources.Add_Slide}"
                         Style="{StaticResource AddButtonStyle}" />
                 <Button Command="{Binding AddTextCommand}"
-                        Content="Add Text"
+                        Content="{x:Static localization:Resources.Add_Text}"
                         Style="{StaticResource AddButtonStyle}" />
                 <Button Command="{Binding AddImageCommand}"
-                        Content="Add Image"
+                        Content="{x:Static localization:Resources.Add_Image}"
                         Style="{StaticResource AddButtonStyle}" />
                 <Button Command="{Binding AddVideoCommand}"
-                        Content="Add Video"
+                        Content="{x:Static localization:Resources.Add_Video}"
                         Style="{StaticResource AddButtonStyle}" />
-                <CheckBox    Content="Horizontal View"
-                             IsChecked="{Binding IsStackView}" />
+                <CheckBox Content="{x:Static localization:Resources.Horizontal_View}"
+                          IsChecked="{Binding IsStackView}" />
             </StackPanel>
 
             <ItemsControl Grid.Row="1"

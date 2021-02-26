@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Modules.Effects.ViewModels"
-                    xmlns:colors="clr-namespace:System.Drawing;assembly=System.Drawing"
-                    xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure">
+                    xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure"
+                    xmlns:localization="clr-namespace:Modules.Effects.Properties"
+                    xmlns:local="clr-namespace:Modules.Effects.ViewModels">
 
     <Style x:Key="TextErrorStyle" TargetType="{x:Type TextBox}">
         <Setter Property="Validation.ErrorTemplate">
@@ -10,20 +10,20 @@
                 <ControlTemplate x:Name="TextErrorTemplate">
                     <DockPanel LastChildFill="True">
                         <AdornedElementPlaceholder>
-                            <Border BorderBrush="Red" 
-                                    BorderThickness="2"/>
+                            <Border BorderBrush="Red"
+                                    BorderThickness="2" />
                         </AdornedElementPlaceholder>
-                        <TextBlock FontSize="20" 
+                        <TextBlock FontSize="20"
                                    Foreground="Red"
-                                   Text="{Binding [0].ErrorContent}"/>
+                                   Text="{Binding [0].ErrorContent}" />
                     </DockPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <Trigger Property="Validation.HasError" 
+            <Trigger Property="Validation.HasError"
                      Value="True">
-                <Setter Property="ToolTip" 
+                <Setter Property="ToolTip"
                         Value="{Binding RelativeSource=
             {x:Static RelativeSource.Self},
             Path=(Validation.Errors)[0].ErrorContent}"></Setter>
@@ -32,157 +32,156 @@
     </Style>
 
     <Style TargetType="{x:Type TabItem}">
-        <Setter Property="Header" Value="{Binding Name}"/>
+        <Setter Property="Header" Value="{Binding Name}" />
     </Style>
 
     <DataTemplate x:Key="BorderTemplate" DataType="{x:Type infrastructure:ExtendedColor}">
-        <TextBlock Text="{Binding Name}"/>
+        <TextBlock Text="{Binding Name}" />
     </DataTemplate>
+
     <DataTemplate DataType="{x:Type local:BorderEffectViewModel}">
-        <StackPanel Background="White" >
+        <StackPanel Background="White">
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Background"/>
-                <ComboBox Width="100" 
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Background}" />
+                <ComboBox Width="100"
                           ItemTemplate="{StaticResource BorderTemplate}"
                           SelectedItem="{Binding ExtendedBackgroundColor,UpdateSourceTrigger=PropertyChanged}"
-                          ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"/>
+                          ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="BorderBrush"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.BorderBrush}" />
                 <ComboBox Width="100"
                           ItemTemplate="{StaticResource BorderTemplate}"
                           SelectedItem="{Binding ExtendedBorderBrushColor,UpdateSourceTrigger=PropertyChanged}"
-                          ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"/>
+                          ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="BorderThickness"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.BorderThickness}" />
                 <TextBox Style="{StaticResource TextErrorStyle}"
-                         Text="{Binding BorderThickness, UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}"/>
+                         Text="{Binding BorderThickness, UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="CornerRadius"/>
-                <TextBox Style="{StaticResource TextErrorStyle}" 
-                    Text="{Binding CornerRadius,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}"/>
-            </StackPanel>
-
-            <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Padding"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.CornerRadius}" />
                 <TextBox Style="{StaticResource TextErrorStyle}"
-                    Text="{Binding Padding,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}"/>
+                    Text="{Binding CornerRadius,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Padding}" />
+                <TextBox Style="{StaticResource TextErrorStyle}"
+                    Text="{Binding Padding,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:BlurEffectViewModel}">
         <StackPanel Background="White">
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Radius"/>
-                <TextBox Text="{Binding BlurEffect.Radius,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Radius}" />
+                <TextBox Text="{Binding BlurEffect.Radius,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Kernel Type"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.KernelType}" />
                 <ComboBox MinWidth="100"
                           SelectedItem="{Binding BlurEffect.KernelType,UpdateSourceTrigger=PropertyChanged}"
-                          ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type KernelType}}}"/>
+                          ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type KernelType}}}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Rendering Bias"/>
-                    <ComboBox MinWidth="100"
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.RenderBias}" />
+                <ComboBox MinWidth="100"
                               SelectedItem="{Binding BlurEffect.RenderingBias,UpdateSourceTrigger=PropertyChanged}"
-                              ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type RenderingBias}}}"/>
+                              ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type RenderingBias}}}" />
             </StackPanel>
-            </StackPanel>
+        </StackPanel>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:PositionEffectViewModel}">
         <StackPanel Background="White">
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="X"/>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.X}" />
                 <TextBox Text="{Binding PositionEffect.X,UpdateSourceTrigger=PropertyChanged}" />
-                </StackPanel>
+            </StackPanel>
 
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Y"/>
-                <TextBox Text="{Binding PositionEffect.Y,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Y}" />
+                <TextBox Text="{Binding PositionEffect.Y,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
 
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Width"/>
-                <TextBox Text="{Binding PositionEffect.Width,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Width}" />
+                <TextBox Text="{Binding PositionEffect.Width,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
 
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Height"/>
-                <TextBox Text="{Binding PositionEffect.Height,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Height}" />
+                <TextBox Text="{Binding PositionEffect.Height,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
 
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Angle"/>
-                <TextBox Text="{Binding PositionEffect.Angle,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Angle}" />
+                <TextBox Text="{Binding PositionEffect.Angle,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:DropShadowViewModel}">
         <StackPanel Background="White">
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Color"/>
-                    <ComboBox Width="100" 
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Color}" />
+                <ComboBox Width="100"
                               ItemTemplate="{StaticResource BorderTemplate}"
                               SelectedItem="{Binding ExtendedDropShadowColor,UpdateSourceTrigger=PropertyChanged}"
-                              ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"/>
-                </StackPanel>
-
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Opacity (0-1)"/>
-                <TextBox Text="{Binding DropShadowEffect.Opacity,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
-
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="BlurRadius"/>
-                <TextBox Text="{Binding DropShadowEffect.BlurRadius,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
-
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Direction"/>
-                <TextBox Text="{Binding DropShadowEffect.Direction,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
-
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="ShadowDepth"/>
-                <TextBox Text="{Binding DropShadowEffect.ShadowDepth,UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
+                              ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}" />
             </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Opacity}" />
+                <TextBox Text="{Binding DropShadowEffect.Opacity,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.BlurRadius}" />
+                <TextBox Text="{Binding DropShadowEffect.BlurRadius,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Direction}" />
+                <TextBox Text="{Binding DropShadowEffect.Direction,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.ShadowDepth}" />
+                <TextBox Text="{Binding DropShadowEffect.ShadowDepth,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+        </StackPanel>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:MarginEffectViewModel}">
         <StackPanel Background="White">
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Left"/>
-                <TextBox Text="{Binding Left,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Left}" />
+                <TextBox Text="{Binding Left,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Top"/>
-                <TextBox Text="{Binding Top,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Top}" />
+                <TextBox Text="{Binding Top,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Right"/>
-                <TextBox Text="{Binding Right,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Right}" />
+                <TextBox Text="{Binding Right,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
-                <TextBlock Margin="5" Text="Bottom"/>
-                <TextBox Text="{Binding Bottom,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Margin="5" Text="{x:Static localization:Resources.Bottom}" />
+                <TextBox Text="{Binding Bottom,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
-
-
 </ResourceDictionary>

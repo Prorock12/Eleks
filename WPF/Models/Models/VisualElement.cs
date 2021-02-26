@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
+﻿using Models.Interfaces.Models;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-using Models.Interfaces.Models;
 
 namespace Models.Models
 {
@@ -24,7 +17,7 @@ namespace Models.Models
         private double _height;
         private double _angle;
 
-        #endregion
+        #endregion position
 
         #region blur
 
@@ -32,7 +25,7 @@ namespace Models.Models
         private KernelType _kernelType;
         private RenderingBias _renderingBias;
 
-        #endregion
+        #endregion blur
 
         #region border
 
@@ -42,7 +35,7 @@ namespace Models.Models
         private int _cornerRadius;
         private int _padding;
 
-        #endregion
+        #endregion border
 
         #region dropShadow
 
@@ -52,13 +45,13 @@ namespace Models.Models
         private int _direction;
         private int _shadowDepth;
 
-        #endregion
+        #endregion dropShadow
 
         #region margin
 
         private Thickness _margin;
 
-        #endregion
+        #endregion margin
 
         #endregion Fields
 
@@ -99,7 +92,7 @@ namespace Models.Models
             set => SetProperty(ref _angle, value);
         }
 
-        #endregion
+        #endregion position
 
         #region blur
 
@@ -121,7 +114,7 @@ namespace Models.Models
             set => SetProperty(ref _renderingBias, value);
         }
 
-        #endregion
+        #endregion blur
 
         #region border
 
@@ -155,7 +148,7 @@ namespace Models.Models
             set => SetProperty(ref _padding, value);
         }
 
-        #endregion
+        #endregion border
 
         #region dropShadow
 
@@ -189,7 +182,7 @@ namespace Models.Models
             set => SetProperty(ref _shadowDepth, value);
         }
 
-        #endregion
+        #endregion dropShadow
 
         #region Margin
 
@@ -199,7 +192,7 @@ namespace Models.Models
             set => SetProperty(ref _margin, value);
         }
 
-        #endregion
+        #endregion Margin
 
         #endregion Properties
 

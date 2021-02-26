@@ -26,6 +26,7 @@ namespace Services.FilseSelector
             const string filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
             return GetFilePath(filter, defaultExt);
         }
+
         public string GetVideoPath()
         {
             const string defaultExt = ".mp4";
@@ -36,13 +37,16 @@ namespace Services.FilseSelector
         public ImageElement ChooseImage()
         {
             var path = GetImagePath();
-            var image = new ImageElement("newImage") {Path = path};
+            if (string.IsNullOrEmpty(path)) return null;
+            var image = new ImageElement("newImage") { Path = path };
             return image;
         }
+
         public VideoElement ChooseVideo()
         {
             var path = GetVideoPath();
-            var video = new VideoElement("newVideo") {Path = path};
+            if (string.IsNullOrEmpty(path)) return null;
+            var video = new VideoElement("newVideo") { Path = path };
             return video;
         }
     }

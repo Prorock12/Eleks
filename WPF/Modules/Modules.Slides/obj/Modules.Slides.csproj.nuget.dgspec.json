@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {}
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
         "projectName": "CommonUI",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -23,16 +23,16 @@
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               }
             }
           }
@@ -42,24 +42,24 @@
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
         "projectName": "Modules.Redactor",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
         "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\obj\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -80,17 +80,17 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"
               }
             }
           }
@@ -126,14 +126,14 @@
         }
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
         "projectName": "Modules.Slides",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
         "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\obj\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -154,14 +154,14 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
               }
             }
           }
@@ -197,16 +197,16 @@
         }
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
         "projectName": "Services.FilseSelector",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               }
             }
           }

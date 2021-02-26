@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\bohdan.hlyva\WPF\MyFirstProject\obj\Debug\
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\obj\Debug\
 MyFirstProject
 none
 false
 DEBUG;TRACE
-C:\Users\bohdan.hlyva\WPF\MyFirstProject\App.xaml
-22090535526
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\App.xaml
+3-1576693215
 
-9-1214869351
-138-119931
-Views\ChangeSizeDialogView.xaml;Views\ShellView.xaml;
+121237243344
+138593295658
+Views\BaseSettings.xaml;Views\ChangeSizeDialogView.xaml;Views\ShellView.xaml;
 
-True
+False
 

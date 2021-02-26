@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\bohdan.hlyva\WPF\Modules\Modules.Redactor\obj\Debug\
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\obj\Debug\
 Modules.Redactor
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 3-1585120859
 11333468352
-211676307358
-135-1849398763
+221355456828
+135-889313791
 Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
 
-True
+False
 

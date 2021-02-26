@@ -8,7 +8,7 @@
         xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
-        prism:ViewModelLocator.AutoWireViewModel="True">
+        prism:ViewModelLocator.AutoWireViewModel="True" Loaded="Window_Loaded">
 
     <Window.Style>
         <Style TargetType="Window">
@@ -59,7 +59,7 @@
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.EffectRegion}"/>
                     </TabItem>
                     <TabItem Header="Accountant">
-                        <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
+                        <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
                     </TabItem>
                 </TabControl>
             </Grid>

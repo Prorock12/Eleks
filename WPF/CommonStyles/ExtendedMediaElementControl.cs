@@ -12,7 +12,7 @@ namespace CommonUI
         private const string TotalTimeStringFormat = "{0} / {1}";
         private const string BaseTimerFormat = @"mm\:ss";
 
-        #endregion
+        #endregion const
 
         private readonly DispatcherTimer _positionTimer = new DispatcherTimer();
 
@@ -34,9 +34,9 @@ namespace CommonUI
             DependencyProperty.Register(nameof(SliderPositionValue), typeof(int), typeof(ExtendedMediaElementControl));
 
         public static readonly DependencyProperty SliderVolumeValueProperty =
-            DependencyProperty.Register(nameof(SliderVolumeValue), typeof(double), typeof(ExtendedMediaElementControl),new PropertyMetadata(0.0,SliderVolumeValueChanged));
+            DependencyProperty.Register(nameof(SliderVolumeValue), typeof(double), typeof(ExtendedMediaElementControl), new PropertyMetadata(0.0, SliderVolumeValueChanged));
 
-        #endregion
+        #endregion dependency properties
 
         #region Properties
 
@@ -45,33 +45,38 @@ namespace CommonUI
             get => (bool)GetValue(IsPlayingProperty);
             set => SetValue(IsPlayingProperty, value);
         }
+
         public string TotalTimer
         {
             get => (string)GetValue(TotalTimerProperty);
             set => SetValue(TotalTimerProperty, value);
         }
+
         public string ToggleButtonContent
         {
             get => (string)GetValue(ToggleButtonContentProperty);
             set => SetValue(ToggleButtonContentProperty, value);
         }
+
         public int DurationVideo
         {
             get => (int)GetValue(DurationVideoProperty);
             set => SetValue(DurationVideoProperty, value);
         }
+
         public int SliderPositionValue
         {
             get => (int)GetValue(SliderPositionValueProperty);
             set => SetValue(SliderPositionValueProperty, value);
         }
+
         public double SliderVolumeValue
         {
             get => (double)GetValue(SliderVolumeValueProperty);
             set => SetValue(SliderVolumeValueProperty, value);
         }
 
-        #endregion
+        #endregion Properties
 
         #region constructor
 
@@ -89,7 +94,7 @@ namespace CommonUI
             IsPlaying = true;
         }
 
-        #endregion
+        #endregion constructor
 
         #region Methods
 
@@ -100,6 +105,7 @@ namespace CommonUI
             if (Source == null)
                 TotalTimer = "No file selected...";
         }
+
         private void OnTimerTick(object sender, EventArgs e)
         {
             if (!NaturalDuration.HasTimeSpan) return;
@@ -109,7 +115,6 @@ namespace CommonUI
             //TODO:add totaMiliseconds
             SliderPositionValue = (int)Position.TotalMilliseconds;
         }
-
 
         #region property changed callback
 
@@ -129,7 +134,7 @@ namespace CommonUI
             localMediaControl.SliderVolumeValueChangedw((double)e.NewValue);
         }
 
-        #endregion
+        #endregion property changed callback
 
         #region property changed
 
@@ -152,9 +157,8 @@ namespace CommonUI
             Volume = volume;
         }
 
+        #endregion property changed
 
-        #endregion
-
-        #endregion
+        #endregion Methods
     }
 }

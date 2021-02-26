@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:localization="clr-namespace:Modules.Slides.Properties"
              xmlns:viewModels="clr-namespace:Modules.Slides.ViewModels"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:SlideContainerViewModel}"
@@ -23,18 +24,19 @@
             <ListBox Grid.Row="0"
                  Style="{StaticResource SlidesListBoxStyle}"
                  ItemsSource="{Binding  Slides}"
-                 SelectedItem="{Binding SelectedSlide}" />
+                 SelectedItem="{Binding SelectedSlide}"
+                 KeyboardNavigation.TabNavigation="Cycle"/>
 
             <StackPanel Grid.Row="1"
                     VerticalAlignment="Bottom"
                     Background="Black">
 
                 <Button Command="{Binding AddSlideCommand}"
-                        Content="Add Slide"
+                        Content="{x:Static localization:Resources.Add_Slide}"
                         Style="{StaticResource AddButtonStyle}" />
 
                 <Button Command="{Binding RemoveSlideCommand}"
-                    Content="Remove Slide"
+                    Content="{x:Static localization:Resources.Remove_Slide}"
                     Style="{StaticResource RemoveButtonStyle}" />
             </StackPanel>
         </Grid>

@@ -1,28 +1,27 @@
-﻿using System.IO;
-using System.Runtime.Remoting.Contexts;
+﻿using Prism.Commands;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
-using Prism.Commands;
 
 namespace CommonUI
 {
     public class RichTextBoxExtended : RichTextBox
     {
-
         #region dependency properties
-        
+
         private static readonly DependencyProperty TextProperty =
             DependencyProperty.Register(nameof(Text), typeof(string), typeof(RichTextBoxExtended));
+
         private static readonly DependencyProperty LoadProperty =
-            DependencyProperty.Register(nameof(LoadCommand),typeof(ICommand),typeof(RichTextBoxExtended));
+            DependencyProperty.Register(nameof(LoadCommand), typeof(ICommand), typeof(RichTextBoxExtended));
 
         public static readonly DependencyProperty SaveProperty = DependencyProperty.Register(
             nameof(SaveCommand), typeof(ICommand), typeof(RichTextBoxExtended));
 
-        #endregion
+        #endregion dependency properties
 
         #region properties
 
@@ -34,16 +33,16 @@ namespace CommonUI
 
         public string Text
         {
-            get => (string) GetValue(TextProperty);
+            get => (string)GetValue(TextProperty);
             set => SetValue(TextProperty, value);
         }
 
-        #endregion
+        #endregion properties
 
         public ICommand LoadCommand
         {
             get => (ICommand)GetValue(LoadProperty);
-            set => SetValue(LoadProperty,value);
+            set => SetValue(LoadProperty, value);
         }
 
         public RichTextBoxExtended()
@@ -56,11 +55,11 @@ namespace CommonUI
         {
             byte[] byteArray = Encoding.UTF8.GetBytes(s);
             MemoryStream stream = new MemoryStream(byteArray);
-            return  stream;
+            return stream;
         }
+
         private void Load()
         {
-
             var text = "asasa";
             //OpenFileDialog ofd = new OpenFileDialog();
             //ofd.Filter = "RichText Files (*.rtf)|*.rtf|All files (*.*)|*.*";
@@ -68,7 +67,6 @@ namespace CommonUI
             //if (ofd.ShowDialog() == true)
             //{
             TextRange doc = new TextRange(Document.ContentStart, Document.ContentEnd);
-
 
             //using(var str = new StreamReader())
 
@@ -85,10 +83,8 @@ namespace CommonUI
                 doc.Load(reader, DataFormats.Rtf);
             }
 
-
             //using (FileStream fs = new FileStream(ofd.FileName, FileMode.Open))
             //    {
-
             //    }
         }
 
@@ -99,7 +95,6 @@ namespace CommonUI
             using (var fs = GenerateStreamFromString("a,b \n c,d"))
             {
                 doc.Save(fs, DataFormats.Rtf);
-
             }
             //SaveFileDialog sfd = new SaveFileDialog();
             //sfd.Filter = "Text Files (*.txt)|*.txt|RichText Files (*.rtf)|*.rtf|XAML Files (*.xaml)|*.xaml|All files (*.*)|*.*";
@@ -117,6 +112,5 @@ namespace CommonUI
             //    }
             //}
         }
-
     }
 }

@@ -14,6 +14,7 @@ namespace Modules.Effects
         {
             _regionManager = regionManager;
         }
+
         public void OnInitialized(IContainerProvider containerProvider)
         {
             _regionManager.RegisterViewWithRegion(RegionNames.EffectRegion, typeof(MainEffectView));

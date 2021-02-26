@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:localization="clr-namespace:MyFirstProject.Properties"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              mvvm:ViewModelLocator.AutoWireViewModel="True">
@@ -16,7 +17,7 @@
                     MinWidth="200"
                     MaxWidth="500">
 
-            <TextBlock Text="Enter new height"
+            <TextBlock Text="{x:Static localization:Resources.Enter_new_height}"
                    Margin="10"
                    FontSize="20" />
             <ComboBox FontSize="20"
@@ -31,7 +32,7 @@
                 <TextBlock Text="600" />
             </ComboBox>
 
-            <TextBlock Text="Enter new width"
+            <TextBlock Text="{x:Static localization:Resources.Enter_new_width}"
                    Margin="10"
                    FontSize="20" />
 
@@ -49,13 +50,13 @@
                 <TextBlock Text="1024" />
             </ComboBox>
 
-            <Button Content="Change"
+            <Button Content="{x:Static localization:Resources.Change}"
                     MinWidth="200"
                     MaxWidth="500"
                     FontSize="20"
                     Margin="10"
                     Command="{Binding ChangeSizeCommand}" />
-            <Button Content="Close"
+            <Button Content="{x:Static localization:Resources.Close}"
                     MinWidth="200"
                     MaxWidth="500"
                     FontSize="20"

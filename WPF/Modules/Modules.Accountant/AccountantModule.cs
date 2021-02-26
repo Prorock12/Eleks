@@ -14,6 +14,7 @@ namespace Modules.Accountant
         {
             _regionManager = regionManager;
         }
+
         public void OnInitialized(IContainerProvider containerProvider)
         {
             _regionManager.RegisterViewWithRegion(RegionNames.Accountant, typeof(AccountantView));
@@ -21,7 +22,6 @@ namespace Modules.Accountant
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
         }
     }
 }
