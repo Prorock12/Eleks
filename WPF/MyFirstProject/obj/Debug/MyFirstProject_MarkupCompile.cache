@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\App.xaml
-22090535526
+3-1576693215
 
-8-372509984
+112079602711
 138593295658
-Views\ChangeSizeDialogView.xaml;Views\ShellView.xaml;
+Views\BaseSettings.xaml;Views\ChangeSizeDialogView.xaml;Views\ShellView.xaml;
 
-True
+False
 

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\bohdan.hlyva\WPF\Modules\Modules.Effects\obj\Debug\
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\obj\Debug\
 Modules.Effects
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 2467554832
 
-13-613440611
-20-1970712121
+14-934291141
+20-1871113043
 Styles\EffectsStyle.xaml;Views\MainEffectView.xaml;
 
-True
+False
 

@@ -1,23 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-                    xmlns:viewModels="clr-namespace:Modules.Accountant.ViewModels"
-                    xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
                     xmlns:converters="clr-namespace:CommonUI.Converters;assembly=CommonUI"
-                    xmlns:models="clr-namespace:Models.Models;assembly=Models">
+                    xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure"
+                    xmlns:models="clr-namespace:Models.Models;assembly=Models"
+                    xmlns:localization="clr-namespace:Modules.Accountant.Properties"
+                    mc:Ignorable="d">
 
-
-    <converters:ValueOfWidthHeightConverter x:Key="ValueOfWidthHeightConverter"/>
+    <converters:ValueOfWidthHeightConverter x:Key="ValueOfWidthHeightConverter" />
 
     <Style TargetType="{x:Type xcdg:DataGridControl}">
-        <Setter Property="AutoCreateColumns" Value="False"/>
+        <Setter Property="AutoCreateColumns" Value="False" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Cycle"/>
         <Setter Property="ContextMenu">
             <Setter.Value>
                 <ContextMenu>
-                    <MenuItem Header="Add Row" Command="{Binding AddRowCommand}"/>
-                    <MenuItem Header="Delete Row" Command="{Binding RemoveRowCommand}"/>
+                    <MenuItem Header="{x:Static localization:Resources.AddRow}" Command="{Binding AddRowCommand}" />
+                    <MenuItem Header="{x:Static localization:Resources.DeleteRow}" Command="{Binding RemoveRowCommand}" />
                 </ContextMenu>
             </Setter.Value>
         </Setter>
@@ -42,52 +43,38 @@
         <Setter Property="RemovingGroupCursor"
                 Value="{x:Null}" />
         <Setter Property="KeyboardNavigation.TabNavigation"
-                Value="Continue"/>
+                Value="Continue" />
     </Style>
 
-
     <DataTemplate x:Key="XDataTemplate" DataType="{x:Type models:VisualElement}">
-        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}"/>
+        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
 
     <DataTemplate x:Key="YDataTemplate">
-        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}"/>
+        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
 
     <DataTemplate x:Key="WidthDataTemplate">
-        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}"/>
+        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
 
     <DataTemplate x:Key="HeightDataTemplate">
-        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}"/>
+        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
 
     <DataTemplate x:Key="AngleDataTemplate">
-        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}"/>
+        <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
-
-
-    <xcdg:CellEditor x:Key="YCellEditor" EditTemplate="{StaticResource YDataTemplate}"/>
-    <xcdg:CellEditor x:Key="WidthCellEditor" EditTemplate="{StaticResource WidthDataTemplate}"/>
-    <xcdg:CellEditor x:Key="HeightCellEditor" EditTemplate="{StaticResource HeightDataTemplate}"/>
-    <xcdg:CellEditor x:Key="AngleCellEditor" EditTemplate="{StaticResource AngleDataTemplate}"/>
 
     <DataTemplate x:Key="BorderTemplate" DataType="{x:Type infrastructure:ExtendedColor}">
-        <TextBlock Text="{Binding Name}"/>
+        <TextBlock Text="{Binding Name}" />
     </DataTemplate>
-
-
 
     <DataTemplate x:Key="ColorsComboBoxDataTemplate">
         <ComboBox DataContext="{Binding DataContext, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type xcdg:DataCell}}}"
             ItemTemplate="{StaticResource BorderTemplate}"
                   ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"
             SelectedValuePath="Color"
-            SelectedValue="{xcdg:CellEditorBinding }"/>
+            SelectedValue="{xcdg:CellEditorBinding}" />
     </DataTemplate>
-    <!--<DataTemplate x:Key="ColorsComboBoxDataTemplate">
-        <TextBox Text="{xcdg:CellEditorBinding}"/>
-    </DataTemplate>-->
-
-    <xcdg:CellEditor x:Key="ColorsCellEditor" EditTemplate="{StaticResource ColorsComboBoxDataTemplate}"/>
 </ResourceDictionary>

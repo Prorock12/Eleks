@@ -10,3 +10,15 @@ C:\Users\bohdan.hlyva\WPF\Models\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\WPF\Models\bin\Debug\Prism.xml
 C:\Users\bohdan.hlyva\WPF\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\bohdan.hlyva\WPF\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\Models.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\Models.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\Prism.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\Prism.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\Prism.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.Properties.Resources.resources
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csproj.GenerateResource.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.pdb

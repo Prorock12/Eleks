@@ -1,16 +1,14 @@
-﻿using System;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using Models.Interfaces.Models;
 using Models.Models;
 using Modules.Controller.Interfaces;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
+using Services.FilseSelector;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.Win32;
-using Services.FilseSelector;
 
 namespace Modules.Controller.ViewModels
 {
@@ -61,7 +59,7 @@ namespace Modules.Controller.ViewModels
 
         #region Constructor
 
-        public ControllerViewModel(IEventAggregator eventAggregator,IFileSelector fileSelector)
+        public ControllerViewModel(IEventAggregator eventAggregator, IFileSelector fileSelector)
         {
             _eventAggregator = eventAggregator;
             _fileSelector = fileSelector;
@@ -106,13 +104,13 @@ namespace Modules.Controller.ViewModels
             {
                 Slides.Add(new SlideViewModel(slide));
             }
-
         }
 
         private void OnSelectedPresentation(IPresentation presentation)
         {
             SelectedPresentation = presentation;
         }
+
         private void OnSelectedSlide(ISlide slide)
         {
             SelectedSlide = slide;

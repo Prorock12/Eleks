@@ -1,7 +1,6 @@
 ﻿namespace Models.Interfaces.Effects
 {
-    public interface IMediaEffect: IEffect
+    public interface IMediaEffect : IEffect
     {
-
     }
 }

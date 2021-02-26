@@ -5,27 +5,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:localization="clr-namespace:Modules.Accountant.Properties"
              xmlns:viewModels="clr-namespace:Modules.Accountant.ViewModels"
-             xmlns:converters="clr-namespace:CommonUI.Converters;assembly=CommonUI"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance viewModels:AccountantViewModel}">
 
     <UserControl.Resources>
-        <ResourceDictionary Source="../Styles/AccountantStyles.xaml"/>
+        <ResourceDictionary Source="../Styles/AccountantStyles.xaml" />
     </UserControl.Resources>
-
-
-
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        
 
         <xcdg:DataGridControl Grid.Row="0" x:Name="ElementsGrid"
                               ItemsSource="{Binding Elements}"
@@ -35,53 +30,75 @@
                               MouseRightButtonDown="RightButtonSelectElement_OnMouseRightButtonDown"
                               GotKeyboardFocus="ElementsGrid_OnGotKeyboardFocus">
             <xcdg:DataGridControl.View>
-                <xcdg:TableView Style="{StaticResource DatamartDataGridTableViewStyle}"/>
+                <xcdg:TableView Style="{StaticResource DatamartDataGridTableViewStyle}" />
             </xcdg:DataGridControl.View>
 
             <xcdg:DataGridControl.InputBindings>
                 <KeyBinding Key="E"
                     Modifiers="Control"
-                    Command="{Binding AddRowCommand}"/>
+                    Command="{Binding AddRowCommand}" />
                 <KeyBinding Key="R"
                     Modifiers="Control"
-                    Command="{Binding RemoveRowCommand}"/>
+                    Command="{Binding RemoveRowCommand}" />
             </xcdg:DataGridControl.InputBindings>
 
             <xcdg:DataGridControl.Columns>
-                <xcdg:Column Title="Id"
+                <xcdg:Column Title="{x:Static localization:Resources.Id}"
                              FieldName="Id"
-                             ReadOnly="True"
-                             />
-                <xcdg:Column Title="Name" FieldName="Name"/>
-                <xcdg:Column Title="X" 
-                             FieldName="X" >
+                             ReadOnly="True" />
+                <xcdg:Column Title="{x:Static localization:Resources.Name}"
+                             FieldName="Name" />
+                <xcdg:Column Title="{x:Static localization:Resources.X}"
+                             FieldName="X">
                     <xcdg:Column.CellEditor>
-                        <xcdg:CellEditor EditTemplate="{StaticResource XDataTemplate}"/>
+                        <xcdg:CellEditor EditTemplate="{StaticResource XDataTemplate}" />
                     </xcdg:Column.CellEditor>
                 </xcdg:Column>
-                <xcdg:Column Title="Y" 
-                             FieldName="Y"
-                             CellEditor="{StaticResource YCellEditor}"/>
-                <xcdg:Column Title="Width" 
+
+                <xcdg:Column Title="{x:Static localization:Resources.Y}"
+                             FieldName="Y">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource YDataTemplate}" />
+                    </xcdg:Column.CellEditor>
+                </xcdg:Column>
+
+                <xcdg:UnboundColumn Title="{x:Static localization:Resources.Width}"
                              FieldName="Width"
-                             CellEditor="{StaticResource WidthCellEditor}"
-                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}"/>
-                <xcdg:Column Title="Height" 
+                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}">
+                    
+                </xcdg:UnboundColumn>
+
+                <xcdg:Column Title="{x:Static localization:Resources.Height}"
                              FieldName="Height"
-                             CellEditor="{StaticResource HeightCellEditor}"
-                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}"/>
-                <xcdg:Column Title="Angle" 
-                             FieldName="Angle"
-                             CellEditor="{StaticResource AngleCellEditor}"/>
-                <xcdg:Column Title="Background" FieldName="Background"
-                             CellEditor="{StaticResource ColorsCellEditor}"
-                             AllowSort="False"/>
-                <xcdg:Column Title="BorderBrush" FieldName="BorderBrush"
-                             CellEditor="{StaticResource ColorsCellEditor}"
+                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource HeightDataTemplate}" />
+                    </xcdg:Column.CellEditor>
+                </xcdg:Column>
+
+                <xcdg:Column Title="{x:Static localization:Resources.Angle}"
+                             FieldName="Angle">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource AngleDataTemplate}" />
+                    </xcdg:Column.CellEditor>
+                </xcdg:Column>
+
+                <xcdg:Column Title="{x:Static localization:Resources.Background}"
+                             FieldName="Background"
                              AllowSort="False">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource ColorsComboBoxDataTemplate}" />
+                    </xcdg:Column.CellEditor>
+                </xcdg:Column>
+
+                <xcdg:Column Title="{x:Static localization:Resources.BorderBrush}"
+                             FieldName="BorderBrush"
+                             AllowSort="False">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource ColorsComboBoxDataTemplate}" />
+                    </xcdg:Column.CellEditor>
                 </xcdg:Column>
             </xcdg:DataGridControl.Columns>
-
         </xcdg:DataGridControl>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">

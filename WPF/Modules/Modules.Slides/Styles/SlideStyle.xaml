@@ -92,12 +92,13 @@
         <Setter Property="ItemTemplate" Value="{StaticResource SlideListBoxTemplate}" />
     </Style>
 
-    <Style  TargetType="ListBoxItem">
+    <Style  TargetType="{x:Type ListBoxItem}">
         <Setter Property="Margin" Value="5" />
-
         <Style.Triggers>
-            <Trigger Property="IsFocused" Value="True">
+            <Trigger Property="IsSelected" Value="True">
                 <Setter Property="Foreground" Value="SandyBrown" />
+                <Setter Property="BorderBrush" Value="Red"/>
+                <Setter Property="BorderThickness" Value="3"/>
             </Trigger>
         </Style.Triggers>
     </Style>

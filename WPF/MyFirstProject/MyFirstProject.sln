@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.FilseSelector", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Accountant", "..\Modules\Modules.Accountant\Modules.Accountant.csproj", "{4DDD598F-7D09-4741-9956-40C9655DC5C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.ApplicationSettingsBase", "..\Services.DialogService\Services.ApplicationSettingsBase\Services.ApplicationSettingsBase.csproj", "{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{4DDD598F-7D09-4741-9956-40C9655DC5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDD598F-7D09-4741-9956-40C9655DC5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDD598F-7D09-4741-9956-40C9655DC5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{26EFA4E9-B8CC-4BAE-B431-02D94C2B8ED6} = {F73BD313-2BF7-4BE9-AF7E-F2290E183EBC}
 		{8DD189FA-7316-478C-8183-4C5BD8A3556B} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
 		{4DDD598F-7D09-4741-9956-40C9655DC5C9} = {F73BD313-2BF7-4BE9-AF7E-F2290E183EBC}
+		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78F7D3C5-660E-4776-BE95-C510700770E0}

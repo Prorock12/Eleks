@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using Models.Interfaces.Effects;
 using Models.Interfaces.Models;
 using Prism.Events;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Modules.Effects.ViewModels
 {
@@ -27,7 +26,6 @@ namespace Modules.Effects.ViewModels
 
             SelectedElement = element as IVisualElement;
 
-
             switch (element)
             {
                 case IVideoElement videoElement:
@@ -36,8 +34,9 @@ namespace Modules.Effects.ViewModels
                     var marginEffect = GetMarginEffect(videoElement);
                     var dropShadowEffect = GetDropShadowEffect(videoElement);
                     var blurEffect = GetBlurEffect(videoElement);
-                    Effects.AddRange(new List<EffectsViewModel>(){ positionEffect,borderEffect, marginEffect, dropShadowEffect, blurEffect});
+                    Effects.AddRange(new List<EffectsViewModel>() { positionEffect, borderEffect, marginEffect, dropShadowEffect, blurEffect });
                     break;
+
                 case IImageElement imageElement:
                     positionEffect = GetPositionEffect(imageElement);
                     dropShadowEffect = GetDropShadowEffect(imageElement);
@@ -46,8 +45,10 @@ namespace Modules.Effects.ViewModels
                     blurEffect = GetBlurEffect(imageElement);
                     Effects.AddRange(new List<EffectsViewModel>() { positionEffect, borderEffect, marginEffect, dropShadowEffect, blurEffect });
                     break;
+
                 case IMediaElement mediaElement:
                     break;
+
                 case ITextElement textElement:
                     blurEffect = GetBlurEffect(textElement);
                     positionEffect = GetPositionEffect(textElement);
@@ -56,6 +57,7 @@ namespace Modules.Effects.ViewModels
                     dropShadowEffect = GetDropShadowEffect(textElement);
                     Effects.AddRange(new List<EffectsViewModel>() { positionEffect, borderEffect, marginEffect, dropShadowEffect, blurEffect });
                     break;
+
                 case IVisualElement visualElement:
                     blurEffect = GetBlurEffect(visualElement);
                     positionEffect = GetPositionEffect(visualElement);
@@ -64,7 +66,6 @@ namespace Modules.Effects.ViewModels
                     Effects.Add(blurEffect);
                     break;
             }
-
         }
 
         private BlurEffectViewModel GetBlurEffect(IBlurEffect blurEffect)
@@ -81,9 +82,10 @@ namespace Modules.Effects.ViewModels
         {
             return new BorderEffectViewModel(borderEffect);
         }
+
         private PositionEffectViewModel GetPositionEffect(IPositionEffect positionEffect)
         {
-            return  new PositionEffectViewModel(positionEffect);
+            return new PositionEffectViewModel(positionEffect);
         }
 
         private MarginEffectViewModel GetMarginEffect(IMarginEffect marginEffect)

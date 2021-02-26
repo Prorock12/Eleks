@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uh/Y/2zwflAdRk+OjR4pXdB3kiQ5rmf7CG/VWP9kLhevh5gKNsy2WHkhKlQK+ytLpbV7v/u3Vqmu3kunHZc9fw==",
+  "dgSpecHash": "UqAcb8YkWT06AFvLwahIdXPQ0gvN91cG+fA8knJiC4CXJdxXxqlWGH95YU4IUxKuq+xbgvMKPIJCKwTb6wUysQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
+  "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",

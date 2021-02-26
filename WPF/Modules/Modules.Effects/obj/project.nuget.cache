@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kvIzRl4yolRktHNdOjpl/qgDuLn9B3ZBygSwS1sBafx6+hi4EJgOD2C/oWjtTbvXARX3nP6NW8BLTjCTVhOXzg==",
+  "dgSpecHash": "Oa7nw1wenPmR24d77IvhYMEWN+VqVj50MHR03G0Nu7ggcbWYTO+4/2u43Ds3b9OEwX60d00ZBjclJqgH11ZwZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Effects\\Modules.Effects.csproj",
+  "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Effects\\Modules.Effects.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",

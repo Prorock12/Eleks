@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {}
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
         "projectName": "CommonUI",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -23,16 +23,16 @@
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               }
             }
           }
@@ -42,24 +42,24 @@
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
         "projectName": "Modules.Accountant",
-        "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
         "packagesPath": "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Accountant\\obj\\",
+        "outputPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -80,14 +80,14 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\CommonStyles\\CommonUI.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\bohdan.hlyva\\WPF\\Models\\Models.csproj"
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
               }
             }
           }

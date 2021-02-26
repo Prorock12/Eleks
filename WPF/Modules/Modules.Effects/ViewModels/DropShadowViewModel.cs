@@ -1,8 +1,6 @@
-﻿using Models.Interfaces.Effects;
-using System.Drawing;
+﻿using Infrastructure;
+using Models.Interfaces.Effects;
 using System.Linq;
-using Infrastructure;
-
 
 namespace Modules.Effects.ViewModels
 {
@@ -15,6 +13,7 @@ namespace Modules.Effects.ViewModels
             get => _extendedDropShadowColor;
             set => SetProperty(ref _extendedDropShadowColor, value, OnExtendedBackgroundColorChanged);
         }
+
         private void OnExtendedBackgroundColorChanged()
         {
             if (ExtendedDropShadowColor == null)
@@ -24,9 +23,10 @@ namespace Modules.Effects.ViewModels
 
             DropShadowEffect.Color = ExtendedDropShadowColor.Color;
         }
+
         public IDropShadowEffect DropShadowEffect { get; }
 
-        public DropShadowViewModel(IDropShadowEffect dropShadowEffect) : base(dropShadowEffect,"DropShadow")
+        public DropShadowViewModel(IDropShadowEffect dropShadowEffect) : base(dropShadowEffect, "DropShadow")
         {
             DropShadowEffect = dropShadowEffect;
             ExtendedDropShadowColor =

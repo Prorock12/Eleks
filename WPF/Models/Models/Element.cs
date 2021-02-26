@@ -1,6 +1,6 @@
-﻿using System;
-using Models.Interfaces.Models;
+﻿using Models.Interfaces.Models;
 using Prism.Mvvm;
+using System;
 
 namespace Models.Models
 {
@@ -9,7 +9,6 @@ namespace Models.Models
         #region Fields
 
         private string _name;
-
 
         #endregion Fields
 

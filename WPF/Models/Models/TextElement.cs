@@ -1,5 +1,5 @@
-﻿using System.Windows.Media;
-using Models.Interfaces.Models;
+﻿using Models.Interfaces.Models;
+using System.Windows.Media;
 
 namespace Models.Models
 {
@@ -708,10 +708,11 @@ Nunc ac faucibus odio. Vestibulum neque massa, scelerisque sit amet ligula eu, c
 \par }
     ";
 
-        #endregion
-#region Fields
+        #endregion constants
 
-private string _text;
+        #region Fields
+
+        private string _text;
 
         #endregion Fields
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "plN4vIFI8lNUvJhf0SLQiFMPVbu0S3AUeCdx9U9zzoYbb5poKpjDPhJZ3oHZO3ldakYk9VvGJk2L0RI6mnMOqA==",
+  "dgSpecHash": "VapPu7bZxwYtuBuL+1ctz1UTuDZbjJmHzAWeCv2WfrawuRQI201EIF8s7mdB/LpUXGFX7lNPRv09LHiUCAHHpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bohdan.hlyva\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
+  "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",

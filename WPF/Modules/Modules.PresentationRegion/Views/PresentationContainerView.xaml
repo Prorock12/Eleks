@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:localization="clr-namespace:Modules.PresentationRegion.Properties"
              xmlns:viewModels="clr-namespace:Modules.PresentationRegion.ViewModels"
              mc:Ignorable="d"
              prism:ViewModelLocator.AutoWireViewModel="True"
@@ -25,15 +26,15 @@
                  SelectedItem="{Binding SelectedPresentation}" />
 
             <StackPanel Grid.Column="1" Orientation="Horizontal">
-                <Button Content="Add Presentation"
+                <Button Content="{x:Static localization:Resources.Add_Presentation}"
                     Style="{StaticResource AddButtonStyle}"
                     Command="{Binding AddPresentationCommand}" />
 
-                <Button Content="Remove Presentation"
+                <Button Content="{x:Static localization:Resources.Remove_Presentation}"
                     Style="{StaticResource RemoveButtonStyle}"
                     Command="{Binding RemovePresentationCommand}" />
 
-                <Button Content="Change Size"
+                <Button Content="{x:Static localization:Resources.Change_Size}"
                         Command="{Binding ChangeSizeCommand}" />
             </StackPanel>
         </Grid>
