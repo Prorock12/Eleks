@@ -16,11 +16,6 @@
     </UserControl.Resources>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
         <TabControl Grid.Column="0"
                     ItemsSource="{Binding Effects}" />
     </Grid>

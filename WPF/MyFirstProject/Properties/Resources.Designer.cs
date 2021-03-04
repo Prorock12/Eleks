@@ -79,6 +79,15 @@ namespace MyFirstProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Language.
+        /// </summary>
+        public static string ChangeLanguage {
+            get {
+                return ResourceManager.GetString("ChangeLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string Close {
@@ -120,6 +129,15 @@ namespace MyFirstProject.Properties {
         public static string Enter_new_width {
             get {
                 return ResourceManager.GetString("Enter_new_width", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language will change when you restart this application. Do you want to do it?.
+        /// </summary>
+        public static string MessageBoxLanguage {
+            get {
+                return ResourceManager.GetString("MessageBoxLanguage", resourceCulture);
             }
         }
     }

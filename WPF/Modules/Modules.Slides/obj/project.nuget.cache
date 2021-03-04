@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "VapPu7bZxwYtuBuL+1ctz1UTuDZbjJmHzAWeCv2WfrawuRQI201EIF8s7mdB/LpUXGFX7lNPRv09LHiUCAHHpQ==",
+  "dgSpecHash": "9eRKoHPA7/JGyuu7fte1T7CFI7o7bhmeC6zpvCiEwkEoGAFtR9WNOcgIt4oe4RalawKDvduf/vJuOsZCeUpQ2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\mahapps.metro\\2.4.4\\mahapps.metro.2.4.4.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",

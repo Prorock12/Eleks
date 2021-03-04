@@ -1,4 +1,5 @@
-﻿using Models.Models;
+﻿using System.Windows.Forms;
+using Models.Models;
 
 namespace Services.FilseSelector
 {
@@ -11,5 +12,7 @@ namespace Services.FilseSelector
         ImageElement ChooseImage();
 
         VideoElement ChooseVideo();
+
+        FolderBrowserDialog GetFolder();
     }
 }

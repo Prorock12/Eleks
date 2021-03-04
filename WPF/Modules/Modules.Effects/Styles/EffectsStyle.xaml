@@ -26,7 +26,7 @@
                 <Setter Property="ToolTip"
                         Value="{Binding RelativeSource=
             {x:Static RelativeSource.Self},
-            Path=(Validation.Errors)[0].ErrorContent}"></Setter>
+            Path=(Validation.Errors)[0].ErrorContent}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -35,12 +35,14 @@
         <Setter Property="Header" Value="{Binding Name}" />
     </Style>
 
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}" />
+
     <DataTemplate x:Key="BorderTemplate" DataType="{x:Type infrastructure:ExtendedColor}">
         <TextBlock Text="{Binding Name}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:BorderEffectViewModel}">
-        <StackPanel Background="White">
+        <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Background}" />
                 <ComboBox Width="100"
@@ -78,7 +80,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:BlurEffectViewModel}">
-        <StackPanel Background="White">
+        <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Radius}" />
                 <TextBox Text="{Binding BlurEffect.Radius,UpdateSourceTrigger=PropertyChanged}" />
@@ -101,7 +103,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:PositionEffectViewModel}">
-        <StackPanel Background="White">
+        <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.X}" />
                 <TextBox Text="{Binding PositionEffect.X,UpdateSourceTrigger=PropertyChanged}" />
@@ -130,7 +132,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:DropShadowViewModel}">
-        <StackPanel Background="White">
+        <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Color}" />
                 <ComboBox Width="100"
@@ -162,7 +164,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type local:MarginEffectViewModel}">
-        <StackPanel Background="White">
+        <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Left}" />
                 <TextBox Text="{Binding Left,UpdateSourceTrigger=PropertyChanged}" />

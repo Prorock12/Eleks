@@ -1,4 +1,5 @@
 ﻿using Models.Interfaces.Effects;
+using Modules.Effects.Properties;
 
 namespace Modules.Effects.ViewModels
 {
@@ -6,7 +7,7 @@ namespace Modules.Effects.ViewModels
     {
         public IPositionEffect PositionEffect { get; }
 
-        public PositionEffectViewModel(IPositionEffect positionEffect) : base(positionEffect, "Position")
+        public PositionEffectViewModel(IPositionEffect positionEffect) : base(positionEffect, Resources.PositionEffect)
         {
             PositionEffect = positionEffect;
         }

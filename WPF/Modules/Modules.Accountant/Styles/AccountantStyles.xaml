@@ -13,7 +13,7 @@
 
     <Style TargetType="{x:Type xcdg:DataGridControl}">
         <Setter Property="AutoCreateColumns" Value="False" />
-        <Setter Property="KeyboardNavigation.TabNavigation" Value="Cycle"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Local"/>
         <Setter Property="ContextMenu">
             <Setter.Value>
                 <ContextMenu>

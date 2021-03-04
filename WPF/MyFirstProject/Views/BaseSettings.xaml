@@ -5,17 +5,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
+             xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:BaseSettingsViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="ComboBoxContentTemplate" DataType="{x:Type infrastructure:ExtendedColor}">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
-            <StackPanel HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
-                <TextBlock Text="Please Choose your language"/>
-                <ComboBox Text="{Binding SelectedItem}">
-                    <TextBlock Text="en-US"/>
-                    <TextBlock Text="uk-UA"/>
-                </ComboBox>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Please Choose your language"
+                       Margin="5"
+                       Style="{DynamicResource MaterialDesignHeadline6TextBlock}"/>
+
+
+            <ComboBox SelectedItem="{Binding SelectedLanguage}"
+                          ItemsSource="{Binding Source={x:Static infrastructure:Languages.LanguagesCollection}}"
+                          ItemTemplate="{StaticResource ComboBoxContentTemplate}"
+                          Style="{DynamicResource MaterialDesignFilledComboBox}"/>
+
+                <Button Content="X"
+                        Command="{Binding CloseCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                        Margin="5"
+                        Style="{DynamicResource MaterialDesignFloatingActionDarkButton}"/>
             </StackPanel>
     </Grid>
 </UserControl>

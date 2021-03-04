@@ -1,21 +1,23 @@
-﻿<Window x:Class="MyFirstProject.Views.ShellView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:prism="http://prismlibrary.com/"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:share="clr-namespace:Infrastructure;assembly=Infrastructure"
-        xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
-        mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
-        prism:ViewModelLocator.AutoWireViewModel="True" Loaded="Window_Loaded">
+﻿<mah:MetroWindow  x:Class="MyFirstProject.Views.ShellView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:prism="http://prismlibrary.com/"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:share="clr-namespace:Infrastructure;assembly=Infrastructure"
+                  xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
+                  xmlns:localization="clr-namespace:MyFirstProject.Properties"
+                  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                  mc:Ignorable="d"
+                  d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
+                  prism:ViewModelLocator.AutoWireViewModel="True">
 
-    <Window.Style>
-        <Style TargetType="Window">
+    <mah:MetroWindow.Style>
+        <Style TargetType="Window" BasedOn="{StaticResource MaterialDesignWindow}">
             <Setter Property="Title" Value="MainWindow" />
             <Setter Property="WindowState" Value="Maximized" />
         </Style>
-    </Window.Style>
+    </mah:MetroWindow.Style>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -33,9 +35,10 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
 
-            <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.SlideRegion}" />
+            <ContentControl Grid.Column="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.SlideRegion}" />
 
             <GridSplitter Grid.Column="1"
                           Style="{StaticResource VerticalGridSplitter}" />
@@ -52,17 +55,23 @@
                 <GridSplitter Grid.Row="1"
                               Style="{StaticResource HorizontalGridSplitter}" />
                 <TabControl Grid.Row="2">
-                    <TabItem Header="Controller">
+                    <TabItem Header="{x:Static localization:Resources.Controller}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.ControllerRegion}" />
                     </TabItem>
-                    <TabItem Header="Effect">
+                    <TabItem Header="{x:Static localization:Resources.Effects}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.EffectRegion}"/>
                     </TabItem>
-                    <TabItem Header="Accountant">
+                    <TabItem Header="{x:Static localization:Resources.Accountant}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
+                    </TabItem>
+                    <TabItem Header="Change Language">
+                    <Button Content="{x:Static localization:Resources.ChangeLanguage}" Command="{Binding SetLanguageCommand}"/>
                     </TabItem>
                 </TabControl>
             </Grid>
+
+            <ContentControl Grid.Column="3" prism:RegionManager.RegionName="{x:Static share:RegionNames.Library}"/>
+            
         </Grid>
     </Grid>
-</Window>
+</mah:MetroWindow>

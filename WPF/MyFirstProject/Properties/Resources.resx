@@ -123,6 +123,9 @@
   <data name="Change" xml:space="preserve">
     <value>Change</value>
   </data>
+  <data name="ChangeLanguage" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -137,5 +140,8 @@
   </data>
   <data name="Enter_new_width" xml:space="preserve">
     <value>Choose new width</value>
+  </data>
+  <data name="MessageBoxLanguage" xml:space="preserve">
+    <value>Language will change when you restart this application. Do you want to do it?</value>
   </data>
 </root>

@@ -99,6 +99,14 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MvvmLightLibs": {
               "target": "Package",
               "version": "[5.4.1.1, )"
@@ -173,6 +181,14 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MvvmLightLibs": {
               "target": "Package",
               "version": "[5.4.1.1, )"
@@ -244,6 +260,14 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Prism.Core": {
               "target": "Package",
               "version": "[8.0.0.1909, )"

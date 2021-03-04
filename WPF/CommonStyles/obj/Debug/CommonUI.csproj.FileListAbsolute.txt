@@ -42,3 +42,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\Styles\MaterialDesignCommonStyle.baml

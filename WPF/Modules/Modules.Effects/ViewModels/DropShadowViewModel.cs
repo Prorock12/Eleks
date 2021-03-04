@@ -1,6 +1,7 @@
 ﻿using Infrastructure;
 using Models.Interfaces.Effects;
 using System.Linq;
+using Modules.Effects.Properties;
 
 namespace Modules.Effects.ViewModels
 {
@@ -26,7 +27,7 @@ namespace Modules.Effects.ViewModels
 
         public IDropShadowEffect DropShadowEffect { get; }
 
-        public DropShadowViewModel(IDropShadowEffect dropShadowEffect) : base(dropShadowEffect, "DropShadow")
+        public DropShadowViewModel(IDropShadowEffect dropShadowEffect) : base(dropShadowEffect, Resources.DropShadow)
         {
             DropShadowEffect = dropShadowEffect;
             ExtendedDropShadowColor =

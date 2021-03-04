@@ -6,6 +6,8 @@ using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using System.Windows.Input;
+using Services.ApplicationSettingsBase;
+using Services.DialogService.Service;
 using Unity;
 using IDialogService = Services.DialogService.Service.IDialogService;
 
@@ -17,16 +19,21 @@ namespace MyFirstProject.ViewModels
 
         private static IUnityContainer _unityContainer;
 
-        public ICommand ChangeSizeCommand { get; set; }
+        private static ISettingsServices _settingsServices;
+
+        public ICommand SetLanguageCommand { get; set; }
+
+        //public ICommand ChangeSizeCommand { get; set; }
 
         #region Constructor
 
-        public ShellViewModel(IDialogService dialogService, IUnityContainer unityContainer, IEventAggregator eventAggregator)
+        public ShellViewModel(IDialogService dialogService, IUnityContainer unityContainer, IEventAggregator eventAggregator,ISettingsServices settingsServices)
         {
             _dialogService = dialogService;
             _unityContainer = unityContainer;
+            _settingsServices = settingsServices;
 
-            ChangeSizeCommand = new DelegateCommand(ChangeSize);
+            SetLanguageCommand = new DelegateCommand(SetBaseSettings);
 
             eventAggregator.GetEvent<SendRequestChangeSizeEvent>().Subscribe(ChangeSize);
         }
@@ -40,9 +47,15 @@ namespace MyFirstProject.ViewModels
         }
         public static void SetBaseSettings()
         {
-            var control = _unityContainer.Resolve<BaseSettings>();
-            var result = _dialogService.ShowDialog(control);
-            //var size = result as Size;
+            //if (_settingsServices.CurrentLanguage == null)
+            //{
+                var control = _unityContainer.Resolve<BaseSettings>();
+                var result = _dialogService.ShowDialog(control);
+            //}
+            //else
+            //{
+                
+            //}
         }
     }
 }

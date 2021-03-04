@@ -123,11 +123,17 @@
   <data name="Background" xml:space="preserve">
     <value>Background</value>
   </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
   <data name="BlurRadius" xml:space="preserve">
     <value>Blur Radius</value>
   </data>
   <data name="BorderBrush" xml:space="preserve">
     <value>Border Brush</value>
+  </data>
+  <data name="BorderEffert" xml:space="preserve">
+    <value>Border Effect</value>
   </data>
   <data name="BorderThickness" xml:space="preserve">
     <value>Border Thickness</value>
@@ -144,6 +150,9 @@
   <data name="Direction" xml:space="preserve">
     <value>Direction</value>
   </data>
+  <data name="DropShadow" xml:space="preserve">
+    <value>Drop Shadow</value>
+  </data>
   <data name="Height" xml:space="preserve">
     <value>Height</value>
   </data>
@@ -153,11 +162,17 @@
   <data name="Left" xml:space="preserve">
     <value>Left</value>
   </data>
+  <data name="MarginEffect" xml:space="preserve">
+    <value>Margin Effect</value>
+  </data>
   <data name="Opacity" xml:space="preserve">
     <value>Opacity</value>
   </data>
   <data name="Padding" xml:space="preserve">
     <value>Padding</value>
+  </data>
+  <data name="PositionEffect" xml:space="preserve">
+    <value>Position Effect</value>
   </data>
   <data name="Radius" xml:space="preserve">
     <value>Radius</value>

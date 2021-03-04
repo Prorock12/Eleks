@@ -62,11 +62,12 @@
                     </xcdg:Column.CellEditor>
                 </xcdg:Column>
 
-                <xcdg:UnboundColumn Title="{x:Static localization:Resources.Width}"
+                <xcdg:Column Title="{x:Static localization:Resources.Width}"
                              FieldName="Width"
+                             DisplayedValueConverterParameter="Width"
                              DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}">
                     
-                </xcdg:UnboundColumn>
+                </xcdg:Column>
 
                 <xcdg:Column Title="{x:Static localization:Resources.Height}"
                              FieldName="Height"

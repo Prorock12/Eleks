@@ -57,3 +57,12 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\obj\
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\uk-UA\Modules.Controller.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\obj\Debug\Modules.Controller.Properties.Resources.uk-UA.resources
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\obj\Debug\uk-UA\Modules.Controller.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MaterialDesignColors.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MaterialDesignColors.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\ControlzEx.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\ControlzEx.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MahApps.Metro.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\MahApps.Metro.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\de\MahApps.Metro.resources.dll

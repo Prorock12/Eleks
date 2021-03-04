@@ -8,11 +8,10 @@ namespace Services.DialogService.Service
 
         public object ShowDialog(UserControl userControl)
         {
-            DialogWindow window = new DialogWindow();
-            window.WindowContent = userControl;
+            var window = new DialogWindow {WindowContent = userControl};
             window.ShowDialog();
 
-            return window.DialogResult;
+            return window;
         }
 
         #endregion Methods

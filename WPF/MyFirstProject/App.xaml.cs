@@ -12,6 +12,8 @@ using Prism.Modularity;
 using Services.DialogService.Service;
 using Services.FilseSelector;
 using System.Windows;
+using Modules.Library;
+using Services.ApplicationSettingsBase;
 
 namespace MyFirstProject
 {
@@ -24,23 +26,11 @@ namespace MyFirstProject
 
         #region methods
 
-        public static void ChangeCulture(CultureInfo newCulture)
-        {
-            Thread.CurrentThread.CurrentCulture = newCulture;
-            Thread.CurrentThread.CurrentUICulture = newCulture;
-
-            var oldWindow = Application.Current.MainWindow;
-
-            Application.Current.MainWindow = new ShellView();
-            Application.Current.MainWindow.Show();
-
-            oldWindow?.Close();
-        }
-
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IDialogService, DialogService>();
             containerRegistry.RegisterSingleton<IFileSelector, FileSelector>();
+            containerRegistry.RegisterSingleton<ISettingsServices, SettingsServices>();
         }
 
         protected override Window CreateShell()
@@ -56,6 +46,7 @@ namespace MyFirstProject
             moduleCatalog.AddModule<ControllerModule>();
             moduleCatalog.AddModule<EffectsModule>();
             moduleCatalog.AddModule<AccountantModule>();
+            moduleCatalog.AddModule<LibraryModule>();
         }
 
         #endregion methods

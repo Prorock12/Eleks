@@ -22,14 +22,14 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Viewbox KeyboardNavigation.TabNavigation="Cycle">
+            <Viewbox>
                 <ListBox x:Name="ElementsListBox"
                          Width="{Binding SelectedPresentation.Resolution.Width}"
                          Height="{Binding SelectedPresentation.Resolution.Height}"
                          Style="{StaticResource ElementListBoxStyle}"
                          ItemsSource="{Binding Elements}"
                          SelectedItem="{Binding SelectedElement}"
-                         KeyboardNavigation.TabNavigation="Cycle"
+                         KeyboardNavigation.TabNavigation="Continue"
                          MouseDown="ElementsListBox_OnMouseDown"
                          MouseUp="ElementsListBox_OnMouseUp"
                          MouseMove="ElementsListBox_OnMouseMove" />

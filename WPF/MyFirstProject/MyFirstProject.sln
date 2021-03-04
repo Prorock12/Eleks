@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Accountant", "..\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.ApplicationSettingsBase", "..\Services.DialogService\Services.ApplicationSettingsBase\Services.ApplicationSettingsBase.csproj", "{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Library", "..\Modules\Modules.Library\Modules.Library.csproj", "{4897F669-8AE1-47E2-9D4A-266D91E0E9EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4897F669-8AE1-47E2-9D4A-266D91E0E9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4897F669-8AE1-47E2-9D4A-266D91E0E9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4897F669-8AE1-47E2-9D4A-266D91E0E9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4897F669-8AE1-47E2-9D4A-266D91E0E9EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{8DD189FA-7316-478C-8183-4C5BD8A3556B} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
 		{4DDD598F-7D09-4741-9956-40C9655DC5C9} = {F73BD313-2BF7-4BE9-AF7E-F2290E183EBC}
 		{F6E9281C-B1BD-4C58-B14C-F898F1DCD62E} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
+		{4897F669-8AE1-47E2-9D4A-266D91E0E9EA} = {F73BD313-2BF7-4BE9-AF7E-F2290E183EBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78F7D3C5-660E-4776-BE95-C510700770E0}
