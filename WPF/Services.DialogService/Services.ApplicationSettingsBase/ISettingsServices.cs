@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.AccessControl;
+using Infrastructure;
 
 namespace Services.ApplicationSettingsBase
 {
     public interface ISettingsServices
     {
-        
+        //Language GetLanguage();
+        //void SetLanguage(Language language);
+        string CurrentLanguage { get; set; }
     }
 }

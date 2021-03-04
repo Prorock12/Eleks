@@ -1,6 +1,7 @@
 ﻿using Infrastructure;
 using Models.Interfaces.Effects;
 using System.Linq;
+using Modules.Effects.Properties;
 
 namespace Modules.Effects.ViewModels
 {
@@ -97,7 +98,7 @@ namespace Modules.Effects.ViewModels
 
         public IBorderEffect BorderEffect { get; }
 
-        public BorderEffectViewModel(IBorderEffect borderEffect) : base(borderEffect, "Border")
+        public BorderEffectViewModel(IBorderEffect borderEffect) : base(borderEffect, Resources.BorderEffert)
         {
             BorderEffect = borderEffect;
             BorderThickness = borderEffect.BorderThickness;

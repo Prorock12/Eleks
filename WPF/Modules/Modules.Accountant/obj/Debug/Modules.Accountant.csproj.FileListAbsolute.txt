@@ -76,3 +76,12 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\obj\Debug\Modules.Accountant.Properties.Resources.uk-UA.resources
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\obj\Debug\uk-UA\Modules.Accountant.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Modules.Accountant.dll.config
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MaterialDesignColors.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MaterialDesignColors.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\ControlzEx.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\ControlzEx.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MahApps.Metro.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\MahApps.Metro.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\de\MahApps.Metro.resources.dll

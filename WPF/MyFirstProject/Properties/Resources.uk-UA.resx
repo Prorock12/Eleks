@@ -123,6 +123,9 @@
   <data name="Change" xml:space="preserve">
     <value>Змінити</value>
   </data>
+  <data name="ChangeLanguage" xml:space="preserve">
+    <value>Змінити мову</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Закрити</value>
   </data>
@@ -137,5 +140,8 @@
   </data>
   <data name="Enter_new_width" xml:space="preserve">
     <value>Виберіть нову ширину</value>
+  </data>
+  <data name="MessageBoxLanguage" xml:space="preserve">
+    <value>Мова зміниться коли ви перезапустите програму.Чи хочете ви це зробити?</value>
   </data>
 </root>

@@ -8,5 +8,6 @@
         public const string ControllerRegion = nameof(ControllerRegion);
         public const string EffectRegion = nameof(EffectRegion);
         public const string Accountant = nameof(Accountant);
+        public const string Library = nameof(Library);
     }
 }

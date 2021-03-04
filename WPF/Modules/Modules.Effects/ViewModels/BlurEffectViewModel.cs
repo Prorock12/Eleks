@@ -1,4 +1,5 @@
 ﻿using Models.Interfaces.Effects;
+using Modules.Effects.Properties;
 
 namespace Modules.Effects.ViewModels
 {
@@ -6,7 +7,7 @@ namespace Modules.Effects.ViewModels
     {
         public IBlurEffect BlurEffect { get; }
 
-        public BlurEffectViewModel(IBlurEffect blurEffect) : base(blurEffect, "Blur")
+        public BlurEffectViewModel(IBlurEffect blurEffect) : base(blurEffect, Resources.Blur)
         {
             BlurEffect = blurEffect;
         }

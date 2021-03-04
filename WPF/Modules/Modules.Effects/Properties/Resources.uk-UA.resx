@@ -123,11 +123,17 @@
   <data name="Background" xml:space="preserve">
     <value>Колір фону</value>
   </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Еффект розмиття</value>
+  </data>
   <data name="BlurRadius" xml:space="preserve">
     <value>Радіус розмиття</value>
   </data>
   <data name="BorderBrush" xml:space="preserve">
     <value>Колір рамки</value>
+  </data>
+  <data name="BorderEffert" xml:space="preserve">
+    <value>Еффект межі</value>
   </data>
   <data name="BorderThickness" xml:space="preserve">
     <value>Товщина рамки</value>
@@ -144,6 +150,9 @@
   <data name="Direction" xml:space="preserve">
     <value>напрям</value>
   </data>
+  <data name="DropShadow" xml:space="preserve">
+    <value>Еффект Тінь</value>
+  </data>
   <data name="Height" xml:space="preserve">
     <value>Висота</value>
   </data>
@@ -153,11 +162,17 @@
   <data name="Left" xml:space="preserve">
     <value>Ліворуч</value>
   </data>
+  <data name="MarginEffect" xml:space="preserve">
+    <value>Еффект відступів</value>
+  </data>
   <data name="Opacity" xml:space="preserve">
     <value>Непрозорість</value>
   </data>
   <data name="Padding" xml:space="preserve">
     <value>Внутрішній відступ</value>
+  </data>
+  <data name="PositionEffect" xml:space="preserve">
+    <value>Еффект розмірів</value>
   </data>
   <data name="Radius" xml:space="preserve">
     <value>Радіус</value>

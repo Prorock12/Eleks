@@ -25,11 +25,10 @@
                  Style="{StaticResource SlidesListBoxStyle}"
                  ItemsSource="{Binding  Slides}"
                  SelectedItem="{Binding SelectedSlide}"
-                 KeyboardNavigation.TabNavigation="Cycle"/>
+                 KeyboardNavigation.TabNavigation="Continue"/>
 
             <StackPanel Grid.Row="1"
-                    VerticalAlignment="Bottom"
-                    Background="Black">
+                    VerticalAlignment="Bottom">
 
                 <Button Command="{Binding AddSlideCommand}"
                         Content="{x:Static localization:Resources.Add_Slide}"

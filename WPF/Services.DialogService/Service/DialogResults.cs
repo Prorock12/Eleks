@@ -3,6 +3,7 @@
     public enum DialogResults
     {
         Undefined,
-        No
+        No,
+        Yes
     }
 }

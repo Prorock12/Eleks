@@ -5,28 +5,25 @@
                     xmlns:viewModels="clr-namespace:Modules.PresentationRegion.ViewModels"
                     mc:Ignorable="d">
 
-    <Style TargetType="{x:Type ListBox}">
-        <Setter Property="Foreground" Value="Bisque" />
-        <Setter Property="Background" Value="Black" />
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="BorderBrush" Value="White" />
         <Setter Property="BorderThickness" Value="0 0 2 0" />
     </Style>
 
-    <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Bisque" />
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+        <!--<Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="5" />-->
+        <Setter Property="Margin" Value="1" />
     </Style>
 
-    <Style TargetType="Border">
+    <Style TargetType="Border" >
         <Setter Property="BorderBrush" Value="White" />
         <Setter Property="BorderThickness" Value="2" />
     </Style>
 
-    <Style TargetType="{x:Type StackPanel}">
-        <Setter Property="Background" Value="Black" />
+    <Style TargetType="{x:Type StackPanel}" BasedOn="{StaticResource BaseStackPanelStyle}">
+        
     </Style>
 
     <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
@@ -60,7 +57,7 @@
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="DarkRed" />
-                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="Foreground" Value="Goldenrod" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

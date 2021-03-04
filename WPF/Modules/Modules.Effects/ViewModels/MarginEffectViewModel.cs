@@ -1,5 +1,6 @@
 ﻿using Models.Interfaces.Effects;
 using System.Windows;
+using Modules.Effects.Properties;
 
 namespace Modules.Effects.ViewModels
 {
@@ -44,7 +45,7 @@ namespace Modules.Effects.ViewModels
 
         #endregion Properties
 
-        public MarginEffectViewModel(IMarginEffect marginEffect) : base(marginEffect, "Margin")
+        public MarginEffectViewModel(IMarginEffect marginEffect) : base(marginEffect, Resources.MarginEffect)
         {
             MarginEffect = marginEffect;
         }

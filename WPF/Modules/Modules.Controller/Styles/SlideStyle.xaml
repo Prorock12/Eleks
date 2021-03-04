@@ -3,19 +3,17 @@
                     xmlns:models="clr-namespace:Models.Interfaces.Models;assembly=Models"
                     xmlns:viewModels="clr-namespace:Modules.Controller.ViewModels">
 
-    <Style TargetType="{x:Type ItemsControl}">
-        <Setter Property="Foreground" Value="Bisque" />
-        <Setter Property="Background" Value="Black" />
+    <Style TargetType="{x:Type ItemsControl}" >
         <Setter Property="FontSize" Value="20" />
         <Setter Property="BorderThickness" Value="0 0 0 2" />
         <Setter Property="BorderBrush" Value="White" />
     </Style>
 
-    <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Bisque" />
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+        <!--<Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="5" />-->
+        <Setter Property="Margin" Value="1" />
     </Style>
 
     <Style TargetType="{x:Type CheckBox}">

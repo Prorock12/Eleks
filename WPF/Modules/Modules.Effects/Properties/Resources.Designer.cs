@@ -79,6 +79,15 @@ namespace Modules.Effects.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blur.
+        /// </summary>
+        public static string Blur {
+            get {
+                return ResourceManager.GetString("Blur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blur Radius.
         /// </summary>
         public static string BlurRadius {
@@ -93,6 +102,15 @@ namespace Modules.Effects.Properties {
         public static string BorderBrush {
             get {
                 return ResourceManager.GetString("BorderBrush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Border Effect.
+        /// </summary>
+        public static string BorderEffert {
+            get {
+                return ResourceManager.GetString("BorderEffert", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace Modules.Effects.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Drop Shadow.
+        /// </summary>
+        public static string DropShadow {
+            get {
+                return ResourceManager.GetString("DropShadow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Height.
         /// </summary>
         public static string Height {
@@ -169,6 +196,15 @@ namespace Modules.Effects.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Margin Effect.
+        /// </summary>
+        public static string MarginEffect {
+            get {
+                return ResourceManager.GetString("MarginEffect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opacity.
         /// </summary>
         public static string Opacity {
@@ -183,6 +219,15 @@ namespace Modules.Effects.Properties {
         public static string Padding {
             get {
                 return ResourceManager.GetString("Padding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position Effect.
+        /// </summary>
+        public static string PositionEffect {
+            get {
+                return ResourceManager.GetString("PositionEffect", resourceCulture);
             }
         }
         

@@ -23,8 +23,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0"
-                        Orientation="Horizontal"
-                        Background="Black">
+                        Orientation="Horizontal">
                 <Button Command="{Binding AddSlideCommand}"
                         Content="{x:Static localization:Resources.Add_Slide}"
                         Style="{StaticResource AddButtonStyle}" />

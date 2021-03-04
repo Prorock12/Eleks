@@ -5,23 +5,23 @@
                     xmlns:viewModels="clr-namespace:Modules.Slides.ViewModels"
                     mc:Ignorable="d">
 
-    <Style TargetType="{x:Type ListBox}">
-        <Setter Property="Foreground" Value="Bisque" />
-        <Setter Property="Background" Value="Black" />
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
+        <!--<Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />-->
         <Setter Property="FontSize" Value="20" />
         <Setter Property="BorderThickness" Value="0 0 0 2" />
         <Setter Property="BorderBrush" Value="White" />
     </Style>
 
-    <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Bisque" />
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+        <!--<Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="5" />-->
+        <Setter Property="Margin" Value="1" />
     </Style>
 
     <Style TargetType="{x:Type StackPanel}">
-        <Setter Property="Background" Value="Black" />
+        <!--<Setter Property="Background" Value="Black" />-->
     </Style>
 
     <Style TargetType="Border">
@@ -95,7 +95,7 @@
     <Style  TargetType="{x:Type ListBoxItem}">
         <Setter Property="Margin" Value="5" />
         <Style.Triggers>
-            <Trigger Property="IsSelected" Value="True">
+            <Trigger Property="IsFocused" Value="True">
                 <Setter Property="Foreground" Value="SandyBrown" />
                 <Setter Property="BorderBrush" Value="Red"/>
                 <Setter Property="BorderThickness" Value="3"/>

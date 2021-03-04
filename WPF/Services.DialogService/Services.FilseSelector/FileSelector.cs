@@ -1,5 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 using Models.Models;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace Services.FilseSelector
 {
@@ -48,6 +51,23 @@ namespace Services.FilseSelector
             if (string.IsNullOrEmpty(path)) return null;
             var video = new VideoElement("newVideo") { Path = path };
             return video;
+        }
+
+        public FolderBrowserDialog GetFolder()
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result != DialogResult.OK || string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    return null;
+
+                return fbd;
+
+                //string[] files = Directory.GetFiles(fbd.SelectedPath);
+
+                //return files;
+            }
         }
     }
 }

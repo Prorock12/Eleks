@@ -11,19 +11,19 @@
 
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
 
-    <Style TargetType="{x:Type ListBox}">
-        <Setter Property="Foreground" Value="Bisque" />
-        <Setter Property="Background" Value="Black" />
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignToolToggleFlatListBox}">
+        <!--<Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderBrush" Value="White" />-->
         <Setter Property="BorderThickness" Value="0 0 0 2" />
     </Style>
 
-    <Style TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Bisque" />
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+        <!--<Setter Property="Foreground" Value="Bisque" />
         <Setter Property="Background" Value="Black" />
-        <Setter Property="Padding" Value="5" />
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Padding" Value="5" />-->
+        <Setter Property="Margin" Value="1" />
     </Style>
 
     <Style TargetType="{x:Type CheckBox}">
@@ -37,7 +37,7 @@
     </Style>
 
     <Style TargetType="{x:Type StackPanel}">
-        <Setter Property="Background" Value="Black" />
+        <!--<Setter Property="Background" Value="Black" />-->
     </Style>
 
     <ControlTemplate x:Key="ElementControlTemplate" TargetType="{x:Type ListBoxItem}">
@@ -113,6 +113,13 @@
         <Setter Property="Height" Value="{Binding VisualElement.Height}" />
         <Setter Property="Margin" Value="{Binding VisualElement.Margin}" />
         <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Foreground" Value="SandyBrown" />
+                <Setter Property="BorderBrush" Value="Red"/>
+                <Setter Property="BorderThickness" Value="3"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="CanvasElementContainerStyle"  TargetType="{x:Type ListBoxItem}">
@@ -184,7 +191,8 @@
                                             Background="{Binding TextElement.Background}"
                                             Width="Auto"
                                             Foreground="Black"
-                                            Padding="5"/>
+                                            Padding="5"
+                                            Style="{DynamicResource MaterialDesignRichTextBox}"/>
                 <StackPanel Orientation="Horizontal">
                     <Button Content="{x:Static localization:Resources.Load}" Command="{Binding LoadCommand, ElementName=MyRtb}" />
                     <Button Content="{x:Static localization:Resources.Save}" Command="{Binding SaveCommand, ElementName=MyRtb}" />
