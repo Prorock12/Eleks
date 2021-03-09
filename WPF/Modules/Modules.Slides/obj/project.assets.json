@@ -232,6 +232,7 @@
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
           "Prism.Wpf": "8.0.0.1909",
           "Services.ApplicationSettingsBase": "1.0.0",
           "Services.FilseSelector": "1.0.0"
@@ -521,6 +522,7 @@
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
           "Prism.Wpf": "8.0.0.1909",
           "Services.ApplicationSettingsBase": "1.0.0",
           "Services.FilseSelector": "1.0.0"
@@ -810,6 +812,7 @@
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
           "Prism.Wpf": "8.0.0.1909",
           "Services.ApplicationSettingsBase": "1.0.0",
           "Services.FilseSelector": "1.0.0"
@@ -1099,6 +1102,7 @@
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
           "Prism.Wpf": "8.0.0.1909",
           "Services.ApplicationSettingsBase": "1.0.0",
           "Services.FilseSelector": "1.0.0"

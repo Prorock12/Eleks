@@ -6,7 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:localization="clr-namespace:Modules.Redactor.Properties"
              xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
-             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
@@ -32,14 +32,14 @@
                          SelectedItem="{Binding SelectedElement}"
                          KeyboardNavigation.TabNavigation="Continue"
                          Background="{DynamicResource MaterialDesignPaper}"
-                         AllowDrop="True"
-                         Drop="ListBoxItem_OnDrop">
-                    
-                    <!--<b:Interaction.Triggers>
-                        <b:EventTrigger EventName="Drop">
-                            <b:InvokeCommandAction  Command="{Binding DropCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=DragDrop}}" />
-                        </b:EventTrigger>
-                    </b:Interaction.Triggers>-->
+                         AllowDrop="True">
+                    <!--Drop="ListBoxItem_OnDrop"-->
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding D}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                 </ListBox>
             </Viewbox>
 

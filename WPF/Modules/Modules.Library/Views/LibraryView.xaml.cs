@@ -2,6 +2,10 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Infrastructure.Events;
+using Models.Models;
+using Modules.Library.ViewModels;
+using Prism.Events;
 
 namespace Modules.Library.Views
 {
@@ -19,11 +23,11 @@ namespace Modules.Library.Views
         {
             ListBox parent = (ListBox)sender;
             object data = GetDataFromListBox(parent, e.GetPosition(parent));
-
             if (data != null)
             {
                 DragDrop.DoDragDrop(parent, data, DragDropEffects.Copy);
             }
+
         }
         private static object GetDataFromListBox(ListBox source, Point point)
         {

@@ -28,7 +28,8 @@ namespace Modules.Library.ViewModels
             get
             {
                 if (_bitmapImage == null)
-                    Task.Run(LoadBitmapImage);
+                    //Task.Run(LoadBitmapImage);
+                Parallel.Invoke(LoadBitmapImage);
                 return _bitmapImage;
             }
             set => SetProperty(ref _bitmapImage, value);
@@ -59,7 +60,7 @@ namespace Modules.Library.ViewModels
             //img.UriSource = uri;
             img.StreamSource = fileStream;
             img.EndInit();
-            img.Freeze();
+            //img.Freeze();
             //BitmapImage = img;
             Application.Current.Dispatcher.InvokeAsync(() => BitmapImage = img, DispatcherPriority.Background);
         }

@@ -10,6 +10,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Modules.Library.ViewModels;
@@ -72,6 +73,8 @@ namespace Modules.Redactor.ViewModels
             set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
         }
 
+        public ICommand DropCommand { get; }
+
         #endregion Properties
 
         #region Constructor
@@ -97,6 +100,8 @@ namespace Modules.Redactor.ViewModels
             AddImageElementCommand = new DelegateCommand(AddImage, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddVideoElementCommand = new DelegateCommand(AddVideo, CanChangeElement).ObservesProperty(() => SelectedSlide);
             RemoveElementCommand = new DelegateCommand(RemoveElement, CanChangeElement).ObservesProperty(() => SelectedSlide);
+
+            DropCommand = new DelegateCommand<DragEventArgs>(Drop);
         }
 
         #endregion Constructor
@@ -104,9 +109,7 @@ namespace Modules.Redactor.ViewModels
         #region Methods
         private void Drop(DragEventArgs e)
         {
-            object data = e.Data.GetData(typeof(LibraryItemViwModel));
-            var newImageElement = new ImageElementViewModel(new ImageElement("new Image") { Path = ((LibraryItemViwModel)data)?.Path });
-            Elements.Add(newImageElement);
+            //Elements.Add(new ImageElementViewModel(element as ImageElement));
         }
 
 

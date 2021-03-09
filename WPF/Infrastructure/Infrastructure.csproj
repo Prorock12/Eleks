@@ -69,6 +69,7 @@
     <Compile Include="Events\AddVideoElementEvent.cs" />
     <Compile Include="Events\ChangePositionVideoElementEvent.cs" />
     <Compile Include="Events\ChangeResolutionSizeEvent.cs" />
+    <Compile Include="Events\DragDropEvent.cs" />
     <Compile Include="Events\RemoveElementEvent.cs" />
     <Compile Include="Events\RemoveSlideEvent.cs" />
     <Compile Include="Events\SelectedElementEvent.cs" />

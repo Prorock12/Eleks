@@ -12,7 +12,7 @@
     </Style>
 
     <DataTemplate DataType="{x:Type viewModels:LibraryItemViwModel}">
-        <Image MaxHeight="100" MaxWidth="100" Source="{Binding BitmapImage}"/>
+        <Image MaxHeight="100" MaxWidth="100" Source="{Binding Path}"/>
     </DataTemplate>
     
 </ResourceDictionary>

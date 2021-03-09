@@ -174,3 +174,11 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Contro
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\MahApps.Metro.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\MahApps.Metro.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\obj\Debug\XamlC.stamp
