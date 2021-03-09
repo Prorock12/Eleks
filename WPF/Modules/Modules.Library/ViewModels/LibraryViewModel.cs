@@ -11,71 +11,83 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using Prism.Events;
+using Services.ApplicationSettingsBase;
 using Services.FilseSelector;
 
 namespace Modules.Library.ViewModels
 {
     public class LibraryViewModel : BindableBase
     {
-        private BitmapImage _bitmapImage;
+        #region Fields
+
         private string _selectedFolder;
         private readonly IFileSelector _fileSelector;
+        private readonly ISettingsServices _settingsServices;
+
+        #endregion
+        #region Properties
+
         public ICommand ChooseFolderCommand { get; }
         public ObservableCollection<LibraryItemViwModel> LibraryItems { get; set; }
         public LibraryItemViwModel LibraryItemViwModel { get; set; }
-
-        //public BitmapImage BitmapImage
-        //{
-        //    get
-        //    {
-        //        if (_bitmapImage == null)
-        //            Task.Run(LoadImages);
-        //        else
-        //        {
-        //            return _bitmapImage;
-        //        }
-        //    };
-        //    set=> SetProperty(ref _bitmapImage,value);
-        //}
-
         public string SelectedFolder
         {
             get => _selectedFolder;
-            set => SetProperty(ref _selectedFolder, value,OnChangedFolder);
+            set => SetProperty(ref _selectedFolder, value, OnChangedFolder);
         }
+
+        #endregion
+
+        #region Methods
 
         private void OnChangedFolder()
         {
+            LibraryItems.Clear();
             //Task task = new Task(LoadImages);
             //task.Start();
 
+            Parallel.Invoke(LoadImages);
+
+            //Thread thread = new Thread(LoadImages);
+            //thread.Priority = ThreadPriority.AboveNormal;
+            //thread.Start();
+
             //Task.Factory.StartNew(LoadImages);
-            LibraryItems.Clear();
-            Task.Run(LoadImages);
+
+            //Task.Run(LoadImages);
         }
 
-        public LibraryViewModel(IEventAggregator eventAggregator, IFileSelector fileSelector)
+        public LibraryViewModel(IFileSelector fileSelector, ISettingsServices settingsServices)
         {
+            _settingsServices = settingsServices;
             _fileSelector = fileSelector;
 
             LibraryItems = new ObservableCollection<LibraryItemViwModel>();
             ChooseFolderCommand = new DelegateCommand(ChooseFolder);
+
+            if (_settingsServices.CurrentFolderPath != null)
+            {
+                SelectedFolder = _settingsServices.CurrentFolderPath;
+            }
         }
 
         private void ChooseFolder()
         {
-            //if ( != null) 
-                SelectedFolder = _fileSelector.GetFolder().SelectedPath;
+            var folderPAth = _fileSelector.GetFolder();
+            if (folderPAth != null)
+            {
+                _settingsServices.CurrentFolderPath = folderPAth.SelectedPath;
+                SelectedFolder = _settingsServices.CurrentFolderPath;
+            }
         }
         private void LoadImages()
         {
-            //if (Images.Count != 0)
             foreach (var path in Directory.GetFiles(SelectedFolder))
             {
                 if (path.EndsWith(".png") || path.EndsWith(".jpeg") || path.EndsWith(".jpg"))
                 {
-                    var item = new LibraryItemViwModel() {Path = path };
-                    Application.Current.Dispatcher.InvokeAsync(()=>AddLibraryItem(item),DispatcherPriority.Background);
+                    var item = new LibraryItemViwModel() { Path = path };
+                    Application.Current.Dispatcher.InvokeAsync(() => AddLibraryItem(item), DispatcherPriority.Background);
                 }
             }
         }
@@ -84,5 +96,7 @@ namespace Modules.Library.ViewModels
         {
             LibraryItems.Add(item);
         }
+
+        #endregion
     }
 }

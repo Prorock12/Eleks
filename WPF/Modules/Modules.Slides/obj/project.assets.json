@@ -225,6 +225,24 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
       "Modules.Redactor/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -234,6 +252,7 @@
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
           "Models": "1.0.0",
+          "Modules.Library": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
           "Prism.Wpf": "8.0.0.1909",
@@ -244,6 +263,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -483,6 +514,24 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
       "Modules.Redactor/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -492,6 +541,7 @@
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
           "Models": "1.0.0",
+          "Modules.Library": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
           "Prism.Wpf": "8.0.0.1909",
@@ -502,6 +552,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -741,6 +803,24 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
       "Modules.Redactor/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -750,6 +830,7 @@
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
           "Models": "1.0.0",
+          "Modules.Library": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
           "Prism.Wpf": "8.0.0.1909",
@@ -760,6 +841,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -999,6 +1092,24 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
       "Modules.Redactor/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
@@ -1008,6 +1119,7 @@
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
           "Models": "1.0.0",
+          "Modules.Library": "1.0.0",
           "MvvmLightLibs": "5.4.1.1",
           "Prism.Unity": "8.0.0.1909",
           "Prism.Wpf": "8.0.0.1909",
@@ -1018,6 +1130,18 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -1512,10 +1636,20 @@
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
     },
+    "Modules.Library/1.0.0": {
+      "type": "project",
+      "path": "../Modules.Library/Modules.Library.csproj",
+      "msbuildProject": "../Modules.Library/Modules.Library.csproj"
+    },
     "Modules.Redactor/1.0.0": {
       "type": "project",
       "path": "../Modules.Redactor/Modules.Redactor.csproj",
       "msbuildProject": "../Modules.Redactor/Modules.Redactor.csproj"
+    },
+    "Services.ApplicationSettingsBase/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj"
     },
     "Services.FilseSelector/1.0.0": {
       "type": "project",

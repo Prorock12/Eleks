@@ -6,6 +6,8 @@ namespace Services.ApplicationSettingsBase
 {
     public class SettingsServices : System.Configuration.ApplicationSettingsBase, ISettingsServices
     {
+        private string _currentFolder;
+
         #region constants
 
         private const string IsAccountantEnabledDefault = "false";
@@ -14,9 +16,6 @@ namespace Services.ApplicationSettingsBase
 
         #region properties
 
-        
-
-   
         [UserScopedSetting]
         [DefaultSettingValue("en-US")]
         public string CurrentLanguage
@@ -24,6 +23,8 @@ namespace Services.ApplicationSettingsBase
             get => (string)this[nameof(CurrentLanguage)];
             set => this[nameof(CurrentLanguage)] = (string) value;
         }
+
+
         [UserScopedSetting]
         [DefaultSettingValue(IsAccountantEnabledDefault)]
         public bool IsAccountantEnabled
@@ -31,6 +32,12 @@ namespace Services.ApplicationSettingsBase
             get { return ((bool) this[nameof(IsAccountantEnabled)]); }
 
             set { this[nameof(IsAccountantEnabled)] = (bool) value; }
+        }
+        [UserScopedSetting]
+        public string CurrentFolderPath
+        {
+            get => (string)this[nameof(CurrentFolderPath)];
+            set => this[nameof(CurrentFolderPath)] = (object)value;
         }
 
         #endregion

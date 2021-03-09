@@ -136,3 +136,8 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\De
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\MahApps.Metro.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\MahApps.Metro.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\Modules.Library.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\Services.ApplicationSettingsBase.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\Modules.Library.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\Services.ApplicationSettingsBase.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\uk-UA\Modules.Library.resources.dll

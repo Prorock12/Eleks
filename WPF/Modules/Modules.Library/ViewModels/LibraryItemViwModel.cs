@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 using Prism.Mvvm;
 
 namespace Modules.Library.ViewModels
@@ -45,18 +46,22 @@ namespace Modules.Library.ViewModels
         #endregion
 
         private void LoadBitmapImage()
-        { 
-            //FileStream fileStream =
-            //    new FileStream(Path, FileMode.Open, FileAccess.Read);
+        {
+            FileStream fileStream =
+                new FileStream(Path, FileMode.Open, FileAccess.Read);
 
             var img = new BitmapImage();
-            var uri = new Uri(Path);
+            //var uri = new Uri(Path);
             img.BeginInit();
-            img.UriSource = uri;
+
+            //img.DecodePixelHeight = 36;
+            //img.DecodePixelWidth = 36;
+            //img.UriSource = uri;
+            img.StreamSource = fileStream;
             img.EndInit();
             img.Freeze();
-
-            Application.Current.Dispatcher.InvokeAsync(() => BitmapImage = img);
+            //BitmapImage = img;
+            Application.Current.Dispatcher.InvokeAsync(() => BitmapImage = img, DispatcherPriority.Background);
         }
     }
 }

@@ -1,5 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using Infrastructure.Events;
+using Models.Models;
+using Modules.Library.ViewModels;
+using Prism.Events;
 
 namespace Modules.Redactor.Views
 {
@@ -10,34 +15,23 @@ namespace Modules.Redactor.Views
     {
         #region Fields
 
-        private bool _isMoving;
+        private IEventAggregator _eventAggregator;
 
         #endregion Fields
 
-        public ElementContainerView()
+        public ElementContainerView(IEventAggregator eventAggregator)
         {
+            _eventAggregator = eventAggregator;
+
             InitializeComponent();
         }
-
-        private void ElementsListBox_OnMouseDown(object sender, MouseButtonEventArgs e)
+        private void ListBoxItem_OnDrop(object sender, DragEventArgs e)
         {
-            _isMoving = true;
-        }
+            object data = e.Data.GetData(typeof(LibraryItemViwModel));
+            var newImageElement = new ImageElement("new Image") { Path = ((LibraryItemViwModel)data)?.Path };
 
-        private void ElementsListBox_OnMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            _isMoving = false;
-        }
-
-        private void ElementsListBox_OnMouseMove(object sender, MouseEventArgs e)
-        {
-            //if (_isMoving)
-            //{
-            //    TranslateTransform transform = new TranslateTransform();
-            //    transform.X = Mouse.GetPosition(ElementsShell).X;
-            //    transform.Y = Mouse.GetPosition(ElementsShell).Y;
-            //    this.ElementsListBox.RenderTransform = transform;
-            //}
+            _eventAggregator.GetEvent<AddImageElementEvent>().Publish(newImageElement);
+            //parent.Items.Add(newImageElement);
         }
     }
 }

@@ -11,6 +11,10 @@
         <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+    </Style>
+
     <!--<Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MaterialDesignSubtitle2TextBlock}"/>-->
 
     <!--<Style x:Key="BaseBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}"/>-->

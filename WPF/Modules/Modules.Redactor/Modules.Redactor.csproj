@@ -149,6 +149,10 @@
       <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
       <Name>Services.FilseSelector</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules.Library\Modules.Library.csproj">
+      <Project>{4897f669-8ae1-47e2-9d4a-266d91e0e9ea}</Project>
+      <Name>Modules.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Files\Videos\video1.mp4">

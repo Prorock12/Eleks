@@ -9,8 +9,10 @@ using Services.FilseSelector;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using Modules.Library.ViewModels;
 
 namespace Modules.Redactor.ViewModels
 {
@@ -100,6 +102,13 @@ namespace Modules.Redactor.ViewModels
         #endregion Constructor
 
         #region Methods
+        private void Drop(DragEventArgs e)
+        {
+            object data = e.Data.GetData(typeof(LibraryItemViwModel));
+            var newImageElement = new ImageElementViewModel(new ImageElement("new Image") { Path = ((LibraryItemViwModel)data)?.Path });
+            Elements.Add(newImageElement);
+        }
+
 
         private void ChangeResolutionSize(IResolution result)
         {
@@ -218,13 +227,14 @@ namespace Modules.Redactor.ViewModels
 
         private void RemoveElement()
         {
-            SelectedSlide.Elements.Remove(SelectedElement.Element);
+            SelectedSlide.Elements.Remove(SelectedElement?.Element);
 
             _eventAggregator.GetEvent<RemoveElementEvent>().Publish(SelectedElement?.Element);
         }
 
         private void OnRemoveElement(IElement element)
         {
+            if(element==null) return;
             var removeElement = Elements.First(x => x.Element == element);
             Elements.Remove(removeElement);
         }

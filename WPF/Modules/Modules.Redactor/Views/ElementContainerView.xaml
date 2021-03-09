@@ -6,6 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:localization="clr-namespace:Modules.Redactor.Properties"
              xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
@@ -30,33 +31,57 @@
                          ItemsSource="{Binding Elements}"
                          SelectedItem="{Binding SelectedElement}"
                          KeyboardNavigation.TabNavigation="Continue"
-                         MouseDown="ElementsListBox_OnMouseDown"
-                         MouseUp="ElementsListBox_OnMouseUp"
-                         MouseMove="ElementsListBox_OnMouseMove" />
+                         Background="{DynamicResource MaterialDesignPaper}"
+                         AllowDrop="True"
+                         Drop="ListBoxItem_OnDrop">
+                    
+                    <!--<b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Drop">
+                            <b:InvokeCommandAction  Command="{Binding DropCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=DragDrop}}" />
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>-->
+                </ListBox>
             </Viewbox>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal"
-                    VerticalAlignment="Bottom">
+                    VerticalAlignment="Bottom"
+                    Background="{DynamicResource MaterialDesignPaper}">
 
                 <CheckBox Content="{x:Static localization:Resources.Change_Stack_View}"
                           IsChecked="{Binding IsStackView}"
                           Foreground="AliceBlue" />
 
                 <Button Command="{Binding AddTextElementCommand}"
-                    Content="{x:Static localization:Resources.Add_Text}"
-                    Style="{StaticResource AddButtonStyle}" />
+                        Style="{StaticResource AddButtonStyle}" >
+                    <Button.Content>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-text-100.png"/>
+                    </Button.Content>
+                </Button>
+
+                <!--Content="{x:Static localization:Resources.Add_Text}"
+                 Content="{x:Static localization:Resources.Add_Video}"
+                Content="{x:Static localization:Resources.Remove_Element}"-->
 
                 <Button Command="{Binding AddImageElementCommand}"
-                    Content="{x:Static localization:Resources.Add_Image}"
-                    Style="{StaticResource AddButtonStyle}" />
+                        Style="{StaticResource AddButtonStyle}">
+                    <Button.Content>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-image-96.png"/>
+                    </Button.Content>
+                </Button>
 
                 <Button Command="{Binding AddVideoElementCommand}"
-                    Content="{x:Static localization:Resources.Add_Video}"
-                    Style="{StaticResource AddButtonStyle}" />
+                        Style="{StaticResource AddButtonStyle}">
+                    <Button.Content>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-video-100.png"/>
+                    </Button.Content>
+                </Button>
 
                 <Button Command="{Binding  RemoveElementCommand}"
-                    Content="{x:Static localization:Resources.Remove_Element}"
-                    Style="{StaticResource RemoveButtonStyle}" />
+                        Style="{StaticResource RemoveButtonStyle}" >
+                    <Button.Content>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-remove-120.png"/>
+                    </Button.Content>
+                </Button>
             </StackPanel>
         </Grid>
     </Border>

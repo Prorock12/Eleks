@@ -8,5 +8,6 @@ namespace Services.ApplicationSettingsBase
         //Language GetLanguage();
         //void SetLanguage(Language language);
         string CurrentLanguage { get; set; }
+        string CurrentFolderPath { get; set; }
     }
 }

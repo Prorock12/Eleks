@@ -24,9 +24,11 @@
             <TextBlock Text="{x:Static localization:Resources.PleaseChooseSomeFolder}" Margin="4"/>
             <Button Content="{x:Static localization:Resources.ChooseFolder}" Command="{Binding ChooseFolderCommand}"/>
         </StackPanel>
-        
+
         <ListBox Grid.Row="1"
                  Style="{StaticResource ImagesListBoxStyle}"
-                 ItemsSource="{Binding LibraryItems}"/>
+                 ItemsSource="{Binding LibraryItems}"
+                 Background="{DynamicResource MaterialDesignPaper}"
+                 PreviewMouseLeftButtonDown="UIElement_OnPreviewMouseLeftButtonDown"/>
     </Grid>
 </UserControl>

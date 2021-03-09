@@ -127,6 +127,18 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        }
+      },
       "Services.FilseSelector/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -264,6 +276,18 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -405,6 +429,18 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        }
+      },
       "Services.FilseSelector/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -542,6 +578,18 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -750,6 +798,11 @@
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
     },
+    "Services.ApplicationSettingsBase/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj"
+    },
     "Services.FilseSelector/1.0.0": {
       "type": "project",
       "path": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj",
@@ -762,6 +815,7 @@
       "MahApps.Metro >= 2.4.4",
       "MaterialDesignThemes >= 4.0.0",
       "Prism.Wpf >= 8.0.0.1909",
+      "Services.ApplicationSettingsBase >= 1.0.0",
       "Services.FilseSelector >= 1.0.0"
     ]
   },
@@ -799,6 +853,9 @@
           "projectReferences": {
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
+            },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.ApplicationSettingsBase\\Services.ApplicationSettingsBase.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.ApplicationSettingsBase\\Services.ApplicationSettingsBase.csproj"
             },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"

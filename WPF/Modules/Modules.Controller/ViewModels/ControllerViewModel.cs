@@ -26,6 +26,7 @@ namespace Modules.Controller.ViewModels
 
         private bool _isStackView;
 
+
         #endregion Fields
 
         #region Properties
@@ -36,6 +37,7 @@ namespace Modules.Controller.ViewModels
         public ICommand AddVideoCommand { get; }
 
         public ObservableCollection<ISlideViewModel> Slides { get; }
+        public ObservableCollection<IElement> Elements { get; set; }
 
         public bool IsStackView
         {
@@ -55,6 +57,8 @@ namespace Modules.Controller.ViewModels
             set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
         }
 
+        public ISlide Slide { get; set; }
+
         #endregion Properties
 
         #region Constructor
@@ -72,7 +76,8 @@ namespace Modules.Controller.ViewModels
             eventAggregator.GetEvent<AddSlideEvent>().Subscribe(OnAddSlide);
             eventAggregator.GetEvent<RemoveSlideEvent>().Subscribe(OnRemoveSlide);
 
-            AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
+            AddSlideCommand =
+                new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
 
             AddTextCommand = new DelegateCommand(AddText, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddImageCommand = new DelegateCommand(AddImage, CanChangeElement).ObservesProperty(() => SelectedSlide);
@@ -99,6 +104,7 @@ namespace Modules.Controller.ViewModels
             {
                 return;
             }
+
 
             foreach (var slide in SelectedPresentation.Slides)
             {
@@ -146,13 +152,9 @@ namespace Modules.Controller.ViewModels
         private void AddText()
         {
             var text = new TextElement("newText");
+            SelectedSlide.Elements.Add(text);
 
             _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(text);
-            }
         }
 
         private void AddImage()
@@ -161,24 +163,14 @@ namespace Modules.Controller.ViewModels
             SelectedSlide.Elements.Add(image);
 
             _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(image);
-            }
         }
 
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
-            //SelectedSlide.Elements.Add(video);
+            SelectedSlide.Elements.Add(video);
 
             _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(video);
-            }
         }
 
         private void OnRemoveSlide(ISlide slide)
