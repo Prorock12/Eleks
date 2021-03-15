@@ -29,6 +29,8 @@
                  Style="{StaticResource ImagesListBoxStyle}"
                  ItemsSource="{Binding LibraryItems}"
                  Background="{DynamicResource MaterialDesignPaper}"
-                 PreviewMouseLeftButtonDown="UIElement_OnPreviewMouseLeftButtonDown"/>
+                 SelectionMode="Extended"
+                 SelectionChanged="Selector_OnSelectionChanged"/>
+        <!--PreviewMouseLeftButtonDown="UIElement_OnPreviewMouseLeftButtonDown"-->
     </Grid>
 </UserControl>

@@ -6,7 +6,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:localization="clr-namespace:Modules.Redactor.Properties"
              xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
-             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:extendedListBox="clr-namespace:CommonUI.ExtendedListBox;assembly=CommonUI"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
@@ -24,7 +26,7 @@
             </Grid.RowDefinitions>
 
             <Viewbox>
-                <ListBox x:Name="ElementsListBox"
+                <extendedListBox:RedactorListBox x:Name="ElementsListBox"
                          Width="{Binding SelectedPresentation.Resolution.Width}"
                          Height="{Binding SelectedPresentation.Resolution.Height}"
                          Style="{StaticResource ElementListBoxStyle}"
@@ -33,14 +35,13 @@
                          KeyboardNavigation.TabNavigation="Continue"
                          Background="{DynamicResource MaterialDesignPaper}"
                          AllowDrop="True">
-                    <!--Drop="ListBoxItem_OnDrop"-->
-
                     <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="SelectionChanged">
-                            <i:InvokeCommandAction Command="{Binding D}"/>
+                        <i:EventTrigger EventName="Drop">
+                            <command:EventToCommand Command="{Binding DropCommand}"
+                                                PassEventArgsToCommand="True" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
-                </ListBox>
+                </extendedListBox:RedactorListBox>
             </Viewbox>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal"
@@ -65,7 +66,7 @@
                 <Button Command="{Binding AddImageElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
-                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-image-96.png"/>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\photo.png"/>
                     </Button.Content>
                 </Button>
 

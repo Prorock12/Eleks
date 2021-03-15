@@ -118,6 +118,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DotNetProjects.SVGImage">
+      <Version>4.1.86</Version>
+    </PackageReference>
     <PackageReference Include="MahApps.Metro">
       <Version>2.4.4</Version>
     </PackageReference>

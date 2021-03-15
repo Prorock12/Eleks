@@ -2,6 +2,8 @@
 using System.Globalization;
 using System.Threading;
 using System.Windows;
+using System.Windows.Documents;
+using Infrastructure;
 using MahApps.Metro.Controls;
 using MyFirstProject.ViewModels;
 using Services.ApplicationSettingsBase;
@@ -18,6 +20,9 @@ namespace MyFirstProject.Views
         {
             _settingsServices = settingsServices;
             InitializeComponent();
+
+            //var _adorner = AdornerLayer.GetAdornerLayer(TabItemController);
+            //_adorner.Add(new SimpleCircleAdorner(TabItemController));
         }
 
         protected override void OnInitialized(EventArgs e)

@@ -176,9 +176,9 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "MahApps.Metro": {
+            "DotNetProjects.SVGImage": {
               "target": "Package",
-              "version": "[2.4.4, )"
+              "version": "[4.1.86, )"
             },
             "MahApps.Metro": {
               "target": "Package",
@@ -188,27 +188,11 @@
               "target": "Package",
               "version": "[4.0.0, )"
             },
-            "MaterialDesignThemes": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            },
-            "MvvmLightLibs": {
-              "target": "Package",
-              "version": "[5.4.1.1, )"
-            },
             "MvvmLightLibs": {
               "target": "Package",
               "version": "[5.4.1.1, )"
             },
             "Prism.Unity": {
-              "target": "Package",
-              "version": "[8.0.0.1909, )"
-            },
-            "Prism.Unity": {
-              "target": "Package",
-              "version": "[8.0.0.1909, )"
-            },
-            "Prism.Wpf": {
               "target": "Package",
               "version": "[8.0.0.1909, )"
             },

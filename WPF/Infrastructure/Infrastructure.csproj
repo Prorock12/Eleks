@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.WpfDesign, Version=8.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\ICSharpCode.WpfDesigner.8.0.175\lib\net45\ICSharpCode.WpfDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.WpfDesign.Designer, Version=8.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\ICSharpCode.WpfDesigner.8.0.175\lib\net45\ICSharpCode.WpfDesign.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.WpfDesign.XamlDom, Version=8.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\ICSharpCode.WpfDesigner.8.0.175\lib\net45\ICSharpCode.WpfDesign.XamlDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\MyFirstProject\packages\Microsoft.Xaml.4.0.0.1\lib\PresentationCore.dll</HintPath>
     </Reference>
@@ -45,6 +57,8 @@
     <Reference Include="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\MyFirstProject\packages\Microsoft.Xaml.4.0.0.1\lib\System.Design.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\MyFirstProject\packages\Microsoft.Xaml.4.0.0.1\lib\System.Xaml.dll</HintPath>
     </Reference>
@@ -62,6 +76,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdornerRedactorListBoxItemView.xaml.cs">
+      <DependentUpon>AdornerRedactorListBoxItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttachedProperties\ImageBehavior.cs" />
+    <Compile Include="AttachedProperties\BorderAdorner.cs" />
+    <Compile Include="AttachedProperties\ShaferAdorner.cs" />
     <Compile Include="EnumBindingSourceExtention.cs" />
     <Compile Include="Events\AddImageElementEvent.cs" />
     <Compile Include="Events\AddTextElementEvent.cs" />
@@ -79,11 +99,14 @@
     <Compile Include="Events\SendRequestChangeSizeEvent.cs" />
     <Compile Include="ExtendedColorHelper.cs" />
     <Compile Include="ExtendedColor.cs" />
+    <Compile Include="AttachedProperties\ExtendedAttachedAdorner.cs" />
+    <Compile Include="IntExtension.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Languages.cs" />
     <Compile Include="NotifyDataErrorViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionNames.cs" />
+    <Compile Include="AttachedProperties\SimpleCircleAdorner.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
@@ -93,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AdornerRedactorListBoxItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

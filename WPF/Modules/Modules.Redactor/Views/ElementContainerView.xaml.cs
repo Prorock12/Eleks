@@ -30,7 +30,9 @@ namespace Modules.Redactor.Views
             object data = e.Data.GetData(typeof(LibraryItemViwModel));
             var newImageElement = new ImageElement("new Image") { Path = ((LibraryItemViwModel)data)?.Path };
 
-            _eventAggregator.GetEvent<AddImageElementEvent>().Publish(newImageElement);
+                //< Setter Property = "attachedProperties:ExtendedAttachedAdorner.Adorner" Value = "{x:Type attachedProperties:BorderAdorner}" />
+
+               _eventAggregator.GetEvent<AddImageElementEvent>().Publish(newImageElement);
             //parent.Items.Add(newImageElement);
         }
     }

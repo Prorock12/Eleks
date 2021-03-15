@@ -29,7 +29,6 @@ namespace Modules.Library.ViewModels
 
         public ICommand ChooseFolderCommand { get; }
         public ObservableCollection<LibraryItemViwModel> LibraryItems { get; set; }
-        public LibraryItemViwModel LibraryItemViwModel { get; set; }
         public string SelectedFolder
         {
             get => _selectedFolder;

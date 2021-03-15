@@ -9,7 +9,9 @@ namespace CommonUI.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var result = value != null && (int)value < 100 ? "small" : "Big";
+            //int item;
+            //int.TryParse((string)value, out item);
+            var result = value != null && (double)value < 100 ? "small" : "Big";
             return result;
         }
 

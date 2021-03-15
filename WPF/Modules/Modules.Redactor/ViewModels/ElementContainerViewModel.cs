@@ -7,6 +7,7 @@ using Prism.Events;
 using Prism.Mvvm;
 using Services.FilseSelector;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -109,7 +110,14 @@ namespace Modules.Redactor.ViewModels
         #region Methods
         private void Drop(DragEventArgs e)
         {
-            //Elements.Add(new ImageElementViewModel(element as ImageElement));
+            List<object> data = (List<object>)e.Data.GetData(typeof(List<object>));
+            if (data == null) return;
+            foreach (var item in data)
+            {
+                var newImageElement = new ImageElement("new Image") {Path = ((LibraryItemViwModel) item)?.Path};
+                SelectedSlide.Elements.Add(newImageElement);
+                Elements.Add(new ImageElementViewModel(newImageElement));
+            }
         }
 
 

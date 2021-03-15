@@ -23,7 +23,7 @@ namespace MyFirstProject.ViewModels
 
         public ICommand SetLanguageCommand { get; set; }
 
-        //public ICommand ChangeSizeCommand { get; set; }
+        public ICommand ShowSolveExpressionCommand { get; set; }
 
         #region Constructor
 
@@ -33,6 +33,7 @@ namespace MyFirstProject.ViewModels
             _unityContainer = unityContainer;
             _settingsServices = settingsServices;
 
+            ShowSolveExpressionCommand = new DelegateCommand(SolveExpression);
             SetLanguageCommand = new DelegateCommand(SetBaseSettings);
 
             eventAggregator.GetEvent<SendRequestChangeSizeEvent>().Subscribe(ChangeSize);
@@ -43,19 +44,17 @@ namespace MyFirstProject.ViewModels
         {
             var control = _unityContainer.Resolve<ChangeSizeDialogView>();
             var result = _dialogService.ShowDialog(control);
-            //var size = result as Size;
         }
+
         public static void SetBaseSettings()
         {
-            //if (_settingsServices.CurrentLanguage == null)
-            //{
-                var control = _unityContainer.Resolve<BaseSettings>();
-                var result = _dialogService.ShowDialog(control);
-            //}
-            //else
-            //{
-                
-            //}
+            var control = _unityContainer.Resolve<BaseSettings>();
+            var result = _dialogService.ShowDialog(control);
+        }
+        public static void SolveExpression()
+        {
+            var control = _unityContainer.Resolve<ShowValueExtension>();
+            var result = _dialogService.ShowDialog(control);
         }
     }
 }

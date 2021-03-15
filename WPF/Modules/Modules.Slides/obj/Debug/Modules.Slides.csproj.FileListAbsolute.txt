@@ -112,3 +112,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\bin\Debu
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\bin\Debug\Modules.Library.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\bin\Debug\Services.ApplicationSettingsBase.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\bin\Debug\uk-UA\Modules.Library.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Slides\bin\Debug\DotNetProjects.SVGImage.dll

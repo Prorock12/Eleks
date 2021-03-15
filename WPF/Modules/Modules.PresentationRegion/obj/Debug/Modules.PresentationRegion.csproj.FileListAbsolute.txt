@@ -117,3 +117,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationReg
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Library.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.ApplicationSettingsBase.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\uk-UA\Modules.Library.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\DotNetProjects.SVGImage.dll

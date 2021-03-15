@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HwVPsDz3ZankRu0fiQsairPk1y0vzuao077/p5Xj59TFJJK/u6E4LUOMcxNcN1L9xKTlAnGsZ6/DDfmZRY2diA==",
+  "dgSpecHash": "onx3UIRSrMWWad+rsugnBgI/nyGgQorqQ4FBM3H2xP2YcQYcdDLrSCV9XYJvt8vaQQQD88lasNglHH7WrcSIew==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\dotnetprojects.svgimage\\4.1.86\\dotnetprojects.svgimage.4.1.86.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\mahapps.metro\\2.4.4\\mahapps.metro.2.4.4.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",

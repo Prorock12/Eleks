@@ -33,6 +33,7 @@
 
     <Style TargetType="{x:Type TabItem}">
         <Setter Property="Header" Value="{Binding Name}" />
+        <Setter Property="Background" Value="{StaticResource MaterialDesignPaper}"/>
     </Style>
 
     <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}" />

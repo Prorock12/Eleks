@@ -5,9 +5,11 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                   xmlns:share="clr-namespace:Infrastructure;assembly=Infrastructure"
+                  xmlns:attachedprop="clr-namespace:Infrastructure.AttachedProperties;assembly=Infrastructure"
                   xmlns:viewModels="clr-namespace:MyFirstProject.ViewModels"
                   xmlns:localization="clr-namespace:MyFirstProject.Properties"
                   xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                  xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
                   mc:Ignorable="d"
                   d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
                   prism:ViewModelLocator.AutoWireViewModel="True">
@@ -18,7 +20,11 @@
             <Setter Property="WindowState" Value="Maximized" />
         </Style>
     </mah:MetroWindow.Style>
-
+    <mah:MetroWindow.Resources>
+        <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource MahApps.Styles.TabItem}">
+            <Setter Property="Padding" Value="5 5 10 5"/>
+        </Style>
+    </mah:MetroWindow.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -43,7 +49,7 @@
             <GridSplitter Grid.Column="1"
                           Style="{StaticResource VerticalGridSplitter}" />
 
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="2" Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
@@ -60,15 +66,22 @@
                     <TabItem Header="{x:Static localization:Resources.Controller}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.ControllerRegion}" />
                     </TabItem>
+
                     <TabItem Header="{x:Static localization:Resources.Effects}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.EffectRegion}"/>
                     </TabItem>
+
                     <TabItem Header="{x:Static localization:Resources.Accountant}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
                     </TabItem>
+
                     <TabItem Header="Change Language">
-                    <Button Content="{x:Static localization:Resources.ChangeLanguage}" Command="{Binding SetLanguageCommand}"/>
+                        <StackPanel>
+                            <Button Content="{x:Static localization:Resources.ChangeLanguage}" Command="{Binding SetLanguageCommand}"/>
+                            <Button Content="Show Solved Dialog" Command="{Binding ShowSolveExpressionCommand}"/>
+                        </StackPanel>
                     </TabItem>
+
                 </TabControl>
             </Grid>
 

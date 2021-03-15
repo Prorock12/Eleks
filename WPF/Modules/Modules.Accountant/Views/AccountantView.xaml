@@ -26,6 +26,7 @@
                               ItemsSource="{Binding Elements}"
                               SelectedItem="{Binding SelectedElement, Mode=TwoWay}"
                               EditTriggers="ClickOnCurrentCell"
+                              UpdateSourceTrigger="CellContentChanged"
                               Style="{StaticResource  {x:Type xcdg:DataGridControl}}"
                               MouseRightButtonDown="RightButtonSelectElement_OnMouseRightButtonDown"
                               GotKeyboardFocus="ElementsGrid_OnGotKeyboardFocus">
@@ -64,14 +65,15 @@
 
                 <xcdg:Column Title="{x:Static localization:Resources.Width}"
                              FieldName="Width"
-                             DisplayedValueConverterParameter="Width"
-                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}">
-                    
+                             CellContentTemplate="{StaticResource ContentValueWidthDataTemplate}">
+                    <xcdg:Column.CellEditor>
+                        <xcdg:CellEditor EditTemplate="{StaticResource WidthDataTemplate}" />
+                    </xcdg:Column.CellEditor>
                 </xcdg:Column>
 
                 <xcdg:Column Title="{x:Static localization:Resources.Height}"
                              FieldName="Height"
-                             DisplayedValueConverter="{StaticResource ValueOfWidthHeightConverter}">
+                             CellContentTemplate="{StaticResource ContentValueHeightDataTemplate}">
                     <xcdg:Column.CellEditor>
                         <xcdg:CellEditor EditTemplate="{StaticResource HeightDataTemplate}" />
                     </xcdg:Column.CellEditor>

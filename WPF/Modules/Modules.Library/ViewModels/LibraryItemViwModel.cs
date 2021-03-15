@@ -29,7 +29,7 @@ namespace Modules.Library.ViewModels
             {
                 if (_bitmapImage == null)
                     //Task.Run(LoadBitmapImage);
-                Parallel.Invoke(LoadBitmapImage);
+                    Parallel.Invoke(LoadBitmapImage);
                 return _bitmapImage;
             }
             set => SetProperty(ref _bitmapImage, value);

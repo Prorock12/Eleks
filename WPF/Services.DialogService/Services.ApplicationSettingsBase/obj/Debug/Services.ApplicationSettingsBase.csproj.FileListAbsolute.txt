@@ -12,3 +12,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\obj\Debug\Services.ApplicationSettingsBase.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\obj\Debug\Services.ApplicationSettingsBase.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\obj\Debug\Services.ApplicationSettingsBase.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.xml
