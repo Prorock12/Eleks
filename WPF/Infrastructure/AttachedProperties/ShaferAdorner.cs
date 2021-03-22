@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;
 
@@ -16,13 +10,13 @@ namespace Infrastructure.AttachedProperties
 
         protected readonly VisualCollection VisualChildren;
 
-        #endregion
+        #endregion fields
 
         #region properties
 
         protected override int VisualChildrenCount => VisualChildren.Count;
 
-        #endregion
+        #endregion properties
 
         public ShaferAdorner(UIElement adornerElement) : base(adornerElement)
         {

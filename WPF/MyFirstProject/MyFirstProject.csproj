@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.props" Condition="Exists('packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -49,6 +50,12 @@
     </Reference>
     <Reference Include="DotNetProjects.SVGImage, Version=4.1.86.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DotNetProjects.SVGImage.4.1.86\lib\net47\DotNetProjects.SVGImage.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -129,8 +136,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\ShowValueExtensionViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -236,6 +241,10 @@
       <Project>{c793c551-bf6d-4f9a-9419-d90deb9017aa}</Project>
       <Name>Modules.PresentationRegion</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\Modules.Que\Modules.Que.csproj">
+      <Project>{31a58ec9-36da-4a9d-afe2-a710435b5ae3}</Project>
+      <Name>Modules.Que</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\Modules.Redactor\Modules.Redactor.csproj">
       <Project>{8dbb10d2-3101-40ce-b8be-4f5df396dfdc}</Project>
       <Name>Modules.Redactor</Name>
@@ -267,6 +276,9 @@
     <Error Condition="!Exists('packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets'))" />
     <Error Condition="!Exists('packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.props'))" />
     <Error Condition="!Exists('packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.targets" Condition="Exists('packages\Xamarin.Forms.4.8.0.1269\build\Xamarin.Forms.targets')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

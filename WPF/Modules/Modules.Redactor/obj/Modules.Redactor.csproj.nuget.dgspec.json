@@ -176,6 +176,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "DotNetProjects.SVGImage": {
               "target": "Package",
               "version": "[4.1.86, )"

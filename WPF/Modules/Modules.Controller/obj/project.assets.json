@@ -106,6 +106,18 @@
           "lib/net47/Prism.Wpf.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -243,6 +255,18 @@
         },
         "runtime": {
           "lib/net47/Prism.Wpf.dll": {}
+        }
+      },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
@@ -384,6 +408,18 @@
           "lib/net47/Prism.Wpf.dll": {}
         }
       },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -521,6 +557,18 @@
         },
         "runtime": {
           "lib/net47/Prism.Wpf.dll": {}
+        }
+      },
+      "CommonUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommonUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUI.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
@@ -740,6 +788,11 @@
         "prism.wpf.nuspec"
       ]
     },
+    "CommonUI/1.0.0": {
+      "type": "project",
+      "path": "../../CommonStyles/CommonUI.csproj",
+      "msbuildProject": "../../CommonStyles/CommonUI.csproj"
+    },
     "Infrastructure/1.0.0": {
       "type": "project",
       "path": "../../Infrastructure/Infrastructure.csproj",
@@ -758,6 +811,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "CommonUI >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "MahApps.Metro >= 2.4.4",
       "MaterialDesignThemes >= 4.0.0",
@@ -798,6 +852,9 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj"
+            },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
             },

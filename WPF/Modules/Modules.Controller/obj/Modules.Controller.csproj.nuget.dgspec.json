@@ -4,6 +4,25 @@
     "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Controller\\Modules.Controller.csproj": {}
   },
   "projects": {
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
+        "projectName": "CommonUI",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj",
@@ -61,6 +80,9 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\CommonStyles\\CommonUI.csproj"
+              },
               "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               },

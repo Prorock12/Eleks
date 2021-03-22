@@ -1,6 +1,6 @@
 ﻿using Models.Interfaces.Effects;
-using System.Windows;
 using Modules.Effects.Properties;
+using System.Windows;
 
 namespace Modules.Effects.ViewModels
 {

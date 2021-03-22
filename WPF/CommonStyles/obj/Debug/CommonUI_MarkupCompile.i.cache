@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-31614013994
+41410290937
 
-10-2026752703
+8-852478281
 151294601543
-Styles\Converters.xaml;Styles\GridSplitterStyle.xaml;Styles\MaterialDesignCommonStyle.xaml;
+Styles\Converters.xaml;Styles\GridSplitterStyle.xaml;Styles\MaterialDesignCommonStyle.xaml;Styles\SizeThumbStyle.xaml;
 
-False
+True
 

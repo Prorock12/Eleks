@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b1aPyYvGXMgs/0P3tPRSWF5sLX72LC3OyvLzfs44fNGxKjdBPdC+7NHZt+k/UYo3UwzVvzswp0XDhYljpZH2iQ==",
+  "dgSpecHash": "NwcrqUwKrJGlHI3kZFoTF/Nz64aS3BC1atu972RlZ+IphMWJWDwmjk/SvuLO5nd4AgkpRREQb266IXMJO1TFpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.PresentationRegion\\Modules.PresentationRegion.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\dotnetprojects.svgimage\\4.1.86\\dotnetprojects.svgimage.4.1.86.nupkg.sha512",

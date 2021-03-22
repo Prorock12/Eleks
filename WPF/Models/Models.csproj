@@ -62,15 +62,24 @@
     <Compile Include="Interfaces\Models\IImageElement.cs" />
     <Compile Include="Interfaces\Models\IMediaElement.cs" />
     <Compile Include="Interfaces\Models\IPresentation.cs" />
+    <Compile Include="Interfaces\Models\IQue.cs" />
     <Compile Include="Interfaces\Models\IResolution.cs" />
     <Compile Include="Interfaces\Models\ISlide.cs" />
     <Compile Include="Interfaces\Models\ITextElement.cs" />
     <Compile Include="Interfaces\Models\IVideoElement.cs" />
     <Compile Include="Interfaces\Models\IVisualElement.cs" />
+    <Compile Include="Interfaces\ShapeModels\IEllipse.cs" />
+    <Compile Include="Interfaces\ShapeModels\ICircle.cs" />
+    <Compile Include="Interfaces\ShapeModels\ILine.cs" />
+    <Compile Include="Interfaces\ShapeModels\IQuadrate.cs" />
+    <Compile Include="Interfaces\ShapeModels\IRectangle.cs" />
+    <Compile Include="Interfaces\ShapeModels\IShape.cs" />
+    <Compile Include="Interfaces\ShapeModels\ITriangle.cs" />
     <Compile Include="Models\Element.cs" />
     <Compile Include="Models\ImageElement.cs" />
     <Compile Include="Models\MediaElement.cs" />
     <Compile Include="Models\Presentation.cs" />
+    <Compile Include="Models\Que.cs" />
     <Compile Include="Models\Resolution.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Models\TextElement.cs" />
@@ -89,6 +98,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ShapeModels\Circle.cs" />
+    <Compile Include="ShapeModels\Ellipse.cs" />
+    <Compile Include="ShapeModels\Line.cs" />
+    <Compile Include="ShapeModels\Quadrate.cs" />
+    <Compile Include="ShapeModels\Rectangle.cs" />
+    <Compile Include="ShapeModels\Shape.cs" />
+    <Compile Include="ShapeModels\Triangle.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

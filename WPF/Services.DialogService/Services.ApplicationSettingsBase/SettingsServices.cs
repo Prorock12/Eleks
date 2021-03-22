@@ -1,6 +1,4 @@
 ﻿using System.Configuration;
-using System.Windows.Media;
-using Infrastructure;
 
 namespace Services.ApplicationSettingsBase
 {
@@ -12,7 +10,7 @@ namespace Services.ApplicationSettingsBase
 
         private const string IsAccountantEnabledDefault = "false";
 
-        #endregion
+        #endregion constants
 
         #region properties
 
@@ -21,18 +19,18 @@ namespace Services.ApplicationSettingsBase
         public string CurrentLanguage
         {
             get => (string)this[nameof(CurrentLanguage)];
-            set => this[nameof(CurrentLanguage)] = (string) value;
+            set => this[nameof(CurrentLanguage)] = (string)value;
         }
-
 
         [UserScopedSetting]
         [DefaultSettingValue(IsAccountantEnabledDefault)]
         public bool IsAccountantEnabled
         {
-            get { return ((bool) this[nameof(IsAccountantEnabled)]); }
+            get { return ((bool)this[nameof(IsAccountantEnabled)]); }
 
-            set { this[nameof(IsAccountantEnabled)] = (bool) value; }
+            set { this[nameof(IsAccountantEnabled)] = (bool)value; }
         }
+
         [UserScopedSetting]
         public string CurrentFolderPath
         {
@@ -40,6 +38,6 @@ namespace Services.ApplicationSettingsBase
             set => this[nameof(CurrentFolderPath)] = (object)value;
         }
 
-        #endregion
+        #endregion properties
     }
 }

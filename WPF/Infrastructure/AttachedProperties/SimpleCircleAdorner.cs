@@ -31,12 +31,12 @@ namespace Infrastructure.AttachedProperties
 
             var adornedElementRect = new Rect(this.AdornedElement.DesiredSize);
 
-            var renderBrush = new SolidColorBrush(Colors.Green) {Opacity = 0.2};
+            var renderBrush = new SolidColorBrush(Colors.Green) { Opacity = 0.2 };
             var renderPen = new Pen(new SolidColorBrush(Colors.Navy), 1.5);
             var renderRadius = 5.0;
 
             Image image = new Image()
-                {Source = _imageBitmap};
+            { Source = _imageBitmap };
 
             image.HorizontalAlignment = HorizontalAlignment.Right;
             image.VerticalAlignment = VerticalAlignment.Top;
@@ -46,7 +46,7 @@ namespace Infrastructure.AttachedProperties
             //drawingContext(toolTip,adornedElementRect);
             //drawingContext.DrawImage(image.Source,adornedElementRect);
 
-            drawingContext.DrawText(formattedText,adornedElementRect.TopRight);
+            drawingContext.DrawText(formattedText, adornedElementRect.TopRight);
 
             //drawingContext.DrawEllipse(renderBrush, renderPen, adornedElementRect.TopLeft, renderRadius, renderRadius);
             //drawingContext.DrawEllipse(renderBrush, renderPen, adornedElementRect.TopRight, renderRadius, renderRadius);

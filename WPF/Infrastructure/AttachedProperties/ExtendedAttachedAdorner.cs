@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Documents;
 
 namespace Infrastructure.AttachedProperties
@@ -13,6 +8,7 @@ namespace Infrastructure.AttachedProperties
     {
         public static readonly DependencyProperty AdornerProperty =
             DependencyProperty.RegisterAttached("Adorner", typeof(Type), typeof(ExtendedAttachedAdorner), new FrameworkPropertyMetadata(default(Type), PropertyChangedCallback));
+
         private static void PropertyChangedCallback(
             DependencyObject dependencyObject,
             DependencyPropertyChangedEventArgs dependencyPropertyChangedEventArgs)

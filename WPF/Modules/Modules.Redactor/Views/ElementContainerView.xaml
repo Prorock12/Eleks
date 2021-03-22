@@ -1,14 +1,14 @@
 ﻿<UserControl x:Class="Modules.Redactor.Views.ElementContainerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             xmlns:extendedListBox="clr-namespace:Modules.Redactor.Adorner.ExtendedListBox"
              xmlns:localization="clr-namespace:Modules.Redactor.Properties"
              xmlns:viewmodels="clr-namespace:Modules.Redactor.ViewModels"
-             xmlns:command="http://www.galasoft.ch/mvvmlight"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:extendedListBox="clr-namespace:CommonUI.ExtendedListBox;assembly=CommonUI"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewmodels:ElementContainerViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
@@ -53,9 +53,9 @@
                           Foreground="AliceBlue" />
 
                 <Button Command="{Binding AddTextElementCommand}"
-                        Style="{StaticResource AddButtonStyle}" >
+                        Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
-                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-text-100.png"/>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-text-100.png" />
                     </Button.Content>
                 </Button>
 
@@ -66,23 +66,34 @@
                 <Button Command="{Binding AddImageElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
-                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\photo.png"/>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\photo.png" />
                     </Button.Content>
                 </Button>
 
                 <Button Command="{Binding AddVideoElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
-                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-video-100.png"/>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-video-100.png" />
                     </Button.Content>
                 </Button>
 
                 <Button Command="{Binding  RemoveElementCommand}"
-                        Style="{StaticResource RemoveButtonStyle}" >
+                        Style="{StaticResource RemoveButtonStyle}">
                     <Button.Content>
-                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-remove-120.png"/>
+                        <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-remove-120.png" />
                     </Button.Content>
                 </Button>
+
+                <Menu>
+                    <MenuItem Header="{x:Static localization:Resources.Add_Shape}">
+                        <MenuItem Header="{x:Static localization:Resources.Add_Circle}" Command="{Binding AddCircleCommand}" />
+                        <MenuItem Header="{x:Static localization:Resources.Add_Quadrate}" Command="{Binding AddQuadrateCommand}"/>
+                        <MenuItem Header="{x:Static localization:Resources.Add_Line}" Command="{Binding AddLineCommand}"/>
+                        <MenuItem Header="{x:Static localization:Resources.Add_Ellipse}" Command="{Binding AddEllipseCommand}"/>
+                        <MenuItem Header="{x:Static localization:Resources.Add_Triangle}" Command="{Binding AddTriangleCommand}"/>
+                        <MenuItem Header="{x:Static localization:Resources.Add_Rectangle}" Command="{Binding AddRectangleCommand}"/>
+                    </MenuItem>
+                </Menu>
             </StackPanel>
         </Grid>
     </Border>

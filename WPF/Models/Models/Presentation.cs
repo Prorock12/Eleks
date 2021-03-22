@@ -28,7 +28,7 @@ namespace Models.Models
             set => SetProperty(ref _path, value);
         }
 
-        public ObservableCollection<ISlide> Slides { get; set; }
+        public ObservableCollection<IQue> Ques { get; set; }
 
         public IResolution Resolution
         {
@@ -48,10 +48,11 @@ namespace Models.Models
                 Width = 1000
             };
 
-            Slides = new ObservableCollection<ISlide>()
+            Ques = new ObservableCollection<IQue>()
             {
-                new Slide("First Slide"),
-                new Slide("Second")
+
+                new Que("First Que"),
+                new Que("Second Que")
             };
 
             Name = nameof(Presentation);

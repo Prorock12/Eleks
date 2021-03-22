@@ -200,6 +200,9 @@ namespace Models.Models
 
         protected VisualElement(string name) : base(name)
         {
+            Background = Colors.Transparent;
+            Width = 100;
+            Height = 100;
             RenderingBias = RenderingBias.Quality;
         }
 

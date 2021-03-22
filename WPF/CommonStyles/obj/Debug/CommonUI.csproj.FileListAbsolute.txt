@@ -46,3 +46,7 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\Styles\M
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\Styles\SizeThumbStyle.baml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\EntityFramework.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Infrastructure.dll.config
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\EntityFramework.xml

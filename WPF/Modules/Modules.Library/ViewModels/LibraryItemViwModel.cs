@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Prism.Mvvm;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using Prism.Mvvm;
 
 namespace Modules.Library.ViewModels
 {
@@ -19,7 +15,7 @@ namespace Modules.Library.ViewModels
         private string _path;
         private BitmapImage _bitmapImage;
 
-        #endregion
+        #endregion Fields
 
         #region Properties
 
@@ -34,17 +30,20 @@ namespace Modules.Library.ViewModels
             }
             set => SetProperty(ref _bitmapImage, value);
         }
+
         public string Name
         {
             get => _name;
             set => SetProperty(ref _name, value);
         }
+
         public string Path
         {
             get => _path;
             set => SetProperty(ref _path, value);
         }
-        #endregion
+
+        #endregion Properties
 
         private void LoadBitmapImage()
         {

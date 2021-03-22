@@ -3,7 +3,12 @@
                     xmlns:models="clr-namespace:Models.Interfaces.Models;assembly=Models"
                     xmlns:viewModels="clr-namespace:Modules.Controller.ViewModels">
 
-    <Style TargetType="{x:Type ItemsControl}" >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type ItemsControl}">
         <Setter Property="FontSize" Value="20" />
         <Setter Property="BorderThickness" Value="0 0 0 2" />
         <Setter Property="BorderBrush" Value="White" />

@@ -1,18 +1,13 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
+using Services.ApplicationSettingsBase;
+using Services.FilseSelector;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using Prism.Events;
-using Services.ApplicationSettingsBase;
-using Services.FilseSelector;
 
 namespace Modules.Library.ViewModels
 {
@@ -24,18 +19,20 @@ namespace Modules.Library.ViewModels
         private readonly IFileSelector _fileSelector;
         private readonly ISettingsServices _settingsServices;
 
-        #endregion
+        #endregion Fields
+
         #region Properties
 
         public ICommand ChooseFolderCommand { get; }
         public ObservableCollection<LibraryItemViwModel> LibraryItems { get; set; }
+
         public string SelectedFolder
         {
             get => _selectedFolder;
             set => SetProperty(ref _selectedFolder, value, OnChangedFolder);
         }
 
-        #endregion
+        #endregion Properties
 
         #region Methods
 
@@ -79,6 +76,7 @@ namespace Modules.Library.ViewModels
                 SelectedFolder = _settingsServices.CurrentFolderPath;
             }
         }
+
         private void LoadImages()
         {
             foreach (var path in Directory.GetFiles(SelectedFolder))
@@ -96,6 +94,6 @@ namespace Modules.Library.ViewModels
             LibraryItems.Add(item);
         }
 
-        #endregion
+        #endregion Methods
     }
 }

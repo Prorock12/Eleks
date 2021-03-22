@@ -4,18 +4,22 @@
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:converters="clr-namespace:CommonUI.Converters;assembly=CommonUI"
                     xmlns:common="clr-namespace:CommonUI;assembly=CommonUI"
+                    xmlns:extendedListBox1="clr-namespace:Modules.Redactor.Adorner.ExtendedListBox"
                     xmlns:localization="clr-namespace:Modules.Redactor.Properties"
                     xmlns:local="clr-namespace:Modules.Redactor.Styles"
                     xmlns:viewModels1="clr-namespace:Modules.Redactor.ViewModels"
-                    xmlns:infrastructure="clr-namespace:Infrastructure;assembly=Infrastructure"
-                    xmlns:attachedProperties="clr-namespace:Infrastructure.AttachedProperties;assembly=Infrastructure"
-                    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-                    xmlns:extendedListBox="clr-namespace:CommonUI.ExtendedListBox;assembly=CommonUI"
+                    xmlns:shapes="clr-namespace:Modules.Redactor.ViewModels.Shapes"
                     mc:Ignorable="d">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/SizeThumbStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
 
     <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
 
-    <Style TargetType="{x:Type extendedListBox:RedactorListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
+    <Style TargetType="{x:Type extendedListBox1:RedactorListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
         <!--<Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
         <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
         <Setter Property="FontSize" Value="20" />
@@ -44,7 +48,10 @@
         <!--<Setter Property="Background" Value="Black" />-->
     </Style>
 
-    <ControlTemplate x:Key="ElementControlTemplate" TargetType="{x:Type extendedListBox:RedactorListBoxItem}">
+    <ControlTemplate x:Key="ElementControlTemplate" TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
+
+        <!--<ContentControl Width="183" Height="110"  Canvas.Left="166" Canvas.Top="50" Style="{StaticResource SizeAdornerContentControl}">
+            <ContentControl.Content>-->
         <Border Margin="{TemplateBinding Margin}"
                 CornerRadius="5"
                 Background="{TemplateBinding Background}"
@@ -76,6 +83,9 @@
                 </ContentPresenter>
             </Border>
         </Border>
+        <!--</ContentControl.Content>
+        </ContentControl>-->
+
         <ControlTemplate.Triggers>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -107,36 +117,37 @@
                 </MultiTrigger.Setters>
             </MultiTrigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="#FF6D6D6D"></Setter>
+                <Setter Property="Foreground" Value="#FF6D6D6D" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type extendedListBox:RedactorListBoxItem}">
+    <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
         <Setter Property="Width" Value="{Binding VisualElement.Width}" />
         <Setter Property="Height" Value="{Binding VisualElement.Height}" />
         <Setter Property="Margin" Value="{Binding VisualElement.Margin}" />
         <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
-        <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}"/>-->
+        <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}" />-->
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
                 <Setter Property="Foreground" Value="SandyBrown" />
                 <Setter Property="BorderBrush" Value="{Binding VisualElement.BorderBrush}" />
-                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="BorderThickness" Value="3" />
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="CanvasElementContainerStyle"  TargetType="{x:Type extendedListBox:RedactorListBoxItem}">
+    <Style x:Key="CanvasElementContainerStyle"  TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
         <Setter Property="Canvas.Left" Value="{Binding VisualElement.X}" />
         <Setter Property="Canvas.Top" Value="{Binding VisualElement.Y}" />
         <Setter Property="Width" Value="{Binding VisualElement.Width}" />
         <Setter Property="Height" Value="{Binding VisualElement.Height}" />
         <Setter Property="Margin" Value="{Binding VisualElement.Margin}" />
-        <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}"/>-->
+        <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
+        <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}" />-->
         <Setter Property="RenderTransformOrigin">
             <Setter.Value>
-                <Point X="50" Y="50" />
+                <Point X="0.5" Y="0.5" />
             </Setter.Value>
         </Setter>
         <Setter Property="RenderTransform">
@@ -198,7 +209,7 @@
                                             Width="Auto"
                                             Foreground="Black"
                                             Padding="5"
-                                            Style="{DynamicResource MaterialDesignRichTextBox}"/>
+                                            Style="{DynamicResource MaterialDesignRichTextBox}" />
                 <StackPanel Orientation="Horizontal">
                     <Button Content="{x:Static localization:Resources.Load}" Command="{Binding LoadCommand, ElementName=MyRtb}" />
                     <Button Content="{x:Static localization:Resources.Save}" Command="{Binding SaveCommand, ElementName=MyRtb}" />
@@ -210,12 +221,11 @@
         </Border>
     </DataTemplate>
 
-
     <!--attachedProperties:ExtendedAttachedAdorner.Adorner="{x:Type attachedProperties:SimpleCircleAdorner}"-->
     <DataTemplate DataType="{x:Type viewModels1:ImageElementViewModel}">
         <Image Source="{Binding ImageElement.Path}">
             <!--<b:Interaction.Behaviors>
-                <attachedProperties:ImageBehavior/>
+                <attachedProperties:ImageBehavior />
             </b:Interaction.Behaviors>-->
         </Image>
     </DataTemplate>
@@ -223,6 +233,45 @@
     <DataTemplate DataType="{x:Type viewModels1:VideoElementViewModel}">
         <local:VideoPlayer />
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:CircleViewModel}">
+        <Ellipse Width="{Binding Circle.Diameter}" 
+                 Height="{Binding Circle.Diameter}" 
+                 Fill="{Binding Circle.Fill}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:EllipseViewModel}">
+        <Ellipse Width="{Binding Ellipse.Width}"
+                 Height="{Binding Ellipse.Height}"
+                 Fill="{Binding Ellipse.Fill}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:QuadrateViewModel}">
+        <Rectangle Width="{Binding Quadrate.Width}"
+                   Height="{Binding Quadrate.Width}"
+                   Fill="{Binding Quadrate.Fill}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:RectangleViewModel}">
+        <Rectangle Width="{Binding Rectangle.Width}"
+                   Height="{Binding Rectangle.Height}"
+                   Fill="{Binding Rectangle.Fill}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:LineViewModel}">
+        <Line X1="{Binding Line.X1}"
+              Y1="{Binding Line.Y1}"
+              X2="{Binding Line.X2}"
+              Y2="{Binding Line.Y2}"
+              Stroke="{Binding Line.Fill}"
+              />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shapes:TriangleViewModel}">
+        <Polygon Points="{Binding Triangle.Points}"
+                 Fill="{Binding Triangle.Fill}"/>
+    </DataTemplate>
+
 
     <ControlTemplate x:Key="ElementsListBoxControlTemplate" TargetType="{x:Type ListBox}">
         <Border Margin="{TemplateBinding Margin}"
@@ -243,8 +292,8 @@
     </ItemsPanelTemplate>
 
     <Style x:Key="ElementListBoxStyle"
-           TargetType="{x:Type extendedListBox:RedactorListBox}"
-           BasedOn="{StaticResource {x:Type extendedListBox:RedactorListBox}}">
+           TargetType="{x:Type extendedListBox1:RedactorListBox}"
+           BasedOn="{StaticResource {x:Type extendedListBox1:RedactorListBox}}">
         <Setter Property="ItemsPanel" Value="{StaticResource ElementWrapPanel}" />
         <Setter Property="ItemContainerStyle" Value="{StaticResource  WrapElementContainerStyle}" />
         <Setter Property="Template" Value="{StaticResource ElementsListBoxControlTemplate}" />

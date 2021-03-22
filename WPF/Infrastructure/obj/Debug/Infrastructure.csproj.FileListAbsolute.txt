@@ -46,8 +46,8 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\ICShar
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\ICSharpCode.WpfDesign.Designer.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\ICSharpCode.WpfDesign.XamlDom.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\ICSharpCode.WpfDesign.XamlDom.xml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\obj\Debug\AdornerRedactorListBoxItemView.g.cs
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\obj\Debug\Infrastructure_MarkupCompile.cache
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\obj\Debug\Infrastructure_MarkupCompile.lref
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\obj\Debug\AdornerRedactorListBoxItemView.baml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\obj\Debug\Infrastructure.g.resources
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\Infrastructure.dll.config
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml

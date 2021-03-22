@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <Style x:Key="BaseListBoxStyle" TargetType="ListBox">
         <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
         <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />
@@ -15,8 +15,7 @@
         <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
     </Style>
 
-    <!--<Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MaterialDesignSubtitle2TextBlock}"/>-->
+    <!--<Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MaterialDesignSubtitle2TextBlock}" />-->
 
-    <!--<Style x:Key="BaseBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}"/>-->
-
+    <!--<Style x:Key="BaseBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}" />-->
 </ResourceDictionary>

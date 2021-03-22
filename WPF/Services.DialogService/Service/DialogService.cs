@@ -8,7 +8,7 @@ namespace Services.DialogService.Service
 
         public object ShowDialog(UserControl userControl)
         {
-            var window = new DialogWindow {WindowContent = userControl};
+            var window = new DialogWindow { WindowContent = userControl };
             window.ShowDialog();
 
             return window;

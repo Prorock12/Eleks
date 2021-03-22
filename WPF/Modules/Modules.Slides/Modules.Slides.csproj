@@ -49,6 +49,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IQueViewModel.cs" />
     <Compile Include="Interfaces\ISlideViewModel.cs" />
     <Compile Include="Properties\Resources.uk-UA.Designer.cs">
       <DependentUpon>Resources.uk-UA.resx</DependentUpon>
@@ -89,6 +90,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CommonStyles\CommonUI.csproj">
+      <Project>{7070743e-31e8-42df-8c77-0682b41c4c91}</Project>
+      <Name>CommonUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj">
       <Project>{92eae888-2724-4d9d-b099-6c4fdd7b1be9}</Project>
       <Name>Infrastructure</Name>

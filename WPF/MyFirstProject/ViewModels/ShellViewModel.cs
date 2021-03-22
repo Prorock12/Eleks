@@ -1,13 +1,10 @@
-﻿using System.Globalization;
-using System.Windows;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using MyFirstProject.Views;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
-using System.Windows.Input;
 using Services.ApplicationSettingsBase;
-using Services.DialogService.Service;
+using System.Windows.Input;
 using Unity;
 using IDialogService = Services.DialogService.Service.IDialogService;
 
@@ -27,7 +24,7 @@ namespace MyFirstProject.ViewModels
 
         #region Constructor
 
-        public ShellViewModel(IDialogService dialogService, IUnityContainer unityContainer, IEventAggregator eventAggregator,ISettingsServices settingsServices)
+        public ShellViewModel(IDialogService dialogService, IUnityContainer unityContainer, IEventAggregator eventAggregator, ISettingsServices settingsServices)
         {
             _dialogService = dialogService;
             _unityContainer = unityContainer;
@@ -40,6 +37,7 @@ namespace MyFirstProject.ViewModels
         }
 
         #endregion Constructor
+
         private void ChangeSize()
         {
             var control = _unityContainer.Resolve<ChangeSizeDialogView>();
@@ -51,6 +49,7 @@ namespace MyFirstProject.ViewModels
             var control = _unityContainer.Resolve<BaseSettings>();
             var result = _dialogService.ShowDialog(control);
         }
+
         public static void SolveExpression()
         {
             var control = _unityContainer.Resolve<ShowValueExtension>();

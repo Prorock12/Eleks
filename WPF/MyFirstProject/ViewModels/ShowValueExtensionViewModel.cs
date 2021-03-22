@@ -1,13 +1,7 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-using Infrastructure;
-using Microsoft.Xaml.Behaviors.Core;
+﻿using Infrastructure;
+using Prism.Commands;
 using Services.DialogService.Service;
+using System.Windows.Input;
 
 namespace MyFirstProject.ViewModels
 {
@@ -22,6 +16,7 @@ namespace MyFirstProject.ViewModels
         }
 
         public ICommand SolveCommand { get; }
+
         public ShowValueExtensionViewModel()
         {
             SolveCommand = new DelegateCommand(Solve);

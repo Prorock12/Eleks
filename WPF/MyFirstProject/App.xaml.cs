@@ -1,19 +1,18 @@
-﻿using System.Globalization;
-using System.Threading;
-using Modules.Accountant;
+﻿using Modules.Accountant;
 using Modules.Controller;
 using Modules.Effects;
+using Modules.Library;
 using Modules.PresentationRegion;
 using Modules.Redactor;
 using Modules.Slides;
 using MyFirstProject.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Services.ApplicationSettingsBase;
 using Services.DialogService.Service;
 using Services.FilseSelector;
 using System.Windows;
-using Modules.Library;
-using Services.ApplicationSettingsBase;
+using Modules.Que;
 
 namespace MyFirstProject
 {
@@ -47,6 +46,7 @@ namespace MyFirstProject
             moduleCatalog.AddModule<EffectsModule>();
             moduleCatalog.AddModule<AccountantModule>();
             moduleCatalog.AddModule<LibraryModule>();
+            moduleCatalog.AddModule<QueModule>();
         }
 
         #endregion methods

@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xaml.Behaviors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -28,7 +24,7 @@ namespace Infrastructure.AttachedProperties
             BitmapImage imageBitmap = new BitmapImage(new Uri("C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Files\\Images\\Image1.jpg", UriKind.Absolute));
             var toolTip = new ToolTip
             {
-                Content = new Image() {Source = imageBitmap},
+                Content = new Image() { Source = imageBitmap },
                 Width = 100,
                 Height = 100,
                 Placement = PlacementMode.Left

@@ -2,12 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
-using Infrastructure.Events;
-using Models.Models;
-using Modules.Library.ViewModels;
-using Prism.Events;
 
 namespace Modules.Library.Views
 {
@@ -16,11 +11,13 @@ namespace Modules.Library.Views
     /// </summary>
     public partial class LibraryView : UserControl
     {
-        readonly List<object> _selectedItems = new List<object>();
+        private readonly List<object> _selectedItems = new List<object>();
+
         public LibraryView()
         {
             InitializeComponent();
         }
+
         // Bad Idea add move event because it will called every time when you move your mouse
         //private void UIElement_OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         //{

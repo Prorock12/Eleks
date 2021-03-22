@@ -15,3 +15,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\EntityFramework.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\Infrastructure.dll.config
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.ApplicationSettingsBase\bin\Debug\EntityFramework.xml

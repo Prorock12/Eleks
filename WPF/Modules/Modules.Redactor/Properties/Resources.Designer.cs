@@ -61,6 +61,24 @@ namespace Modules.Redactor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Circle.
+        /// </summary>
+        public static string Add_Circle {
+            get {
+                return ResourceManager.GetString("Add_Circle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Ellipse.
+        /// </summary>
+        public static string Add_Ellipse {
+            get {
+                return ResourceManager.GetString("Add_Ellipse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Image.
         /// </summary>
         public static string Add_Image {
@@ -70,11 +88,56 @@ namespace Modules.Redactor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Line.
+        /// </summary>
+        public static string Add_Line {
+            get {
+                return ResourceManager.GetString("Add_Line", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Quadrate.
+        /// </summary>
+        public static string Add_Quadrate {
+            get {
+                return ResourceManager.GetString("Add_Quadrate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Rectangle.
+        /// </summary>
+        public static string Add_Rectangle {
+            get {
+                return ResourceManager.GetString("Add_Rectangle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Shape.
+        /// </summary>
+        public static string Add_Shape {
+            get {
+                return ResourceManager.GetString("Add_Shape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Text.
         /// </summary>
         public static string Add_Text {
             get {
                 return ResourceManager.GetString("Add_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Triangle.
+        /// </summary>
+        public static string Add_Triangle {
+            get {
+                return ResourceManager.GetString("Add_Triangle", resourceCulture);
             }
         }
         

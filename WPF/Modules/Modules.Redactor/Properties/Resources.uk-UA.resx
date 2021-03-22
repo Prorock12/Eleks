@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add_Circle" xml:space="preserve">
+    <value>Додати Коло</value>
+  </data>
+  <data name="Add_Ellipse" xml:space="preserve">
+    <value>Додати Еліпс</value>
+  </data>
   <data name="Add_Image" xml:space="preserve">
     <value>Додати Зображення</value>
   </data>
+  <data name="Add_Line" xml:space="preserve">
+    <value>Додати Лінію</value>
+  </data>
+  <data name="Add_Quadrate" xml:space="preserve">
+    <value>Додати Квадрат</value>
+  </data>
+  <data name="Add_Rectangle" xml:space="preserve">
+    <value>Додати Прямокутник</value>
+  </data>
+  <data name="Add_Shape" xml:space="preserve">
+    <value>Додати Форму</value>
+  </data>
   <data name="Add_Text" xml:space="preserve">
     <value>Додати Текст</value>
+  </data>
+  <data name="Add_Triangle" xml:space="preserve">
+    <value>Додати Трикутник</value>
   </data>
   <data name="Add_Video" xml:space="preserve">
     <value>Додати Відео</value>

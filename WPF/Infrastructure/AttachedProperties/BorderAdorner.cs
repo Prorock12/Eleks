@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Models.Interfaces.Models;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using Models.Interfaces.Models;
 
 namespace Infrastructure.AttachedProperties
 {
@@ -25,16 +25,20 @@ namespace Infrastructure.AttachedProperties
 
         private readonly FrameworkElement _element;
 
-        readonly VisualCollection _visualChildrens;
+        private readonly VisualCollection _visualChildrens;
 
         private readonly IElement _visualElement;
-       
+
         public BorderAdorner(UIElement element) : base(element)
         {
             _visualChildrens = new VisualCollection(this);
             _element = (FrameworkElement)element;
-            //_visualElement = (IVisualElementViewModel)_element.DataContext;
 
+            //create ResizeT elemtn (resize thumb, borders...
+            //set datacontext element.DataContext is VisualElemtnViewmodel
+            //visualChilderans add ui element
+
+            var item = _element.DataContext;
             BuildAdornerCorners(ref _topLeft, Cursors.SizeNWSE);
             BuildAdornerCorners(ref _topRight, Cursors.SizeNESW);
             BuildAdornerCorners(ref _bottomLeft, Cursors.SizeNESW);
@@ -50,7 +54,6 @@ namespace Infrastructure.AttachedProperties
             BuildAdornerVector(ref _bottom, Cursors.SizeNS, 10, _element.Width);
             BuildAdornerVector(ref _right, Cursors.SizeWE, _element.Height, 10);
             BuildAdornerVector(ref _left, Cursors.SizeWE, _element.Height, 10);
-
 
             //registering drag delta events for thumb drag movement
             _topLeft.DragDelta += TopLeft_DragDelta;
@@ -84,7 +87,7 @@ namespace Infrastructure.AttachedProperties
             if (AdornedElement is FrameworkElement adornedElement && sender is Thumb)
             {
                 adornedElement.RenderTransformOrigin = new Point(50, 50);
-                
+
                 //var dragDelta = new Point(e.HorizontalChange, e.VerticalChange);
 
                 if (adornedElement.RenderTransform is RotateTransform transform)
@@ -93,11 +96,11 @@ namespace Infrastructure.AttachedProperties
                     transform.Angle += 1;
                 }
 
-                
                 //Canvas.SetLeft(adornedElement, Canvas.GetLeft(adornedElement) + dragDelta.X);
                 //Canvas.SetTop(adornedElement, Canvas.GetTop(adornedElement) + dragDelta.Y);
             }
         }
+
         private void Bottom_DragDelta(object sender, DragDeltaEventArgs e)
         {
             if (this.AdornedElement is FrameworkElement adornedElement && sender is Thumb bottomVector)
@@ -115,6 +118,7 @@ namespace Infrastructure.AttachedProperties
                 adornedElement.Height = newHeight;
             }
         }
+
         private void Right_DragDelta(object sender, DragDeltaEventArgs e)
         {
             if (this.AdornedElement is FrameworkElement adornedElement && sender is Thumb rightVector)
@@ -132,6 +136,7 @@ namespace Infrastructure.AttachedProperties
                 adornedElement.Width = newWidth;
             }
         }
+
         private void Left_DragDelta(object sender, DragDeltaEventArgs e)
         {
             if (this.AdornedElement is FrameworkElement adornedElement && sender is Thumb leftVector)
@@ -154,6 +159,7 @@ namespace Infrastructure.AttachedProperties
                 Canvas.SetLeft(adornedElement, newLeft);
             }
         }
+
         private void Top_DragDelta(object sender, DragDeltaEventArgs e)
         {
             if (this.AdornedElement is FrameworkElement adornedElement && sender is Thumb topVector)
@@ -175,6 +181,7 @@ namespace Infrastructure.AttachedProperties
                 Canvas.SetTop(adornedElement, newTop);
             }
         }
+
         private void BottomRight_DragDelta(object sender, DragDeltaEventArgs e)
         {
             if (this.AdornedElement is FrameworkElement adornedElement && sender is Thumb bottomRightCorner)
@@ -291,7 +298,8 @@ namespace Infrastructure.AttachedProperties
             cornerThumb = new Thumb() { Cursor = customizedCursors, Height = 10, Width = 10, Opacity = 0.5, Background = new SolidColorBrush(Colors.Blue) };
             _visualChildrens.Add(cornerThumb);
         }
-        public void BuildAdornerVector(ref Thumb cornerThumb, Cursor customizedCursors,double height,double width)
+
+        public void BuildAdornerVector(ref Thumb cornerThumb, Cursor customizedCursors, double height, double width)
         {
             if (cornerThumb != null) return;
             cornerThumb = new Thumb() { Cursor = customizedCursors, Height = height, Width = width, Opacity = 0.5, Background = new SolidColorBrush(Colors.Transparent) };
@@ -301,7 +309,7 @@ namespace Infrastructure.AttachedProperties
         public void BuildAdornerRectMove(ref Rectangle cornerThumb)
         {
             if (cornerThumb != null) return;
-            cornerThumb = new Rectangle(){ Stroke = Brushes.Black, StrokeDashArray = {4,4}, StrokeThickness = 2 };
+            cornerThumb = new Rectangle() { Stroke = Brushes.Black, StrokeDashArray = { 4, 4 }, StrokeThickness = 2 };
             _visualChildrens.Add(cornerThumb);
         }
 
@@ -333,9 +341,9 @@ namespace Infrastructure.AttachedProperties
             var bottomPoint = new Point(0, adornerHeight / 2);
             var topBottomVector = new Vector(adornerWidth, adornerHeight);
 
-            var leftPoint = new Point(adornerWidth/2, 0);
-            var rightPoint = new Point(-adornerWidth/2, 0);
-            var leftRightVector = new Vector(adornerWidth,adornerHeight);
+            var leftPoint = new Point(adornerWidth / 2, 0);
+            var rightPoint = new Point(-adornerWidth / 2, 0);
+            var leftRightVector = new Vector(adornerWidth, adornerHeight);
 
             var rotatePoint = new Point(0, -adornerHeight / 2 - 20);
             var rotateVector = new Vector(adornerWidth, adornerHeight);
@@ -344,17 +352,23 @@ namespace Infrastructure.AttachedProperties
             _topRight.Arrange(new Rect(desireWidth - adornerWidth / 2, -adornerHeight / 2, adornerWidth, adornerHeight));
             _bottomLeft.Arrange(new Rect(-adornerWidth / 2, desireHeight - adornerHeight / 2, adornerWidth, adornerHeight));
             _bottomRight.Arrange(new Rect(desireWidth - adornerWidth / 2, desireHeight - adornerHeight / 2, adornerWidth, adornerHeight));
-            _top.Arrange(new Rect( topPoint, topBottomVector));
+            _top.Arrange(new Rect(topPoint, topBottomVector));
             _bottom.Arrange(new Rect(bottomPoint, topBottomVector));
-            _left.Arrange(new Rect(leftPoint,leftRightVector));
-            _right.Arrange(new Rect(rightPoint,leftRightVector));
+            _left.Arrange(new Rect(leftPoint, leftRightVector));
+            _right.Arrange(new Rect(rightPoint, leftRightVector));
             _rotateElement.Arrange(new Rect(rotatePoint, rotateVector));
             _move.Arrange(new Rect(adornerWidth / 2 + 20, 0, adornerWidth, adornerHeight));
             _rectangle.Arrange(new Rect(0, 0, adornerWidth, adornerHeight));
             return finalSize;
         }
+
         protected override int VisualChildrenCount { get { return _visualChildrens.Count; } }
-        protected override Visual GetVisualChild(int index) { return _visualChildrens[index]; }
+
+        protected override Visual GetVisualChild(int index)
+        {
+            return _visualChildrens[index];
+        }
+
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);

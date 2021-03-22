@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "onx3UIRSrMWWad+rsugnBgI/nyGgQorqQ4FBM3H2xP2YcQYcdDLrSCV9XYJvt8vaQQQD88lasNglHH7WrcSIew==",
+  "dgSpecHash": "HbqqJbMvOtNIvMJbi5sdbSYCyrlG0wq1VCwiIg+UhEkshP5GQK+90xSWdSgjl/VOppwXK3BVJw0rrzT7v5S4Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\dotnetprojects.svgimage\\4.1.86\\dotnetprojects.svgimage.4.1.86.nupkg.sha512",
