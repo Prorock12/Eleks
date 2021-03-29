@@ -14,7 +14,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using Models.ShapeModels;
+using Models.Models.ShapeModels;
 using Modules.Redactor.ViewModels.Shapes;
 
 namespace Modules.Redactor.ViewModels
@@ -67,7 +67,7 @@ namespace Modules.Redactor.ViewModels
             set => SetProperty(ref _isStackView, value);
         }
 
-        public ObservableCollection<IElementViewModel> Elements { get; }
+        public ObservableCollection<IElementViewModel> Elements { get; set; }
 
         public ISlide SelectedSlide
         {
@@ -87,7 +87,7 @@ namespace Modules.Redactor.ViewModels
 
         #region Constructor
 
-        public ElementContainerViewModel(IEventAggregator eventAggregator, IFileSelector fileSelector)
+        public ElementContainerViewModel(IEventAggregator eventAggregator, IFileSelector fileSelector) : this()
         {
             _eventAggregator = eventAggregator;
             _fileSelector = fileSelector;
@@ -109,8 +109,6 @@ namespace Modules.Redactor.ViewModels
             eventAggregator.GetEvent<AddQuadrateEvent>().Subscribe(OnAddQuadrate);
             eventAggregator.GetEvent<AddTriangleEvent>().Subscribe(OnAddTriangle);
 
-            Elements = new ObservableCollection<IElementViewModel>();
-
             AddTextElementCommand = new DelegateCommand(AddText, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddImageElementCommand = new DelegateCommand(AddImage, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddVideoElementCommand = new DelegateCommand(AddVideo, CanChangeElement).ObservesProperty(() => SelectedSlide);
@@ -126,6 +124,10 @@ namespace Modules.Redactor.ViewModels
             DropCommand = new DelegateCommand<DragEventArgs>(Drop);
         }
 
+        public ElementContainerViewModel()
+        {
+            Elements = new ObservableCollection<IElementViewModel>();
+        }
         #endregion Constructor
 
         #region Methods
@@ -196,7 +198,7 @@ namespace Modules.Redactor.ViewModels
                         break;
 
                     default:
-                        throw new ArgumentOutOfRangeException(nameof(element));
+                        break;
                 }
             }
         }
@@ -210,14 +212,13 @@ namespace Modules.Redactor.ViewModels
         {
             SelectedPresentation = presentation;
         }
-
         private void AddText()
         {
             var text = new TextElement("newText");
 
             _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
 
-            SelectedSlide.Elements.Add(text);
+            SelectedSlide?.Elements.Add(text);
         }
 
         private void OnAddText(IElement element)
@@ -226,13 +227,12 @@ namespace Modules.Redactor.ViewModels
             Elements.Add(text);
             SelectedElement = text;
         }
-
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
             if (image == null) return;
             _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
-            SelectedSlide.Elements.Add(image);
+            SelectedSlide?.Elements.Add(image);
         }
 
         private void OnAddImage(IElement element)
@@ -241,13 +241,12 @@ namespace Modules.Redactor.ViewModels
             Elements.Add(image);
             SelectedElement = image;
         }
-
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
             if (video == null) return;
             _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
-            SelectedSlide.Elements.Add(video);
+            SelectedSlide?.Elements.Add(video);
         }
 
         private void OnAddVideo(IElement element)
@@ -256,7 +255,6 @@ namespace Modules.Redactor.ViewModels
             Elements.Add(video);
             SelectedElement = video;
         }
-
         private void RemoveElement()
         {
             SelectedSlide.Elements.Remove(SelectedElement?.Element);
@@ -272,14 +270,13 @@ namespace Modules.Redactor.ViewModels
         }
 
         #region shapes
-
         private void AddCircle()
         {
             var circle = new Circle("NewCircle");
 
             _eventAggregator.GetEvent<AddCircleEvent>().Publish(circle);
 
-            SelectedSlide.Elements.Add(circle);
+            SelectedSlide?.Elements.Add(circle);
         }
         private void OnAddCircle(IElement element)
         {
@@ -293,7 +290,7 @@ namespace Modules.Redactor.ViewModels
 
             _eventAggregator.GetEvent<AddEllipseEvent>().Publish(ellipse);
 
-            SelectedSlide.Elements.Add(ellipse);
+            SelectedSlide?.Elements.Add(ellipse);
         }
         private void OnAddEllipse(IElement element)
         {
@@ -307,7 +304,7 @@ namespace Modules.Redactor.ViewModels
 
             _eventAggregator.GetEvent<AddRectangleEvent>().Publish(rectangle);
 
-            SelectedSlide.Elements.Add(rectangle);
+            SelectedSlide?.Elements.Add(rectangle);
         }
         private void OnAddRectangle(IElement element)
         {
@@ -321,7 +318,7 @@ namespace Modules.Redactor.ViewModels
 
             _eventAggregator.GetEvent<AddQuadrateEvent>().Publish(quadrate);
 
-            SelectedSlide.Elements.Add(quadrate);
+            SelectedSlide?.Elements.Add(quadrate);
         }
         private void OnAddQuadrate(IElement element)
         {
@@ -335,7 +332,7 @@ namespace Modules.Redactor.ViewModels
 
             _eventAggregator.GetEvent<AddTriangleEvent>().Publish(triangle);
 
-            SelectedSlide.Elements.Add(triangle);
+            SelectedSlide?.Elements.Add(triangle);
         }
         private void OnAddTriangle(IElement element)
         {
@@ -349,7 +346,7 @@ namespace Modules.Redactor.ViewModels
 
             _eventAggregator.GetEvent<AddLineEvent>().Publish(line);
 
-            SelectedSlide.Elements.Add(line);
+            SelectedSlide?.Elements.Add(line);
         }
         private void OnAddLine(IElement element)
         {
@@ -359,7 +356,6 @@ namespace Modules.Redactor.ViewModels
         }
 
         #endregion
-
 
         #endregion Methods
     }

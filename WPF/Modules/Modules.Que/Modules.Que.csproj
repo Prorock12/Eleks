@@ -103,15 +103,22 @@
       <Project>{2e1605c1-c01c-47d1-b74b-f12f3b2ca9fc}</Project>
       <Name>Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
+      <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
+      <Name>Services.FilseSelector</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Prism.Core">
       <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Styles\SlideStyle.xaml">
+    <Page Include="Styles\QueStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

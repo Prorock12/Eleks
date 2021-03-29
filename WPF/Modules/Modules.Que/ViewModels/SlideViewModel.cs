@@ -1,5 +1,4 @@
-﻿using Infrastructure.Events;
-using Models.Interfaces.Models;
+﻿using Models.Interfaces.Models;
 using Modules.Que.Interfaces;
 
 namespace Modules.Que.ViewModels
@@ -14,9 +13,13 @@ namespace Modules.Que.ViewModels
 
         #region Constructor
 
-        public SlideViewModel(ISlide slide)
+        public SlideViewModel(ISlide slide) : this()
         {
             Slide = slide;
+        }
+        public SlideViewModel()
+        {
+
         }
 
         #endregion Constructor

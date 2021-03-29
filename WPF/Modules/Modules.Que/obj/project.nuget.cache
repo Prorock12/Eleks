@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "f1vYLkjc16lEquZoZzECQkpCHMSRImscWDv5LXW51WnfNKCDnoRtfAxiKup2xWuDPSHIYYylmzig5GRctWy3zQ==",
+  "dgSpecHash": "45RzLZTYwXpAUWt3WUEb3Gm2BuYuUr8xRn+mh1O9n4dP4fw70hs3iZ01ahNVrJrWVmpHNgrI/G/Wc6k+hESyqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Que\\Modules.Que.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.wpf\\8.0.0.1909\\prism.wpf.8.0.0.1909.nupkg.sha512"

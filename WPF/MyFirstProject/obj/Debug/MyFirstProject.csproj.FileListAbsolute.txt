@@ -198,3 +198,7 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Entity
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Modules.Que.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Modules.Que.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\uk-UA\Modules.Que.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\AutoMapper.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Service.DispatcherAction.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\MyFirstProject\bin\Debug\Service.DispatcherAction.pdb

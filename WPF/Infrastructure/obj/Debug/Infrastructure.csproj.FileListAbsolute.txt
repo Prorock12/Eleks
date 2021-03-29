@@ -51,3 +51,5 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\Entity
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Infrastructure\bin\Debug\AutoMapper.xml

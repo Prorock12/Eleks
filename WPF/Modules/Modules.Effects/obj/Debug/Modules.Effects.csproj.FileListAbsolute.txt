@@ -65,3 +65,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Deb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\EntityFramework.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\Infrastructure.dll.config
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\EntityFramework.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\CommonUI.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Effects\bin\Debug\CommonUI.pdb

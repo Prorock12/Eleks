@@ -11,9 +11,14 @@ namespace Modules.Controller.ViewModels
 
         #endregion Properties
 
-        public SlideViewModel(ISlide slide)
+        public SlideViewModel(ISlide slide) : this()
         {
             Slide = slide;
+        }
+
+        public SlideViewModel()
+        {
+
         }
     }
 }

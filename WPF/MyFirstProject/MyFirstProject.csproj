@@ -42,6 +42,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
     </Reference>
@@ -252,6 +255,10 @@
     <ProjectReference Include="..\Modules\Modules.Slides\Modules.Slides.csproj">
       <Project>{b55f85d9-811d-4824-ab71-c38c801ffc21}</Project>
       <Name>Modules.Slides</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.DialogService\Service.DispatcherAction\Service.DispatcherAction.csproj">
+      <Project>{826772f7-db8b-4bb5-9987-35a62fbc68b4}</Project>
+      <Name>Service.DispatcherAction</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services.DialogService\Services.ApplicationSettingsBase\Services.ApplicationSettingsBase.csproj">
       <Project>{f6e9281c-b1bd-4c58-b14c-f898f1dcd62e}</Project>

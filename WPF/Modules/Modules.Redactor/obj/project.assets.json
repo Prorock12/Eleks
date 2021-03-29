@@ -250,6 +250,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
@@ -539,6 +540,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
@@ -828,6 +830,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",
@@ -1117,6 +1120,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Infrastructure": "1.0.0",
           "MahApps.Metro": "2.4.4",
           "MaterialDesignThemes": "4.0.0",

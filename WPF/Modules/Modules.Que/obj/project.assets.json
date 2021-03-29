@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -76,10 +88,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -154,10 +190,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -232,10 +292,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -310,11 +394,39 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.FilseSelector/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.FilseSelector.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "type": "package",
+      "path": "automapper/10.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.10.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
       "sha512": "5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
       "type": "package",
@@ -397,15 +509,22 @@
       "type": "project",
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
+    },
+    "Services.FilseSelector/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "AutoMapper >= 10.1.1",
       "CommonUI >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "Models >= 1.0.0",
       "Prism.Core >= 8.0.0.1909",
-      "Prism.Wpf >= 8.0.0.1909"
+      "Prism.Wpf >= 8.0.0.1909",
+      "Services.FilseSelector >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -448,6 +567,9 @@
             },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
+            },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"
             }
           }
         }
@@ -456,6 +578,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
           "Prism.Core": {
             "target": "Package",
             "version": "[8.0.0.1909, )"

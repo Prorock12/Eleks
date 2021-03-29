@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-4-485541353
+5-542610073
 11333468352
-51-773351938
+521233889413
 145-93507273
-Controls\RedactorItemThumb.xaml;Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
+Controls\RedactorItemThumb.xaml;Controls\RedactorItemTriangleThumb.xaml;Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
 
-False
+True
 

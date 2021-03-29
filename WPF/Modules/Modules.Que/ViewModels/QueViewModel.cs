@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using Models.Interfaces.Models;
 using Modules.Que.Interfaces;
 using Prism.Events;
@@ -15,6 +10,7 @@ namespace Modules.Que.ViewModels
     {
         private ISlide _selectedSlide;
         private IEventAggregator _eventAggregator;
+        private bool _isSelected;
         #region Properties
 
         public IQue Que { get; set; }
@@ -26,16 +22,30 @@ namespace Modules.Que.ViewModels
         }
         #endregion Properties
 
+        public bool IsSelected
+        {
+            get =>_isSelected;
+            set => SetProperty(ref _isSelected, value);
+        }
+
         #region Constructor
 
-        public QueViewModel(IQue slide ,IEventAggregator eventAggregator)
+        public QueViewModel(IQue slide, IEventAggregator eventAggregator) : this(eventAggregator)
+        {
+            Que = slide;
+        }
+        public QueViewModel(IEventAggregator eventAggregator) : this()
         {
             _eventAggregator = eventAggregator;
-            Que = slide;
+        }
+
+        public QueViewModel()
+        {
+
         }
         private void OnSelectedSlideChanged()
         {
-            _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide); ;
+            _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide);
         }
         #endregion Constructor
     }

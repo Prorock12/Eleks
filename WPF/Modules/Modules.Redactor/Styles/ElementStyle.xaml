@@ -9,6 +9,7 @@
                     xmlns:local="clr-namespace:Modules.Redactor.Styles"
                     xmlns:viewModels1="clr-namespace:Modules.Redactor.ViewModels"
                     xmlns:shapes="clr-namespace:Modules.Redactor.ViewModels.Shapes"
+                    xmlns:models="clr-namespace:Models.Models;assembly=Models"
                     mc:Ignorable="d">
 
     <ResourceDictionary.MergedDictionaries>
@@ -123,9 +124,9 @@
     </ControlTemplate>
 
     <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
-        <Setter Property="Width" Value="{Binding VisualElement.Width}" />
-        <Setter Property="Height" Value="{Binding VisualElement.Height}" />
-        <Setter Property="Margin" Value="{Binding VisualElement.Margin}" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="100" />
+        <Setter Property="Margin" Value="10" />
         <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
         <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}" />-->
         <Style.Triggers>
@@ -156,6 +157,38 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--<Style x:Key="ElementContainerStyle"  TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="100" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="SandyBrown" />
+                <Setter Property="BorderBrush" Value="{Binding VisualElement.BorderBrush}" />
+                <Setter Property="BorderThickness" Value="3" />
+            </Trigger>
+            <DataTrigger Binding="{Binding IsStackView}"  Value="True">
+                <Setter Property="Canvas.Left" Value="{Binding VisualElement.X}" />
+                <Setter Property="Canvas.Top" Value="{Binding VisualElement.Y}" />
+                <Setter Property="Width" Value="{Binding VisualElement.Width}" />
+                <Setter Property="Height" Value="{Binding VisualElement.Height}" />
+                <Setter Property="Margin" Value="{Binding VisualElement.Margin}" />
+                <Setter Property="RenderTransformOrigin">
+                    <Setter.Value>
+                        <Point X="0.5" Y="0.5" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="{Binding VisualElement.Angle}" />
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>-->
+
 
     <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
 
@@ -237,25 +270,25 @@
     <DataTemplate DataType="{x:Type shapes:CircleViewModel}">
         <Ellipse Width="{Binding Circle.Diameter}" 
                  Height="{Binding Circle.Diameter}" 
-                 Fill="{Binding Circle.Fill}"/>
+                 Fill="{Binding Circle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:EllipseViewModel}">
         <Ellipse Width="{Binding Ellipse.Width}"
                  Height="{Binding Ellipse.Height}"
-                 Fill="{Binding Ellipse.Fill}"/>
+                 Fill="{Binding Ellipse.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:QuadrateViewModel}">
         <Rectangle Width="{Binding Quadrate.Width}"
                    Height="{Binding Quadrate.Width}"
-                   Fill="{Binding Quadrate.Fill}"/>
+                   Fill="{Binding Quadrate.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:RectangleViewModel}">
         <Rectangle Width="{Binding Rectangle.Width}"
                    Height="{Binding Rectangle.Height}"
-                   Fill="{Binding Rectangle.Fill}"/>
+                   Fill="{Binding Rectangle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:LineViewModel}">
@@ -263,15 +296,14 @@
               Y1="{Binding Line.Y1}"
               X2="{Binding Line.X2}"
               Y2="{Binding Line.Y2}"
-              Stroke="{Binding Line.Fill}"
+              Stroke="{Binding Line.Fill,Converter={StaticResource ColorToBrushConverter}}"
               />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:TriangleViewModel}">
-        <Polygon Points="{Binding Triangle.Points}"
-                 Fill="{Binding Triangle.Fill}"/>
+        <Polygon Points="{Binding Triangle.Points,Mode=TwoWay}"
+                 Fill="{Binding Triangle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
     </DataTemplate>
-
 
     <ControlTemplate x:Key="ElementsListBoxControlTemplate" TargetType="{x:Type ListBox}">
         <Border Margin="{TemplateBinding Margin}"

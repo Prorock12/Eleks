@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace Models.Interfaces.ShapeModels
 {
-    public interface ICircle : IShape
+    public interface ICircle : IEllipse
     {
         #region properties
 

@@ -48,12 +48,12 @@ namespace Models.Models
                 Width = 1000
             };
 
-            Ques = new ObservableCollection<IQue>()
-            {
+            Ques = new ObservableCollection<IQue>();
+            //{
 
-                new Que("First Que"),
-                new Que("Second Que")
-            };
+            //    new Que("First Que"),
+            //    new Que("Second Que")
+            //};
 
             Name = nameof(Presentation);
         }

@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\MyFirstProject\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -104,6 +107,7 @@
     <Compile Include="Events\AddCircleEvent.cs" />
     <Compile Include="Events\ChangeResolutionSizeEvent.cs" />
     <Compile Include="Events\AddEllipseEvent.cs" />
+    <Compile Include="Events\IsSelectedQueEvent.cs" />
     <Compile Include="Events\RemoveElementEvent.cs" />
     <Compile Include="Events\RemoveQueEvent.cs" />
     <Compile Include="Events\RemoveSlideEvent.cs" />

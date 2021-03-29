@@ -58,6 +58,7 @@
     <Compile Include="Adorner\ResizeThumb\BottomVector.cs" />
     <Compile Include="Adorner\ResizeThumb\LeftVector.cs" />
     <Compile Include="Adorner\ResizeThumb\MoveThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\ResizeCircleThumb.cs" />
     <Compile Include="Adorner\ResizeThumb\ResizeThumb.cs" />
     <Compile Include="Adorner\ResizeThumb\RightVector.cs" />
     <Compile Include="Adorner\ResizeThumb\RotateThumb.cs" />
@@ -66,6 +67,9 @@
     <Compile Include="Adorner\ResizeThumb\TopVector.cs" />
     <Compile Include="Controls\RedactorItemThumb.xaml.cs">
       <DependentUpon>RedactorItemThumb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RedactorItemTriangleThumb.xaml.cs">
+      <DependentUpon>RedactorItemTriangleThumb.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IElementViewModel.cs" />
     <Compile Include="Interfaces\IImageElementViewModel.cs" />
@@ -106,7 +110,6 @@
     <Compile Include="ViewModels\ElementViewModel.cs" />
     <Compile Include="ViewModels\ImageElementViewModel.cs" />
     <Compile Include="ViewModels\MediaElementViewModel.cs" />
-    <Compile Include="ViewModels\ShapesElementViewModel.cs" />
     <Compile Include="ViewModels\Shapes\CircleViewModel.cs" />
     <Compile Include="ViewModels\Shapes\EllipseViewModel.cs" />
     <Compile Include="ViewModels\Shapes\LineViewModel.cs" />
@@ -136,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\RedactorItemThumb.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RedactorItemTriangleThumb.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

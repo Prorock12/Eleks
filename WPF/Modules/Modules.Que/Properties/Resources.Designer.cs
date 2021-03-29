@@ -70,11 +70,29 @@ namespace Modules.Que.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Slide.
+        /// </summary>
+        public static string Add_Slide {
+            get {
+                return ResourceManager.GetString("Add_Slide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove_Que.
         /// </summary>
         public static string Remove_Que {
             get {
                 return ResourceManager.GetString("Remove_Que", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Slide.
+        /// </summary>
+        public static string Remove_Slide {
+            get {
+                return ResourceManager.GetString("Remove_Slide", resourceCulture);
             }
         }
     }

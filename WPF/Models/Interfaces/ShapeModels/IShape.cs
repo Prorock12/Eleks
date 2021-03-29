@@ -12,7 +12,7 @@ namespace Models.Interfaces.ShapeModels
     {
         #region properties
 
-        Brush Fill { get; set; }
+        Color Fill { get; set; }
 
         #endregion
     }

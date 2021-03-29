@@ -1,0 +1,160 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:viewModels="clr-namespace:Modules.Que.ViewModels"
+                    xmlns:regions="http://prismlibrary.com/"
+                    xmlns:share="clr-namespace:Infrastructure;assembly=Infrastructure"
+                    xmlns:models="clr-namespace:Models.Models;assembly=Models"
+                    mc:Ignorable="d">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--BasedOn="{StaticResource MaterialDesignListBox}"-->
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
+        <!--<Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />-->
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="BorderThickness" Value="0 0 0 2" />
+        <Setter Property="BorderBrush" Value="White" />
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatMidBgButton}">
+        <!--<Setter Property="Foreground" Value="Bisque" />
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Padding" Value="5" />-->
+        <Setter Property="Margin" Value="1" />
+    </Style>
+
+    <Style TargetType="{x:Type StackPanel}">
+        <!--<Setter Property="Background" Value="Black" />-->
+    </Style>
+
+    <Style TargetType="Border">
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderThickness" Value="2 0 0 2" />
+    </Style>
+
+    <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Green" />
+                <Setter Property="Foreground" Value="Goldenrod" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="RemoveButtonControlTemplate" TargetType="{x:Type Button}">
+
+        <Border Margin="{TemplateBinding Margin}"
+                CornerRadius="5"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Margin="{TemplateBinding Padding}" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkRed" />
+                <Setter Property="Foreground" Value="Black" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="Gray" />
+                <Setter Property="Foreground" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="QueListBoxControlTemplate" TargetType="{x:Type ListBox}">
+        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <ItemsPresenter />
+        </Border>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="SlideListBoxDataTemplate" DataType="{x:Type models:Slide}">
+        <TextBlock Text="{Binding Name}" Foreground="White"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="QueListBoxTemplate" DataType="{x:Type viewModels:QueViewModel}">
+        <Expander Header="{Binding Que.Name}" 
+                  Padding="5"
+                  Width="{Binding Width,RelativeSource={RelativeSource FindAncestor,AncestorType=ListBoxItem}}"
+                  IsExpanded="{Binding IsSelected,Mode=TwoWay}">
+            <ListBox ItemsSource="{Binding Que.Slides}" ItemTemplate="{StaticResource SlideListBoxDataTemplate}" SelectedItem="{Binding SelectedSlide}"/>
+        </Expander>
+    </DataTemplate>
+
+    <Style x:Key="QueListBoxItemContainerStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}"/>
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Foreground" Value="SandyBrown" />
+                <Setter Property="BorderBrush" Value="Red" />
+                <Setter Property="BorderThickness" Value="3" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SlideListBoxItemContainerStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Margin" Value="5" />
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Foreground" Value="SandyBrown" />
+                <Setter Property="BorderBrush" Value="Red" />
+                <Setter Property="BorderThickness" Value="3" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SlideListBoxStyle"
+           TargetType="ListBox"
+           BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
+        <Setter Property="ItemTemplate" Value="{StaticResource QueListBoxTemplate}" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource SlideListBoxItemContainerStyle}"/>
+    </Style>
+
+    <Style x:Key="QueListBoxStyle"
+           TargetType="ListBox"
+           BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
+        <Setter Property="ItemTemplate" Value="{StaticResource QueListBoxTemplate}" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource QueListBoxItemContainerStyle}"/>
+    </Style>
+
+    
+
+    
+
+    <Style x:Key="AddButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource AddButtonControlTemplate}" />
+    </Style>
+
+    <Style x:Key="RemoveButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Template" Value="{StaticResource RemoveButtonControlTemplate}" />
+    </Style>
+</ResourceDictionary>

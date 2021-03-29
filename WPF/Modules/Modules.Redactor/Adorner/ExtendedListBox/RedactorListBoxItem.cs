@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace Modules.Redactor.Adorner.ExtendedListBox
 {
@@ -11,30 +12,32 @@ namespace Modules.Redactor.Adorner.ExtendedListBox
         protected override void OnSelected(RoutedEventArgs e)
         {
             base.OnSelected(e);
-
-            if (this is FrameworkElement frameworkElement)
+            Background = Brushes.Transparent;
+            if (VisualParent is Canvas)
             {
-                if (_adorner != null)
-                {
-                    var adornerLayer = AdornerLayer.GetAdornerLayer(frameworkElement);
-                    adornerLayer?.Add(_adorner);
-                }
-                else
-                {
+                //if (_adorner != null)
+                //{
+                //    var adornerLayer = AdornerLayer.GetAdornerLayer(this);
+                //    adornerLayer?.Add(_adorner);
+                //}
+                //else
+                //{
                     _adorner = new RedactorItemAdorner(this);
-                    var adornerLayer = AdornerLayer.GetAdornerLayer(frameworkElement);
+                    var adornerLayer = AdornerLayer.GetAdornerLayer(this);
                     adornerLayer?.Add(_adorner);
-                }
+                //}
             }
         }
 
         protected override void OnUnselected(RoutedEventArgs e)
         {
-            if (this is FrameworkElement frameworkElement)
+            if (VisualParent is Canvas)
             {
-                var adornerLayer = AdornerLayer.GetAdornerLayer(frameworkElement);
-                adornerLayer?.Remove(_adorner);
+                var adornerLayer = AdornerLayer.GetAdornerLayer(this);
+                if (_adorner != null)
+                    adornerLayer?.Remove(_adorner);
             }
+
             base.OnUnselected(e);
         }
     }

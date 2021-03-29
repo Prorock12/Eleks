@@ -120,7 +120,13 @@
   <data name="Add_Que" xml:space="preserve">
     <value>Додати Чергу</value>
   </data>
+  <data name="Add_Slide" xml:space="preserve">
+    <value>Додати Слайд</value>
+  </data>
   <data name="Remove_Que" xml:space="preserve">
     <value>Видалити Чергу</value>
+  </data>
+  <data name="Remove_Slide" xml:space="preserve">
+    <value>Видалити Слайд</value>
   </data>
 </root>

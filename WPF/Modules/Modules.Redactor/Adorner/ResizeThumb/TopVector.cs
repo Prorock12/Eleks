@@ -1,6 +1,8 @@
 ﻿using Modules.Redactor.ViewModels;
 using System;
+using System.Windows;
 using System.Windows.Controls.Primitives;
+using Models.Models.ShapeModels;
 
 namespace Modules.Redactor.Adorner.ResizeThumb
 {
@@ -26,7 +28,6 @@ namespace Modules.Redactor.Adorner.ResizeThumb
                 designerItem.Height = newHeight;
                 designerItem.Y = newTop;
             }
-            //ResizeTopVector(designerItem, sender, e,false,false);
         }
     }
 }

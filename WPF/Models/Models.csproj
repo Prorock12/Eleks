@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\MyFirstProject\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\MyFirstProject\packages\Prism.Core.8.0.0.1909\lib\net47\Prism.dll</HintPath>
     </Reference>
@@ -98,13 +101,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ShapeModels\Circle.cs" />
-    <Compile Include="ShapeModels\Ellipse.cs" />
-    <Compile Include="ShapeModels\Line.cs" />
-    <Compile Include="ShapeModels\Quadrate.cs" />
-    <Compile Include="ShapeModels\Rectangle.cs" />
-    <Compile Include="ShapeModels\Shape.cs" />
-    <Compile Include="ShapeModels\Triangle.cs" />
+    <Compile Include="Models\ShapeModels\Circle.cs" />
+    <Compile Include="Models\ShapeModels\Ellipse.cs" />
+    <Compile Include="Models\ShapeModels\Line.cs" />
+    <Compile Include="Models\ShapeModels\Quadrate.cs" />
+    <Compile Include="Models\ShapeModels\Rectangle.cs" />
+    <Compile Include="Models\ShapeModels\Shape.cs" />
+    <Compile Include="Models\ShapeModels\Triangle.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

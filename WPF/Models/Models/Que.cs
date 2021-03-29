@@ -28,11 +28,11 @@ namespace Models.Models
         }
         public Que()
         {
-            Slides = new ObservableCollection<ISlide>()
-            {
-                new Slide("First Slide"),
-                new Slide("Second Slide")
-            };
+            Slides = new ObservableCollection<ISlide>();
+            //{
+            //    new Slide("First Slide"),
+            //    new Slide("Second Slide")
+            //};
         }
     }
 }

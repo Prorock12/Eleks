@@ -71,3 +71,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\EntityFramework.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\CommonUI.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\CommonUI.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Controller\bin\Debug\AutoMapper.dll

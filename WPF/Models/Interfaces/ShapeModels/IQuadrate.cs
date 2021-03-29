@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Interfaces.ShapeModels
 {
-    public interface IQuadrate : IShape
+    public interface IQuadrate : IRectangle
     {
-        double Width { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Models.Models
             set => SetProperty(ref _name, value);
         }
 
-        public ObservableCollection<IElement> Elements { get; }
+        public ObservableCollection<IElement> Elements { get; set; }
 
         #endregion Properties
 
@@ -33,12 +33,12 @@ namespace Models.Models
 
         public Slide()
         {
-            Elements = new ObservableCollection<IElement>()
-            {
-                new TextElement("Hello"),
-                new ImageElement("World"),
-                new VideoElement("SomeImage")
-            };
+            Elements = new ObservableCollection<IElement>();
+            //{
+            //    new TextElement("Hello"),
+            //    new ImageElement("World"),
+            //    new VideoElement("SomeImage")
+            //};
 
             Name = nameof(Slide);
         }

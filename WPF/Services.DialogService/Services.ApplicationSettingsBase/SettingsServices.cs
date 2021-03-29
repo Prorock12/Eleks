@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Windows.Threading;
 
 namespace Services.ApplicationSettingsBase
 {
@@ -37,7 +38,6 @@ namespace Services.ApplicationSettingsBase
             get => (string)this[nameof(CurrentFolderPath)];
             set => this[nameof(CurrentFolderPath)] = (object)value;
         }
-
         #endregion properties
     }
 }

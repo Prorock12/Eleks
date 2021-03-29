@@ -36,7 +36,7 @@ namespace Modules.Controller.ViewModels
         public ICommand AddVideoCommand { get; }
 
         public ObservableCollection<ISlideViewModel> Slides { get; }
-        public ObservableCollection<IElement> Elements { get; set; }
+        public ObservableCollection<IElement> Elements { get;  }
 
         public bool IsStackView
         {
@@ -104,9 +104,12 @@ namespace Modules.Controller.ViewModels
                 return;
             }
 
-            foreach (var slide in SelectedQue.Slides)
+            if (SelectedQue.Slides != null)
             {
-                Slides.Add(new SlideViewModel(slide));
+                foreach (var slide in SelectedQue.Slides)
+                {
+                    Slides.Add(new SlideViewModel(slide));
+                }
             }
         }
 
@@ -130,14 +133,12 @@ namespace Modules.Controller.ViewModels
         {
             _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide);
         }
-
         private void AddSlide()
         {
             var slide = new Slide("NewSlide");
 
             _eventAggregator.GetEvent<AddSlideEvent>().Publish(slide);
-
-            SelectedQue.Slides.Add(slide);
+            SelectedQue.Slides?.Add(slide);
         }
 
         private void OnAddSlide(ISlide slide)
@@ -146,27 +147,24 @@ namespace Modules.Controller.ViewModels
             Slides.Add(slideViewModel);
             SelectedSlide = slide;
         }
-
         private void AddText()
         {
             var text = new TextElement("newText");
-            SelectedSlide.Elements.Add(text);
+            SelectedSlide?.Elements.Add(text);
 
             _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
         }
-
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
-            SelectedSlide.Elements.Add(image);
+            SelectedSlide?.Elements.Add(image);
 
             _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
         }
-
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
-            SelectedSlide.Elements.Add(video);
+            SelectedSlide?.Elements.Add(video);
 
             _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
         }

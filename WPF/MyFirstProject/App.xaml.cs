@@ -13,6 +13,7 @@ using Services.DialogService.Service;
 using Services.FilseSelector;
 using System.Windows;
 using Modules.Que;
+using Service.DispatcherAction;
 
 namespace MyFirstProject
 {
@@ -30,6 +31,7 @@ namespace MyFirstProject
             containerRegistry.RegisterSingleton<IDialogService, DialogService>();
             containerRegistry.RegisterSingleton<IFileSelector, FileSelector>();
             containerRegistry.RegisterSingleton<ISettingsServices, SettingsServices>();
+            containerRegistry.RegisterSingleton<IDispatcherAction, DispatcherAction>();
         }
 
         protected override Window CreateShell()

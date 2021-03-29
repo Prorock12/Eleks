@@ -9,7 +9,6 @@ namespace Models.Interfaces.ShapeModels
 {
     public interface IRectangle : IShape
     {
-        double Width { get; set; }
-        double Height { get; set; }
+
     }
 }

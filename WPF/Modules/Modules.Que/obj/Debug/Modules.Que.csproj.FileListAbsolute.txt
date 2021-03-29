@@ -25,10 +25,13 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\I
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Infrastructure.dll.config
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Models.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\EntityFramework.xml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Styles\SlideStyle.baml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\uk-UA\Modules.Que.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.Properties.Resources.uk-UA.resources
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\uk-UA\Modules.Que.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Styles\QueStyle.baml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.pdb

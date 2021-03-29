@@ -11,7 +11,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
 
     <UserControl.Resources>
-        <ResourceDictionary Source="../Styles/SlideStyle.xaml" />
+        <ResourceDictionary Source="../Styles/QueStyle.xaml" />
     </UserControl.Resources>
 
     <Border>
@@ -30,13 +30,26 @@
             <StackPanel Grid.Row="1"
                     VerticalAlignment="Bottom">
 
-                <Button Command="{Binding AddQueCommand}"
-                        Content="{x:Static localization:Resources.Add_Que}"
-                        Style="{StaticResource AddButtonStyle}" />
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding AddQueCommand}"
+                            Content="{x:Static localization:Resources.Add_Que}"
+                            Style="{StaticResource AddButtonStyle}" />
 
-                <Button Command="{Binding RemoveQueCommand}"
-                    Content="{x:Static localization:Resources.Remove_Que}"
-                    Style="{StaticResource RemoveButtonStyle}" />
+                    <Button Command="{Binding RemoveQueCommand}"
+                            Content="{x:Static localization:Resources.Remove_Que}"
+                            Style="{StaticResource RemoveButtonStyle}" />
+                </StackPanel>
+
+               <StackPanel Orientation="Horizontal">
+                   <Button Command="{Binding AddSlideCommand}"
+                           Content="{x:Static localization:Resources.Add_Slide}"
+                           Style="{StaticResource AddButtonStyle}" />
+
+                   <Button Command="{Binding RemoveSlideCommand}"
+                           Content="{x:Static localization:Resources.Remove_Slide}"
+                           Style="{StaticResource RemoveButtonStyle}" />
+                </StackPanel>
+               
             </StackPanel>
         </Grid>
     </Border>

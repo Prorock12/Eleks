@@ -14,6 +14,10 @@ namespace Modules.Redactor.ViewModels
             VisualElement = element;
         }
 
+        protected VisualElementViewModel()
+        {
+
+        }
         #endregion Constructors
     }
 }

@@ -13,6 +13,10 @@ namespace Modules.Que.Interfaces
 
         IQue Que { get; set; }
 
+        ISlide SelectedSlide { get; set; }
+
+        bool IsSelected { get; set; }
+
         #endregion Properties
     }
 }

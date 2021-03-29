@@ -148,3 +148,5 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\De
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\Infrastructure.dll.config
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\EntityFramework.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\obj\Debug\Controls\RedactorItemTriangleThumb.g.cs
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Redactor\obj\Debug\Controls\RedactorItemTriangleThumb.baml
