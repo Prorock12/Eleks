@@ -1,19 +1,19 @@
-﻿using System.Globalization;
-using System.Threading;
-using Modules.Accountant;
+﻿using Modules.Accountant;
 using Modules.Controller;
 using Modules.Effects;
+using Modules.Library;
 using Modules.PresentationRegion;
 using Modules.Redactor;
 using Modules.Slides;
 using MyFirstProject.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Services.ApplicationSettingsBase;
 using Services.DialogService.Service;
 using Services.FilseSelector;
 using System.Windows;
-using Modules.Library;
-using Services.ApplicationSettingsBase;
+using Modules.Que;
+using Service.DispatcherAction;
 
 namespace MyFirstProject
 {
@@ -31,6 +31,7 @@ namespace MyFirstProject
             containerRegistry.RegisterSingleton<IDialogService, DialogService>();
             containerRegistry.RegisterSingleton<IFileSelector, FileSelector>();
             containerRegistry.RegisterSingleton<ISettingsServices, SettingsServices>();
+            containerRegistry.RegisterSingleton<IDispatcherAction, DispatcherAction>();
         }
 
         protected override Window CreateShell()
@@ -47,6 +48,7 @@ namespace MyFirstProject
             moduleCatalog.AddModule<EffectsModule>();
             moduleCatalog.AddModule<AccountantModule>();
             moduleCatalog.AddModule<LibraryModule>();
+            moduleCatalog.AddModule<QueModule>();
         }
 
         #endregion methods

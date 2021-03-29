@@ -6,6 +6,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Service.DispatcherAction;
 
 namespace Modules.Accountant.ViewModels
 {
@@ -14,6 +15,7 @@ namespace Modules.Accountant.ViewModels
         private static Random _random = new Random();
 
         private IVisualElement _selectedElement;
+        private IDispatcherAction _dispatcherAction;
 
         public ICommand AddRowCommand { get; set; }
         public ICommand RemoveRowCommand { get; set; }
@@ -26,20 +28,21 @@ namespace Modules.Accountant.ViewModels
 
         public ObservableCollection<IVisualElement> Elements { get; set; }
 
-        public AccountantViewModel()
+        public AccountantViewModel(IDispatcherAction dispatcherAction)
         {
+            _dispatcherAction = dispatcherAction;
             AddRowCommand = new DelegateCommand(AddRow);
             RemoveRowCommand = new DelegateCommand(RemoveRow, () => SelectedElement != null).ObservesProperty(() => SelectedElement);
 
             Elements = new ObservableCollection<IVisualElement>();
 
-            for (int i = 0; i < 1000; i++)
-            {
-                Elements.Add(CreateElement());
-            }
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    Elements.Add(CreateElement());
+            //}
         }
-
-        private static IVisualElement CreateElement()
+        //Should be private
+        public IVisualElement CreateElement()
         {
             switch (_random.Next(1, 4))
             {
@@ -53,18 +56,20 @@ namespace Modules.Accountant.ViewModels
                     return new VideoElement("New Video");
             }
         }
-
-        private void AddRow()
+        //Should be private
+        public void AddRow()
         {
-            Dispatcher.CurrentDispatcher.InvokeAsync(() =>
-            {
-                var newElement = CreateElement();
-                Elements.Add(newElement);
-                SelectedElement = newElement;
-            }, DispatcherPriority.Loaded);
+            //Dispatcher.CurrentDispatcher.InvokeAsync(() =>
+            //{
+            //    var newElement = CreateElement();
+            //    Elements?.Add(newElement);
+            //    SelectedElement = newElement;
+            //}, DispatcherPriority.Loaded);
+            var observableCollection = Elements;
+            _dispatcherAction.AddRowDispatcher(ref observableCollection,CreateElement);
         }
-
-        private void RemoveRow()
+        //Should be private
+        public void RemoveRow()
         {
             if (SelectedElement != null)
                 Elements.Remove(SelectedElement);

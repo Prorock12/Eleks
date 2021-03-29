@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Prism.Mvvm;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using Prism.Mvvm;
+using System.Windows.Threading;
 
 namespace Modules.Library.ViewModels
 {
@@ -18,7 +15,7 @@ namespace Modules.Library.ViewModels
         private string _path;
         private BitmapImage _bitmapImage;
 
-        #endregion
+        #endregion Fields
 
         #region Properties
 
@@ -27,36 +24,44 @@ namespace Modules.Library.ViewModels
             get
             {
                 if (_bitmapImage == null)
-                    Task.Run(LoadBitmapImage);
+                    //Task.Run(LoadBitmapImage);
+                    Parallel.Invoke(LoadBitmapImage);
                 return _bitmapImage;
             }
             set => SetProperty(ref _bitmapImage, value);
         }
+
         public string Name
         {
             get => _name;
             set => SetProperty(ref _name, value);
         }
+
         public string Path
         {
             get => _path;
             set => SetProperty(ref _path, value);
         }
-        #endregion
+
+        #endregion Properties
 
         private void LoadBitmapImage()
-        { 
-            //FileStream fileStream =
-            //    new FileStream(Path, FileMode.Open, FileAccess.Read);
+        {
+            FileStream fileStream =
+                new FileStream(Path, FileMode.Open, FileAccess.Read);
 
             var img = new BitmapImage();
-            var uri = new Uri(Path);
+            //var uri = new Uri(Path);
             img.BeginInit();
-            img.UriSource = uri;
-            img.EndInit();
-            img.Freeze();
 
-            Application.Current.Dispatcher.InvokeAsync(() => BitmapImage = img);
+            //img.DecodePixelHeight = 36;
+            //img.DecodePixelWidth = 36;
+            //img.UriSource = uri;
+            img.StreamSource = fileStream;
+            img.EndInit();
+            //img.Freeze();
+            //BitmapImage = img;
+            Application.Current.Dispatcher.InvokeAsync(() => BitmapImage = img, DispatcherPriority.Background);
         }
     }
 }

@@ -93,12 +93,23 @@
       <Project>{92eae888-2724-4d9d-b099-6c4fdd7b1be9}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Models\Models.csproj">
+      <Project>{2e1605c1-c01c-47d1-b74b-f12f3b2ca9fc}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services.DialogService\Services.ApplicationSettingsBase\Services.ApplicationSettingsBase.csproj">
+      <Project>{f6e9281c-b1bd-4c58-b14c-f898f1dcd62e}</Project>
+      <Name>Services.ApplicationSettingsBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
       <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
       <Name>Services.FilseSelector</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
     <PackageReference Include="MahApps.Metro">
       <Version>2.4.4</Version>
     </PackageReference>

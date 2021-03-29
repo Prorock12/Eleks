@@ -8,7 +8,7 @@ namespace Models.Interfaces.Models
 
         string Name { get; set; }
 
-        ObservableCollection<IElement> Elements { get; }
+        ObservableCollection<IElement> Elements { get; set; }
 
         #endregion Properties
     }

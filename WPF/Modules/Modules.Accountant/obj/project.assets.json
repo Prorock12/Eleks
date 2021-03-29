@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -247,10 +259,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Service.DispatcherAction/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -496,10 +532,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Service.DispatcherAction/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -745,10 +805,34 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Service.DispatcherAction/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -994,11 +1078,39 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Service.DispatcherAction/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.DispatcherAction.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "type": "package",
+      "path": "automapper/10.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.10.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "ControlzEx/4.4.0": {
       "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
       "type": "package",
@@ -1347,16 +1459,23 @@
       "type": "project",
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
+    },
+    "Service.DispatcherAction/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Service.DispatcherAction/Service.DispatcherAction.csproj",
+      "msbuildProject": "../../Services.DialogService/Service.DispatcherAction/Service.DispatcherAction.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "AutoMapper >= 10.1.1",
       "CommonUI >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "MahApps.Metro >= 2.4.4",
       "MaterialDesignThemes >= 4.0.0",
       "Models >= 1.0.0",
       "Prism.Wpf >= 8.0.0.1909",
+      "Service.DispatcherAction >= 1.0.0",
       "Xceed.Products.Wpf.DataGrid.Full >= 7.0.21101.19010"
     ]
   },
@@ -1400,6 +1519,9 @@
             },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
+            },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Service.DispatcherAction\\Service.DispatcherAction.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Service.DispatcherAction\\Service.DispatcherAction.csproj"
             }
           }
         }
@@ -1408,6 +1530,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
           "MahApps.Metro": {
             "target": "Package",
             "version": "[2.4.4, )"

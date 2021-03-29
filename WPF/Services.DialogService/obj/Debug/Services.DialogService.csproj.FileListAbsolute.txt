@@ -38,3 +38,5 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debu
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.xml

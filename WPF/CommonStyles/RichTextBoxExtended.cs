@@ -92,9 +92,12 @@ namespace CommonUI
         {
             TextRange doc = new TextRange(Document.ContentStart, Document.ContentEnd);
 
-            using (var fs = GenerateStreamFromString("a,b \n c,d"))
+            using (var fs = GenerateStreamFromString(Text))
             {
-                doc.Save(fs, DataFormats.Rtf);
+                if (fs.CanRead)
+                {
+                    doc.Save(fs, DataFormats.Rtf);
+                }
             }
             //SaveFileDialog sfd = new SaveFileDialog();
             //sfd.Filter = "Text Files (*.txt)|*.txt|RichText Files (*.rtf)|*.rtf|XAML Files (*.xaml)|*.xaml|All files (*.*)|*.*";

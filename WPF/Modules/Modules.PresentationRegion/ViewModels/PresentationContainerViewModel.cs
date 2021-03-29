@@ -5,11 +5,7 @@ using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using System.Collections.ObjectModel;
-using System.Globalization;
-using System.Threading;
-using System.Windows;
 using System.Windows.Input;
-using System.Windows.Markup;
 
 namespace Modules.PresentationRegion.ViewModels
 {
@@ -19,7 +15,7 @@ namespace Modules.PresentationRegion.ViewModels
 
         private readonly IEventAggregator _eventAggregator;
 
-        private PresentationViewModel _selectedPresentation;
+        private IPresentationViewModel _selectedPresentation;
 
         #endregion Fields
 
@@ -30,7 +26,7 @@ namespace Modules.PresentationRegion.ViewModels
         public ICommand RemovePresentationCommand { get; }
         public ICommand ChangeSizeCommand { get; }
 
-        public PresentationViewModel SelectedPresentation
+        public IPresentationViewModel SelectedPresentation
         {
             get => _selectedPresentation;
             set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
@@ -40,19 +36,18 @@ namespace Modules.PresentationRegion.ViewModels
 
         #region Constructor
 
-        public PresentationContainerViewModel(IEventAggregator eventAggregator)
+        public PresentationContainerViewModel(IEventAggregator eventAggregator) : this()
         {
             _eventAggregator = eventAggregator;
 
             AddPresentationCommand = new DelegateCommand(AddPresentation);
             RemovePresentationCommand = new DelegateCommand(RemovePresentation);
             ChangeSizeCommand = new DelegateCommand(ChangeSizeSendRequest);
+        }
 
-            Presentations = new ObservableCollection<IPresentationViewModel>
-            {
-                new PresentationViewModel(new Presentation("FirstPresentation" )),
-                new PresentationViewModel(new Presentation("Second" ))
-            };
+        public PresentationContainerViewModel()
+        {
+            Presentations = new ObservableCollection<IPresentationViewModel>();
         }
 
         #endregion Constructor
@@ -61,24 +56,24 @@ namespace Modules.PresentationRegion.ViewModels
 
         private void ChangeSizeSendRequest()
         {
-            _eventAggregator.GetEvent<SendRequestChangeSizeEvent>().Publish();
+            _eventAggregator?.GetEvent<SendRequestChangeSizeEvent>().Publish();
         }
 
         private void OnSelectedPresentationChanged()
         {
-            _eventAggregator.GetEvent<SelectedPresentationEvent>().Publish(SelectedPresentation?.Presentation);
+            _eventAggregator?.GetEvent<SelectedPresentationEvent>().Publish(SelectedPresentation?.Presentation);
         }
-
         private void AddPresentation()
         {
             var presentation = new PresentationViewModel(new Presentation("newSlide"));
-            Presentations.Insert(Presentations.Count, presentation);
-            SelectedPresentation = presentation;
+            Presentations?.Add(presentation);
+            //if (SelectedPresentation != null)
+                SelectedPresentation = presentation;
         }
-
         private void RemovePresentation()
         {
-            Presentations.Remove(SelectedPresentation);
+            if (SelectedPresentation != null)
+                Presentations.Remove(SelectedPresentation);
         }
 
         #endregion Methods

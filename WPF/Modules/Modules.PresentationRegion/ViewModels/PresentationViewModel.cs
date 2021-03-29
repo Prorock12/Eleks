@@ -13,11 +13,15 @@ namespace Modules.PresentationRegion.ViewModels
 
         #region Constructor
 
-        public PresentationViewModel(IPresentation presentation)
+        public PresentationViewModel(IPresentation presentation) : this()
         {
             Presentation = presentation;
         }
 
+        public PresentationViewModel()
+        {
+
+        }
         #endregion Constructor
     }
 }

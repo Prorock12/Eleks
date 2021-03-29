@@ -15,7 +15,7 @@ namespace Modules.Slides.ViewModels
     {
         #region Fields
 
-        private IPresentation _selectedPresentation;
+        private IQue _selectedQue;
 
         private readonly IEventAggregator _eventAggregator;
 
@@ -36,10 +36,10 @@ namespace Modules.Slides.ViewModels
             set => SetProperty(ref _selectedSlide, value, OnSelectedSlideChanged);
         }
 
-        public IPresentation SelectedPresentation
+        public IQue SelectedQue
         {
-            get => _selectedPresentation;
-            set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
+            get => _selectedQue;
+            set => SetProperty(ref _selectedQue, value, OnSelectedQueChanged);
         }
 
         #endregion Properties
@@ -52,13 +52,13 @@ namespace Modules.Slides.ViewModels
 
             Slides = new ObservableCollection<ISlideViewModel>();
 
-            eventAggregator.GetEvent<SelectedPresentationEvent>().Subscribe(OnSelectedPresentation);
+            eventAggregator.GetEvent<SelectedQueEvent>().Subscribe(OnSelectedQue);
 
             eventAggregator.GetEvent<AddSlideEvent>().Subscribe(OnAddSlide);
             eventAggregator.GetEvent<RemoveSlideEvent>().Subscribe(OnRemoveSlide);
 
-            AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
-            RemoveSlideCommand = new DelegateCommand(RemoveSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
+            AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedSlide);
+            RemoveSlideCommand = new DelegateCommand(RemoveSlide, CanChangeSlide).ObservesProperty(() => SelectedSlide);
         }
 
         #endregion Constructor
@@ -67,28 +67,28 @@ namespace Modules.Slides.ViewModels
 
         private bool CanChangeSlide()
         {
-            return SelectedPresentation != null;
+            return SelectedSlide != null;
         }
 
         private void OnLoadSlides()
         {
-            if (SelectedPresentation == null)
+            if (SelectedQue == null)
             {
                 return;
             }
 
-            foreach (var slide in SelectedPresentation.Slides)
+            foreach (var slide in SelectedQue.Slides)
             {
                 Slides.Add(new SlideViewModel(slide));
             }
         }
 
-        private void OnSelectedPresentation(IPresentation presentation)
+        private void OnSelectedQue(IQue que)
         {
-            SelectedPresentation = presentation;
+            SelectedQue = que;
         }
 
-        private void OnSelectedPresentationChanged()
+        private void OnSelectedQueChanged()
         {
             Slides.Clear();
             OnLoadSlides();
@@ -106,7 +106,7 @@ namespace Modules.Slides.ViewModels
 
             _eventAggregator.GetEvent<AddSlideEvent>().Publish(slide);
 
-            SelectedPresentation.Slides.Add(slide);
+            SelectedQue.Slides.Add(slide);
         }
 
         private void OnAddSlide(ISlide slide)
@@ -118,7 +118,7 @@ namespace Modules.Slides.ViewModels
 
         private void RemoveSlide()
         {
-            SelectedPresentation.Slides.Remove(SelectedSlide.Slide);
+            SelectedQue.Slides.Remove(SelectedSlide.Slide);
 
             _eventAggregator.GetEvent<RemoveSlideEvent>().Publish(SelectedSlide.Slide);
         }
@@ -127,8 +127,6 @@ namespace Modules.Slides.ViewModels
         {
             var removeSlide = Slides.First(x => x.Slide == slide);
             Slides.Remove(removeSlide);
-
-            //select s;lide
         }
 
         #endregion Methods

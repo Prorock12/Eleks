@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "CommonServiceLocator/2.0.2": {
         "type": "package",
         "compile": {
@@ -25,6 +37,15 @@
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "DotNetProjects.SVGImage/4.1.86": {
+        "type": "package",
+        "compile": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
         }
       },
       "MahApps.Metro/2.4.4": {
@@ -223,6 +244,38 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -239,6 +292,18 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "CommonServiceLocator/2.0.2": {
         "type": "package",
         "compile": {
@@ -262,6 +327,15 @@
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "DotNetProjects.SVGImage/4.1.86": {
+        "type": "package",
+        "compile": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
         }
       },
       "MahApps.Metro/2.4.4": {
@@ -460,6 +534,38 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -476,6 +582,18 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "CommonServiceLocator/2.0.2": {
         "type": "package",
         "compile": {
@@ -499,6 +617,15 @@
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "DotNetProjects.SVGImage/4.1.86": {
+        "type": "package",
+        "compile": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
         }
       },
       "MahApps.Metro/2.4.4": {
@@ -697,6 +824,38 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -713,6 +872,18 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net461/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutoMapper.dll": {}
+        }
+      },
       "CommonServiceLocator/2.0.2": {
         "type": "package",
         "compile": {
@@ -736,6 +907,15 @@
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "DotNetProjects.SVGImage/4.1.86": {
+        "type": "package",
+        "compile": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/DotNetProjects.SVGImage.dll": {}
         }
       },
       "MahApps.Metro/2.4.4": {
@@ -934,6 +1114,38 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Modules.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Infrastructure": "1.0.0",
+          "MahApps.Metro": "2.4.4",
+          "MaterialDesignThemes": "4.0.0",
+          "Models": "1.0.0",
+          "Prism.Wpf": "8.0.0.1909",
+          "Services.ApplicationSettingsBase": "1.0.0",
+          "Services.FilseSelector": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Modules.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Library.dll": {}
+        }
+      },
+      "Services.ApplicationSettingsBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.ApplicationSettingsBase.dll": {}
         }
       },
       "Services.FilseSelector/1.0.0": {
@@ -951,6 +1163,22 @@
     }
   },
   "libraries": {
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "type": "package",
+      "path": "automapper/10.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.10.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "CommonServiceLocator/2.0.2": {
       "sha512": "OeAz2cDGiQuaxpJ2pUm1xyZyklT2HgP5LHoumI0o/pcXdTweJMjKHu92JKa33pZRCrRI0DdPcE5MGHk6GCpDMQ==",
       "type": "package",
@@ -990,6 +1218,24 @@
         "lib/netcoreapp3.1/ControlzEx.pdb",
         "lib/netcoreapp3.1/ControlzEx.xml",
         "logo-mini.png"
+      ]
+    },
+    "DotNetProjects.SVGImage/4.1.86": {
+      "sha512": "4h0ofpPGa+XzEuKFwMDjow5xFQluA5Uthude5+0+wB0HQomf1yohgA+Uf2Ppucp7b3jpJSoX2HeDReLYWedBjQ==",
+      "type": "package",
+      "path": "dotnetprojects.svgimage/4.1.86",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetprojects.svgimage.4.1.86.nupkg.sha512",
+        "dotnetprojects.svgimage.nuspec",
+        "lib/net40/DotNetProjects.SVGImage.dll",
+        "lib/net45/DotNetProjects.SVGImage.dll",
+        "lib/net46/DotNetProjects.SVGImage.dll",
+        "lib/net47/DotNetProjects.SVGImage.dll",
+        "lib/net48/DotNetProjects.SVGImage.dll",
+        "lib/netcoreapp3.0/DotNetProjects.SVGImage.dll",
+        "lib/netcoreapp3.1/DotNetProjects.SVGImage.dll"
       ]
     },
     "MahApps.Metro/2.4.4": {
@@ -1428,6 +1674,16 @@
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
     },
+    "Modules.Library/1.0.0": {
+      "type": "project",
+      "path": "../Modules.Library/Modules.Library.csproj",
+      "msbuildProject": "../Modules.Library/Modules.Library.csproj"
+    },
+    "Services.ApplicationSettingsBase/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj"
+    },
     "Services.FilseSelector/1.0.0": {
       "type": "project",
       "path": "../../Services.DialogService/Services.FilseSelector/Services.FilseSelector.csproj",
@@ -1436,11 +1692,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "AutoMapper >= 10.1.1",
       "CommonUI >= 1.0.0",
+      "DotNetProjects.SVGImage >= 4.1.86",
       "Infrastructure >= 1.0.0",
       "MahApps.Metro >= 2.4.4",
       "MaterialDesignThemes >= 4.0.0",
       "Models >= 1.0.0",
+      "Modules.Library >= 1.0.0",
       "MvvmLightLibs >= 5.4.1.1",
       "Prism.Unity >= 8.0.0.1909",
       "Prism.Wpf >= 8.0.0.1909",
@@ -1488,6 +1747,9 @@
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
             },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Library\\Modules.Library.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Library\\Modules.Library.csproj"
+            },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.FilseSelector\\Services.FilseSelector.csproj"
             }
@@ -1498,6 +1760,14 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
+          "DotNetProjects.SVGImage": {
+            "target": "Package",
+            "version": "[4.1.86, )"
+          },
           "MahApps.Metro": {
             "target": "Package",
             "version": "[2.4.4, )"

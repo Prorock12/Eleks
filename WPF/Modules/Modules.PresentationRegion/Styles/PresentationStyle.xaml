@@ -5,6 +5,11 @@
                     xmlns:viewModels="clr-namespace:Modules.PresentationRegion.ViewModels"
                     mc:Ignorable="d">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
         <Setter Property="FontSize" Value="20" />
         <Setter Property="BorderThickness" Value="0 0 2 0" />
@@ -17,13 +22,12 @@
         <Setter Property="Margin" Value="1" />
     </Style>
 
-    <Style TargetType="Border" >
+    <Style TargetType="Border">
         <Setter Property="BorderBrush" Value="White" />
         <Setter Property="BorderThickness" Value="2" />
     </Style>
 
     <Style TargetType="{x:Type StackPanel}" BasedOn="{StaticResource BaseStackPanelStyle}">
-        
     </Style>
 
     <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">

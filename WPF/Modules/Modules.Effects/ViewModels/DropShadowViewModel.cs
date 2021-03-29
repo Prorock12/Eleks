@@ -1,7 +1,7 @@
 ﻿using Infrastructure;
 using Models.Interfaces.Effects;
-using System.Linq;
 using Modules.Effects.Properties;
+using System.Linq;
 
 namespace Modules.Effects.ViewModels
 {

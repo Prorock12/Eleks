@@ -13,7 +13,7 @@
 
     <Style TargetType="{x:Type xcdg:DataGridControl}">
         <Setter Property="AutoCreateColumns" Value="False" />
-        <Setter Property="KeyboardNavigation.TabNavigation" Value="Local"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Local" />
         <Setter Property="ContextMenu">
             <Setter.Value>
                 <ContextMenu>
@@ -66,15 +66,24 @@
         <xcdg:NumericTextBox Value="{xcdg:CellEditorBinding}" />
     </DataTemplate>
 
+    <DataTemplate x:Key="ContentValueWidthDataTemplate">
+        <TextBlock Text="{Binding DataContext.Width, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type xcdg:DataCell}} ,Converter={StaticResource ValueOfWidthHeightConverter}}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ContentValueHeightDataTemplate">
+        <TextBlock Text="{Binding DataContext.Height, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type xcdg:DataCell}} ,Converter={StaticResource ValueOfWidthHeightConverter}}" />
+    </DataTemplate>
+
     <DataTemplate x:Key="BorderTemplate" DataType="{x:Type infrastructure:ExtendedColor}">
-        <TextBlock Text="{Binding Name}" />
+        <TextBlock Text="{Binding Name}" Style="{DynamicResource MaterialdesignTextBlock}" />
     </DataTemplate>
 
     <DataTemplate x:Key="ColorsComboBoxDataTemplate">
         <ComboBox DataContext="{Binding DataContext, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type xcdg:DataCell}}}"
             ItemTemplate="{StaticResource BorderTemplate}"
-                  ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"
+            ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}"
             SelectedValuePath="Color"
-            SelectedValue="{xcdg:CellEditorBinding}" />
+            SelectedValue="{xcdg:CellEditorBinding}"
+            Style="{DynamicResource MaterialDesignComboBox}" />
     </DataTemplate>
 </ResourceDictionary>

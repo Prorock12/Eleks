@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "I1YXP2zE57Dp690BZxGCzji2GsOIxTpLCbqECJXofA7B7A4MtXoui758hXCxK3O9AwyMeFNCxswdLDSmBSGwYQ==",
+  "dgSpecHash": "44WinHrDIQ9VdfCQ6Tex+l5MwTHHlbzEpOzb6fBnRm2m5gS8CR5Iiyy8ochTbzmiqaE8xRhSI6kaJKATeS8KyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Library\\Modules.Library.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\mahapps.metro\\2.4.4\\mahapps.metro.2.4.4.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",

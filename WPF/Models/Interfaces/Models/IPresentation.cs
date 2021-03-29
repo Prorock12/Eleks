@@ -9,7 +9,7 @@ namespace Models.Interfaces.Models
         string Name { get; set; }
         string Path { get; set; }
         IResolution Resolution { get; set; }
-        ObservableCollection<ISlide> Slides { get; set; }
+        ObservableCollection<IQue> Ques { get; set; }
 
         #endregion Properties
     }

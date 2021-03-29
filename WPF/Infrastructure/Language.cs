@@ -4,7 +4,8 @@
     {
         public string Name { get; }
         public string Culture { get; }
-        public  Language(string name,string culture)
+
+        public Language(string name, string culture)
         {
             Name = name;
             Culture = culture;

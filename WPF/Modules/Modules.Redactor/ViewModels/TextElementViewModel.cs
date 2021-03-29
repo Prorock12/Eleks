@@ -18,6 +18,10 @@ namespace Modules.Redactor.ViewModels
             TextElement = element;
         }
 
+        public TextElementViewModel()
+        {
+
+        }
         #endregion Constructors
     }
 }

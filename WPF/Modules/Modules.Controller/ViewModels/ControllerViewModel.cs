@@ -18,7 +18,7 @@ namespace Modules.Controller.ViewModels
 
         private readonly IFileSelector _fileSelector;
 
-        private IPresentation _selectedPresentation;
+        private IQue _selectedQue;
 
         private readonly IEventAggregator _eventAggregator;
 
@@ -36,6 +36,7 @@ namespace Modules.Controller.ViewModels
         public ICommand AddVideoCommand { get; }
 
         public ObservableCollection<ISlideViewModel> Slides { get; }
+        public ObservableCollection<IElement> Elements { get;  }
 
         public bool IsStackView
         {
@@ -49,11 +50,13 @@ namespace Modules.Controller.ViewModels
             set => SetProperty(ref _selectedSlide, value, OnSelectedSlideChanged);
         }
 
-        public IPresentation SelectedPresentation
+        public IQue SelectedQue
         {
-            get => _selectedPresentation;
-            set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
+            get => _selectedQue;
+            set => SetProperty(ref _selectedQue, value, OnSelectedQueChanged);
         }
+
+        public ISlide Slide { get; set; }
 
         #endregion Properties
 
@@ -66,13 +69,14 @@ namespace Modules.Controller.ViewModels
 
             Slides = new ObservableCollection<ISlideViewModel>();
 
-            eventAggregator.GetEvent<SelectedPresentationEvent>().Subscribe(OnSelectedPresentation);
+            eventAggregator.GetEvent<SelectedQueEvent>().Subscribe(OnSelectedQue);
             eventAggregator.GetEvent<SelectedSlideEvent>().Subscribe(OnSelectedSlide);
 
             eventAggregator.GetEvent<AddSlideEvent>().Subscribe(OnAddSlide);
             eventAggregator.GetEvent<RemoveSlideEvent>().Subscribe(OnRemoveSlide);
 
-            AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedPresentation);
+            AddSlideCommand =
+                new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedQue);
 
             AddTextCommand = new DelegateCommand(AddText, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddImageCommand = new DelegateCommand(AddImage, CanChangeElement).ObservesProperty(() => SelectedSlide);
@@ -85,7 +89,7 @@ namespace Modules.Controller.ViewModels
 
         private bool CanChangeSlide()
         {
-            return SelectedPresentation != null;
+            return SelectedQue != null;
         }
 
         private bool CanChangeElement()
@@ -95,20 +99,23 @@ namespace Modules.Controller.ViewModels
 
         private void OnLoadSlides()
         {
-            if (SelectedPresentation == null)
+            if (SelectedQue == null)
             {
                 return;
             }
 
-            foreach (var slide in SelectedPresentation.Slides)
+            if (SelectedQue.Slides != null)
             {
-                Slides.Add(new SlideViewModel(slide));
+                foreach (var slide in SelectedQue.Slides)
+                {
+                    Slides.Add(new SlideViewModel(slide));
+                }
             }
         }
 
-        private void OnSelectedPresentation(IPresentation presentation)
+        private void OnSelectedQue(IQue que)
         {
-            SelectedPresentation = presentation;
+            SelectedQue = que;
         }
 
         private void OnSelectedSlide(ISlide slide)
@@ -116,7 +123,7 @@ namespace Modules.Controller.ViewModels
             SelectedSlide = slide;
         }
 
-        private void OnSelectedPresentationChanged()
+        private void OnSelectedQueChanged()
         {
             Slides.Clear();
             OnLoadSlides();
@@ -126,14 +133,12 @@ namespace Modules.Controller.ViewModels
         {
             _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide);
         }
-
         private void AddSlide()
         {
             var slide = new Slide("NewSlide");
 
             _eventAggregator.GetEvent<AddSlideEvent>().Publish(slide);
-
-            SelectedPresentation.Slides.Add(slide);
+            SelectedQue.Slides?.Add(slide);
         }
 
         private void OnAddSlide(ISlide slide)
@@ -142,43 +147,26 @@ namespace Modules.Controller.ViewModels
             Slides.Add(slideViewModel);
             SelectedSlide = slide;
         }
-
         private void AddText()
         {
             var text = new TextElement("newText");
+            SelectedSlide?.Elements.Add(text);
 
             _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(text);
-            }
         }
-
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
-            SelectedSlide.Elements.Add(image);
+            SelectedSlide?.Elements.Add(image);
 
             _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(image);
-            }
         }
-
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
-            //SelectedSlide.Elements.Add(video);
+            SelectedSlide?.Elements.Add(video);
 
             _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
-
-            foreach (var slide in Slides)
-            {
-                slide.Slide.Elements.Add(video);
-            }
         }
 
         private void OnRemoveSlide(ISlide slide)

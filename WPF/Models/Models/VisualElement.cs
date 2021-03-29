@@ -75,14 +75,23 @@ namespace Models.Models
         {
             get => _width;
 
-            set => SetProperty(ref _width, value);
+            set => SetProperty(ref _width, value, OnWidthChanged);
+        }
+        protected virtual void OnWidthChanged()
+        {
+
         }
 
-        public double Height
+        public  double Height
         {
             get => _height;
 
-            set => SetProperty(ref _height, value);
+            set => SetProperty(ref _height, value, OnHeightChanged);
+        }
+
+        protected virtual void OnHeightChanged()
+        {
+            
         }
 
         public double Angle
@@ -200,6 +209,9 @@ namespace Models.Models
 
         protected VisualElement(string name) : base(name)
         {
+            Background = Colors.Transparent;
+            Width = 100;
+            Height = 100;
             RenderingBias = RenderingBias.Quality;
         }
 

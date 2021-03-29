@@ -1,38 +1,43 @@
 ﻿using System.Configuration;
-using System.Windows.Media;
-using Infrastructure;
+using System.Windows.Threading;
 
 namespace Services.ApplicationSettingsBase
 {
     public class SettingsServices : System.Configuration.ApplicationSettingsBase, ISettingsServices
     {
+        private string _currentFolder;
+
         #region constants
 
         private const string IsAccountantEnabledDefault = "false";
 
-        #endregion
+        #endregion constants
 
         #region properties
 
-        
-
-   
         [UserScopedSetting]
         [DefaultSettingValue("en-US")]
         public string CurrentLanguage
         {
             get => (string)this[nameof(CurrentLanguage)];
-            set => this[nameof(CurrentLanguage)] = (string) value;
+            set => this[nameof(CurrentLanguage)] = (string)value;
         }
+
         [UserScopedSetting]
         [DefaultSettingValue(IsAccountantEnabledDefault)]
         public bool IsAccountantEnabled
         {
-            get { return ((bool) this[nameof(IsAccountantEnabled)]); }
+            get { return ((bool)this[nameof(IsAccountantEnabled)]); }
 
-            set { this[nameof(IsAccountantEnabled)] = (bool) value; }
+            set { this[nameof(IsAccountantEnabled)] = (bool)value; }
         }
 
-        #endregion
+        [UserScopedSetting]
+        public string CurrentFolderPath
+        {
+            get => (string)this[nameof(CurrentFolderPath)];
+            set => this[nameof(CurrentFolderPath)] = (object)value;
+        }
+        #endregion properties
     }
 }

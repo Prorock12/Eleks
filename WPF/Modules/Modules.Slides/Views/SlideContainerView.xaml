@@ -22,10 +22,10 @@
             </Grid.RowDefinitions>
 
             <ListBox Grid.Row="0"
-                 Style="{StaticResource SlidesListBoxStyle}"
+                 Style="{StaticResource SlideListBoxStyle}"
                  ItemsSource="{Binding  Slides}"
                  SelectedItem="{Binding SelectedSlide}"
-                 KeyboardNavigation.TabNavigation="Continue"/>
+                 KeyboardNavigation.TabNavigation="Continue" />
 
             <StackPanel Grid.Row="1"
                     VerticalAlignment="Bottom">

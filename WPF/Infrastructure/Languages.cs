@@ -11,6 +11,7 @@ namespace Infrastructure
             LanguagesCollection = GetListLanguages();
             //BaseColors = GetListBaseColor();
         }
+
         private static List<Language> GetListLanguages()
         {
             return new List<Language>()

@@ -1,32 +1,36 @@
 ﻿<UserControl x:Class="Modules.Library.Views.LibraryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"             
-             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:prism="http://prismlibrary.com/"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:Modules.Library.ViewModels"
              xmlns:localization="clr-namespace:Modules.Library.Properties"
+             xmlns:viewModels="clr-namespace:Modules.Library.ViewModels"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:LibraryViewModel}">
 
     <UserControl.Resources>
-        <ResourceDictionary Source="../Style/LibraryStyle.xaml"/>
+        <ResourceDictionary Source="../Style/LibraryStyle.xaml" />
     </UserControl.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="{x:Static localization:Resources.PleaseChooseSomeFolder}" Margin="4"/>
-            <Button Content="{x:Static localization:Resources.ChooseFolder}" Command="{Binding ChooseFolderCommand}"/>
+            <TextBlock Text="{x:Static localization:Resources.PleaseChooseSomeFolder}" Margin="4" />
+            <Button Content="{x:Static localization:Resources.ChooseFolder}" Command="{Binding ChooseFolderCommand}" />
         </StackPanel>
-        
+
         <ListBox Grid.Row="1"
                  Style="{StaticResource ImagesListBoxStyle}"
-                 ItemsSource="{Binding LibraryItems}"/>
+                 ItemsSource="{Binding LibraryItems}"
+                 Background="{DynamicResource MaterialDesignPaper}"
+                 SelectionMode="Extended"
+                 SelectionChanged="Selector_OnSelectionChanged" />
+        <!--PreviewMouseLeftButtonDown="UIElement_OnPreviewMouseLeftButtonDown"-->
     </Grid>
 </UserControl>

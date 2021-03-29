@@ -92,11 +92,18 @@ namespace CommonUI
             _positionTimer.Start();
 
             IsPlaying = true;
+
+            Unloaded += OnUnloaded;
         }
 
         #endregion constructor
 
         #region Methods
+
+        private void OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            IsPlaying = false;
+        }
 
         private void OnMediaOpened(object sender, RoutedEventArgs e)
         {

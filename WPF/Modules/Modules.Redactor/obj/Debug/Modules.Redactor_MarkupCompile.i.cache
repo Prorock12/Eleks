@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-3-1585120859
+5-542610073
 11333468352
-221355456828
-142-673946189
-Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
+521233889413
+145-93507273
+Controls\RedactorItemThumb.xaml;Controls\RedactorItemTriangleThumb.xaml;Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
 
-False
+True
 

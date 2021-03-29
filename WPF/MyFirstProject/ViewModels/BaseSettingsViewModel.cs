@@ -1,13 +1,11 @@
-﻿using System.Globalization;
-using System.Threading;
-using System.Windows;
-using Prism.Commands;
-using System.Windows.Input;
-using Infrastructure;
-using Services.ApplicationSettingsBase;
-using Services.DialogService.Service;
+﻿using Infrastructure;
 using MyFirstProject.Properties;
 using MyFirstProject.Views;
+using Prism.Commands;
+using Services.ApplicationSettingsBase;
+using Services.DialogService.Service;
+using System.Windows;
+using System.Windows.Input;
 using IDialogWindow = Services.DialogService.Service.IDialogWindow;
 
 namespace MyFirstProject.ViewModels
@@ -18,6 +16,7 @@ namespace MyFirstProject.ViewModels
         private readonly ISettingsServices _settingsServices;
 
         private Language _selectedLanguage;
+
         public Language SelectedLanguage
         {
             get => _selectedLanguage;
@@ -32,14 +31,16 @@ namespace MyFirstProject.ViewModels
             ////Set intitial value selected language
             CloseCommand = new DelegateCommand<IDialogWindow>(Close);
         }
+
         private void Close(IDialogWindow window)
         {
             CloseDialogWithResult(window, DialogResults.Undefined);
         }
+
         private void OnChangedLanguage()
         {
             _settingsServices.CurrentLanguage = SelectedLanguage.Culture;
-            var result = MessageBox.Show(Resources.MessageBoxLanguage,"You broke something",MessageBoxButton.YesNo);
+            var result = MessageBox.Show(Resources.MessageBoxLanguage, "You broke something", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 var oldWindow = Application.Current.MainWindow;
@@ -51,9 +52,8 @@ namespace MyFirstProject.ViewModels
             }
             else
             {
-      
             }
-            //If yes = save value in settings, close window, 
+            //If yes = save value in settings, close window,
             //if no don`t change property
         }
     }

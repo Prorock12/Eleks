@@ -18,6 +18,10 @@ namespace Modules.Redactor.ViewModels
             MediaElement = element;
         }
 
+        protected MediaElementViewModel()
+        {
+
+        }
         #endregion Constructors
     }
 }

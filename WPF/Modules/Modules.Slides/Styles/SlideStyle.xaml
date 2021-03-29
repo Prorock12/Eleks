@@ -4,7 +4,11 @@
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:viewModels="clr-namespace:Modules.Slides.ViewModels"
                     mc:Ignorable="d">
-
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!--BasedOn="{StaticResource MaterialDesignListBox}"-->
     <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
         <!--<Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}" />
         <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}" />-->
@@ -77,7 +81,7 @@
         <TextBlock Text="{Binding   Slide.Name}" Padding="5" />
     </DataTemplate>
 
-    <ControlTemplate x:Key="SlideListBoxControlTemplate" TargetType="{x:Type ListBox}">
+    <ControlTemplate x:Key="QueListBoxControlTemplate" TargetType="{x:Type ListBox}">
         <Border Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}">
@@ -85,11 +89,29 @@
         </Border>
     </ControlTemplate>
 
-    <Style x:Key="SlidesListBoxStyle"
+    <Style x:Key="SlideListBoxStyle"
            TargetType="ListBox"
            BasedOn="{StaticResource {x:Type ListBox}}">
-        <Setter Property="Template" Value="{StaticResource SlideListBoxControlTemplate}" />
+        <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
         <Setter Property="ItemTemplate" Value="{StaticResource SlideListBoxTemplate}" />
+    </Style>
+
+    <!--<DataTemplate x:Key="QueListBoxTemplate" DataType="{x:Type viewModels:QueViewModel}">
+        <Expander Header="{Binding Que.Name}" Padding="5">
+            <ListBox Style="{StaticResource SlideListBoxStyle}"
+                     ItemsSource="{Binding  Que.Slides}"
+                     
+                     KeyboardNavigation.TabNavigation="Continue"/>
+        </Expander>
+    </DataTemplate>-->
+
+    
+
+    <Style x:Key="QueListBoxStyle"
+           TargetType="ListBox"
+           BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
+        <Setter Property="ItemTemplate" Value="{StaticResource QueListBoxTemplate}" />
     </Style>
 
     <Style  TargetType="{x:Type ListBoxItem}">
@@ -97,11 +119,13 @@
         <Style.Triggers>
             <Trigger Property="IsFocused" Value="True">
                 <Setter Property="Foreground" Value="SandyBrown" />
-                <Setter Property="BorderBrush" Value="Red"/>
-                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="BorderBrush" Value="Red" />
+                <Setter Property="BorderThickness" Value="3" />
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    
 
     <Style x:Key="AddButtonStyle"
            TargetType="Button"

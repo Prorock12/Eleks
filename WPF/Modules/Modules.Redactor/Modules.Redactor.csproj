@@ -50,9 +50,37 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adorner\ExtendedListBox\RedactorListBox.cs" />
+    <Compile Include="Adorner\ExtendedListBox\RedactorListBoxItem.cs" />
+    <Compile Include="Adorner\RedactorItemAdorner.cs" />
+    <Compile Include="Adorner\ResizeThumb\BottomLeftThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\BottomRightThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\BottomVector.cs" />
+    <Compile Include="Adorner\ResizeThumb\LeftVector.cs" />
+    <Compile Include="Adorner\ResizeThumb\MoveThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\ResizeCircleThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\ResizeThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\RightVector.cs" />
+    <Compile Include="Adorner\ResizeThumb\RotateThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\TopLeftThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\TopRightThumb.cs" />
+    <Compile Include="Adorner\ResizeThumb\TopVector.cs" />
+    <Compile Include="Controls\RedactorItemThumb.xaml.cs">
+      <DependentUpon>RedactorItemThumb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RedactorItemTriangleThumb.xaml.cs">
+      <DependentUpon>RedactorItemTriangleThumb.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IElementViewModel.cs" />
     <Compile Include="Interfaces\IImageElementViewModel.cs" />
     <Compile Include="Interfaces\IMediaElementViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\ICircleViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\IEllipsViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\ILineViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\IQuadrateViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\IRectangleViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\IShapeViewModel.cs" />
+    <Compile Include="Interfaces\InterfaceShapes\ITriangleViewModel.cs" />
     <Compile Include="Interfaces\ITextElementViewModel.cs" />
     <Compile Include="Interfaces\IVideoElementVewModel.cs" />
     <Compile Include="Interfaces\IVisualElementViewModel.cs" />
@@ -82,7 +110,13 @@
     <Compile Include="ViewModels\ElementViewModel.cs" />
     <Compile Include="ViewModels\ImageElementViewModel.cs" />
     <Compile Include="ViewModels\MediaElementViewModel.cs" />
-    <Compile Include="ViewModels\ShapesElementViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\CircleViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\EllipseViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\LineViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\QuadrateViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\RectangleViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\ShapeViewModel.cs" />
+    <Compile Include="ViewModels\Shapes\TriangleViewModel.cs" />
     <Compile Include="ViewModels\TextElementViewModel.cs" />
     <Compile Include="ViewModels\VideoElementViewModel.cs" />
     <Compile Include="ViewModels\VisualElementViewModel.cs" />
@@ -104,6 +138,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\RedactorItemThumb.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RedactorItemTriangleThumb.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ElementStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -118,6 +160,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetProjects.SVGImage">
+      <Version>4.1.86</Version>
+    </PackageReference>
     <PackageReference Include="MahApps.Metro">
       <Version>2.4.4</Version>
     </PackageReference>
@@ -148,6 +196,10 @@
     <ProjectReference Include="..\..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
       <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
       <Name>Services.FilseSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules.Library\Modules.Library.csproj">
+      <Project>{4897f669-8ae1-47e2-9d4a-266d91e0e9ea}</Project>
+      <Name>Modules.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

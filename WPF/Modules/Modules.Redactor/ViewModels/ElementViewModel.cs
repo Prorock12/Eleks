@@ -19,6 +19,10 @@ namespace Modules.Redactor.ViewModels
             Element = element;
         }
 
+        protected ElementViewModel()
+        {
+
+        }
         #endregion Constructors
     }
 }

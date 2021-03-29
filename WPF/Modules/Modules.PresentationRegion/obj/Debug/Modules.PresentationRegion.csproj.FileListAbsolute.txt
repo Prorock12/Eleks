@@ -112,3 +112,13 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationReg
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\MahApps.Metro.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\MahApps.Metro.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Library.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.ApplicationSettingsBase.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Library.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.ApplicationSettingsBase.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\uk-UA\Modules.Library.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\DotNetProjects.SVGImage.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\EntityFramework.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Infrastructure.dll.config
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\EntityFramework.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\AutoMapper.dll

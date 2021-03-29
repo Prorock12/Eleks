@@ -7,12 +7,11 @@
     </ItemsPanelTemplate>
 
     <Style x:Key="ImagesListBoxStyle" TargetType="{x:Type ListBox}">
-        <Setter Property="ItemsPanel" Value="{StaticResource ImagesWrapPanel}"/>
-        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ItemsPanel" Value="{StaticResource ImagesWrapPanel}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
     </Style>
 
     <DataTemplate DataType="{x:Type viewModels:LibraryItemViwModel}">
-        <Image MaxHeight="100" MaxWidth="100" Source="{Binding BitmapImage}"/>
+        <Image MaxHeight="100" MaxWidth="100" Source="{Binding Path}" />
     </DataTemplate>
-    
 </ResourceDictionary>

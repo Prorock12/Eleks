@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add_Circle" xml:space="preserve">
+    <value>Add Circle</value>
+  </data>
+  <data name="Add_Ellipse" xml:space="preserve">
+    <value>Add Ellipse</value>
+  </data>
   <data name="Add_Image" xml:space="preserve">
     <value>Add Image</value>
   </data>
+  <data name="Add_Line" xml:space="preserve">
+    <value>Add Line</value>
+  </data>
+  <data name="Add_Quadrate" xml:space="preserve">
+    <value>Add Quadrate</value>
+  </data>
+  <data name="Add_Rectangle" xml:space="preserve">
+    <value>Add Rectangle</value>
+  </data>
+  <data name="Add_Shape" xml:space="preserve">
+    <value>Add Shape</value>
+  </data>
   <data name="Add_Text" xml:space="preserve">
     <value>Add Text</value>
+  </data>
+  <data name="Add_Triangle" xml:space="preserve">
+    <value>Add Triangle</value>
   </data>
   <data name="Add_Video" xml:space="preserve">
     <value>Add Video</value>

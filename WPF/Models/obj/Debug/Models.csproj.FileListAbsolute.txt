@@ -22,3 +22,5 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csproj.
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\obj\Debug\Models.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\AutoMapper.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Models\bin\Debug\AutoMapper.xml
