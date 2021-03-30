@@ -1,0 +1,11 @@
+﻿namespace ModelStandard.Interfaces.Models
+{
+    public interface ITextElement : IVisualElement
+    {
+        #region Properties
+
+        string Text { get; set; }
+
+        #endregion Properties
+    }
+}

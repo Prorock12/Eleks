@@ -1,0 +1,9 @@
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.AssemblyInfoInputs.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.AssemblyInfo.cs
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.csproj.CoreCompileInputs.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\bin\Debug\netstandard2.0\ModelStandard.deps.json
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\bin\Debug\netstandard2.0\ModelStandard.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\bin\Debug\netstandard2.0\ModelStandard.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\ModelStandard\obj\Debug\netstandard2.0\ModelStandard.pdb

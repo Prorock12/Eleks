@@ -15,12 +15,16 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0" AutoGenerateColumns="False" x:Name="UserGrid" SelectedItem="{Binding SelectedElement}">
-            <DataGrid.Columns>
+        <DataGrid Grid.Row="0"
+                  AutoGenerateColumns="True"
+                  x:Name="UserGrid" 
+                  SelectedItem="{Binding SelectedElement}"
+                  ItemsSource="{Binding Db.VisualElements}">
+            <!--<DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id , UpdateSourceTrigger=PropertyChanged}" Header="Id" Width="100"/>
                 <DataGridTextColumn Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Header="Name" Width="110"/>
                 <DataGridTextColumn Binding="{Binding Age,UpdateSourceTrigger=PropertyChanged}" Header="Age" Width="70"/>
-            </DataGrid.Columns>
+            </DataGrid.Columns>-->
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">

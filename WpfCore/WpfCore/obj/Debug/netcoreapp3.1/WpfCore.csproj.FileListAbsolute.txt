@@ -60,6 +60,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreap
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\Unity.Container.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\obj\Debug\netcoreapp3.1\Views\MainWindow.baml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\Models.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\Models.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\obj\Debug\netcoreapp3.1\WpfCore_MarkupCompile.lref
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\ModelStandard.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WpfCore\WpfCore\bin\Debug\netcoreapp3.1\ModelStandard.pdb

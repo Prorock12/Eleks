@@ -15,8 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Models">
-      <HintPath>..\..\WPF\Models\bin\Debug\Models.dll</HintPath>
+    <Folder Include="EntityFramework\Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ModelStandard">
+      <HintPath>..\..\WPF\ModelStandard\bin\Debug\netstandard2.0\ModelStandard.dll</HintPath>
     </Reference>
   </ItemGroup>
 

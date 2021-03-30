@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstProjectTests", "..\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.DispatcherAction", "..\Services.DialogService\Service.DispatcherAction\Service.DispatcherAction.csproj", "{826772F7-DB8B-4BB5-9987-35A62FBC68B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelStandard", "..\ModelStandard\ModelStandard.csproj", "{68EFE6B6-162B-4338-91CD-BE7BB1EF997F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{826772F7-DB8B-4BB5-9987-35A62FBC68B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{826772F7-DB8B-4BB5-9987-35A62FBC68B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826772F7-DB8B-4BB5-9987-35A62FBC68B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EFE6B6-162B-4338-91CD-BE7BB1EF997F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EFE6B6-162B-4338-91CD-BE7BB1EF997F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EFE6B6-162B-4338-91CD-BE7BB1EF997F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EFE6B6-162B-4338-91CD-BE7BB1EF997F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

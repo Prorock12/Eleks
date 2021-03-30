@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.EntityFrameworkCore;
+using ModelStandard.Interfaces.Models;
+using ModelStandard.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 using WpfCore.EntityFramework;
@@ -13,20 +15,26 @@ namespace WpfCore.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private User _selectedElement;
-        private ApplicationContext db = new ApplicationContext();
+        private IVisualElement _selectedElement;
+        private ApplicationContext _db;
         public ICommand AddCommand { get; }
         public ICommand UpdateCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public User SelectedElement
+        public IVisualElement SelectedElement
         {
             get =>_selectedElement;
             set => SetProperty(ref _selectedElement, value);
         }
+
+        public ApplicationContext Db 
+        {
+            get => _db;
+            set => SetProperty(ref _db, value);
+        }
         public MainWindowViewModel()
         {
-
+            Db = new ApplicationContext();
             //CreateElemets();
 
             AddCommand = new DelegateCommand(Add);
@@ -37,9 +45,9 @@ namespace WpfCore.ViewModels
 
         private void Delete()
         {
-            var current = db.Users.FirstOrDefault( x => x == SelectedElement);
-            if (current != null) db.Users.Remove(current);
-            db.SaveChanges();
+            //var current = _db.VisualElements.FirstOrDefault(x => x == SelectedElement);
+            //if (current != null) _db.VisualElements.Remove(current);
+            //_db.SaveChanges();
         }
 
         private void Update()
@@ -50,10 +58,10 @@ namespace WpfCore.ViewModels
 
         private void Add()
         {
-            User newUser = new User() {Name = "Bob", Age = 21};
-            db.Users.Add(newUser);
-            db.SaveChanges();
-            db.Users.Load();
+            //var image = new ImageElement("NewImage");
+            //_db.VisualElements.Add(image);
+            //_db.SaveChanges();
+            //_db.VisualElements.Load();
         }
 
         private void CreateElemets()
@@ -64,9 +72,9 @@ namespace WpfCore.ViewModels
 
 
             // добавляем их в бд
-            db.Users.Add(user1);
-            db.Users.Add(user2);
-            db.SaveChanges();
+            _db.Users.Add(user1);
+            _db.Users.Add(user2);
+            _db.SaveChanges();
         }
     }
 }

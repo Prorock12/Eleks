@@ -20,7 +20,7 @@ namespace Modules.Accountant.Views
         private void RightButtonSelectElement_OnMouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             //TODO:Never do this
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
+            DependencyObject dep = (DependencyObject) e.OriginalSource;
             while ((dep != null) && !(dep is DataCell))
             {
                 dep = VisualTreeHelper.GetParent(dep);
@@ -28,19 +28,16 @@ namespace Modules.Accountant.Views
 
             if (dep == null) return;
 
-            if (dep is DataCell)
+            DataCell cell = dep as DataCell;
+            cell.Focus();
+
+            while ((dep != null) && !(dep is DataRow))
             {
-                DataCell cell = dep as DataCell;
-                cell.Focus();
-
-                while ((dep != null) && !(dep is DataRow))
-                {
-                    dep = VisualTreeHelper.GetParent(dep);
-                }
-
-                DataRow row = dep as DataRow;
-                ElementsGrid.SelectedItem = row.DataContext;
+                dep = VisualTreeHelper.GetParent(dep);
             }
+
+            DataRow row = dep as DataRow;
+            ElementsGrid.SelectedItem = row.DataContext;
         }
 
         private void ElementsGrid_OnGotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)

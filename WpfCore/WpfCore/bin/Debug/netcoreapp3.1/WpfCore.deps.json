@@ -13,7 +13,7 @@
           "Prism.Core": "8.0.0.1909",
           "Prism.Unity": "8.0.0.1909",
           "Prism.Wpf": "8.0.0.1909",
-          "Models": "1.0.0.0"
+          "ModelStandard": "1.0.0.0"
         },
         "runtime": {
           "WpfCore.dll": {}
@@ -1042,9 +1042,9 @@
           }
         }
       },
-      "Models/1.0.0.0": {
+      "ModelStandard/1.0.0.0": {
         "runtime": {
-          "Models.dll": {
+          "ModelStandard.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1765,7 +1765,7 @@
       "path": "unity.container/5.11.8",
       "hashPath": "unity.container.5.11.8.nupkg.sha512"
     },
-    "Models/1.0.0.0": {
+    "ModelStandard/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
