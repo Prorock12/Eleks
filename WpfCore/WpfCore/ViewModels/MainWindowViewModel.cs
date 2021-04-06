@@ -1,72 +1,86 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Microsoft.EntityFrameworkCore;
+using ModelStandard.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 using WpfCore.EntityFramework;
+using WpfCore.EntityFramework.Repository;
 
 namespace WpfCore.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private User _selectedElement;
-        private ApplicationContext db = new ApplicationContext();
-        public ICommand AddCommand { get; }
-        public ICommand UpdateCommand { get; }
-        public ICommand DeleteCommand { get; }
+        private Presentation _selectedPresentation;
+        private IRepository<Presentation> _db;
+        public ICommand AddPresentationCommand { get; }
+        public ICommand UpdatePresentationCommand { get; }
+        public ICommand DeletePresentationCommand { get; }
+        public VisualElementsCRUD VisualElementsCrud { get; set; }
+        public SlidesCRUD SlidesCrud { get; set; }
 
-        public User SelectedElement
+        public Presentation SelectedPresentation
         {
-            get =>_selectedElement;
-            set => SetProperty(ref _selectedElement, value);
+            get => _selectedPresentation;
+            set => SetProperty(ref _selectedPresentation, value);
         }
+
+        public IRepository<Presentation> Db 
+        {
+            get => _db;
+            set => SetProperty(ref _db, value);
+        }
+
+        public ObservableCollection<Presentation> Presentations { get; set; }
         public MainWindowViewModel()
         {
-
-            //CreateElemets();
-
-            AddCommand = new DelegateCommand(Add);
-            UpdateCommand = new DelegateCommand(Update);
-            DeleteCommand = new DelegateCommand(Delete);
-
-        }
-
-        private void Delete()
-        {
-            var current = db.Users.FirstOrDefault( x => x == SelectedElement);
-            if (current != null) db.Users.Remove(current);
-            db.SaveChanges();
-        }
-
-        private void Update()
-        {
+            Presentations = new ObservableCollection<Presentation>();
+            VisualElementsCrud = new VisualElementsCRUD();
+            SlidesCrud = new SlidesCRUD();
+            Db = new PresentationRepository();
+            foreach (var presentation in Db.GetElementsList())
+            {
+                Presentations.Add(presentation);
+            }
             
-            //throw new NotImplementedException();
+            AddPresentationCommand = new DelegateCommand(AddPresentation);
+            UpdatePresentationCommand = new DelegateCommand(UpdatePresentation);
+            DeletePresentationCommand = new DelegateCommand(DeletePresentation);
+
         }
 
-        private void Add()
+        private void DeletePresentation()
         {
-            User newUser = new User() {Name = "Bob", Age = 21};
-            db.Users.Add(newUser);
-            db.SaveChanges();
-            db.Users.Load();
+            if (SelectedPresentation != null && Presentations != null)
+            {
+                var index = Presentations.Select(x=>x.Id).FirstOrDefault(x => x==SelectedPresentation.Id);
+                if (index != null)
+                {
+                    Db.Delete(index);
+                    Presentations.Clear();
+                    foreach (var item in Db.GetElementsList())
+                    {
+                        Presentations.Add(item);
+                    }
+                }
+            }
         }
 
-        private void CreateElemets()
+        private void UpdatePresentation()
         {
-            // создаем два объекта User
-            User user1 = new User {Name = "Tom", Age = 33};
-            User user2 = new User {Name = "Alice", Age = 26};
+            Db.Update(SelectedPresentation);
+        }
 
-
-            // добавляем их в бд
-            db.Users.Add(user1);
-            db.Users.Add(user2);
-            db.SaveChanges();
+        private void AddPresentation()
+        {
+            var presentation = new Presentation{Id = Guid.NewGuid().ToString(),Name = "new Presentation"};
+            Db.Create(presentation);
+            Presentations.Clear();
+            foreach (var item in Db.GetElementsList())
+            {
+                Presentations.Add(item);
+            }
         }
     }
 }

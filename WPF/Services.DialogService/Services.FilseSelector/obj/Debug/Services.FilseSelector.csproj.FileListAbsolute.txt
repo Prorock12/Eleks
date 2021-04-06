@@ -17,10 +17,10 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Models.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\Prism.xml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csprojAssemblyReference.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csproj.CoreCompileInputs.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\AutoMapper.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\bin\Debug\AutoMapper.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Services.FilseSelector\obj\Debug\Services.FilseSelector.csprojAssemblyReference.cache

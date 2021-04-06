@@ -27,9 +27,13 @@ namespace WpfCore.Views
         {
             InitializeComponent();
 
-            db = new ApplicationContext();
-            db.Users.Load(); // загружаем данные
-            UserGrid.ItemsSource = db.Users.Local.ToBindingList();
+            //db = new ApplicationContext();
+            //// загружаем данные
+            //if (db != null)
+            //{
+            //    db.Presentations.Load();
+            //    UserGrid.ItemsSource = db.Presentations.Local.ToBindingList();
+            //}
         }
     }
 }

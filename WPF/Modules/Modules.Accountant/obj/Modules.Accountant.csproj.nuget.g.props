@@ -16,7 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgXceed_Products_Wpf_DataGrid_Full Condition=" '$(PkgXceed_Products_Wpf_DataGrid_Full)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\xceed.products.wpf.datagrid.full\7.0.21101.19010</PkgXceed_Products_Wpf_DataGrid_Full>
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.19</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\materialdesignthemes\4.0.0</PkgMaterialDesignThemes>
     <PkgMahApps_Metro Condition=" '$(PkgMahApps_Metro)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\mahapps.metro\2.4.4</PkgMahApps_Metro>

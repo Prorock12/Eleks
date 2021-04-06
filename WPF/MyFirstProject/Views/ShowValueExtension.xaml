@@ -12,7 +12,7 @@
         <StackPanel>
             <TextBlock Text="Enter Some Value" />
             <TextBox Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}" />
-            <Button Content="Solve" Command="{Binding SolveCommand}"></Button>
+            <Button Content="Solve" Command="{Binding SolveCommand}" Style="{StaticResource MahApps.Styles.Button}"/>
         </StackPanel>
     </Grid>
 </UserControl>

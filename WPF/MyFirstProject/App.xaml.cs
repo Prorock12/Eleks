@@ -4,7 +4,6 @@ using Modules.Effects;
 using Modules.Library;
 using Modules.PresentationRegion;
 using Modules.Redactor;
-using Modules.Slides;
 using MyFirstProject.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -12,8 +11,10 @@ using Services.ApplicationSettingsBase;
 using Services.DialogService.Service;
 using Services.FilseSelector;
 using System.Windows;
+using Modules.ChatModule;
 using Modules.Que;
 using Service.DispatcherAction;
+using Services.NavigationServices;
 
 namespace MyFirstProject
 {
@@ -32,6 +33,7 @@ namespace MyFirstProject
             containerRegistry.RegisterSingleton<IFileSelector, FileSelector>();
             containerRegistry.RegisterSingleton<ISettingsServices, SettingsServices>();
             containerRegistry.RegisterSingleton<IDispatcherAction, DispatcherAction>();
+            containerRegistry.RegisterSingleton<INavigationService, NavigationService>();
         }
 
         protected override Window CreateShell()
@@ -43,12 +45,12 @@ namespace MyFirstProject
         {
             moduleCatalog.AddModule<RedactorModule>();
             moduleCatalog.AddModule<PresentationRegionModule>();
-            moduleCatalog.AddModule<SlidesModule>();
             moduleCatalog.AddModule<ControllerModule>();
             moduleCatalog.AddModule<EffectsModule>();
             moduleCatalog.AddModule<AccountantModule>();
             moduleCatalog.AddModule<LibraryModule>();
             moduleCatalog.AddModule<QueModule>();
+            moduleCatalog.AddModule<ChatModule>();
         }
 
         #endregion methods

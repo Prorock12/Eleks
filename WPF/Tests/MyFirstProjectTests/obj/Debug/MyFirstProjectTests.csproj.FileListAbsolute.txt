@@ -35,13 +35,9 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\D
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Que.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\uk-UA\Modules.Que.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Accountant.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.DataGrid.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.Controls.v7.0.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Accountant.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Accountant.dll.config
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\uk-UA\Modules.Accountant.resources.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.DataGrid.v7.0.XmlSerializers.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.Controls.v7.0.XmlSerializers.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Redactor.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\CommonUI.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Modules.Library.dll
@@ -69,3 +65,5 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\D
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Service.DispatcherAction.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Service.DispatcherAction.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.DataGrid.v5.8.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\MyFirstProjectTests\bin\Debug\Xceed.Wpf.Controls.v5.8.dll

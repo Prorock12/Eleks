@@ -2,10 +2,12 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\bohdan.hlyva\WPF\Constants\bin\Debug\Constants.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Tests\UITest\bin\Debug\appium-dotnet-driver.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dc3b332e_002D76f4_002D4993_002Dbc07_002Dc7777599afc5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AddVideo_ElementCollectionIsInitialize_ExpectedPublishEventOnce" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::F60313AB-7D1E-4B3C-ABC6-1D4271897FC3::.NETFramework,Version=v4.7.2::MyFirstProjectTests.AccountantViewModelTest.AddRowCorrect_WhenElementsCollectionIsNotNull_CountIsOne&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::FF98BD7D-E261-41E2-9FDF-E14DA4E1EBA6::.NETFramework,Version=v4.7.2::UITest.CreatePresentationScenario.Division&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	

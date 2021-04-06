@@ -152,21 +152,21 @@ namespace Modules.Controller.ViewModels
             var text = new TextElement("newText");
             SelectedSlide?.Elements.Add(text);
 
-            _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(text);
         }
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
             SelectedSlide?.Elements.Add(image);
 
-            _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(image);
         }
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
             SelectedSlide?.Elements.Add(video);
 
-            _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(video);
         }
 
         private void OnRemoveSlide(ISlide slide)

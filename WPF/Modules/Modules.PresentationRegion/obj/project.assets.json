@@ -290,28 +290,6 @@
           "bin/placeholder/Modules.Redactor.dll": {}
         }
       },
-      "Modules.Slides/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "AutoMapper": "10.1.1",
-          "CommonUI": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "MahApps.Metro": "2.4.4",
-          "MaterialDesignThemes": "4.0.0",
-          "Models": "1.0.0",
-          "Modules.Redactor": "1.0.0",
-          "Prism.Core": "8.0.0.1909",
-          "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
-        },
-        "compile": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        }
-      },
       "Services.ApplicationSettingsBase/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -624,28 +602,6 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
-        }
-      },
-      "Modules.Slides/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "AutoMapper": "10.1.1",
-          "CommonUI": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "MahApps.Metro": "2.4.4",
-          "MaterialDesignThemes": "4.0.0",
-          "Models": "1.0.0",
-          "Modules.Redactor": "1.0.0",
-          "Prism.Core": "8.0.0.1909",
-          "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
-        },
-        "compile": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Modules.Slides.dll": {}
         }
       },
       "Services.ApplicationSettingsBase/1.0.0": {
@@ -962,28 +918,6 @@
           "bin/placeholder/Modules.Redactor.dll": {}
         }
       },
-      "Modules.Slides/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "AutoMapper": "10.1.1",
-          "CommonUI": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "MahApps.Metro": "2.4.4",
-          "MaterialDesignThemes": "4.0.0",
-          "Models": "1.0.0",
-          "Modules.Redactor": "1.0.0",
-          "Prism.Core": "8.0.0.1909",
-          "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
-        },
-        "compile": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        }
-      },
       "Services.ApplicationSettingsBase/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -1296,28 +1230,6 @@
         },
         "runtime": {
           "bin/placeholder/Modules.Redactor.dll": {}
-        }
-      },
-      "Modules.Slides/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "AutoMapper": "10.1.1",
-          "CommonUI": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "MahApps.Metro": "2.4.4",
-          "MaterialDesignThemes": "4.0.0",
-          "Models": "1.0.0",
-          "Modules.Redactor": "1.0.0",
-          "Prism.Core": "8.0.0.1909",
-          "Prism.Unity": "8.0.0.1909",
-          "Prism.Wpf": "8.0.0.1909"
-        },
-        "compile": {
-          "bin/placeholder/Modules.Slides.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Modules.Slides.dll": {}
         }
       },
       "Services.ApplicationSettingsBase/1.0.0": {
@@ -1868,11 +1780,6 @@
       "path": "../Modules.Redactor/Modules.Redactor.csproj",
       "msbuildProject": "../Modules.Redactor/Modules.Redactor.csproj"
     },
-    "Modules.Slides/1.0.0": {
-      "type": "project",
-      "path": "../Modules.Slides/Modules.Slides.csproj",
-      "msbuildProject": "../Modules.Slides/Modules.Slides.csproj"
-    },
     "Services.ApplicationSettingsBase/1.0.0": {
       "type": "project",
       "path": "../../Services.DialogService/Services.ApplicationSettingsBase/Services.ApplicationSettingsBase.csproj",
@@ -1893,7 +1800,6 @@
       "MaterialDesignThemes >= 4.0.0",
       "Models >= 1.0.0",
       "Modules.Redactor >= 1.0.0",
-      "Modules.Slides >= 1.0.0",
       "MvvmLightLibs >= 5.4.1.1",
       "Prism.Core >= 8.0.0.1909",
       "Prism.Wpf >= 8.0.0.1909"
@@ -1942,9 +1848,6 @@
             },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Redactor\\Modules.Redactor.csproj"
-            },
-            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj": {
-              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Slides\\Modules.Slides.csproj"
             }
           }
         }

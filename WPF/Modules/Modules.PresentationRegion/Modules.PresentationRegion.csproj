@@ -105,10 +105,6 @@
       <Project>{8dbb10d2-3101-40ce-b8be-4f5df396dfdc}</Project>
       <Name>Modules.Redactor</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules.Slides\Modules.Slides.csproj">
-      <Project>{b55f85d9-811d-4824-ab71-c38c801ffc21}</Project>
-      <Name>Modules.Slides</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Styles\PresentationStyle.xaml">

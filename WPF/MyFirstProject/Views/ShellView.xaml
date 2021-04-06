@@ -70,9 +70,9 @@
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.EffectRegion}" />
                     </TabItem>
 
-                    <TabItem Header="{x:Static localization:Resources.Accountant}">
+                    <!--<TabItem Header="{x:Static localization:Resources.Accountant}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
-                    </TabItem>
+                    </TabItem>-->
 
                     <TabItem Header="Change Language">
                         <StackPanel>
@@ -81,14 +81,8 @@
                         </StackPanel>
                     </TabItem>
 
-                    <TabItem Header="Database">
-                        <DataGrid AutoGenerateColumns="False" x:Name="VisualElementGrid">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="100" />
-                                <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="110" />
-                                <!--<DataGridTextColumn Binding="{Binding Height}" Header="Height" Width="70" />-->
-                            </DataGrid.Columns>
-                        </DataGrid>
+                    <TabItem Header="Chat">
+                        <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Chat}"/>
                     </TabItem>
                 </TabControl>
             </Grid>
