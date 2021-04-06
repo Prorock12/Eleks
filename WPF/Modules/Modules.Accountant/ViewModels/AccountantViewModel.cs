@@ -12,10 +12,10 @@ namespace Modules.Accountant.ViewModels
 {
     public class AccountantViewModel : BindableBase
     {
-        private static Random _random = new Random();
+        private static readonly Random Random = new Random();
 
         private IVisualElement _selectedElement;
-        private IDispatcherAction _dispatcherAction;
+        private readonly IDispatcherAction _dispatcherAction;
 
         public ICommand AddRowCommand { get; set; }
         public ICommand RemoveRowCommand { get; set; }
@@ -44,7 +44,7 @@ namespace Modules.Accountant.ViewModels
         //Should be private
         public IVisualElement CreateElement()
         {
-            switch (_random.Next(1, 4))
+            switch (Random.Next(1, 4))
             {
                 case 1:
                     return new TextElement("New Text");

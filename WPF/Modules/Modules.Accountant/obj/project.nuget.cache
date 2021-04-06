@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6DrbXEwouYJYBbjTSnami2k2/uyK7HIbzcIYy4E9VHCh8MOWuhzo23AL7ertPHyJyBdiHaR56xdH4SflZRqNZg==",
+  "dgSpecHash": "XTcLQsK8V9b8imLXPHxXuDQXpGPhJ0LnSsMNmIrkS4czA27hxKQDYEvFCN/axsgJwokfNkcc37YexB155z48+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Modules\\Modules.Accountant\\Modules.Accountant.csproj",
   "expectedPackageFiles": [
@@ -11,16 +11,7 @@
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.wpf\\8.0.0.1909\\prism.wpf.8.0.0.1909.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.products.wpf.datagrid.full\\7.0.21101.19010\\xceed.products.wpf.datagrid.full.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.controls\\7.0.21101.19010\\xceed.wpf.controls.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid\\7.0.21101.19010\\xceed.wpf.datagrid.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.themepack.1\\7.0.21101.19010\\xceed.wpf.datagrid.themepack.1.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.themepack.2\\7.0.21101.19010\\xceed.wpf.datagrid.themepack.2.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.themepack.3\\7.0.21101.19010\\xceed.wpf.datagrid.themepack.3.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.themepack.4\\7.0.21101.19010\\xceed.wpf.datagrid.themepack.4.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.themepack.5\\7.0.21101.19010\\xceed.wpf.datagrid.themepack.5.7.0.21101.19010.nupkg.sha512",
-    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\xceed.wpf.datagrid.views3d\\7.0.21101.19010\\xceed.wpf.datagrid.views3d.7.0.21101.19010.nupkg.sha512"
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.wpf\\8.0.0.1909\\prism.wpf.8.0.0.1909.nupkg.sha512"
   ],
   "logs": []
 }

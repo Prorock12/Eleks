@@ -5,7 +5,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\bin\Debug\Models.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\bin\Debug\Prism.xml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.csprojAssemblyReference.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.csproj.CoreCompileInputs.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.dll

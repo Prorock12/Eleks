@@ -10,27 +10,66 @@
         d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
         prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0">
+            <TabItem Header="Presentations">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0"
-                  AutoGenerateColumns="True"
-                  x:Name="UserGrid" 
-                  SelectedItem="{Binding SelectedElement}"
-                  ItemsSource="{Binding Db.VisualElements}">
-            <!--<DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Id , UpdateSourceTrigger=PropertyChanged}" Header="Id" Width="100"/>
-                <DataGridTextColumn Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Header="Name" Width="110"/>
-                <DataGridTextColumn Binding="{Binding Age,UpdateSourceTrigger=PropertyChanged}" Header="Age" Width="70"/>
-            </DataGrid.Columns>-->
-        </DataGrid>
+                    <DataGrid Grid.Row="0" AutoGenerateColumns="True"
+                          SelectedItem="{Binding SelectedPresentation}"
+                          ItemsSource="{Binding Presentations}">
+                    </DataGrid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button Content="Add" Command="{Binding AddCommand}"/>
-            <Button Content="Update" Command="{Binding UpdateCommand}"/>
-            <Button Content="Delete" Command="{Binding DeleteCommand}"/>
-        </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <Button Content="Add" Command="{Binding AddPresentationCommand}"/>
+                        <Button Content="Update" Command="{Binding UpdatePresentationCommand}"/>
+                        <Button Content="Delete" Command="{Binding DeletePresentationCommand}"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Elements">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Grid.Row="0" AutoGenerateColumns="True"
+                              SelectedItem="{Binding VisualElementsCrud.SelectedVisualElement}"
+                              ItemsSource="{Binding VisualElementsCrud.VisualElements}">
+                    </DataGrid>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <Button Content="Add" Command="{Binding VisualElementsCrud.AddElementCommand}"/>
+                        <Button Content="Update" Command="{Binding VisualElementsCrud.UpdateElementCommand}"/>
+                        <Button Content="Delete" Command="{Binding VisualElementsCrud.DeleteElementCommand}"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Slides">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Grid.Row="0" AutoGenerateColumns="True"
+                              SelectedItem="{Binding SlidesCrud.SelectedSlide}"
+                              ItemsSource="{Binding SlidesCrud.Slides}">
+                    </DataGrid>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <Button Content="Add" Command="{Binding SlidesCrud.AddSlideCommand}"/>
+                        <Button Content="Update" Command="{Binding SlidesCrud.UpdateSlideCommand}"/>
+                        <Button Content="Delete" Command="{Binding SlidesCrud.DeleteSlideCommand}"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

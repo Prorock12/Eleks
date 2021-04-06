@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Add_Que" xml:space="preserve">
-    <value>Add_Que</value>
+    <value>Add Que</value>
   </data>
   <data name="Add_Slide" xml:space="preserve">
     <value>Add Slide</value>
   </data>
   <data name="Remove_Que" xml:space="preserve">
-    <value>Remove_Que</value>
+    <value>Remove Que</value>
   </data>
   <data name="Remove_Slide" xml:space="preserve">
     <value>Remove Slide</value>

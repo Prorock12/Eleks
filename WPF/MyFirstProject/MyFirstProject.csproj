@@ -42,8 +42,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Appium.Net, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Appium.WebDriver.4.3.1\lib\net45\Appium.Net.dll</HintPath>
+    </Reference>
     <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
@@ -81,6 +87,9 @@
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>packages\Prism.Core.8.0.0.1909\lib\net47\Prism.dll</HintPath>
     </Reference>
@@ -90,11 +99,15 @@
     <Reference Include="Prism.Wpf, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>packages\Prism.Wpf.8.0.0.1909\lib\net47\Prism.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
@@ -125,6 +138,12 @@
     </Reference>
     <Reference Include="Unity.Container, Version=5.11.8.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>packages\Unity.Container.5.11.8\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -228,6 +247,10 @@
       <Project>{4ddd598f-7d09-4741-9956-40c9655dc5c9}</Project>
       <Name>Modules.Accountant</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\Modules.ChatModule\Modules.ChatModule.csproj">
+      <Project>{9dbd1439-ee4a-402a-bee5-8385012499c5}</Project>
+      <Name>Modules.ChatModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\Modules.Controller\Modules.Controller.csproj">
       <Project>{752b7ca8-a337-4914-8f08-8a9fa81dacd7}</Project>
       <Name>Modules.Controller</Name>
@@ -252,10 +275,6 @@
       <Project>{8dbb10d2-3101-40ce-b8be-4f5df396dfdc}</Project>
       <Name>Modules.Redactor</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules\Modules.Slides\Modules.Slides.csproj">
-      <Project>{b55f85d9-811d-4824-ab71-c38c801ffc21}</Project>
-      <Name>Modules.Slides</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Services.DialogService\Service.DispatcherAction\Service.DispatcherAction.csproj">
       <Project>{826772f7-db8b-4bb5-9987-35a62fbc68b4}</Project>
       <Name>Service.DispatcherAction</Name>
@@ -271,6 +290,10 @@
     <ProjectReference Include="..\Services.DialogService\Services.FilseSelector\Services.FilseSelector.csproj">
       <Project>{8dd189fa-7316-478c-8183-4c5bd8a3556b}</Project>
       <Name>Services.FilseSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.DialogService\Services.NavigationServices\Services.NavigationServices.csproj">
+      <Project>{6fd6db29-285a-418d-b651-a362682387f2}</Project>
+      <Name>Services.NavigationServices</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

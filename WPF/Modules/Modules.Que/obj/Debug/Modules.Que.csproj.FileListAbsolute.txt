@@ -1,4 +1,3 @@
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.csprojAssemblyReference.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Views\QueContainerView.baml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Views\QueContainerView.g.cs
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que_MarkupCompile.cache
@@ -35,3 +34,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\S
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\AutoMapper.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.csprojAssemblyReference.cache

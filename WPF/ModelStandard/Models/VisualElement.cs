@@ -5,7 +5,8 @@ using ModelStandard.Interfaces.Models;
 
 namespace ModelStandard.Models
 {
-    public abstract class VisualElement : Element, IVisualElement
+    //Should be abstract
+    public class VisualElement : Element, IVisualElement
     {
         #region Fields
 
@@ -207,7 +208,7 @@ namespace ModelStandard.Models
 
         #region Constructor
 
-        protected VisualElement(string name) : base(name)
+        public VisualElement(string name) : base(name)
         {
             Background = Colors.Transparent;
             Width = 100;

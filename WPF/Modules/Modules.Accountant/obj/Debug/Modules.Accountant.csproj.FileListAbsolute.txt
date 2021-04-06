@@ -43,16 +43,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Prism.Wpf.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Prism.Wpf.pdb
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.Controls.v7.0.XmlSerializers.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.Controls.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.v7.0.XmlSerializers.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.1.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.2.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.3.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.4.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.5.v7.0.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.Views3D.v7.0.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\CommonUI.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Infrastructure.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Models.dll
@@ -91,3 +81,10 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\AutoMapper.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Service.DispatcherAction.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Service.DispatcherAction.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\WPFToolkit.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\WPFToolkit.Extended.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.Controls.v5.8.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.ThemePack.1.v5.8.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.v5.8.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.DataGrid.Views3D.v5.8.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Accountant\bin\Debug\Xceed.Wpf.Toolkit.dll

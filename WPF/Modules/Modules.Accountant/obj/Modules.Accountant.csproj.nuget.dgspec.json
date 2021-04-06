@@ -114,10 +114,6 @@
             "Prism.Wpf": {
               "target": "Package",
               "version": "[8.0.0.1909, )"
-            },
-            "Xceed.Products.Wpf.DataGrid.Full": {
-              "target": "Package",
-              "version": "[7.0.21101.19010, )"
             }
           }
         }

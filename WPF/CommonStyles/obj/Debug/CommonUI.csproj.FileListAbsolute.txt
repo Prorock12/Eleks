@@ -29,7 +29,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Infrastr
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Prism.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Models.pdb
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI.csprojAssemblyReference.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\Styles\GridSplitterStyle.baml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI_MarkupCompile.cache
@@ -52,3 +51,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\Infrastr
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\EntityFramework.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\AutoMapper.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\bin\Debug\AutoMapper.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\CommonStyles\obj\Debug\CommonUI.csprojAssemblyReference.cache

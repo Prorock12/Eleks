@@ -7,13 +7,13 @@ using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using Services.FilseSelector;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using Models.Interfaces.ShapeModels;
 using Models.Models.ShapeModels;
 using Modules.Redactor.ViewModels.Shapes;
 
@@ -97,17 +97,9 @@ namespace Modules.Redactor.ViewModels
 
             eventAggregator.GetEvent<ChangeResolutionSizeEvent>().Subscribe(ChangeResolutionSize);
 
-            eventAggregator.GetEvent<AddTextElementEvent>().Subscribe(OnAddText);
-            eventAggregator.GetEvent<AddImageElementEvent>().Subscribe(OnAddImage);
-            eventAggregator.GetEvent<AddVideoElementEvent>().Subscribe(OnAddVideo);
-            eventAggregator.GetEvent<RemoveElementEvent>().Subscribe(OnRemoveElement);
-
-            eventAggregator.GetEvent<AddCircleEvent>().Subscribe(OnAddCircle);
-            eventAggregator.GetEvent<AddEllipseEvent>().Subscribe(OnAddEllipse);
-            eventAggregator.GetEvent<AddLineEvent>().Subscribe(OnAddLine);
-            eventAggregator.GetEvent<AddRectangleEvent>().Subscribe(OnAddRectangle);
+            eventAggregator.GetEvent<AddElementEvent>().Subscribe(OnAddElement);
             eventAggregator.GetEvent<AddQuadrateEvent>().Subscribe(OnAddQuadrate);
-            eventAggregator.GetEvent<AddTriangleEvent>().Subscribe(OnAddTriangle);
+            eventAggregator.GetEvent<RemoveElementEvent>().Subscribe(OnRemoveElement);
 
             AddTextElementCommand = new DelegateCommand(AddText, CanChangeElement).ObservesProperty(() => SelectedSlide);
             AddImageElementCommand = new DelegateCommand(AddImage, CanChangeElement).ObservesProperty(() => SelectedSlide);
@@ -196,8 +188,23 @@ namespace Modules.Redactor.ViewModels
                     case IVideoElement videoElement:
                         Elements.Add(new VideoElementViewModel(videoElement));
                         break;
-
-                    default:
+                    case ICircle circle:
+                        Elements.Add(new CircleViewModel(circle));
+                        break;
+                    case IEllipse ellipse:
+                        Elements.Add(new EllipseViewModel(ellipse));
+                        break;
+                    case IRectangle rectangle:
+                        Elements.Add(new RectangleViewModel(rectangle));
+                        break;
+                    //case IQuadrate quadrate:
+                    //    Elements.Add(new VideoElementViewModel(quadrate));
+                    //    break;
+                    case ILine line:
+                        Elements.Add(new LineViewModel(line));
+                        break;
+                    case ITriangle triangle:
+                        Elements.Add(new TriangleViewModel(triangle));
                         break;
                 }
             }
@@ -216,45 +223,75 @@ namespace Modules.Redactor.ViewModels
         {
             var text = new TextElement("newText");
 
-            _eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
+            //_eventAggregator.GetEvent<AddTextElementEvent>().Publish(text);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(text);
 
             SelectedSlide?.Elements.Add(text);
         }
 
-        private void OnAddText(IElement element)
+        public void OnAddElement(IElement element)
         {
-            var text = new TextElementViewModel(element as TextElement);
-            Elements.Add(text);
-            SelectedElement = text;
+            IElementViewModel elementViewModel;
+            switch (element)
+            {
+                case ITextElement textElement:
+                    elementViewModel = new TextElementViewModel(textElement);
+                    break;
+
+                case IImageElement imageElement:
+                    elementViewModel = new ImageElementViewModel(imageElement);
+                    break;
+
+                case IVideoElement videoElement:
+                    elementViewModel = new VideoElementViewModel(videoElement);
+                    break;
+                case ICircle circle:
+                    elementViewModel = new CircleViewModel(circle);
+                    break;
+                case IEllipse ellipse:
+                    elementViewModel = new EllipseViewModel(ellipse);
+                    break;
+                case IRectangle rectangle:
+                    elementViewModel = new RectangleViewModel(rectangle);
+                    break;
+                //case IQuadrate quadrate:
+                //    elementViewModel = new QuadrateViewModel(quadrate);
+                //    break;
+                case ITriangle triangle:
+                    elementViewModel = new TriangleViewModel(triangle);
+                    break;
+                case ILine line:
+                    elementViewModel = new LineViewModel(line);
+                    break;
+
+                default:
+                    elementViewModel = null;
+                    break;
+            }
+            Elements.Add(elementViewModel);
+            SelectedElement = elementViewModel;
         }
+
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
             if (image == null) return;
-            _eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
+
+            //_eventAggregator.GetEvent<AddImageElementEvent>().Publish(image);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(image);
+
             SelectedSlide?.Elements.Add(image);
         }
 
-        private void OnAddImage(IElement element)
-        {
-            var image = new ImageElementViewModel(element as ImageElement);
-            Elements.Add(image);
-            SelectedElement = image;
-        }
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();
             if (video == null) return;
-            _eventAggregator.GetEvent<AddVideoElementEvent>().Publish(video);
+
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(video);
             SelectedSlide?.Elements.Add(video);
         }
 
-        private void OnAddVideo(IElement element)
-        {
-            var video = new VideoElementViewModel(element as VideoElement);
-            Elements.Add(video);
-            SelectedElement = video;
-        }
         private void RemoveElement()
         {
             SelectedSlide.Elements.Remove(SelectedElement?.Element);
@@ -274,44 +311,29 @@ namespace Modules.Redactor.ViewModels
         {
             var circle = new Circle("NewCircle");
 
-            _eventAggregator.GetEvent<AddCircleEvent>().Publish(circle);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(circle);
 
             SelectedSlide?.Elements.Add(circle);
         }
-        private void OnAddCircle(IElement element)
-        {
-            var circle = new CircleViewModel(element as Circle);
-            Elements.Add(circle);
-            SelectedElement = circle;
-        }
+
         private void AddEllipse()
         {
             var ellipse = new Ellipse("NewEllipse");
 
-            _eventAggregator.GetEvent<AddEllipseEvent>().Publish(ellipse);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(ellipse);
 
             SelectedSlide?.Elements.Add(ellipse);
         }
-        private void OnAddEllipse(IElement element)
-        {
-            var ellipse = new EllipseViewModel(element as Ellipse);
-            Elements.Add(ellipse);
-            SelectedElement = ellipse;
-        }
+
         private void AddRectangle()
         {
             var rectangle = new Rectangle("NewRectangle");
 
-            _eventAggregator.GetEvent<AddRectangleEvent>().Publish(rectangle);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(rectangle);
 
             SelectedSlide?.Elements.Add(rectangle);
         }
-        private void OnAddRectangle(IElement element)
-        {
-            var rectangle = new RectangleViewModel(element as Rectangle);
-            Elements.Add(rectangle);
-            SelectedElement = rectangle;
-        }
+
         private void AddQuadrate()
         {
             var quadrate = new Quadrate("NewQuadrate");
@@ -320,39 +342,30 @@ namespace Modules.Redactor.ViewModels
 
             SelectedSlide?.Elements.Add(quadrate);
         }
+
         private void OnAddQuadrate(IElement element)
         {
             var quadrate = new QuadrateViewModel(element as Quadrate);
             Elements.Add(quadrate);
             SelectedElement = quadrate;
         }
+
         private void AddTriangle()
         {
             var triangle = new Triangle("NewTriangle");
 
-            _eventAggregator.GetEvent<AddTriangleEvent>().Publish(triangle);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(triangle);
 
             SelectedSlide?.Elements.Add(triangle);
         }
-        private void OnAddTriangle(IElement element)
-        {
-            var triangle = new TriangleViewModel(element as Triangle);
-            Elements.Add(triangle);
-            SelectedElement = triangle;
-        }
+
         private void AddLine()
         {
             var line = new Line("NewLine");
 
-            _eventAggregator.GetEvent<AddLineEvent>().Publish(line);
+            _eventAggregator.GetEvent<AddElementEvent>().Publish(line);
 
             SelectedSlide?.Elements.Add(line);
-        }
-        private void OnAddLine(IElement element)
-        {
-            var line = new LineViewModel(element as Line);
-            Elements.Add(line);
-            SelectedElement = line;
         }
 
         #endregion

@@ -23,8 +23,8 @@ namespace Services.FilseSelector
 
         public string GetImagePath()
         {
-            const string defaultExt = ".png";
-            const string filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+            const string defaultExt = "*.jpeg";
+            const string filter = "JPG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|JPEG Files (*.jpeg)|*.jpeg|GIF Files (*.gif)|*.gif";
             return GetFilePath(filter, defaultExt);
         }
 

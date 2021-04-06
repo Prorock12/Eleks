@@ -75,13 +75,11 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationReg
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Infrastructure.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Models.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Redactor.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Slides.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.FilseSelector.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\CommonUI.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Infrastructure.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Models.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Redactor.pdb
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Modules.Slides.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\Services.FilseSelector.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\CommonUI.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\Modules.PresentationRegion.csprojAssemblyReference.cache
@@ -99,7 +97,6 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationReg
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\Modules.PresentationRegion.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\Modules.PresentationRegion.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\uk-UA\Modules.Redactor.resources.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\uk-UA\Modules.Slides.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\bin\Debug\uk-UA\Modules.PresentationRegion.resources.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\Modules.PresentationRegion.Properties.Resources.uk-UA.resources
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.PresentationRegion\obj\Debug\uk-UA\Modules.PresentationRegion.resources.dll

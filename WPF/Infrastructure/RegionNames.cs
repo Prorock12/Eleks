@@ -10,5 +10,6 @@
         public const string Accountant = nameof(Accountant);
         public const string Library = nameof(Library);
         public const string Que = nameof(Que);
+        public const string Chat = nameof(Chat);
     }
 }

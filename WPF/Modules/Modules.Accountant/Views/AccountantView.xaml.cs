@@ -37,7 +37,7 @@ namespace Modules.Accountant.Views
             }
 
             DataRow row = dep as DataRow;
-            ElementsGrid.SelectedItem = row.DataContext;
+            ElementsGrid.SelectedItem = row?.DataContext;
         }
 
         private void ElementsGrid_OnGotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)

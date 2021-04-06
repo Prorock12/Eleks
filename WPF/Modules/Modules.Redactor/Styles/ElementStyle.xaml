@@ -126,7 +126,7 @@
     <Style x:Key="WrapElementContainerStyle"  TargetType="{x:Type extendedListBox1:RedactorListBoxItem}">
         <Setter Property="Width" Value="100" />
         <Setter Property="Height" Value="100" />
-        <Setter Property="Margin" Value="10" />
+        <Setter Property="Margin" Value="2" />
         <Setter Property="Template" Value="{StaticResource ElementControlTemplate}" />
         <!--<Setter Property="attachedProperties:ExtendedAttachedAdorner.Adorner" Value="{x:Type attachedProperties:BorderAdorner}" />-->
         <Style.Triggers>

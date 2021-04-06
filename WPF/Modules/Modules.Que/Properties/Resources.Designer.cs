@@ -61,7 +61,7 @@ namespace Modules.Que.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add_Que.
+        ///   Looks up a localized string similar to Add Que.
         /// </summary>
         public static string Add_Que {
             get {
@@ -79,7 +79,7 @@ namespace Modules.Que.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove_Que.
+        ///   Looks up a localized string similar to Remove Que.
         /// </summary>
         public static string Remove_Que {
             get {

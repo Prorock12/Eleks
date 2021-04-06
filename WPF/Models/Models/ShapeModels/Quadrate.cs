@@ -3,7 +3,7 @@ using Models.Interfaces.ShapeModels;
 
 namespace Models.Models.ShapeModels
 {
-    public class Quadrate : Shape,IQuadrate
+    public class Quadrate : Rectangle,IQuadrate
     {
 
         public Quadrate(string name) : base(name)

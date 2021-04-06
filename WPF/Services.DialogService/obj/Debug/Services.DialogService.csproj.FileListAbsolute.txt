@@ -20,16 +20,17 @@ C:\Users\bohdan.hlyva\WPF\Services.DialogService\bin\Debug\Prism.Wpf.xml
 C:\Users\bohdan.hlyva\WPF\Services.DialogService\obj\Debug\Services.DialogService.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Services.DialogService.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Services.DialogService.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.Wpf.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.xml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.Wpf.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\Prism.Wpf.xml
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.csprojAssemblyReference.cache
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Service\DialogWindow.baml
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Service\DialogWindow.g.cs
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService_MarkupCompile.cache
@@ -38,5 +39,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debu
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.pdb
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.dll
-C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\bin\Debug\AutoMapper.xml
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\obj\Debug\Services.DialogService.csprojAssemblyReference.cache

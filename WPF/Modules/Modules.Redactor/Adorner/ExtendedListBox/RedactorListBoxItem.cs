@@ -12,7 +12,7 @@ namespace Modules.Redactor.Adorner.ExtendedListBox
         protected override void OnSelected(RoutedEventArgs e)
         {
             base.OnSelected(e);
-            Background = Brushes.Transparent;
+            //Background = Brushes.Transparent;
             if (VisualParent is Canvas)
             {
                 //if (_adorner != null)

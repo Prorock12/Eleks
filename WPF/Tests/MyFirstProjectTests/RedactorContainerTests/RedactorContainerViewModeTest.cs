@@ -60,16 +60,8 @@ namespace MyFirstProjectTests.RedactorContainerTests
             _mockEventAggregator.Setup(x => x.GetEvent<SelectedSlideEvent>()).Returns(new SelectedSlideEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<SelectedElementEvent>()).Returns(new SelectedElementEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<ChangeResolutionSizeEvent>()).Returns(new ChangeResolutionSizeEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddTextElementEvent>()).Returns(new AddTextElementEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddImageElementEvent>()).Returns(new AddImageElementEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddVideoElementEvent>()).Returns(new AddVideoElementEvent());
+            _mockEventAggregator.Setup(x => x.GetEvent<AddElementEvent>()).Returns(new AddElementEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<RemoveElementEvent>()).Returns(new RemoveElementEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddCircleEvent>()).Returns(new AddCircleEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddEllipseEvent>()).Returns(new AddEllipseEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddLineEvent>()).Returns(new AddLineEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddRectangleEvent>()).Returns(new AddRectangleEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddQuadrateEvent>()).Returns(new AddQuadrateEvent());
-            _mockEventAggregator.Setup(x => x.GetEvent<AddTriangleEvent>()).Returns(new AddTriangleEvent());
             //_eventAggregator = _mockEventAggregator.Object; 
             //_fileSelector = _mockFileSelector.Object;
             _fileSelector = new FileSelector();

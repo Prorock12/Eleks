@@ -63,7 +63,7 @@ namespace Modules.Effects.ViewModels
                     positionEffect = GetPositionEffect(visualElement);
                     dropShadowEffect = GetDropShadowEffect(visualElement);
                     borderEffect = GetBorderEffect(visualElement);
-                    Effects.Add(blurEffect);
+                    Effects.AddRange(new List<EffectsViewModel>() { positionEffect, borderEffect, dropShadowEffect, blurEffect });
                     break;
             }
         }
