@@ -1,5 +1,5 @@
-﻿using System.Windows.Media;
-using ModelStandard.Interfaces.Models;
+﻿using ModelStandard.Interfaces.Models;
+using System.Windows.Media;
 
 namespace ModelStandard.Models
 {

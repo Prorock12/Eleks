@@ -2,7 +2,7 @@
 using System.Windows.Media;
 
 namespace ModelStandard.Interfaces.ShapeModels
-{ 
+{
     public interface ITriangle : IShape
     {
         Point Point1 { get; set; }

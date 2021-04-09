@@ -6,11 +6,12 @@ using Prism.Mvvm;
 
 namespace Modules.Que.ViewModels
 {
-    public class QueViewModel : BindableBase ,IQueViewModel
+    public class QueViewModel : BindableBase, IQueViewModel
     {
         private ISlide _selectedSlide;
         private IEventAggregator _eventAggregator;
         private bool _isSelected;
+
         #region Properties
 
         public IQue Que { get; set; }
@@ -20,11 +21,12 @@ namespace Modules.Que.ViewModels
             get => _selectedSlide;
             set => SetProperty(ref _selectedSlide, value, OnSelectedSlideChanged);
         }
+
         #endregion Properties
 
         public bool IsSelected
         {
-            get =>_isSelected;
+            get => _isSelected;
             set => SetProperty(ref _isSelected, value);
         }
 
@@ -34,6 +36,7 @@ namespace Modules.Que.ViewModels
         {
             Que = slide;
         }
+
         public QueViewModel(IEventAggregator eventAggregator) : this()
         {
             _eventAggregator = eventAggregator;
@@ -41,12 +44,13 @@ namespace Modules.Que.ViewModels
 
         public QueViewModel()
         {
-
         }
+
         private void OnSelectedSlideChanged()
         {
             _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide);
         }
+
         #endregion Constructor
     }
 }

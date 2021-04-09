@@ -1,9 +1,9 @@
-﻿using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
+﻿using Models.Interfaces.ShapeModels;
+using System.Windows.Media;
 
 namespace Models.Models.ShapeModels
 {
-    public abstract class Shape : VisualElement,IShape
+    public abstract class Shape : VisualElement, IShape
     {
         private Color _fill;
 
@@ -12,7 +12,8 @@ namespace Models.Models.ShapeModels
             get => _fill;
             set => SetProperty(ref _fill, value);
         }
-        protected Shape(string name): base(name)
+
+        protected Shape(string name) : base(name)
         {
             Name = name;
         }

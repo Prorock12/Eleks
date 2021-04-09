@@ -1,12 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.ObjectModel;
 using Models.Interfaces.Models;
 using Models.Models;
 using Modules.Accountant.ViewModels;
-using Modules.PresentationRegion.ViewModels;
-using Moq;
 using Service.DispatcherAction;
+using System.Collections.ObjectModel;
 
 namespace MyFirstProjectTests
 {
@@ -14,14 +11,15 @@ namespace MyFirstProjectTests
     public class AccountantViewModelTest
     {
         private AccountantViewModel _accountant;
-        private IDispatcherAction _dispatcherAction;
+        private IDispatcherService _dispatcherAction;
 
         [TestInitialize]
         public void Initialize()
         {
-            _dispatcherAction = new DispatcherAction();
+            _dispatcherAction = new DispatcherService();
             _accountant = new AccountantViewModel(_dispatcherAction);
         }
+
         //[TestMethod]
         //public void GetElementsCollection_WhenAccountantViewModelInitialized_CountIsZero()
         //{
@@ -67,9 +65,10 @@ namespace MyFirstProjectTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void CreateElement_WhenAccountantViewModelInitialized_IsNotNull()
-        { 
+        {
             //Act
             var actual = _accountant.CreateElement();
 
@@ -85,12 +84,13 @@ namespace MyFirstProjectTests
 
             //Act
             _accountant.Elements = new ObservableCollection<IVisualElement>();
-            _accountant.AddRow();
+            _accountant.AddRowCommand.Execute(null);
             var actual = _accountant.Elements.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void RemoveRowCorrect_WhenElementsCollectionIsNotNullAndHasOneElement_CountIsZero()
         {
@@ -98,14 +98,13 @@ namespace MyFirstProjectTests
             var expected = 0;
 
             //Act
-            _accountant.Elements = new ObservableCollection<IVisualElement>(){new ImageElement("some")};
+            _accountant.Elements = new ObservableCollection<IVisualElement>() { new ImageElement("some") };
             _accountant.SelectedElement = _accountant.Elements[0];
-            _accountant.RemoveRow();
+            _accountant.RemoveRowCommand.Execute(null);
             var actual = _accountant.Elements.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
-
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
+﻿using Models.Interfaces.ShapeModels;
+using System.Windows.Media;
 
 namespace Models.Models.ShapeModels
 {
-    public class Circle : Shape,ICircle
+    public class Circle : Shape, ICircle
     {
         private double _diameter;
 

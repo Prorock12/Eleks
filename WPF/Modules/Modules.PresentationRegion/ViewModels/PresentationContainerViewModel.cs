@@ -63,13 +63,15 @@ namespace Modules.PresentationRegion.ViewModels
         {
             _eventAggregator?.GetEvent<SelectedPresentationEvent>().Publish(SelectedPresentation?.Presentation);
         }
+
         private void AddPresentation()
         {
             var presentation = new PresentationViewModel(new Presentation("newSlide"));
             Presentations?.Add(presentation);
             //if (SelectedPresentation != null)
-                SelectedPresentation = presentation;
+            SelectedPresentation = presentation;
         }
+
         private void RemovePresentation()
         {
             if (SelectedPresentation != null)

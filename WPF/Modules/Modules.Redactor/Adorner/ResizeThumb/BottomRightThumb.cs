@@ -1,8 +1,6 @@
 ﻿using Modules.Redactor.ViewModels;
 using System;
-using System.Windows;
 using System.Windows.Controls.Primitives;
-using Models.Models.ShapeModels;
 
 namespace Modules.Redactor.Adorner.ResizeThumb
 {

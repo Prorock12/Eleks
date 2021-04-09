@@ -13,7 +13,6 @@ namespace Modules.Redactor.Adorner.ResizeThumb
 
         private void Right_DragDelta(object sender, DragDeltaEventArgs e)
         {
-
             var designerItem = (DataContext as VisualElementViewModel)?.VisualElement;
 
             if (sender is Thumb rightVector && designerItem != null)

@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using PresentationWebApplication.Entities;
 using PresentationWebApplication.Extentions;
 using PresentationWebApplication.Repositories;
 
@@ -19,14 +18,13 @@ namespace PresentationWebApplication
         }
 
         public IConfiguration Configuration { get; }
+
         public static string GetConnectionString()
         {
             var builder = new SqlConnectionStringBuilder
             {
                 DataSource = "Presentation.db"
             };
-
-
 
             return builder.ConnectionString;
         }

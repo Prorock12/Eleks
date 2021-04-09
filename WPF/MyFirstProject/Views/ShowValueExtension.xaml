@@ -8,11 +8,12 @@
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:ShowValueExtensionViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
+
     <Grid>
         <StackPanel>
             <TextBlock Text="Enter Some Value" />
             <TextBox Text="{Binding Value,UpdateSourceTrigger=PropertyChanged}" />
-            <Button Content="Solve" Command="{Binding SolveCommand}" Style="{StaticResource MahApps.Styles.Button}"/>
+            <Button Content="Solve" Command="{Binding SolveCommand}" Style="{StaticResource MahApps.Styles.Button}" />
         </StackPanel>
     </Grid>
 </UserControl>

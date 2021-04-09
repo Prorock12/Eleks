@@ -17,10 +17,11 @@ namespace Modules.Redactor.ViewModels
         {
             ImageElement = element;
         }
+
         public ImageElementViewModel()
         {
-
         }
+
         #endregion Constructors
     }
 }

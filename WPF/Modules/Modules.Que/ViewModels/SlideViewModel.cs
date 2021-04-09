@@ -17,9 +17,9 @@ namespace Modules.Que.ViewModels
         {
             Slide = slide;
         }
+
         public SlideViewModel()
         {
-
         }
 
         #endregion Constructor

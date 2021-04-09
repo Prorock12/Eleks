@@ -1,11 +1,10 @@
-﻿using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
+﻿using Models.Interfaces.ShapeModels;
+using System.Windows.Media;
 
 namespace Models.Models.ShapeModels
 {
-    public class Ellipse : Shape,IEllipse
+    public class Ellipse : Shape, IEllipse
     {
-
         public Ellipse(string name) : base(name)
         {
             Width = 100;

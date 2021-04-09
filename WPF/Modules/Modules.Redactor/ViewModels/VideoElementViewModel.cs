@@ -20,8 +20,8 @@ namespace Modules.Redactor.ViewModels
 
         public VideoElementViewModel()
         {
-
         }
+
         #endregion Constructors
     }
 }

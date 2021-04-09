@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
-
-namespace Models.Interfaces.ShapeModels
+﻿namespace Models.Interfaces.ShapeModels
 {
     public interface ICircle : IEllipse
     {
@@ -13,7 +6,6 @@ namespace Models.Interfaces.ShapeModels
 
         double Diameter { get; set; }
 
-        #endregion
-
+        #endregion properties
     }
 }

@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using PresentationWebApplication.Entities;
+using PresentationWebApplication.Repositories;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using PresentationWebApplication.Entities;
-using PresentationWebApplication.Repositories;
 
 namespace PresentationWebApplication.Controllers
 {
@@ -31,17 +31,19 @@ namespace PresentationWebApplication.Controllers
 
         public async Task<User> GetUserAsync(int id)
         {
-             return await _repository.GetElementAsync(id);
+            return await _repository.GetElementAsync(id);
         }
+        [HttpGet("default")]
+        public async Task<User> GetUserDefaultAsync()
+        {
+            var users = await _repository.GetElementsListAsync();
+            return users.FirstOrDefault();
+        }
+
         [HttpPost("empty")]
         public async Task CreateAsync()
         {
-            User user = new User(){Email = "assdasd",Password = "asdas"};
-            await _repository.CreateAsync(user);
-        }
-        [HttpPost]
-        public async Task CreateUserAsync([FromBody]User user)
-        {
+            User user = new User() { Email = "admin@gmail.com", Password = "Uijasd2" };
             var matchEmail = EmailRegex.Match(user.Email);
             var matchPassword = PasswordRegex.Match(user.Password);
             if (matchEmail.Success && matchPassword.Success)
@@ -52,39 +54,52 @@ namespace PresentationWebApplication.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task CreateUserAsync([FromBody] User user)
+        {
+            //var matchEmail = EmailRegex.Match(user.Email);
+            //var matchPassword = PasswordRegex.Match(user.Password);
+            //if (matchEmail.Success && matchPassword.Success)
+            //{
+                //var hash = new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes(user.Password));
+                //user.Password = string.Concat(hash.Select(b => b.ToString("X2")));
+                await _repository.CreateAsync(user);
+            //}
+        }
+
         [HttpPut]
-        public void EditUser([FromBody]User user)
+        public void EditUser([FromBody] User user)
         {
             var matchEmail = EmailRegex.Match(user.Email);
-                var matchPassword = PasswordRegex.Match(user.Password);
-                if (matchEmail.Success && matchPassword.Success)
-                {
-                    var hash = new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes(user.Password));
-                    user.Password = string.Concat(hash.Select(b => b.ToString("X2")));
-                    _repository.Update(user);
-                }
+            var matchPassword = PasswordRegex.Match(user.Password);
+            if (matchEmail.Success && matchPassword.Success)
+            {
+                var hash = new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes(user.Password));
+                user.Password = string.Concat(hash.Select(b => b.ToString("X2")));
+                _repository.Update(user);
+            }
         }
 
         [HttpPut("updateEmail")]
         public void EditUserEmail([FromBody] User user)
         {
             var matchEmail = EmailRegex.Match(user.Email);
-                if (matchEmail.Success)
-                {
-                    _repository.UpdateEmailAsync(user);
-                }
+            if (matchEmail.Success)
+            {
+                _repository.UpdateEmailAsync(user);
+            }
         }
 
         [HttpPut("updatePassword")]
         public void EditUserPassword([FromBody] User user)
         {
             var matchPassword = PasswordRegex.Match(user.Password);
-                if (matchPassword.Success)
-                {
-                    var hash = new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes(user.Password));
-                    user.Password = string.Concat(hash.Select(b => b.ToString("X2")));
-                    _repository.UpdatePasswordAsync(user);
-                }
+            if (matchPassword.Success)
+            {
+                var hash = new SHA1Managed().ComputeHash(Encoding.UTF8.GetBytes(user.Password));
+                user.Password = string.Concat(hash.Select(b => b.ToString("X2")));
+                _repository.UpdatePasswordAsync(user);
+            }
         }
 
         [HttpDelete]
@@ -93,7 +108,7 @@ namespace PresentationWebApplication.Controllers
             var user = await _repository.GetElementAsync(id);
             if (user != null)
             {
-               await _repository.DeleteAsync(user,id);
+                await _repository.DeleteAsync(user, id);
             }
         }
     }

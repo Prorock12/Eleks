@@ -1,7 +1,5 @@
-﻿using System.Drawing;
-using System.Linq;
+﻿using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 
 namespace UITest
 {
@@ -13,46 +11,64 @@ namespace UITest
         {
             // Create session to launch a Calculator window
             Setup(context);
-
-
         }
+
         //[TestInitialize]
         //public void TesInitialize()
         //{
-
         //}
         [TestMethod]
-        public void Division()
+        public void CreateBaseElement()
         {
-            //// Find the buttons by their accessibility ids and click them in sequence to perform 88 / 11 = 8
-            Session.FindElementByName("Add Presentation").Click();
-            Session.FindElementByName("Add Que").Click();
-            Session.FindElementByName("Add Slide").Click();
-            Session.FindElementByName("Add Text").Click();
-            Session.FindElementByName("Add Shape").Click();
-            Session.FindElementByName("Add Triangle").Click();
-            Session.FindElementByName("Add Shape").Click();
-            Session.FindElementByName("Add Circle").Click();
-            Session.FindElementByName("Add Shape").Click();
-            Session.FindElementByName("Add Rectangle").Click();
+            Session.FindElementByAccessibilityId("AddPresentation").Click();
+            Session.FindElementByAccessibilityId("AddQue").Click();
+            Session.FindElementByAccessibilityId("AddSlide").Click();
+            Session.FindElementByAccessibilityId("AddTextElement").Click();
+            Session.FindElementByAccessibilityId("AddShapeMenu").Click();
+            Session.FindElementByAccessibilityId("AddTriangleElement").Click();
+            Session.FindElementByAccessibilityId("AddShapeMenu").Click();
+            Session.FindElementByAccessibilityId("AddCircleElement").Click();
+            Session.FindElementByAccessibilityId("AddShapeMenu").Click();
+            Session.FindElementByAccessibilityId("AddRectangleElement").Click();
 
-            Session.FindElementByName("Effects").Click();
-            Session.FindElementByName("Blur").Click();
+            //Session.FindElementByName("Effects").Click();
+            //Session.FindElementByName("Blur").Click();
+            //Session.FindElementByAccessibilityId("BlurEffectRadius").Clear();
+            //Session.FindElementByAccessibilityId("BlurEffectRadius").SendKeys("100");
+
+            //Thread.Sleep(5000);
+            //Session.FindElementByAccessibilityId("AddTextElement").Click();
 
             //Session.FindElementByName("Add Text").Click();
 
-
-
-            //Session.FindElementByAccessibilityId("Add Presentation").Click();
-            //Session.FindElementByAccessibilityId("Add Presentation").Click();
-            //session.FindElementByAccessibilityId("num8Button").Click();
-            //session.FindElementByAccessibilityId("divideButton").Click();
-            //session.FindElementByAccessibilityId("num1Button").Click();
-            //session.FindElementByAccessibilityId("num1Button").Click();
-            //session.FindElementByAccessibilityId("equalButton").Click();
+            
             //Assert.AreEqual("8", GetCalculatorResultText());
         }
-        [ClassCleanup]
+
+        [TestMethod]
+        public void SetBlurRadius_WhenElementIsCreated_100()
+        {
+            //Arrange
+            var expected = "100";
+
+            Session.FindElementByAccessibilityId("AddPresentation").Click();
+            Session.FindElementByAccessibilityId("AddQue").Click();
+            Session.FindElementByAccessibilityId("AddSlide").Click();
+            Session.FindElementByAccessibilityId("AddTextElement").Click();
+            Session.FindElementByAccessibilityId("EffectsItem").Click();
+            Session.FindElementByAccessibilityId("Blur").Click();
+            Session.FindElementByAccessibilityId("BlurEffectRadius").Clear();
+            Session.FindElementByAccessibilityId("BlurEffectRadius").SendKeys("100");
+
+            Thread.Sleep(3000);
+
+            //Act
+            var actual = Session.FindElementByAccessibilityId("BlurEffectRadius").Text;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+    [ClassCleanup]
         public static void ClassCleanup()
         {
             TearDown();

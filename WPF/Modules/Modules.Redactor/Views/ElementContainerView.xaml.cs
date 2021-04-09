@@ -1,5 +1,4 @@
-﻿using Prism.Events;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Modules.Redactor.Views
 {

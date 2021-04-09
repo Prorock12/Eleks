@@ -1,5 +1,4 @@
-﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Models;
 using Modules.Redactor.ViewModels;
 
@@ -9,11 +8,13 @@ namespace MyFirstProjectTests.RedactorContainerTests
     public class ImageElementViewModelTest
     {
         private ImageElementViewModel _element;
+
         [TestInitialize]
         public void Initialize()
         {
             _element = new ImageElementViewModel();
         }
+
         [TestMethod]
         public void GetImageElement_WhenInitialized_IsNull()
         {
@@ -23,6 +24,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetImageElement_WhenInitialized_IsNotNull()
         {

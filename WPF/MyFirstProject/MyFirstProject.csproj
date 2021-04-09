@@ -108,6 +108,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
@@ -282,6 +285,10 @@
     <ProjectReference Include="..\Services.DialogService\Services.ApplicationSettingsBase\Services.ApplicationSettingsBase.csproj">
       <Project>{f6e9281c-b1bd-4c58-b14c-f898f1dcd62e}</Project>
       <Name>Services.ApplicationSettingsBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.DialogService\Services.CRUDOperation\Services.CRUDOperation.csproj">
+      <Project>{de1ba703-0a81-4591-afbb-eb13e8f71c7f}</Project>
+      <Name>Services.CRUDOperation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services.DialogService\Services.DialogService.csproj">
       <Project>{17ff1ce4-8cbe-4a84-bda8-c1f9da573943}</Project>

@@ -39,6 +39,7 @@
     <Style TargetType="{x:Type TabItem}">
         <Setter Property="Header" Value="{Binding Name}" />
         <Setter Property="Background" Value="{StaticResource MaterialDesignPaper}" />
+        <Setter Property="AutomationProperties.AutomationId" Value="{Binding Name}"/>
     </Style>
 
     <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}" />
@@ -67,20 +68,22 @@
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.BorderThickness}" />
-                <TextBox Style="{StaticResource TextErrorStyle}"
+                <TextBox AutomationProperties.AutomationId="BorderEffectBorderThickness"
+                         Style="{StaticResource TextErrorStyle}"
                          Text="{Binding BorderThickness, UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.CornerRadius}" />
-                <TextBox Style="{StaticResource TextErrorStyle}"
+                <TextBox AutomationProperties.AutomationId="BorderEffectCornerRadius" Style="{StaticResource TextErrorStyle}"
                     Text="{Binding CornerRadius,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Padding}" />
-                <TextBox Style="{StaticResource TextErrorStyle}"
-                    Text="{Binding Padding,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
+                <TextBox AutomationProperties.AutomationId="BorderEffectPadding"
+                         Style="{StaticResource TextErrorStyle}"
+                         Text="{Binding Padding,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -89,7 +92,8 @@
         <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Radius}" />
-                <TextBox Text="{Binding BlurEffect.Radius,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="BlurEffectRadius"
+                         Text="{Binding BlurEffect.Radius,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
@@ -102,8 +106,8 @@
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.RenderBias}" />
                 <ComboBox MinWidth="100"
-                              SelectedItem="{Binding BlurEffect.RenderingBias,UpdateSourceTrigger=PropertyChanged}"
-                              ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type RenderingBias}}}" />
+                          SelectedItem="{Binding BlurEffect.RenderingBias,UpdateSourceTrigger=PropertyChanged}"
+                          ItemsSource="{Binding Source={infrastructure:EnumBindingSourceExtention {x:Type RenderingBias}}}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -112,27 +116,32 @@
         <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.X}" />
-                <TextBox Text="{Binding PositionEffect.X,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="PositionEffectX" 
+                         Text="{Binding PositionEffect.X,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Y}" />
-                <TextBox Text="{Binding PositionEffect.Y,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="PositionEffectY"
+                         Text="{Binding PositionEffect.Y,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Width}" />
-                <TextBox Text="{Binding PositionEffect.Width,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="PositionEffectWidth"
+                         Text="{Binding PositionEffect.Width,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Height}" />
-                <TextBox Text="{Binding PositionEffect.Height,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="PositionEffectHeight"
+                         Text="{Binding PositionEffect.Height,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Angle}" />
-                <TextBox Text="{Binding PositionEffect.Angle,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="PositionEffectAngle"
+                         Text="{Binding PositionEffect.Angle,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -142,29 +151,33 @@
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Color}" />
                 <ComboBox Width="100"
-                              ItemTemplate="{StaticResource BorderTemplate}"
-                              SelectedItem="{Binding ExtendedDropShadowColor,UpdateSourceTrigger=PropertyChanged}"
-                              ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}" />
+                          ItemTemplate="{StaticResource BorderTemplate}"
+                          SelectedItem="{Binding ExtendedDropShadowColor,UpdateSourceTrigger=PropertyChanged}"
+                          ItemsSource="{Binding Source={x:Static infrastructure:ExtendedColorHelper.Colors}}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Opacity}" />
-                <TextBox Text="{Binding DropShadowEffect.Opacity,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="DropShadowEffectOpacity"
+                         Text="{Binding DropShadowEffect.Opacity,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.BlurRadius}" />
-                <TextBox Text="{Binding DropShadowEffect.BlurRadius,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="DropShadowEffectBlurRadius"
+                         Text="{Binding DropShadowEffect.BlurRadius,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Direction}" />
-                <TextBox Text="{Binding DropShadowEffect.Direction,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="DropShadowEffectDirection"
+                         Text="{Binding DropShadowEffect.Direction,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.ShadowDepth}" />
-                <TextBox Text="{Binding DropShadowEffect.ShadowDepth,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="DropShadowEffectShadowDepth"
+                         Text="{Binding DropShadowEffect.ShadowDepth,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -173,22 +186,26 @@
         <StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Left}" />
-                <TextBox Text="{Binding Left,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="MarginEffectLeft"
+                         Text="{Binding Left,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Top}" />
-                <TextBox Text="{Binding Top,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="MarginEffectTop"
+                         Text="{Binding Top,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Right}" />
-                <TextBox Text="{Binding Right,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="MarginEffectRight"
+                         Text="{Binding Right,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Margin="5" Text="{x:Static localization:Resources.Bottom}" />
-                <TextBox Text="{Binding Bottom,UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox AutomationProperties.AutomationId="MarginEffectBottom"
+                         Text="{Binding Bottom,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>

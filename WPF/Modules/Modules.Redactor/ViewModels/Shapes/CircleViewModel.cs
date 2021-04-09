@@ -3,7 +3,7 @@ using Modules.Redactor.Interfaces.InterfaceShapes;
 
 namespace Modules.Redactor.ViewModels.Shapes
 {
-    public class CircleViewModel : ShapeViewModel,ICircleViewModel
+    public class CircleViewModel : ShapeViewModel, ICircleViewModel
     {
         public ICircle Circle { get; set; }
 
@@ -11,7 +11,5 @@ namespace Modules.Redactor.ViewModels.Shapes
         {
             Circle = shape;
         }
-
-       
     }
 }

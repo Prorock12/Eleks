@@ -26,15 +26,18 @@
                  SelectedItem="{Binding SelectedPresentation}" />
 
             <StackPanel Grid.Column="1" Orientation="Horizontal">
-                <Button Content="{x:Static localization:Resources.Add_Presentation}"
-                    Style="{StaticResource AddButtonStyle}"
-                    Command="{Binding AddPresentationCommand}" />
+                <Button AutomationProperties.AutomationId="AddPresentation" 
+                        Content="{x:Static localization:Resources.Add_Presentation}"
+                        Style="{StaticResource AddButtonStyle}"
+                        Command="{Binding AddPresentationCommand}" />
 
-                <Button Content="{x:Static localization:Resources.Remove_Presentation}"
-                    Style="{StaticResource RemoveButtonStyle}"
-                    Command="{Binding RemovePresentationCommand}" />
+                <Button AutomationProperties.AutomationId="RemovePresentation" 
+                        Content="{x:Static localization:Resources.Remove_Presentation}"
+                        Style="{StaticResource RemoveButtonStyle}"
+                        Command="{Binding RemovePresentationCommand}" />
 
-                <Button Content="{x:Static localization:Resources.Change_Size}"
+                <Button AutomationProperties.AutomationId="ChangeSize" 
+                        Content="{x:Static localization:Resources.Change_Size}"
                         Command="{Binding ChangeSizeCommand}" />
             </StackPanel>
         </Grid>

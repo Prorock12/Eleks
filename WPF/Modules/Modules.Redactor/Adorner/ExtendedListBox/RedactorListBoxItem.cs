@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Media;
 
 namespace Modules.Redactor.Adorner.ExtendedListBox
 {
@@ -22,9 +21,9 @@ namespace Modules.Redactor.Adorner.ExtendedListBox
                 //}
                 //else
                 //{
-                    _adorner = new RedactorItemAdorner(this);
-                    var adornerLayer = AdornerLayer.GetAdornerLayer(this);
-                    adornerLayer?.Add(_adorner);
+                _adorner = new RedactorItemAdorner(this);
+                var adornerLayer = AdornerLayer.GetAdornerLayer(this);
+                adornerLayer?.Add(_adorner);
                 //}
             }
         }

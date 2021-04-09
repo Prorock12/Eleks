@@ -4,8 +4,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:Modules.Que.ViewModels"
              xmlns:localization="clr-namespace:Modules.Que.Properties"
+             xmlns:viewModels="clr-namespace:Modules.Que.ViewModels"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance viewModels:QueContainerViewModel}"
              prism:ViewModelLocator.AutoWireViewModel="True">
@@ -31,25 +31,28 @@
                     VerticalAlignment="Bottom">
 
                 <StackPanel Orientation="Horizontal">
-                    <Button Command="{Binding AddQueCommand}"
+                    <Button AutomationProperties.AutomationId="AddQue"
+                            Command="{Binding AddQueCommand}"
                             Content="{x:Static localization:Resources.Add_Que}"
                             Style="{StaticResource AddButtonStyle}" />
 
-                    <Button Command="{Binding RemoveQueCommand}"
+                    <Button AutomationProperties.AutomationId="RemoveQue"
+                            Command="{Binding RemoveQueCommand}"
                             Content="{x:Static localization:Resources.Remove_Que}"
                             Style="{StaticResource RemoveButtonStyle}" />
                 </StackPanel>
 
-               <StackPanel Orientation="Horizontal">
-                   <Button Command="{Binding AddSlideCommand}"
-                           Content="{x:Static localization:Resources.Add_Slide}"
-                           Style="{StaticResource AddButtonStyle}" />
+                <StackPanel Orientation="Horizontal">
+                    <Button AutomationProperties.AutomationId="AddSlide"
+                            Command="{Binding AddSlideCommand}"
+                            Content="{x:Static localization:Resources.Add_Slide}"
+                            Style="{StaticResource AddButtonStyle}" />
 
-                   <Button Command="{Binding RemoveSlideCommand}"
-                           Content="{x:Static localization:Resources.Remove_Slide}"
-                           Style="{StaticResource RemoveButtonStyle}" />
+                    <Button AutomationProperties.AutomationId="RemoveSlide"
+                            Command="{Binding RemoveSlideCommand}"
+                            Content="{x:Static localization:Resources.Remove_Slide}"
+                            Style="{StaticResource RemoveButtonStyle}" />
                 </StackPanel>
-               
             </StackPanel>
         </Grid>
     </Border>

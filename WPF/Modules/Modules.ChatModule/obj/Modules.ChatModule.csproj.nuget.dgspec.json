@@ -86,6 +86,12 @@
               "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
               },
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj"
+              },
               "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj": {
                 "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj"
               }
@@ -96,6 +102,26 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "MahApps.Metro": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
             "Prism.Wpf": {
               "target": "Package",
               "version": "[8.0.0.1909, )"
@@ -117,6 +143,28 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj",
+        "projectName": "Services.CRUDOperation",
+        "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
+              },
+              "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj": {
+                "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     },
     "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj": {

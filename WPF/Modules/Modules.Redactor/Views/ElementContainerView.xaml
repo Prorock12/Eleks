@@ -52,7 +52,7 @@
                           IsChecked="{Binding IsStackView}"
                           Foreground="AliceBlue" />
 
-                <Button Command="{Binding AddTextElementCommand}"
+                <Button AutomationProperties.AutomationId="AddTextElement" Command="{Binding AddTextElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
                         <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-add-text-100.png" />
@@ -63,21 +63,24 @@
                  Content="{x:Static localization:Resources.Add_Video}"
                 Content="{x:Static localization:Resources.Remove_Element}"-->
 
-                <Button Command="{Binding AddImageElementCommand}"
+                <Button AutomationProperties.AutomationId="AddImageElement"
+                        Command="{Binding AddImageElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
                         <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\photo.png" />
                     </Button.Content>
                 </Button>
 
-                <Button Command="{Binding AddVideoElementCommand}"
+                <Button AutomationProperties.AutomationId="AddVideoElement"
+                        Command="{Binding AddVideoElementCommand}"
                         Style="{StaticResource AddButtonStyle}">
                     <Button.Content>
                         <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-video-100.png" />
                     </Button.Content>
                 </Button>
 
-                <Button Command="{Binding  RemoveElementCommand}"
+                <Button AutomationProperties.AutomationId="RemoveElement"
+                        Command="{Binding  RemoveElementCommand}"
                         Style="{StaticResource RemoveButtonStyle}">
                     <Button.Content>
                         <Image Source="C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Files\Icons\icons8-remove-120.png" />
@@ -85,13 +88,13 @@
                 </Button>
 
                 <Menu>
-                    <MenuItem Header="{x:Static localization:Resources.Add_Shape}">
-                        <MenuItem Header="{x:Static localization:Resources.Add_Circle}" Command="{Binding AddCircleCommand}" />
-                        <MenuItem Header="{x:Static localization:Resources.Add_Quadrate}" Command="{Binding AddQuadrateCommand}"/>
-                        <MenuItem Header="{x:Static localization:Resources.Add_Line}" Command="{Binding AddLineCommand}"/>
-                        <MenuItem Header="{x:Static localization:Resources.Add_Ellipse}" Command="{Binding AddEllipseCommand}"/>
-                        <MenuItem Header="{x:Static localization:Resources.Add_Triangle}" Command="{Binding AddTriangleCommand}"/>
-                        <MenuItem Header="{x:Static localization:Resources.Add_Rectangle}" Command="{Binding AddRectangleCommand}"/>
+                    <MenuItem AutomationProperties.AutomationId="AddShapeMenu" Header="{x:Static localization:Resources.Add_Shape}">
+                        <MenuItem AutomationProperties.AutomationId="AddCircleElement" Header="{x:Static localization:Resources.Add_Circle}" Command="{Binding AddCircleCommand}" />
+                        <MenuItem AutomationProperties.AutomationId="AddQuadrateElement" Header="{x:Static localization:Resources.Add_Quadrate}" Command="{Binding AddQuadrateCommand}" />
+                        <MenuItem AutomationProperties.AutomationId="AddLineElement" Header="{x:Static localization:Resources.Add_Line}" Command="{Binding AddLineCommand}" />
+                        <MenuItem AutomationProperties.AutomationId="AddEllipseElement" Header="{x:Static localization:Resources.Add_Ellipse}" Command="{Binding AddEllipseCommand}" />
+                        <MenuItem AutomationProperties.AutomationId="AddTriangleElement" Header="{x:Static localization:Resources.Add_Triangle}" Command="{Binding AddTriangleCommand}" />
+                        <MenuItem AutomationProperties.AutomationId="AddRectangleElement" Header="{x:Static localization:Resources.Add_Rectangle}" Command="{Binding AddRectangleCommand}" />
                     </MenuItem>
                 </Menu>
             </StackPanel>

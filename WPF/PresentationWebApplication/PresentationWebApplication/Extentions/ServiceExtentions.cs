@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace PresentationWebApplication.Extentions
@@ -42,6 +37,6 @@ namespace PresentationWebApplication.Extentions
             services.Configure<IISOptions>(options => { });
         }
 
-        #endregion
+        #endregion methods
     }
 }

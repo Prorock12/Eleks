@@ -1,8 +1,11 @@
 ﻿using Infrastructure.Events;
 using Models.Interfaces.Models;
+using Models.Interfaces.ShapeModels;
 using Models.Models;
+using Models.Models.ShapeModels;
 using Modules.Library.ViewModels;
 using Modules.Redactor.Interfaces;
+using Modules.Redactor.ViewModels.Shapes;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
@@ -13,9 +16,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
-using Models.Models.ShapeModels;
-using Modules.Redactor.ViewModels.Shapes;
 
 namespace Modules.Redactor.ViewModels
 {
@@ -50,9 +50,9 @@ namespace Modules.Redactor.ViewModels
         public ICommand RemoveElementCommand { get; }
         public ICommand AddCircleCommand { get; }
         public ICommand AddEllipseCommand { get; }
-        public ICommand AddLineCommand { get;  }
+        public ICommand AddLineCommand { get; }
         public ICommand AddRectangleCommand { get; }
-        public ICommand AddTriangleCommand { get;  }
+        public ICommand AddTriangleCommand { get; }
         public ICommand AddQuadrateCommand { get; set; }
 
         public IElementViewModel SelectedElement
@@ -120,6 +120,7 @@ namespace Modules.Redactor.ViewModels
         {
             Elements = new ObservableCollection<IElementViewModel>();
         }
+
         #endregion Constructor
 
         #region Methods
@@ -188,12 +189,15 @@ namespace Modules.Redactor.ViewModels
                     case IVideoElement videoElement:
                         Elements.Add(new VideoElementViewModel(videoElement));
                         break;
+
                     case ICircle circle:
                         Elements.Add(new CircleViewModel(circle));
                         break;
+
                     case IEllipse ellipse:
                         Elements.Add(new EllipseViewModel(ellipse));
                         break;
+
                     case IRectangle rectangle:
                         Elements.Add(new RectangleViewModel(rectangle));
                         break;
@@ -203,6 +207,7 @@ namespace Modules.Redactor.ViewModels
                     case ILine line:
                         Elements.Add(new LineViewModel(line));
                         break;
+
                     case ITriangle triangle:
                         Elements.Add(new TriangleViewModel(triangle));
                         break;
@@ -219,6 +224,7 @@ namespace Modules.Redactor.ViewModels
         {
             SelectedPresentation = presentation;
         }
+
         private void AddText()
         {
             var text = new TextElement("newText");
@@ -245,12 +251,15 @@ namespace Modules.Redactor.ViewModels
                 case IVideoElement videoElement:
                     elementViewModel = new VideoElementViewModel(videoElement);
                     break;
+
                 case ICircle circle:
                     elementViewModel = new CircleViewModel(circle);
                     break;
+
                 case IEllipse ellipse:
                     elementViewModel = new EllipseViewModel(ellipse);
                     break;
+
                 case IRectangle rectangle:
                     elementViewModel = new RectangleViewModel(rectangle);
                     break;
@@ -260,6 +269,7 @@ namespace Modules.Redactor.ViewModels
                 case ITriangle triangle:
                     elementViewModel = new TriangleViewModel(triangle);
                     break;
+
                 case ILine line:
                     elementViewModel = new LineViewModel(line);
                     break;
@@ -307,6 +317,7 @@ namespace Modules.Redactor.ViewModels
         }
 
         #region shapes
+
         private void AddCircle()
         {
             var circle = new Circle("NewCircle");
@@ -368,7 +379,7 @@ namespace Modules.Redactor.ViewModels
             SelectedSlide?.Elements.Add(line);
         }
 
-        #endregion
+        #endregion shapes
 
         #endregion Methods
     }

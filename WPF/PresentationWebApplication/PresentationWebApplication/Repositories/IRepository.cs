@@ -8,9 +8,13 @@ namespace PresentationWebApplication.Repositories
         where T : class
     {
         Task<IEnumerable<T>> GetElementsListAsync();
+
         Task<T> GetElementAsync(int id);
+
         Task CreateAsync(T item);
+
         void Update(T item);
-        Task DeleteAsync(T item,int id);
+
+        Task DeleteAsync(T item, int id);
     }
 }

@@ -1,15 +1,38 @@
 {
   "version": 2,
-  "dgSpecHash": "63yjmV2WTByaLoY7SCyLRZcS6WnBnuewmeaUwUm/JXAlVDoKosMNQ9W5Y6Bg2brIVZNyllllao95xQuia5B76w==",
+  "dgSpecHash": "XkTb0hk4sZft+qxWZaKqMVNrAQmnrE2Otjtijtq7ro94TLyyrWgZL+MwoikI2L/Z/Um5hSI0C0i/5IAdauyy/A==",
   "success": true,
   "projectFilePath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\ModelStandard\\ModelStandard.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\mahapps.metro\\2.4.4\\mahapps.metro.2.4.4.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesigncolors\\2.0.0\\materialdesigncolors.2.0.0.nupkg.sha512",
+    "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\materialdesignthemes\\4.0.0\\materialdesignthemes.4.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\microsoft.xaml\\4.0.0.1\\microsoft.xaml.4.0.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\bohdan.hlyva\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MahApps.Metro 2.4.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MahApps.Metro",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignColors 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

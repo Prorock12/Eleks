@@ -1,5 +1,4 @@
-﻿
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Models;
 using Modules.Que.ViewModels;
@@ -12,6 +11,7 @@ namespace MyFirstProjectTests.QueTests
     public class QueViewModelTest
     {
         private QueViewModel _que;
+
         //private IEventAggregator _eventAggregator;
         private Mock<IEventAggregator> _mockEventAggregator;
 
@@ -24,6 +24,7 @@ namespace MyFirstProjectTests.QueTests
             _que = new QueViewModel(_mockEventAggregator.Object);
             //_que.SelectedSlide = new Slide("slide");
         }
+
         [TestMethod]
         public void GetQue_WhenInitialized_IsNull()
         {
@@ -33,6 +34,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetQue_WhenInitialized_IsNotNull()
         {
@@ -43,6 +45,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.IsNotNull(actual);
         }
+
         [TestMethod]
         public void GetSelectedSlide_WhenInitialized_IsNull()
         {
@@ -52,6 +55,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetSelectedSlide_WhenInitialized_IsNotNull()
         {
@@ -62,6 +66,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.IsNotNull(actual);
         }
+
         [TestMethod]
         public void GetIsSelectedSlide_WhenInitialized_False()
         {
@@ -71,6 +76,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.IsFalse(actual);
         }
+
         [TestMethod]
         public void SetIsSelectedSlide_WhenInitialized_True()
         {

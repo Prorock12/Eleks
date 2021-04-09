@@ -1,12 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿using Infrastructure.Events;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using Infrastructure.Events;
 using Models.Models;
 using Modules.Que.Interfaces;
 using Modules.Que.ViewModels;
 using Moq;
 using Prism.Events;
+using System.Collections.ObjectModel;
 
 namespace MyFirstProjectTests.QueTests
 {
@@ -14,8 +13,10 @@ namespace MyFirstProjectTests.QueTests
     public class QueContainerViewModelTest
     {
         private QueContainerViewModel _queContainer;
+
         //private IEventAggregator _eventAggregator;
         private Mock<IEventAggregator> _mockEventAggregator;
+
         //private Mock<SelectedPresentationEvent> _mockSelectedPresentation;
         //private Mock<SelectedQueEvent> _mockSelectedQue;
         //private Mock<AddQueEvent> _mockAddQue;
@@ -49,6 +50,7 @@ namespace MyFirstProjectTests.QueTests
                 SelectedPresentation = new Presentation("some")
             };
         }
+
         [TestMethod]
         public void GetQuesCollection_WhenPresentationIsSelected_CountIsZero()
         {
@@ -61,6 +63,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void SetQuesCollection_WhenPresentationIsSelected_CountIsOne()
         {
@@ -75,6 +78,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddQue_WhenPresentationIsSelectedAndQuesCollectionIsNotNull_CountIsOne()
         {
@@ -89,6 +93,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddSlide_WhenPresentationIsSelectedAndQuesCollectionIsNotNullAndSlidesCollectionIsNotNull_CountIsOne()
         {
@@ -103,6 +108,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void RemoveSlide_WhenPresentationIsSelectedAndQuesCollectionIsNotNullAndSlidesCollectionIsNotNull_CountIsZero()
         {
@@ -110,7 +116,7 @@ namespace MyFirstProjectTests.QueTests
             var expected = 0;
 
             //Act
-            _queContainer.SelectedQue = new QueViewModel(new Que("some"),_mockEventAggregator.Object);
+            _queContainer.SelectedQue = new QueViewModel(new Que("some"), _mockEventAggregator.Object);
             _queContainer.SelectedQue.Que.Slides.Add(new Slide("some"));
             _queContainer.SelectedQue.SelectedSlide = _queContainer.SelectedQue.Que.Slides[0];
             _queContainer.RemoveSlideCommand.Execute(null);
@@ -119,6 +125,7 @@ namespace MyFirstProjectTests.QueTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void RemoveQue_WhenPresentationIsSelectedAndQuesCollectionIsNotNull_CountIsZero()
         {

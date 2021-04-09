@@ -5,6 +5,5 @@ namespace Infrastructure.Events
 {
     public class AddQuadrateEvent : PubSubEvent<IElement>
     {
-        
     }
 }

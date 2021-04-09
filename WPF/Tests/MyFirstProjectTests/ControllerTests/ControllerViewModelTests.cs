@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.ObjectModel;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Interfaces.Models;
 using Models.Models;
 using Modules.Controller.ViewModels;
 using Moq;
 using Prism.Events;
 using Services.FilseSelector;
+using System.Collections.ObjectModel;
 
 namespace MyFirstProjectTests.ControllerTests
 {
@@ -28,7 +28,6 @@ namespace MyFirstProjectTests.ControllerTests
             _mockFileSelector.Setup(x => x.ChooseVideo()).Returns(_fileSelector.ChooseVideo);
             _mockFileSelector.Setup(x => x.ChooseImage()).Returns(_fileSelector.ChooseImage);
 
-
             _mockEventAggregator.Setup(m => m.GetEvent<SelectedQueEvent>()).Returns(new SelectedQueEvent());
             _mockEventAggregator.Setup(m => m.GetEvent<SelectedSlideEvent>()).Returns(new SelectedSlideEvent());
             _mockEventAggregator.Setup(m => m.GetEvent<AddSlideEvent>()).Returns(new AddSlideEvent());
@@ -37,7 +36,6 @@ namespace MyFirstProjectTests.ControllerTests
 
             _controller = new ControllerViewModel(_mockEventAggregator.Object, _mockFileSelector.Object);
         }
-
 
         [TestMethod]
         public void AddVideoEvent_ElementCollectionIsInitialize_ExpectedPublishEventOnce()
@@ -52,13 +50,14 @@ namespace MyFirstProjectTests.ControllerTests
             mockEventAggregator.Setup(m => m.GetEvent<RemoveSlideEvent>()).Returns(new RemoveSlideEvent());
             mockEventAggregator.Setup(m => m.GetEvent<AddElementEvent>()).Returns(_mockAddElement.Object);
 
-            var controller = new ControllerViewModel(mockEventAggregator.Object,_mockFileSelector.Object);
+            var controller = new ControllerViewModel(mockEventAggregator.Object, _mockFileSelector.Object);
             //Act
             controller.AddVideoCommand.Execute(null);
 
             //Assert
             _mockAddElement.Verify(m => m.Publish(It.IsAny<IElement>()), Times.Once);
         }
+
         [TestMethod]
         public void AddText_ElementCollectionIsInitialize_ExpectedPublishEventOnce()
         {
@@ -79,6 +78,7 @@ namespace MyFirstProjectTests.ControllerTests
             //Assert
             _mockAddElement.Verify(m => m.Publish(It.IsAny<IElement>()), Times.Once);
         }
+
         [TestMethod]
         public void AddImage_ElementCollectionIsInitialize_ExpectedPublishEventOnceAndAddedImage()
         {
@@ -99,6 +99,7 @@ namespace MyFirstProjectTests.ControllerTests
             //Assert
             _mockAddElement.Verify(m => m.Publish(It.IsAny<IElement>()), Times.Once);
         }
+
         [TestMethod]
         public void GetSelectedQue_AfterInitialization_IsNull()
         {
@@ -108,6 +109,7 @@ namespace MyFirstProjectTests.ControllerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         //[TestMethod]
         //public void GetSelectedSlide_WhenQueIsSelected_IsNull()
         //{
@@ -141,6 +143,7 @@ namespace MyFirstProjectTests.ControllerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddText_WhenCountElementsCollectionIsZero_TextAdded()
         {
@@ -148,13 +151,14 @@ namespace MyFirstProjectTests.ControllerTests
             var expected = 1;
 
             //Act
-            _controller.SelectedSlide = new Slide(It.IsAny<string>()) {Elements = new ObservableCollection<IElement>()};
+            _controller.SelectedSlide = new Slide(It.IsAny<string>()) { Elements = new ObservableCollection<IElement>() };
             _controller.AddTextCommand.Execute(null);
             var actual = _controller.SelectedSlide.Elements.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddImage_WhenCountElementsCollectionIsZero_ImageAdded()
         {
@@ -162,13 +166,14 @@ namespace MyFirstProjectTests.ControllerTests
             var expected = 1;
 
             //Act
-            _controller.SelectedSlide = new Slide(It.IsAny<string>()) {Elements = new ObservableCollection<IElement>()};
+            _controller.SelectedSlide = new Slide(It.IsAny<string>()) { Elements = new ObservableCollection<IElement>() };
             _controller.AddImageCommand.Execute(null);
             var actual = _controller.SelectedSlide.Elements.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddVideo_WhenCountElementsCollectionIsZero_VideoAdded()
         {
@@ -176,7 +181,7 @@ namespace MyFirstProjectTests.ControllerTests
             var expected = 1;
 
             //Act
-            _controller.SelectedSlide = new Slide(It.IsAny<string>()) {Elements = new ObservableCollection<IElement>()};
+            _controller.SelectedSlide = new Slide(It.IsAny<string>()) { Elements = new ObservableCollection<IElement>() };
             _controller.AddVideoCommand.Execute(null);
             var actual = _controller.SelectedSlide.Elements.Count;
 

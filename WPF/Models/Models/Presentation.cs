@@ -50,7 +50,6 @@ namespace Models.Models
 
             Ques = new ObservableCollection<IQue>();
             //{
-
             //    new Que("First Que"),
             //    new Que("Second Que")
             //};

@@ -8,11 +8,11 @@ namespace PresentationWebApplication
         public DbSet<User> Users { get; set; }
         public DbSet<Message> Messages { get; set; }
 
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) :base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             Database.EnsureCreated();
         }
- 
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlite("Server=(localdb)\\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;");

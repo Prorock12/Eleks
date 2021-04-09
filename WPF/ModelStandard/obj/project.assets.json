@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "MahApps.Metro/2.4.4": {
+        "type": "package",
+        "compile": {
+          "lib/net46/MahApps.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/net46/MahApps.Metro.dll": {}
+        },
+        "resource": {
+          "lib/net46/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -57,6 +86,95 @@
     }
   },
   "libraries": {
+    "MahApps.Metro/2.4.4": {
+      "sha512": "QK514bFWbfJ784VWlVlAt0BjLAyrgl9m7dijUh22voTZFCvYdWS22rtYPUP9SNVQRjuVqZnV+V+JlKMGmsZRog==",
+      "type": "package",
+      "path": "mahapps.metro/2.4.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MahApps.Metro.dll",
+        "lib/net452/MahApps.Metro.pdb",
+        "lib/net452/MahApps.Metro.xml",
+        "lib/net452/de/MahApps.Metro.resources.dll",
+        "lib/net46/MahApps.Metro.dll",
+        "lib/net46/MahApps.Metro.pdb",
+        "lib/net46/MahApps.Metro.xml",
+        "lib/net46/de/MahApps.Metro.resources.dll",
+        "lib/net47/MahApps.Metro.dll",
+        "lib/net47/MahApps.Metro.pdb",
+        "lib/net47/MahApps.Metro.xml",
+        "lib/net47/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.xml",
+        "lib/netcoreapp3.0/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.xml",
+        "lib/netcoreapp3.1/de/MahApps.Metro.resources.dll",
+        "mahapps.metro.2.4.4.nupkg.sha512",
+        "mahapps.metro.logo.png",
+        "mahapps.metro.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "MaterialDesignColors/2.0.0": {
+      "sha512": "+JoghC3QRK0u9Wul1To1ORjcfTbFTVzFPjJ02H7VREOdNzIIn427e8G9gP9hXu9pm1r2OneLnoCG/lTma5cG2w==",
+      "type": "package",
+      "path": "materialdesigncolors/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net452/MaterialDesignColors.dll",
+        "lib/net452/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.2.0.0.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/4.0.0": {
+      "sha512": "+n5oWHuRiYL/gUw2XfQHCRZqHtU8KbrdurgU0IcO98Zsyhw4BvggodfXY8veRtbjjmM9EJ/sG2yKBrgPOGX4JQ==",
+      "type": "package",
+      "path": "materialdesignthemes/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net452/MaterialDesignThemes.Wpf.dll",
+        "lib/net452/MaterialDesignThemes.Wpf.pdb",
+        "lib/net452/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.4.0.0.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -242,6 +360,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "MahApps.Metro >= 2.4.4",
+      "MaterialDesignColors >= 2.0.0",
+      "MaterialDesignThemes >= 4.0.0",
       "Microsoft.Xaml >= 4.0.0.1",
       "NETStandard.Library >= 2.0.3",
       "Prism.Core >= 8.0.0.1909"
@@ -293,6 +414,18 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "MahApps.Metro": {
+            "target": "Package",
+            "version": "[2.4.4, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Microsoft.Xaml": {
             "target": "Package",
             "version": "[4.0.0.1, )"
@@ -323,6 +456,26 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MahApps.Metro 2.4.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MahApps.Metro",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignColors 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

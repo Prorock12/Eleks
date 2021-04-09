@@ -9,6 +9,6 @@
         double Y1 { get; set; }
         double Y2 { get; set; }
 
-        #endregion
+        #endregion properties
     }
 }

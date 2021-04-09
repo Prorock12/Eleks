@@ -1,7 +1,5 @@
-﻿using ModelStandard.Interfaces.Effects;
-
-namespace ModelStandard.Interfaces.Effects
-{ 
+﻿namespace ModelStandard.Interfaces.Effects
+{
     public interface IPositionEffect : IEffect
     {
         #region Properties

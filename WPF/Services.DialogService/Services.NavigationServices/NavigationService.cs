@@ -1,9 +1,7 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Windows.Controls;
-using Infrastructure;
+﻿using Infrastructure;
 using Prism.Regions;
+using System;
+using System.Linq;
 using Unity;
 
 namespace Services.NavigationServices
@@ -12,11 +10,13 @@ namespace Services.NavigationServices
     {
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _unityContainer;
-        public NavigationService(IRegionManager regionManager,IUnityContainer unityContainer)
+
+        public NavigationService(IRegionManager regionManager, IUnityContainer unityContainer)
         {
             _regionManager = regionManager;
             _unityContainer = unityContainer;
         }
+
         public void NavigateChatToAnotherView(Type type)
         {
             var region = _regionManager.Regions.FirstOrDefault(x => x.Name == RegionNames.Chat);
@@ -26,7 +26,6 @@ namespace Services.NavigationServices
             region.RemoveAll();
 
             region.Add(_unityContainer.Resolve(type));
-
         }
     }
 }

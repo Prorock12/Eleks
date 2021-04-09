@@ -101,7 +101,6 @@
                         <xcdg:CellEditor EditTemplate="{StaticResource ColorsComboBoxDataTemplate}" />
                     </xcdg:Column.CellEditor>
                 </xcdg:Column>
-
             </xcdg:DataGridControl.Columns>
         </xcdg:DataGridControl>
 

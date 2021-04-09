@@ -17,5 +17,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.19</PkgMicrosoft_Xaml_Behaviors_Wpf>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\newtonsoft.json\6.0.4</PkgNewtonsoft_Json>
+    <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\materialdesignthemes\4.0.0</PkgMaterialDesignThemes>
+    <PkgMahApps_Metro Condition=" '$(PkgMahApps_Metro)' == '' ">C:\Users\bohdan.hlyva\.nuget\packages\mahapps.metro\2.4.4</PkgMahApps_Metro>
   </PropertyGroup>
 </Project>

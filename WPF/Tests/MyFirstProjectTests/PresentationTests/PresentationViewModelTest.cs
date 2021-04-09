@@ -15,6 +15,7 @@ namespace MyFirstProjectTests.PresentationTests
         {
             _presentation = new PresentationViewModel();
         }
+
         [TestMethod]
         public void GetPresentation_WhenPresentationViewModelIsNotNull_IsNotNull()
         {
@@ -24,6 +25,7 @@ namespace MyFirstProjectTests.PresentationTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetNewPresentationCorrect_WhenPresentationViewModelIsNotNull_IsNotNull()
         {

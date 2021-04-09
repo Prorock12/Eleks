@@ -1,13 +1,13 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
 using Models.Interfaces.Models;
 using Models.Models;
 using Modules.Que.Interfaces;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 namespace Modules.Que.ViewModels
 {
@@ -21,16 +21,19 @@ namespace Modules.Que.ViewModels
         public ICommand RemoveQueCommand { get; }
         public ICommand AddSlideCommand { get; }
         public ICommand RemoveSlideCommand { get; }
+
         public IPresentation SelectedPresentation
         {
             get => _selectedPresentation;
             set => SetProperty(ref _selectedPresentation, value, OnSelectedPresentationChanged);
         }
+
         public IQueViewModel SelectedQue
         {
             get => _selectedQue;
             set => SetProperty(ref _selectedQue, value, OnSelectedQueChanged);
         }
+
         public ObservableCollection<IQueViewModel> Ques { get; set; }
 
         public QueContainerViewModel(IEventAggregator eventAggregator)
@@ -46,7 +49,7 @@ namespace Modules.Que.ViewModels
             RemoveQueCommand =
                 new DelegateCommand(RemoveQue, CanChangeQue).ObservesProperty(() => SelectedPresentation);
 
-            AddSlideCommand = new DelegateCommand(AddSlide,CanChangeSlide).ObservesProperty(() => SelectedQue);
+            AddSlideCommand = new DelegateCommand(AddSlide, CanChangeSlide).ObservesProperty(() => SelectedQue);
             RemoveSlideCommand = new DelegateCommand(RemoveSlide, CanChangeSlide).ObservesProperty(() => SelectedQue);
         }
 
@@ -54,19 +57,23 @@ namespace Modules.Que.ViewModels
         {
             return SelectedPresentation != null;
         }
+
         private bool CanChangeSlide()
         {
             return SelectedQue != null;
         }
+
         private void OnSelectedPresentation(IPresentation presentation)
         {
             SelectedPresentation = presentation;
         }
+
         private void OnSelectedPresentationChanged()
         {
             Ques.Clear();
             OnLoadQues();
         }
+
         private void OnLoadQues()
         {
             if (SelectedPresentation == null)
@@ -82,10 +89,12 @@ namespace Modules.Que.ViewModels
                 }
             }
         }
+
         private void OnSelectedQueChanged()
         {
             _eventAggregator.GetEvent<SelectedQueEvent>().Publish(SelectedQue?.Que);
         }
+
         public void AddQue()
         {
             var que = new Models.Models.Que("NewSlide");
@@ -97,10 +106,11 @@ namespace Modules.Que.ViewModels
 
         private void OnAddQue(IQue que)
         {
-            var queViewModel = new QueViewModel(que,_eventAggregator);
+            var queViewModel = new QueViewModel(que, _eventAggregator);
             Ques.Add(queViewModel);
             SelectedQue = queViewModel;
         }
+
         private void AddSlide()
         {
             var newSlide = new Slide("newSlide");
@@ -110,13 +120,13 @@ namespace Modules.Que.ViewModels
             SelectedQue.Que.Slides.Add(newSlide);
 
             SelectedQue.SelectedSlide = newSlide;
-
         }
+
         private void RemoveSlide()
         {
             SelectedQue.Que.Slides.Remove(SelectedQue.SelectedSlide);
-
         }
+
         private void RemoveQue()
         {
             SelectedPresentation.Ques.Remove(SelectedQue.Que);

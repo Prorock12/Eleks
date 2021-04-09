@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.ObjectModel;
-using Infrastructure.Events;
+﻿using Infrastructure.Events;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Models;
 using Modules.PresentationRegion.Interfaces;
 using Modules.PresentationRegion.ViewModels;
 using Moq;
 using Prism.Events;
+using System.Collections.ObjectModel;
 
 namespace MyFirstProjectTests.PresentationTests
 {
@@ -13,8 +13,10 @@ namespace MyFirstProjectTests.PresentationTests
     public class PresentationContainerViewModelTest
     {
         private PresentationContainerViewModel _presentation;
+
         //private IEventAggregator _eventAggregator;
         private Mock<IEventAggregator> _mockEventAggregator;
+
         //private Mock<SelectedPresentationEvent> _mockEventSelectedPresentation;
 
         [TestInitialize]
@@ -28,6 +30,7 @@ namespace MyFirstProjectTests.PresentationTests
                 .Returns(new SelectedPresentationEvent());
             _presentation = new PresentationContainerViewModel(_mockEventAggregator.Object);
         }
+
         //[TestMethod]
         //public void GetPresentationsCollection_WhenProjectStart_IsNotNull()
         //{
@@ -62,6 +65,7 @@ namespace MyFirstProjectTests.PresentationTests
             //Assert
             Assert.IsNull(actual);
         }
+
         //[TestMethod]
         //public void SetSelectedPresentation_WhenPresentationCollectionNotNull_NotNull()
         //{
@@ -88,6 +92,7 @@ namespace MyFirstProjectTests.PresentationTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void RemovePresentation_WhenPresentationCollectionNotNull_CountIsNull()
         {

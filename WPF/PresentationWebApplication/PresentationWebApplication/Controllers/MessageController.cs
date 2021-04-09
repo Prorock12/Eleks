@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PresentationWebApplication.Entities;
 using PresentationWebApplication.Repositories;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PresentationWebApplication.Controllers
 {
@@ -31,7 +31,7 @@ namespace PresentationWebApplication.Controllers
         [HttpPost]
         public async Task CreateMessageAsync([FromBody] Message message)
         {
-            if(message.SenderId.HasValue && message.ReceiverId.HasValue)
+            if (message.SenderId != null && message.ReceiverId != null)
                 await _repository.CreateAsync(message);
         }
 
@@ -40,6 +40,7 @@ namespace PresentationWebApplication.Controllers
         {
             _repository.Update(message);
         }
+
         [HttpPut("updateMessageText")]
         public void EditMessageText([FromBody] Message message)
         {

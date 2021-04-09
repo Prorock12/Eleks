@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.NavigationServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITest", "..\Tests\UITest\UITest.csproj", "{FF98BD7D-E261-41E2-9FDF-E14DA4E1EBA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.CRUDOperation", "..\Services.DialogService\Services.CRUDOperation\Services.CRUDOperation.csproj", "{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{FF98BD7D-E261-41E2-9FDF-E14DA4E1EBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF98BD7D-E261-41E2-9FDF-E14DA4E1EBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF98BD7D-E261-41E2-9FDF-E14DA4E1EBA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +157,7 @@ Global
 		{826772F7-DB8B-4BB5-9987-35A62FBC68B4} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
 		{9DBD1439-EE4A-402A-BEE5-8385012499C5} = {F73BD313-2BF7-4BE9-AF7E-F2290E183EBC}
 		{6FD6DB29-285A-418D-B651-A362682387F2} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
+		{DE1BA703-0A81-4591-AFBB-EB13E8F71C7F} = {7E48531C-36DE-4240-A92D-8F58A33D159E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78F7D3C5-660E-4776-BE95-C510700770E0}

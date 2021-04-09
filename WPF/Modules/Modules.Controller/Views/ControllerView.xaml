@@ -24,20 +24,25 @@
 
             <StackPanel Grid.Row="0"
                         Orientation="Horizontal">
-                <Button Command="{Binding AddSlideCommand}"
+                <Button AutomationProperties.AutomationId="AddSlideController"
+                        Command="{Binding AddSlideCommand}"
                         Content="{x:Static localization:Resources.Add_Slide}"
                         Style="{StaticResource AddButtonStyle}" />
-                <Button Command="{Binding AddTextCommand}"
+                <Button AutomationProperties.AutomationId="AddTextController"
+                        Command="{Binding AddTextCommand}"
                         Content="{x:Static localization:Resources.Add_Text}"
                         Style="{StaticResource AddButtonStyle}" />
-                <Button Command="{Binding AddImageCommand}"
+                <Button AutomationProperties.AutomationId="AddImageController"
+                        Command="{Binding AddImageCommand}"
                         Content="{x:Static localization:Resources.Add_Image}"
                         Style="{StaticResource AddButtonStyle}" />
-                <Button Command="{Binding AddVideoCommand}"
+                <Button AutomationProperties.AutomationId="AddVideoController" 
+                        Command="{Binding AddVideoCommand}"
                         Content="{x:Static localization:Resources.Add_Video}"
                         Style="{StaticResource AddButtonStyle}" />
-                <CheckBox Content="{x:Static localization:Resources.Horizontal_View}"
-                          IsChecked="{Binding IsStackView}" />
+                <CheckBox  AutomationProperties.AutomationId="IsStackViewController" 
+                           Content="{x:Static localization:Resources.Horizontal_View}"
+                           IsChecked="{Binding IsStackView}" />
             </StackPanel>
 
             <ItemsControl Grid.Row="1"

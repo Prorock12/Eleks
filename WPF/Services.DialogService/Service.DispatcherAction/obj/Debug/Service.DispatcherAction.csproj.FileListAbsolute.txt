@@ -9,3 +9,4 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.csproj.CopyComplete
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Services.DialogService\Service.DispatcherAction\obj\Debug\Service.DispatcherAction.csprojAssemblyReference.cache

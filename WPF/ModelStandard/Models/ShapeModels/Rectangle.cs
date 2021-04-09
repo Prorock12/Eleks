@@ -1,9 +1,9 @@
-﻿using System.Windows.Media;
-using ModelStandard.Interfaces.ShapeModels;
+﻿using ModelStandard.Interfaces.ShapeModels;
+using System.Windows.Media;
 
 namespace ModelStandard.Models.ShapeModels
 {
-    public class Rectangle : Shape,IRectangle
+    public class Rectangle : Shape, IRectangle
     {
         public Rectangle(string name) : base(name)
         {

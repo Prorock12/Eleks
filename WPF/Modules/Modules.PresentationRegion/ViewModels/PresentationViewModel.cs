@@ -20,8 +20,8 @@ namespace Modules.PresentationRegion.ViewModels
 
         public PresentationViewModel()
         {
-
         }
+
         #endregion Constructor
     }
 }

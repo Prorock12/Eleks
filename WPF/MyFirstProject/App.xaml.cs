@@ -1,20 +1,21 @@
 ﻿using Modules.Accountant;
+using Modules.ChatModule;
 using Modules.Controller;
 using Modules.Effects;
 using Modules.Library;
 using Modules.PresentationRegion;
+using Modules.Que;
 using Modules.Redactor;
 using MyFirstProject.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Service.DispatcherAction;
 using Services.ApplicationSettingsBase;
 using Services.DialogService.Service;
 using Services.FilseSelector;
-using System.Windows;
-using Modules.ChatModule;
-using Modules.Que;
-using Service.DispatcherAction;
 using Services.NavigationServices;
+using System.Windows;
+using Services.CRUDOperation;
 
 namespace MyFirstProject
 {
@@ -32,8 +33,9 @@ namespace MyFirstProject
             containerRegistry.RegisterSingleton<IDialogService, DialogService>();
             containerRegistry.RegisterSingleton<IFileSelector, FileSelector>();
             containerRegistry.RegisterSingleton<ISettingsServices, SettingsServices>();
-            containerRegistry.RegisterSingleton<IDispatcherAction, DispatcherAction>();
+            containerRegistry.RegisterSingleton<IDispatcherService, DispatcherService>();
             containerRegistry.RegisterSingleton<INavigationService, NavigationService>();
+            containerRegistry.RegisterSingleton<ICrudService, CrudService>();
         }
 
         protected override Window CreateShell()

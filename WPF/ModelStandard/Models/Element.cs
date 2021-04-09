@@ -1,6 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using ModelStandard.Interfaces.Models;
+using Prism.Mvvm;
 using System;
-using ModelStandard.Interfaces.Models;
 
 namespace ModelStandard.Models
 {

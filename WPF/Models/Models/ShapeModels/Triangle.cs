@@ -1,15 +1,16 @@
-﻿using System.Windows;
+﻿using Models.Interfaces.ShapeModels;
+using System.Windows;
 using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
 
 namespace Models.Models.ShapeModels
 {
-    public class Triangle : Shape,ITriangle 
+    public class Triangle : Shape, ITriangle
     {
         private Point _point1;
         private Point _point2;
         private Point _point3;
         private PointCollection _points;
+
         public Point Point1
         {
             get => _point1;
@@ -62,7 +63,7 @@ namespace Models.Models.ShapeModels
 
             Points = new PointCollection();
             Point1 = new Point(0, Height);
-            Point2 = new Point(Width/2, 0);
+            Point2 = new Point(Width / 2, 0);
             Point3 = new Point(Width, Height);
 
             Points.Add(Point1);

@@ -2,6 +2,82 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "ControlzEx/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {}
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.4": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "resource": {
+          "lib/net47/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -20,6 +96,15 @@
           "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
         }
       },
+      "Newtonsoft.Json/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -27,6 +112,19 @@
         },
         "runtime": {
           "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/8.0.0.1909": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "8.0.0.1909",
+          "Unity.Container": "5.11.8"
+        },
+        "compile": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
         }
       },
       "Prism.Wpf/8.0.0.1909": {
@@ -78,6 +176,19 @@
           "lib/net47/Unity.Abstractions.dll": {}
         }
       },
+      "Unity.Container/5.11.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "Unity.Abstractions": "5.11.6"
+        },
+        "compile": {
+          "lib/net47/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Unity.Container.dll": {}
+        }
+      },
       "CommonUI/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -109,6 +220,19 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.CRUDOperation/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0",
+          "Services.NavigationServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
         }
       },
       "Services.NavigationServices/1.0.0": {
@@ -126,6 +250,82 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "ControlzEx/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {}
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.4": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "resource": {
+          "lib/net47/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -144,6 +344,15 @@
           "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
         }
       },
+      "Newtonsoft.Json/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -151,6 +360,19 @@
         },
         "runtime": {
           "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/8.0.0.1909": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "8.0.0.1909",
+          "Unity.Container": "5.11.8"
+        },
+        "compile": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
         }
       },
       "Prism.Wpf/8.0.0.1909": {
@@ -202,6 +424,19 @@
           "lib/net47/Unity.Abstractions.dll": {}
         }
       },
+      "Unity.Container/5.11.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "Unity.Abstractions": "5.11.6"
+        },
+        "compile": {
+          "lib/net47/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Unity.Container.dll": {}
+        }
+      },
       "CommonUI/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -233,6 +468,19 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.CRUDOperation/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0",
+          "Services.NavigationServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
         }
       },
       "Services.NavigationServices/1.0.0": {
@@ -250,6 +498,82 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "ControlzEx/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {}
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.4": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "resource": {
+          "lib/net47/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -268,6 +592,15 @@
           "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
         }
       },
+      "Newtonsoft.Json/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -275,6 +608,19 @@
         },
         "runtime": {
           "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/8.0.0.1909": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "8.0.0.1909",
+          "Unity.Container": "5.11.8"
+        },
+        "compile": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
         }
       },
       "Prism.Wpf/8.0.0.1909": {
@@ -326,6 +672,19 @@
           "lib/net47/Unity.Abstractions.dll": {}
         }
       },
+      "Unity.Container/5.11.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "Unity.Abstractions": "5.11.6"
+        },
+        "compile": {
+          "lib/net47/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Unity.Container.dll": {}
+        }
+      },
       "CommonUI/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -357,6 +716,19 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.CRUDOperation/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0",
+          "Services.NavigationServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
         }
       },
       "Services.NavigationServices/1.0.0": {
@@ -374,6 +746,82 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "ControlzEx/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {}
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.4": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {}
+        },
+        "resource": {
+          "lib/net47/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
         "type": "package",
         "frameworkAssemblies": [
@@ -392,6 +840,15 @@
           "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
         }
       },
+      "Newtonsoft.Json/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -399,6 +856,19 @@
         },
         "runtime": {
           "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/8.0.0.1909": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "8.0.0.1909",
+          "Unity.Container": "5.11.8"
+        },
+        "compile": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Unity.Wpf.dll": {}
         }
       },
       "Prism.Wpf/8.0.0.1909": {
@@ -450,6 +920,19 @@
           "lib/net47/Unity.Abstractions.dll": {}
         }
       },
+      "Unity.Container/5.11.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "Unity.Abstractions": "5.11.6"
+        },
+        "compile": {
+          "lib/net47/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Unity.Container.dll": {}
+        }
+      },
       "CommonUI/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -481,6 +964,19 @@
         },
         "runtime": {
           "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Services.CRUDOperation/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0",
+          "Services.NavigationServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.CRUDOperation.dll": {}
         }
       },
       "Services.NavigationServices/1.0.0": {
@@ -499,6 +995,136 @@
     }
   },
   "libraries": {
+    "ControlzEx/4.4.0": {
+      "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
+      "type": "package",
+      "path": "controlzex/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "controlzex.4.4.0.nupkg.sha512",
+        "controlzex.nuspec",
+        "lib/net45/ControlzEx.dll",
+        "lib/net45/ControlzEx.pdb",
+        "lib/net45/ControlzEx.xml",
+        "lib/net462/ControlzEx.dll",
+        "lib/net462/ControlzEx.pdb",
+        "lib/net462/ControlzEx.xml",
+        "lib/netcoreapp3.0/ControlzEx.dll",
+        "lib/netcoreapp3.0/ControlzEx.pdb",
+        "lib/netcoreapp3.0/ControlzEx.xml",
+        "lib/netcoreapp3.1/ControlzEx.dll",
+        "lib/netcoreapp3.1/ControlzEx.pdb",
+        "lib/netcoreapp3.1/ControlzEx.xml",
+        "logo-mini.png"
+      ]
+    },
+    "MahApps.Metro/2.4.4": {
+      "sha512": "QK514bFWbfJ784VWlVlAt0BjLAyrgl9m7dijUh22voTZFCvYdWS22rtYPUP9SNVQRjuVqZnV+V+JlKMGmsZRog==",
+      "type": "package",
+      "path": "mahapps.metro/2.4.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MahApps.Metro.dll",
+        "lib/net452/MahApps.Metro.pdb",
+        "lib/net452/MahApps.Metro.xml",
+        "lib/net452/de/MahApps.Metro.resources.dll",
+        "lib/net46/MahApps.Metro.dll",
+        "lib/net46/MahApps.Metro.pdb",
+        "lib/net46/MahApps.Metro.xml",
+        "lib/net46/de/MahApps.Metro.resources.dll",
+        "lib/net47/MahApps.Metro.dll",
+        "lib/net47/MahApps.Metro.pdb",
+        "lib/net47/MahApps.Metro.xml",
+        "lib/net47/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.xml",
+        "lib/netcoreapp3.0/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.xml",
+        "lib/netcoreapp3.1/de/MahApps.Metro.resources.dll",
+        "mahapps.metro.2.4.4.nupkg.sha512",
+        "mahapps.metro.logo.png",
+        "mahapps.metro.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "MaterialDesignColors/2.0.0": {
+      "sha512": "+JoghC3QRK0u9Wul1To1ORjcfTbFTVzFPjJ02H7VREOdNzIIn427e8G9gP9hXu9pm1r2OneLnoCG/lTma5cG2w==",
+      "type": "package",
+      "path": "materialdesigncolors/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net452/MaterialDesignColors.dll",
+        "lib/net452/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.2.0.0.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/4.0.0": {
+      "sha512": "+n5oWHuRiYL/gUw2XfQHCRZqHtU8KbrdurgU0IcO98Zsyhw4BvggodfXY8veRtbjjmM9EJ/sG2yKBrgPOGX4JQ==",
+      "type": "package",
+      "path": "materialdesignthemes/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net452/MaterialDesignThemes.Wpf.dll",
+        "lib/net452/MaterialDesignThemes.Wpf.pdb",
+        "lib/net452/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.4.0.0.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "sha512": "/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.nuspec"
+      ]
+    },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
       "sha512": "5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
       "type": "package",
@@ -518,6 +1144,33 @@
         "microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
         "microsoft.xaml.behaviors.wpf.nuspec",
         "tools/Install.ps1"
+      ]
+    },
+    "Newtonsoft.Json/6.0.4": {
+      "sha512": "FyQLmEpjsCrEP+znauLDGAi+h6i9YnaMkITlfIoiM4RYyX3nki306bTHsr/0okiIvIc7BJhQTbOAIZVocccFUw==",
+      "type": "package",
+      "path": "newtonsoft.json/6.0.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.6.0.4.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
       ]
     },
     "Prism.Core/8.0.0.1909": {
@@ -540,6 +1193,31 @@
         "prism-logo.png",
         "prism.core.8.0.0.1909.nupkg.sha512",
         "prism.core.nuspec"
+      ]
+    },
+    "Prism.Unity/8.0.0.1909": {
+      "sha512": "5WO7gvzQUkqxhJi0Ff+aCv3SSn0H4Eigk/yn4HPnNrQFoHzQJ5L1dtvyBcBP3zxrH/C3XXCfbl/4gikMVd/0MA==",
+      "type": "package",
+      "path": "prism.unity/8.0.0.1909",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net461/Prism.Unity.Wpf.dll",
+        "lib/net461/Prism.Unity.Wpf.pdb",
+        "lib/net461/Prism.Unity.Wpf.xml",
+        "lib/net47/Prism.Unity.Wpf.dll",
+        "lib/net47/Prism.Unity.Wpf.pdb",
+        "lib/net47/Prism.Unity.Wpf.xml",
+        "lib/net48/Prism.Unity.Wpf.dll",
+        "lib/net48/Prism.Unity.Wpf.pdb",
+        "lib/net48/Prism.Unity.Wpf.xml",
+        "lib/netcoreapp3.1/Prism.Unity.Wpf.dll",
+        "lib/netcoreapp3.1/Prism.Unity.Wpf.pdb",
+        "lib/netcoreapp3.1/Prism.Unity.Wpf.xml",
+        "prism-logo.png",
+        "prism.unity.8.0.0.1909.nupkg.sha512",
+        "prism.unity.nuspec"
       ]
     },
     "Prism.Wpf/8.0.0.1909": {
@@ -658,6 +1336,37 @@
         "unity.abstractions.nuspec"
       ]
     },
+    "Unity.Container/5.11.8": {
+      "sha512": "iZeix/165OP+EN7oN5UaVHIEi4Aya3jhBUo3TVReWDcyp8iYBExT19Drp5Q5rf56Hpcf+tN86tZW0B378NhwZQ==",
+      "type": "package",
+      "path": "unity.container/5.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Unity.Container.dll",
+        "lib/net40/Unity.Container.pdb",
+        "lib/net45/Unity.Container.dll",
+        "lib/net45/Unity.Container.pdb",
+        "lib/net46/Unity.Container.dll",
+        "lib/net46/Unity.Container.pdb",
+        "lib/net47/Unity.Container.dll",
+        "lib/net47/Unity.Container.pdb",
+        "lib/net48/Unity.Container.dll",
+        "lib/net48/Unity.Container.pdb",
+        "lib/netcoreapp1.0/Unity.Container.dll",
+        "lib/netcoreapp1.0/Unity.Container.pdb",
+        "lib/netcoreapp2.0/Unity.Container.dll",
+        "lib/netcoreapp2.0/Unity.Container.pdb",
+        "lib/netcoreapp3.0/Unity.Container.dll",
+        "lib/netcoreapp3.0/Unity.Container.pdb",
+        "lib/netstandard1.0/Unity.Container.dll",
+        "lib/netstandard1.0/Unity.Container.pdb",
+        "lib/netstandard2.0/Unity.Container.dll",
+        "lib/netstandard2.0/Unity.Container.pdb",
+        "unity.container.5.11.8.nupkg.sha512",
+        "unity.container.nuspec"
+      ]
+    },
     "CommonUI/1.0.0": {
       "type": "project",
       "path": "../../CommonStyles/CommonUI.csproj",
@@ -673,6 +1382,11 @@
       "path": "../../Models/Models.csproj",
       "msbuildProject": "../../Models/Models.csproj"
     },
+    "Services.CRUDOperation/1.0.0": {
+      "type": "project",
+      "path": "../../Services.DialogService/Services.CRUDOperation/Services.CRUDOperation.csproj",
+      "msbuildProject": "../../Services.DialogService/Services.CRUDOperation/Services.CRUDOperation.csproj"
+    },
     "Services.NavigationServices/1.0.0": {
       "type": "project",
       "path": "../../Services.DialogService/Services.NavigationServices/Services.NavigationServices.csproj",
@@ -683,7 +1397,14 @@
     ".NETFramework,Version=v4.7.2": [
       "CommonUI >= 1.0.0",
       "Infrastructure >= 1.0.0",
+      "MahApps.Metro >= 2.4.4",
+      "MaterialDesignColors >= 2.0.0",
+      "MaterialDesignThemes >= 4.0.0",
+      "Microsoft.AspNet.WebApi.Client >= 5.2.7",
+      "Models >= 1.0.0",
+      "Prism.Unity >= 8.0.0.1909",
       "Prism.Wpf >= 8.0.0.1909",
+      "Services.CRUDOperation >= 1.0.0",
       "Services.NavigationServices >= 1.0.0",
       "Unity.Abstractions >= 5.11.6"
     ]
@@ -726,6 +1447,12 @@
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Infrastructure\\Infrastructure.csproj"
             },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Models\\Models.csproj"
+            },
+            "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj": {
+              "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.CRUDOperation\\Services.CRUDOperation.csproj"
+            },
             "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj": {
               "projectPath": "C:\\Users\\bohdan.hlyva\\Documents\\GitHub\\Eleks\\WPF\\Services.DialogService\\Services.NavigationServices\\Services.NavigationServices.csproj"
             }
@@ -736,6 +1463,26 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "MahApps.Metro": {
+            "target": "Package",
+            "version": "[2.4.4, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Microsoft.AspNet.WebApi.Client": {
+            "target": "Package",
+            "version": "[5.2.7, )"
+          },
+          "Prism.Unity": {
+            "target": "Package",
+            "version": "[8.0.0.1909, )"
+          },
           "Prism.Wpf": {
             "target": "Package",
             "version": "[8.0.0.1909, )"

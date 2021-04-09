@@ -1,6 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using ModelStandard.Interfaces.Models;
+using Prism.Mvvm;
 using System.Collections.ObjectModel;
-using ModelStandard.Interfaces.Models;
 
 namespace ModelStandard.Models
 {
@@ -57,7 +57,6 @@ namespace ModelStandard.Models
 
             Ques = new ObservableCollection<IQue>();
             //{
-
             //    new Que("First Que"),
             //    new Que("Second Que")
             //};

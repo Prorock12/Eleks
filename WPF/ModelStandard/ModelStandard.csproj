@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.4" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
     <PackageReference Include="Microsoft.Xaml" Version="4.0.0.1" />
     <PackageReference Include="Prism.Core" Version="8.0.0.1909" />
   </ItemGroup>

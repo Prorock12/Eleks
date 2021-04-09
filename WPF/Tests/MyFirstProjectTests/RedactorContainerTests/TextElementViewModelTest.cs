@@ -8,11 +8,13 @@ namespace MyFirstProjectTests.RedactorContainerTests
     public class TextElementViewModelTest
     {
         private TextElementViewModel _element;
+
         [TestInitialize]
         public void Initialize()
         {
             _element = new TextElementViewModel();
         }
+
         [TestMethod]
         public void GetVideoElement_WhenInitialized_IsNull()
         {
@@ -22,6 +24,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetVideoElement_WhenInitialized_IsNotNull()
         {

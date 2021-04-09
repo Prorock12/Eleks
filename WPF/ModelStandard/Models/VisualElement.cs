@@ -1,7 +1,7 @@
-﻿using System.Windows;
+﻿using ModelStandard.Interfaces.Models;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-using ModelStandard.Interfaces.Models;
 
 namespace ModelStandard.Models
 {
@@ -78,12 +78,12 @@ namespace ModelStandard.Models
 
             set => SetProperty(ref _width, value, OnWidthChanged);
         }
+
         protected virtual void OnWidthChanged()
         {
-
         }
 
-        public  double Height
+        public double Height
         {
             get => _height;
 
@@ -92,7 +92,6 @@ namespace ModelStandard.Models
 
         protected virtual void OnHeightChanged()
         {
-            
         }
 
         public double Angle

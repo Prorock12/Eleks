@@ -2,10 +2,8 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    xmlns:viewModels="clr-namespace:Modules.Que.ViewModels"
-                    xmlns:regions="http://prismlibrary.com/"
-                    xmlns:share="clr-namespace:Infrastructure;assembly=Infrastructure"
                     xmlns:models="clr-namespace:Models.Models;assembly=Models"
+                    xmlns:viewModels="clr-namespace:Modules.Que.ViewModels"
                     mc:Ignorable="d">
 
     <ResourceDictionary.MergedDictionaries>
@@ -91,21 +89,21 @@
     </ControlTemplate>
 
     <DataTemplate x:Key="SlideListBoxDataTemplate" DataType="{x:Type models:Slide}">
-        <TextBlock Text="{Binding Name}" Foreground="White"/>
+        <TextBlock Text="{Binding Name}" Foreground="White" />
     </DataTemplate>
 
     <DataTemplate x:Key="QueListBoxTemplate" DataType="{x:Type viewModels:QueViewModel}">
-        <Expander Header="{Binding Que.Name}" 
+        <Expander Header="{Binding Que.Name}"
                   Padding="5"
                   Width="{Binding Width,RelativeSource={RelativeSource FindAncestor,AncestorType=ListBoxItem}}"
                   IsExpanded="{Binding IsSelected,Mode=TwoWay}">
-            <ListBox ItemsSource="{Binding Que.Slides}" ItemTemplate="{StaticResource SlideListBoxDataTemplate}" SelectedItem="{Binding SelectedSlide}"/>
+            <ListBox ItemsSource="{Binding Que.Slides}" ItemTemplate="{StaticResource SlideListBoxDataTemplate}" SelectedItem="{Binding SelectedSlide}" />
         </Expander>
     </DataTemplate>
 
     <Style x:Key="QueListBoxItemContainerStyle" TargetType="{x:Type ListBoxItem}">
         <Setter Property="Margin" Value="5" />
-        <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}"/>
+        <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}" />
         <Style.Triggers>
             <Trigger Property="IsFocused" Value="True">
                 <Setter Property="Foreground" Value="SandyBrown" />
@@ -131,7 +129,7 @@
            BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
         <Setter Property="ItemTemplate" Value="{StaticResource QueListBoxTemplate}" />
-        <Setter Property="ItemContainerStyle" Value="{StaticResource SlideListBoxItemContainerStyle}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource SlideListBoxItemContainerStyle}" />
     </Style>
 
     <Style x:Key="QueListBoxStyle"
@@ -139,12 +137,8 @@
            BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="Template" Value="{StaticResource QueListBoxControlTemplate}" />
         <Setter Property="ItemTemplate" Value="{StaticResource QueListBoxTemplate}" />
-        <Setter Property="ItemContainerStyle" Value="{StaticResource QueListBoxItemContainerStyle}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource QueListBoxItemContainerStyle}" />
     </Style>
-
-    
-
-    
 
     <Style x:Key="AddButtonStyle"
            TargetType="Button"

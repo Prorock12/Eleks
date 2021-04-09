@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Models;
 using Modules.Redactor.ViewModels;
-using Moq;
-using Prism.Events;
-using Services.FilseSelector;
 
 namespace MyFirstProjectTests.RedactorContainerTests
 {
@@ -17,6 +14,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
         {
             _element = new ImageElementViewModel();
         }
+
         [TestMethod]
         public void GetElement_WhenInitialized_IsNull()
         {
@@ -26,9 +24,10 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetElement_WhenInitialized_IsNotNull()
-        { 
+        {
             //Act
             _element.Element = new ImageElement("some");
             var actual = _element.Element;

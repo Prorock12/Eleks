@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using Models.Interfaces.Models;
-using Models.Models;
-using Modules.Redactor.ViewModels;
 
 namespace Modules.Redactor.Adorner.ResizeThumb
 {
@@ -47,7 +44,6 @@ namespace Modules.Redactor.Adorner.ResizeThumb
         //            designerItem.Width = newWidth;
         //        else
         //        {
-                    
         //        }
         //        designerItem.X = newLeft;
         //    }
@@ -62,7 +58,6 @@ namespace Modules.Redactor.Adorner.ResizeThumb
         //        var verticalChange = (IsHorizontalVerticalChanged) ? e.HorizontalChange : e.VerticalChange;
 
         //        var oldWidth = changedWidth;
-
 
         //        var newWidth = Math.Max(oldWidth + e.HorizontalChange, rightVector.DesiredSize.Width);
 

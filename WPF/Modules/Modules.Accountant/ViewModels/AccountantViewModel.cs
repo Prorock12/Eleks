@@ -2,11 +2,10 @@
 using Models.Models;
 using Prism.Commands;
 using Prism.Mvvm;
+using Service.DispatcherAction;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using System.Windows.Threading;
-using Service.DispatcherAction;
 
 namespace Modules.Accountant.ViewModels
 {
@@ -15,7 +14,7 @@ namespace Modules.Accountant.ViewModels
         private static readonly Random Random = new Random();
 
         private IVisualElement _selectedElement;
-        private readonly IDispatcherAction _dispatcherAction;
+        private readonly IDispatcherService _dispatcherAction;
 
         public ICommand AddRowCommand { get; set; }
         public ICommand RemoveRowCommand { get; set; }
@@ -28,7 +27,7 @@ namespace Modules.Accountant.ViewModels
 
         public ObservableCollection<IVisualElement> Elements { get; set; }
 
-        public AccountantViewModel(IDispatcherAction dispatcherAction)
+        public AccountantViewModel(IDispatcherService dispatcherAction)
         {
             _dispatcherAction = dispatcherAction;
             AddRowCommand = new DelegateCommand(AddRow);
@@ -41,6 +40,7 @@ namespace Modules.Accountant.ViewModels
             //    Elements.Add(CreateElement());
             //}
         }
+
         //Should be private
         public IVisualElement CreateElement()
         {
@@ -56,8 +56,8 @@ namespace Modules.Accountant.ViewModels
                     return new VideoElement("New Video");
             }
         }
-        //Should be private
-        public void AddRow()
+
+        private void AddRow()
         {
             //Dispatcher.CurrentDispatcher.InvokeAsync(() =>
             //{
@@ -65,11 +65,17 @@ namespace Modules.Accountant.ViewModels
             //    Elements?.Add(newElement);
             //    SelectedElement = newElement;
             //}, DispatcherPriority.Loaded);
-            var observableCollection = Elements;
-            _dispatcherAction.AddRowDispatcher(ref observableCollection,CreateElement);
+            _dispatcherAction.Invoke(Action);
         }
-        //Should be private
-        public void RemoveRow()
+
+        private void Action()
+        {
+            var element = CreateElement();
+            Elements.Add(element);
+            SelectedElement = element;
+        }
+
+        private void RemoveRow()
         {
             if (SelectedElement != null)
                 Elements.Remove(SelectedElement);

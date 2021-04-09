@@ -11,7 +11,6 @@
                   mc:Ignorable="d"
                   d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
                   prism:ViewModelLocator.AutoWireViewModel="True">
-   
 
     <mah:MetroWindow.Style>
         <Style TargetType="Window" BasedOn="{StaticResource MaterialDesignWindow}">
@@ -62,27 +61,28 @@
                 <TabControl Grid.Row="2"
                             Background="{DynamicResource MaterialDesignPaper}"
                             Style="{DynamicResource MahApps.Styles.TabControl}">
-                    <TabItem Header="{x:Static localization:Resources.Controller}">
+
+                    <TabItem AutomationProperties.AutomationId="ControllerItem" Header="{x:Static localization:Resources.Controller}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.ControllerRegion}" />
                     </TabItem>
 
-                    <TabItem Header="{x:Static localization:Resources.Effects}">
+                    <TabItem AutomationProperties.AutomationId="EffectsItem" Header="{x:Static localization:Resources.Effects}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.EffectRegion}" />
                     </TabItem>
 
-                    <!--<TabItem Header="{x:Static localization:Resources.Accountant}">
+                    <!--<TabItem AutomationProperties.AutomationId="AccountantItem" Header="{x:Static localization:Resources.Accountant}">
                         <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Accountant}" />
                     </TabItem>-->
 
-                    <TabItem Header="Change Language">
+                    <TabItem AutomationProperties.AutomationId="ChangeLanguageItem" Header="Change Language">
                         <StackPanel>
                             <Button Content="{x:Static localization:Resources.ChangeLanguage}" Command="{Binding SetLanguageCommand}" />
                             <Button Content="Show Solved Dialog" Command="{Binding ShowSolveExpressionCommand}" />
                         </StackPanel>
                     </TabItem>
 
-                    <TabItem Header="Chat">
-                        <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Chat}"/>
+                    <TabItem AutomationProperties.AutomationId="ChatItem" Header="Chat">
+                        <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.Chat}" />
                     </TabItem>
                 </TabControl>
             </Grid>

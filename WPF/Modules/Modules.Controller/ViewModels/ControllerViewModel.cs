@@ -36,7 +36,7 @@ namespace Modules.Controller.ViewModels
         public ICommand AddVideoCommand { get; }
 
         public ObservableCollection<ISlideViewModel> Slides { get; }
-        public ObservableCollection<IElement> Elements { get;  }
+        public ObservableCollection<IElement> Elements { get; }
 
         public bool IsStackView
         {
@@ -133,6 +133,7 @@ namespace Modules.Controller.ViewModels
         {
             _eventAggregator.GetEvent<SelectedSlideEvent>().Publish(SelectedSlide);
         }
+
         private void AddSlide()
         {
             var slide = new Slide("NewSlide");
@@ -147,6 +148,7 @@ namespace Modules.Controller.ViewModels
             Slides.Add(slideViewModel);
             SelectedSlide = slide;
         }
+
         private void AddText()
         {
             var text = new TextElement("newText");
@@ -154,6 +156,7 @@ namespace Modules.Controller.ViewModels
 
             _eventAggregator.GetEvent<AddElementEvent>().Publish(text);
         }
+
         private void AddImage()
         {
             var image = _fileSelector.ChooseImage();
@@ -161,6 +164,7 @@ namespace Modules.Controller.ViewModels
 
             _eventAggregator.GetEvent<AddElementEvent>().Publish(image);
         }
+
         private void AddVideo()
         {
             var video = _fileSelector.ChooseVideo();

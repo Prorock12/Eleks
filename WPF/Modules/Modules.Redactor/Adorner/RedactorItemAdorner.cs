@@ -1,8 +1,8 @@
 ﻿using Infrastructure.AttachedProperties;
 using Modules.Redactor.Controls;
+using Modules.Redactor.ViewModels.Shapes;
 using System.Windows;
 using System.Windows.Media;
-using Modules.Redactor.ViewModels.Shapes;
 
 namespace Modules.Redactor.Adorner
 {
@@ -19,18 +19,17 @@ namespace Modules.Redactor.Adorner
             _visualChildrens = new VisualCollection(this);
             if (element.DataContext is TriangleViewModel)
             {
-                _redactorItemTriangleThumb = new RedactorItemTriangleThumb {DataContext = element.DataContext};
+                _redactorItemTriangleThumb = new RedactorItemTriangleThumb { DataContext = element.DataContext };
 
                 _visualChildrens.Add(_redactorItemTriangleThumb);
             }
             else
             {
-                _redactorItemThumb = new RedactorItemThumb {DataContext = element.DataContext};
+                _redactorItemThumb = new RedactorItemThumb { DataContext = element.DataContext };
                 _redactorItemThumb.Background = Brushes.Transparent;
 
                 _visualChildrens.Add(_redactorItemThumb);
             }
-
         }
 
         protected override Size ArrangeOverride(Size finalSize)

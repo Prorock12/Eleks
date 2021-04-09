@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls.Primitives;
-using Models.Models.ShapeModels;
-using Modules.Redactor.ViewModels;
-
-namespace Modules.Redactor.Adorner.ResizeThumb
+﻿namespace Modules.Redactor.Adorner.ResizeThumb
 {
     public class ResizeCircleThumb : ResizeThumb
     {

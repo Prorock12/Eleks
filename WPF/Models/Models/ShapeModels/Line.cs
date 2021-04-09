@@ -1,9 +1,9 @@
-﻿using System.Windows.Media;
-using Models.Interfaces.ShapeModels;
+﻿using Models.Interfaces.ShapeModels;
+using System.Windows.Media;
 
 namespace Models.Models.ShapeModels
 {
-    public class Line : Shape,ILine
+    public class Line : Shape, ILine
     {
         private double _x1;
         private double _x2;

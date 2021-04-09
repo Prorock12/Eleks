@@ -35,3 +35,12 @@ C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\A
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.dll
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\Services.FilseSelector.pdb
 C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\obj\Debug\Modules.Que.csprojAssemblyReference.cache
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\ControlzEx.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\ControlzEx.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MahApps.Metro.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MahApps.Metro.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MaterialDesignColors.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MaterialDesignColors.pdb
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\bohdan.hlyva\Documents\GitHub\Eleks\WPF\Modules\Modules.Que\bin\Debug\MaterialDesignThemes.Wpf.pdb

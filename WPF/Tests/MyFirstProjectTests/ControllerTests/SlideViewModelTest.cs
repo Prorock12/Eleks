@@ -3,13 +3,13 @@ using Models.Models;
 using Modules.Controller.ViewModels;
 using Moq;
 
-
 namespace MyFirstProjectTests.ControllerTests
 {
     [TestClass]
     public class SlideViewModelTest
     {
         private readonly SlideViewModel _slideView = new SlideViewModel();
+
         [TestMethod]
         public void GetSlide_SlideViewModelIsCreatedWithoutElement_IsNull()
         {
@@ -19,6 +19,7 @@ namespace MyFirstProjectTests.ControllerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetSlide_WhenNewSlideIsNotNull_IsNotNull()
         {

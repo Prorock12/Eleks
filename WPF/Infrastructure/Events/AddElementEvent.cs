@@ -5,6 +5,5 @@ namespace Infrastructure.Events
 {
     public class AddElementEvent : PubSubEvent<IElement>
     {
-        
     }
 }

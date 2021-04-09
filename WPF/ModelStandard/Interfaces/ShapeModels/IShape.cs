@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ModelStandard.Interfaces.Models;
 using System.Windows.Media;
-using ModelStandard.Interfaces.Models;
 
 namespace ModelStandard.Interfaces.ShapeModels
 {
@@ -14,6 +9,6 @@ namespace ModelStandard.Interfaces.ShapeModels
 
         Color Fill { get; set; }
 
-        #endregion
+        #endregion properties
     }
 }

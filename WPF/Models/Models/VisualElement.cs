@@ -77,12 +77,12 @@ namespace Models.Models
 
             set => SetProperty(ref _width, value, OnWidthChanged);
         }
+
         protected virtual void OnWidthChanged()
         {
-
         }
 
-        public  double Height
+        public double Height
         {
             get => _height;
 
@@ -91,7 +91,6 @@ namespace Models.Models
 
         protected virtual void OnHeightChanged()
         {
-            
         }
 
         public double Angle

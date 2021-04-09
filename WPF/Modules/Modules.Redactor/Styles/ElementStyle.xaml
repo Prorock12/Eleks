@@ -9,11 +9,9 @@
                     xmlns:local="clr-namespace:Modules.Redactor.Styles"
                     xmlns:viewModels1="clr-namespace:Modules.Redactor.ViewModels"
                     xmlns:shapes="clr-namespace:Modules.Redactor.ViewModels.Shapes"
-                    xmlns:models="clr-namespace:Models.Models;assembly=Models"
                     mc:Ignorable="d">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/SizeThumbStyle.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
         <ResourceDictionary Source="pack://application:,,,/CommonUI;component/Styles/MaterialDesignCommonStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -189,7 +187,6 @@
         </Style.Triggers>
     </Style>-->
 
-
     <ControlTemplate x:Key="AddButtonControlTemplate" TargetType="{x:Type Button}">
 
         <Border Margin="{TemplateBinding Margin}"
@@ -268,27 +265,27 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:CircleViewModel}">
-        <Ellipse Width="{Binding Circle.Diameter}" 
-                 Height="{Binding Circle.Diameter}" 
-                 Fill="{Binding Circle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
+        <Ellipse Width="{Binding Circle.Diameter}"
+                 Height="{Binding Circle.Diameter}"
+                 Fill="{Binding Circle.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:EllipseViewModel}">
         <Ellipse Width="{Binding Ellipse.Width}"
                  Height="{Binding Ellipse.Height}"
-                 Fill="{Binding Ellipse.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
+                 Fill="{Binding Ellipse.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:QuadrateViewModel}">
         <Rectangle Width="{Binding Quadrate.Width}"
                    Height="{Binding Quadrate.Width}"
-                   Fill="{Binding Quadrate.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
+                   Fill="{Binding Quadrate.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:RectangleViewModel}">
         <Rectangle Width="{Binding Rectangle.Width}"
                    Height="{Binding Rectangle.Height}"
-                   Fill="{Binding Rectangle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
+                   Fill="{Binding Rectangle.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:LineViewModel}">
@@ -296,13 +293,12 @@
               Y1="{Binding Line.Y1}"
               X2="{Binding Line.X2}"
               Y2="{Binding Line.Y2}"
-              Stroke="{Binding Line.Fill,Converter={StaticResource ColorToBrushConverter}}"
-              />
+              Stroke="{Binding Line.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type shapes:TriangleViewModel}">
         <Polygon Points="{Binding Triangle.Points,Mode=TwoWay}"
-                 Fill="{Binding Triangle.Fill,Converter={StaticResource ColorToBrushConverter}}"/>
+                 Fill="{Binding Triangle.Fill,Converter={StaticResource ColorToBrushConverter}}" />
     </DataTemplate>
 
     <ControlTemplate x:Key="ElementsListBoxControlTemplate" TargetType="{x:Type ListBox}">

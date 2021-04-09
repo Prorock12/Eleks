@@ -27,7 +27,7 @@ namespace Modules.ChatModule
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion(RegionNames.Chat, typeof(LoginView));
+            _regionManager.RegisterViewWithRegion(RegionNames.Chat, typeof(ChatView));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

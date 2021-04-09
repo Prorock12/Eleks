@@ -20,8 +20,8 @@ namespace Modules.Redactor.ViewModels
 
         protected MediaElementViewModel()
         {
-
         }
+
         #endregion Constructors
     }
 }

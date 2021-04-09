@@ -21,8 +21,8 @@ namespace Modules.Redactor.ViewModels
 
         protected ElementViewModel()
         {
-
         }
+
         #endregion Constructors
     }
 }

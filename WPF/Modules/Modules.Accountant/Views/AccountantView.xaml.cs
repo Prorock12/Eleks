@@ -20,7 +20,7 @@ namespace Modules.Accountant.Views
         private void RightButtonSelectElement_OnMouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             //TODO:Never do this
-            DependencyObject dep = (DependencyObject) e.OriginalSource;
+            DependencyObject dep = (DependencyObject)e.OriginalSource;
             while ((dep != null) && !(dep is DataCell))
             {
                 dep = VisualTreeHelper.GetParent(dep);

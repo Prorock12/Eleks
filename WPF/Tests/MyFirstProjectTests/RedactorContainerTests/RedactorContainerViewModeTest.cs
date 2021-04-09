@@ -1,14 +1,12 @@
-﻿using System.Collections.ObjectModel;
+﻿using Infrastructure.Events;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using Infrastructure.Events;
 using Models.Models;
 using Modules.Redactor.Interfaces;
 using Modules.Redactor.ViewModels;
-using Modules.Redactor.ViewModels.Shapes;
 using Moq;
 using Prism.Events;
 using Services.FilseSelector;
+using System.Collections.ObjectModel;
 
 namespace MyFirstProjectTests.RedactorContainerTests
 {
@@ -61,13 +59,15 @@ namespace MyFirstProjectTests.RedactorContainerTests
             _mockEventAggregator.Setup(x => x.GetEvent<SelectedElementEvent>()).Returns(new SelectedElementEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<ChangeResolutionSizeEvent>()).Returns(new ChangeResolutionSizeEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<AddElementEvent>()).Returns(new AddElementEvent());
+            _mockEventAggregator.Setup(x => x.GetEvent<AddQuadrateEvent>()).Returns(new AddQuadrateEvent());
             _mockEventAggregator.Setup(x => x.GetEvent<RemoveElementEvent>()).Returns(new RemoveElementEvent());
-            //_eventAggregator = _mockEventAggregator.Object; 
+            //_eventAggregator = _mockEventAggregator.Object;
             //_fileSelector = _mockFileSelector.Object;
             _fileSelector = new FileSelector();
             //_eventAggregator = new EventAggregator();
-            _element = new ElementContainerViewModel(_mockEventAggregator.Object,_fileSelector);
+            _element = new ElementContainerViewModel(_mockEventAggregator.Object, _fileSelector);
         }
+
         //[TestMethod]
         //public void GetElementsCollection_WhenElementContainerViewModelIsCreated_IsNotNull()
         //{
@@ -100,6 +100,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         //[TestMethod]
         //public void SetSelectedElement_WhenSlideIsSelected_IsNotNull()
         //{
@@ -120,6 +121,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         //[TestMethod]
         //public void SetSelectedSlide_WhenElementContainerViewModelIsCreated_IsNotNull()
         //{
@@ -139,6 +141,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNull(actual);
         }
+
         [TestMethod]
         public void SetSelectedPresentation_WhenInitialized_NotNull()
         {
@@ -149,6 +152,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.IsNotNull(actual);
         }
+
         [TestMethod]
         public void AddText_WhenSelectedSlideIsNotNull_AddedTextCountOne()
         {
@@ -163,6 +167,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddImage_WhenSelectedSlideIsNotNull_AddedImageCountOne()
         {
@@ -177,6 +182,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddVideo_WhenSelectedSlideIsNotNull_AddedVideoCountOne()
         {
@@ -191,6 +197,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void RemoveElement_WhenElementsCollectionInitializedAndNotNull_CountZero()
         {
@@ -207,6 +214,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddCircle_WhenSelectedSlideNotNull_AddedCircleCountOne()
         {
@@ -221,6 +229,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddEllipse_WhenSelectedSlideNotNull_AddedEllipseCountOne()
         {
@@ -235,6 +244,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddRectangle_WhenSelectedSlideNotNull_AddedRectangleCountOne()
         {
@@ -249,6 +259,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddQuadrate_WhenSelectedSlideNotNull_AddedQuadrateCountOne()
         {
@@ -263,6 +274,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddTriangle_WhenSelectedSlideNotNull_AddedTriangleCountOne()
         {
@@ -277,6 +289,7 @@ namespace MyFirstProjectTests.RedactorContainerTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void AddLine_WhenSelectedSlideIsNotNull_AddedLineCountOne()
         {

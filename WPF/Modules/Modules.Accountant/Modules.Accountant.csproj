@@ -47,25 +47,32 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="WPFToolkit">
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\WPFToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="WPFToolkit.Extended">
+    <Reference Include="WPFToolkit.Extended, Version=1.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\WPFToolkit.Extended.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.Controls.v5.8">
+    <Reference Include="Xceed.Wpf.Controls.v5.8, Version=5.8.15608.14330, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\Xceed.Wpf.Controls.v5.8.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.1.v5.8">
+    <Reference Include="Xceed.Wpf.DataGrid.ThemePack.1.v5.8, Version=5.8.15608.14330, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\Xceed.Wpf.DataGrid.ThemePack.1.v5.8.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.v5.8">
+    <Reference Include="Xceed.Wpf.DataGrid.v5.8, Version=5.8.15608.14330, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\Xceed.Wpf.DataGrid.v5.8.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid.Views3D.v5.8">
+    <Reference Include="Xceed.Wpf.DataGrid.Views3D.v5.8, Version=5.8.15608.14330, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\Xceed.Wpf.DataGrid.Views3D.v5.8.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit">
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\References\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -142,6 +149,9 @@
     </PackageReference>
     <PackageReference Include="MahApps.Metro">
       <Version>2.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignColors">
+      <Version>2.0.0</Version>
     </PackageReference>
     <PackageReference Include="MaterialDesignThemes">
       <Version>4.0.0</Version>

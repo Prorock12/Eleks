@@ -18,7 +18,6 @@ namespace Modules.Controller.ViewModels
 
         public SlideViewModel()
         {
-
         }
     }
 }

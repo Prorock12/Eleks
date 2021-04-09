@@ -16,5 +16,5 @@ DEBUG;TRACE
 145-93507273
 Controls\RedactorItemThumb.xaml;Controls\RedactorItemTriangleThumb.xaml;Styles\ElementStyle.xaml;Styles\VideoPlayer.xaml;Views\ElementContainerView.xaml;
 
-True
+False
 

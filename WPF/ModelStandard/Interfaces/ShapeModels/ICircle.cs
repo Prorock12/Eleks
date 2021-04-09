@@ -6,7 +6,6 @@
 
         double Diameter { get; set; }
 
-        #endregion
-
+        #endregion properties
     }
 }

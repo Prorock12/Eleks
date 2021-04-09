@@ -1,10 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using ModelStandard.Interfaces.Models;
+﻿using ModelStandard.Interfaces.Models;
 using Prism.Mvvm;
+using System.Collections.ObjectModel;
 
 namespace ModelStandard.Models
 {
-    public class Que : BindableBase,IQue
+    public class Que : BindableBase, IQue
     {
         private string _name;
 
@@ -20,6 +20,7 @@ namespace ModelStandard.Models
         {
             Name = name;
         }
+
         public Que()
         {
             Slides = new ObservableCollection<ISlide>();
